@@ -1,0 +1,32 @@
+
+These are the terms with their positions in each doc:
+
+{'file_1.txt': [('a', [4]), ('all', [2]), ('do', [6]), ('few', [5]), ('love', [1]), ('none', [9]), ('to', [8]), ('trust', [3]), ('wrong', [7])], 'file_10.txt': [('be', [2, 6]), ('is', [8]), ('not', [4]), ('or', [3]), ('question', [10]), ('that', [7]), ('the', [9]), ('to', [1, 5])], 'file_2.txt': [('a', [1, 9, 16]), ('be', [6, 15]), ('but', [8]), ('fool', [2, 17]), ('himself', [4, 13]), ('knows', [12]), ('man', [11]), ('thinks', [3]), ('to', [5, 14]), ('wise', [7, 10])], 'file_3.txt': [('a', [17]), ('and', [10]), ('are', [2, 7]), ('as', [5]), ('dreams', [6]), ('is', [14]), ('life', [13]), ('little', [12]), ('made', [8]), ('on;', [9]), ('our', [11]), ('rounded', [15]), ('sleep', [18]), ('stuff', [4]), ('such', [3]), ('we', [1]), ('with', [16])], 'file_4.txt': [('a', [2, 11]), ('both', [8, 17]), ('cry', [18]), ('father', [3, 16]), ('gives', [4, 13]), ('his', [6, 15]), ('laugh;', [9]), ('son', [7, 12]), ('to', [5, 14]), ('when', [1, 10])], 'file_5.txt': [('but', [6]), ('dear', [8, 15]), ('dear;', [5]), ('every', [2]), ('far', [12]), ('holds', [4, 10]), ('honor', [11]), ('life', [1, 17]), ('man', [3, 9]), ('more', [13]), ('precious', [14]), ('than', [16]), ('the', [7])], 'file_6.txt': [('and', [5]), ('by', [3, 7]), ('fall', [9]), ('rise', [2]), ('sin', [4]), ('some', [1, 6]), ('virtue', [8])], 'file_7.txt': [('conscience', [8]), ('is', [2, 9]), ('know', [6]), ('love', [1]), ('to', [5]), ('too', [3]), ('what', [7]), ('young', [4])], 'file_8.txt': [('be', [18]), ('good', [1, 3, 14]), ('i', [11]), ('is', [6]), ('it', [17]), ('morrow', [19]), ('night', [2, 4, 15]), ('parting', [5]), ('say', [13]), ('shall', [12]), ('sorrow', [9]), ('such', [7]), ('sweet', [8]), ('that', [10]), ('till', [16])], 'file_9.txt': [('a', [6]), ('and', [10]), ('could', [2]), ('courage', [14]), ('had', [5]), ('heart', [7, 13]), ('in', [11]), ('known', [18]), ('love', [9, 17]), ('make', [16]), ('refrain', [3]), ('that', [4, 12]), ('to', [8, 15]), ('who', [1])]}
+
+These are the doc frequencies for all terms:
+
+   to  gives  dreams  fool  do  precious  sleep  too  and  some ...   it  man  \
+0   1      0       0     0   1         1      0    0    0     0 ...    0    0   
+1   1      0       0     0   0         1      0    0    0     0 ...    0    0   
+2   1      0       0     1   0         1      0    0    0     0 ...    0    1   
+3   0      0       1     0   0         1      1    0    1     0 ...    0    0   
+4   1      1       0     0   0         1      0    0    0     0 ...    0    0   
+5   0      0       0     0   0         1      0    0    0     0 ...    0    1   
+6   0      0       0     0   0         1      0    0    1     1 ...    0    0   
+7   1      0       0     0   0         1      0    1    0     0 ...    0    0   
+8   0      0       0     0   0         1      0    0    0     0 ...    1    0   
+9   1      0       0     0   0         1      0    0    1     0 ...    0    0   
+
+   conscience  every  morrow  dear  son  father  all  few  
+0           0      0       0     0    0       0    1    1  
+1           0      0       0     0    0       0    0    0  
+2           0      0       0     0    0       0    0    0  
+3           0      0       0     0    0       0    0    0  
+4           0      0       0     0    1       1    0    0  
+5           0      1       0     1    0       0    0    0  
+6           0      0       0     0    0       0    0    0  
+7           1      0       0     0    0       0    0    0  
+8           0      0       1     0    0       0    0    0  
+9           0      0       0     0    0       0    0    0  
+
+[10 rows x 86 columns]
