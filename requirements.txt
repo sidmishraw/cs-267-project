@@ -1,0 +1,10 @@
+appdirs==1.4.2
+chardet==2.3.0
+packaging==16.8
+pdb==0.1
+pdfminer2==20151206
+pymining==0.2
+pyparsing==2.2.0
+python-gnupg==0.4.0
+PyYAML==3.12
+six==1.10.0
