@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-06 17:14:07
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-06 17:43:44
+# @Last Modified time: 2017-03-06 21:34:38
 
 
 
@@ -33,6 +33,7 @@ from pdb import set_trace
 from pdf_processing.pdf_processor import extract_pages
 from pdf_processing.pdf_processor import extract_page_contents
 from pdf_processing.pdf_processor import get_pdf_contents
+from pdf_processing.pdf_processor import create_json_file
 
 
 
@@ -44,6 +45,8 @@ if __name__ == '__main__':
 
   doc_name = 'obscalculi_testing_pdf_conv.pdf'
   pprint(get_pdf_contents(doc_name))
+  # creates the JSON file for the PDF document's pages mapped to their contents.
+  create_json_file('phase1.json')
 
 
 

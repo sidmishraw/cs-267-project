@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-06 16:58:51
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-06 17:43:16
+# @Last Modified time: 2017-03-06 21:35:31
 
 
 
@@ -48,6 +48,7 @@ KIDS = 'Kids'
 
 
 # Globals
+# The global dict that holds the mapping of the page to its corressponding contents.
 __pdf_contents_dict__ = {}
 
 
@@ -172,9 +173,10 @@ def extract_page_contents(page_nbr, page):
     contents.append(objref.resolve())
 
   # contruct the page_dict
+  # The value is converted to string since the JSON conversion of bytes is hard.
   for index, stream_obj in enumerate(contents):
     stream_obj.decode()
-    page_dict['Content#{}'.format(index)] = stream_obj.data
+    page_dict['Content#{}'.format(index)] = str(stream_obj.data)
 
   # contruct the __pdf_contents_dict__
   __pdf_contents_dict__['Page#{}'.format(page_nbr)] = page_dict
@@ -221,6 +223,30 @@ def get_pdf_contents(pdf_file_name):
       extract_page_contents(page_nbr + 1, page)
 
   return dict(__pdf_contents_dict__)
+
+
+
+
+# Writes the Page:Contents mapping to the JSON file
+# Writing to a JSON file can help if we need to use someother platform/stack for this program.
+def create_json_file(json_file_name):
+  '''
+  Creates the JSON file from the global dict (pdf_contents_dict) that contains the mapping from the
+  page to its corressponding contents. It takes the file name for the JSON file as argument.
+
+  :param json_file_name: The file name of the JSON file created. :class: `str`
+
+  :return: None
+  '''
+
+  global __pdf_contents_dict__
+
+  json_string = dumps(__pdf_contents_dict__)
+
+  with open(json_file_name, 'w') as op_file:
+    op_file.write(json_string)
+
+  return
 
 
 
