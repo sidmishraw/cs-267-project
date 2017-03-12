@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-06 16:58:51
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-06 21:35:31
+# @Last Modified time: 2017-03-11 23:30:26
 
 
 
@@ -247,6 +247,61 @@ def create_json_file(json_file_name):
     op_file.write(json_string)
 
   return
+
+
+
+
+# finds all the matching patterns to the provided regex pattern
+def __find_all_matching__(regex_pattern, search_text):
+  '''
+  Finds and returns all the matching regex patterns.
+
+  :param regex_pattern: The regex pattern :class: `_sre.SRE_Pattern`
+  :param search_text: The string to search on. :class: `str`
+
+  :return: matches `list(str)`
+  '''
+
+  matches = findall(regex_pattern, search_text)
+  
+  return matches
+
+
+
+
+# Extract the words/phrases from the contents of the __pdf_contents_dict__ and
+# make a new JSON string/file
+def extract_words(json_file_name):
+  '''
+  Extracts the words(textual)/phrases from the decoded(decomoressed) contents of the PDF pages
+  and writes them to a new JSON file and returns the JSON string as well.
+
+  :param json_file_name: The name of the JSON file that contains the new JSON. :class: `str`
+
+  :return: json_string `str`
+  '''
+
+  global __pdf_contents_dict__
+
+  new_json = {}
+
+  # since in POSTScript, all the strings are enclosed within `()`
+  textual_regex_pattern = r'\([^\(\)]*\)'
+  pattern = compile(textual_regex_pattern)
+
+  for page in __pdf_contents_dict__.keys():
+    new_json[page] = {}
+    for content in __pdf_contents_dict__[page].keys():
+      print('Content {}'.format(__pdf_contents_dict__[page][content]))
+      new_json[page][content] = __find_all_matching__(textual_regex_pattern, \
+        __pdf_contents_dict__[page][content])
+
+  json_string = dumps(new_json)
+
+  with open(json_file_name, 'w') as op_file:
+    op_file.write(json_string)
+
+  return json_string
 
 
 
