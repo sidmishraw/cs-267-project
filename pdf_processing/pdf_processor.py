@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-06 16:58:51
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-14 00:27:10
+# @Last Modified time: 2017-03-14 09:44:38
 
 
 
@@ -359,9 +359,14 @@ def __build_pdf_json_pattern__():
 def __extract_content__(matching_pattern):
   '''
   Extracts the text from the PostScript code.
+
+  :return: extracted_text `str`
   '''
 
-  return matching_pattern
+  text_pattern = r'\((.*?)\)'
+  text_pieces = findall(compile(text_pattern), matching_pattern)
+
+  return ','.join(text_pieces)
 
 
 

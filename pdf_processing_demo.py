@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-06 17:14:07
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-14 00:14:43
+# @Last Modified time: 2017-03-14 09:53:44
 
 
 
@@ -36,7 +36,7 @@ from pdf_processing.pdf_processor import get_pdf_contents
 from pdf_processing.pdf_processor import create_json_file
 from pdf_processing.pdf_processor import extract_words
 from pdf_processing.pdf_processor import build_pdf_json
-
+from pdf_processing.pdf_processor import TEST_PDF_2
 
 
 
@@ -58,6 +58,14 @@ if __name__ == '__main__':
   def_dict = build_pdf_json()
 
   with open('phase3.json', 'w') as fp_open:
+    fp_open.write(dumps(def_dict))
+
+  doc_name = TEST_PDF_2
+  get_pdf_contents(TEST_PDF_2)
+
+  def_dict = build_pdf_json()
+
+  with open('phase3_2.json', 'w') as fp_open:
     fp_open.write(dumps(def_dict))
 
 
