@@ -1,0 +1,5631 @@
+{
+  "Page#1": {
+    "Content#0": {},
+    "Content#1": {},
+    "Content#2": {
+      "/T1_0#1#0": [
+        "[(Obser)10(v)10(ational)-250(Calculi,)-250(Classes)-250(of)-250(Association)-249(Rules)-250(and)-250(F-pr)18(operty)]",
+        "[(1)-1000(Intr)18(oduction)]",
+        "[(2)-1000(GUHA)-251(and)-249(Granular)-250(Computing)]"
+      ],
+      "/T1_1#1#0.0001": [
+        "[(Jan)-249(Rauch)]",
+        "[(F)15(aculty)-250(of)-250(Informatics)-252(and)-250(Statistics)]"
+      ],
+      "/T1_2#1#0": [
+        "(\\001)"
+      ],
+      "/T1_1#1#11.9551": [
+        "[(,)-250(Uni)25(v)15(ersity)-250(of)-250(Economics,)-250(Prague)]",
+        "(n)",
+        "(\\264)",
+        "[(am.)-310(W)92(.)-250(Churchilla)-251(4,)-251(130)-250(67)-251(Praha)-250(3,)-250(Czech)-249(Republic)]",
+        "(rauch@vse.cz)"
+      ],
+      "/T1_0#1#0.0001": [
+        "(Abstract)"
+      ],
+      "/T1_3#1#": [
+        "[(An)-419(o)10(vervie)16(w)-421(of)-419(se)16(ver)15(al)-419(classes)-420(of)-419(association)-420(rules)-419(is)]",
+        "[(given.)-296(It)-202(is)-202(shown)-204(that)-203(these)-202(classes)-203(have)-204(theor)37(etically)-204(inter)19(-)]",
+        "[(esting)-285(and)-287(pr)15(actically)-286(useful)-286(pr)45(operties.)-417(The)-287(class)-285(of)-286(asso-)]",
+        "[(ciation)-278(rules)-278(with)-277(the)-277(F-pr)45(operty)-278(is)-278(intr)45(oduced.)-393(It)-277(is)-278(shown)]",
+        "[(that)-296(association)-295(rules)-296(fr)45(om)-294(this)-295(class)-296(have)-296(pr)45(operties)-296(simi-)]",
+        "[(lar)-238(to)-237(pr)45(operties)-239(of)-238(the)-237(F)45(isher\\222)39(s)-238(test.)-305(Results)-238(concerning)-240(the)]",
+        "[(association)-251(rules)-251(with)-250(the)-250(F-pr)45(operty)-251(ar)37(e)-251(pr)37(esented.)]",
+        "[(pr)37(edicate)-366(observational)-367(calcu-)]",
+        "(lus)"
+      ],
+      "/T1_1#1#": [
+        "[(This)-381(paper)-381(tries)-380(to)-379(contrib)20(ute)-381(to)-379(foundations)-383(of)-380(granu-)]",
+        "[(lar)-327(computing.)-540(The)-327(paper)-328(deals)-328(with)-326(observ)26(ational)-328(calculi)]",
+        "[(\\(OC)-328(for)-328(short\\))-328(which)-329(were)-329(de\\036ned)-330(and)-329(studied)-329(in)-329([2]",
+        "(as)",
+        "(a)",
+        "[(theoretical)-245(basis)-244(for)-244(the)-244(GUHA)-244(method)-245(of)-244(mechanizing)-246(h)6(y-)]",
+        "[(potheses)-259(formation.)-333(GUHA)-258(is)-257(an)-258(original)-259(Czech)-259(method)-259(of)]",
+        "[(e)16(xploratory)-262(data)-260(analysis)-261(de)26(v)16(eloped)-263(since)-260(the)-260(1960s,)-263(that)-261(is)]",
+        "[(closely)-251(related)-250(to)-250(granular)-252(computing;)-252(see)-251(Section)-251(2.)]",
+        "[(The)-365(most)-365(simple)-365(OC)-365(is)]",
+        "[(which)-348(is)-347(a)-347(modi\\036cation)-348(of)-347(classical)-347(predicate)-348(calculus)]",
+        "[(\\(gene-ralized)-207(quanti\\036ers)-208(are)-206(added)-208(and)-206(only)-206(\\036nite)-206(structures)]",
+        "[(as)-246(models)-247(are)-246(allo)26(wed\\).)-310(F)16(ormulas)-248(of)-246(OC)-246(correspond)-247(to)-246(v)26(ar)19(-)]",
+        "[(ious)-365(assertions)-364(concerning)-366(analyzed)-366(data)-365(matrices.)-652(There)]",
+        "[(are)-270(also)-270(the)-271(assertions)-270(corresponding)-272(to)-270(statistical)-269(h)6(ypothe-)]",
+        "[(ses)-312(tests.)-494(OC)-312(were)-312(further)-312(modi\\036ed)-313(and)-312(studied)-312(to)-312(get)-312(the)]",
+        "[(additional)-326(results)-325(which)-326(help)-325(to)-325(better)-326(understand)-327(associa-)]",
+        "[(tion)-321(rules.)-522(W)80(e)-321(mean)-322(not)-322(only)-322(\\224classical\\224)-322(association)-321(rules)]",
+        "[(de\\036ned)-324(in)-322([1]",
+        "(as)",
+        "(a)",
+        "(pattern)",
+        "(describing)",
+        "(mark)",
+        "(et)",
+        "(bask)",
+        "(ets.)",
+        "(The)",
+        "[(association)-418(rule)-417(we)-418(are)-418(interested)-417(in)-417(is)-418(a)-417(relation)-418(of)-418(tw)10(o)]",
+        "[(Boolean)-322(attrib)20(utes)-321(deri)25(v)16(ed)-323(in)-320(a)-321(general)-322(w)10(ay)-322(from)-321(columns)]",
+        "[(of)-251(analyzed)-253(data)-251(matrix;)-250(see)-251(Section)-251(3.)]",
+        "[(Both)-360(theoretically)-359(interesting)-359(and)-360(practically)-359(important)]",
+        "[(results)-318(about)-320(deduction)-321(r)-1(ules)-318(concerning)-321(association)-320(r)-1(ules,)]",
+        "[(de\\036nability)-358(of)-357(association)-357(rules)-356(in)-356(predicate)-358(calculus,)-385(and)]",
+        "[(about)-593(association)-592(rules)-592(with)-591(missing)-590(information)-592(were)]",
+        "[]",
+        "[(test;)-233(see)-225(Section)-226(6.)-302(Some)-226(of)-226(these)-225(results)-224(were)-225(published)]",
+        "[(in)-222(last)-222(30)-222(years)-223(under)-224(v)26(arious)-224(names,)-229(s)-1(ome)-222(of)-222(them)-223(are)-222(ne)26(w)65(.)]",
+        "[(Ov)16(ervie)26(w)-285(of)-283(these)-283(results)-283(is)-283(in)-282(Section)-284(7.)-410(Results)-283(concern-)]",
+        "[(ing)-227(relation)-228(of)-228(classes)-227(of)]",
+        "[(-equi)25(v)26(alence)-231(rules)-228(and)-228(rules)-228(with)]",
+        "[(F-property)-221(are)-221(in)-220(Section)-222(8.)-300(Se)26(v)16(eral)-223(concluding)-223(remarks)-221(are)]",
+        "[(in)-250(Section)-252(9.)]",
+        "[(Aim)-233(of)-233(the)-234(GUHA)-234(method)-234(is)-233(to)-233(of)25(fer)-233(all)-233(interesting)-233(f)10(acts)]",
+        "[(follo)26(wing)-463(from)-462(the)-462(analyzed)-465(data)-463(to)-462(the)-463(gi)25(v)16(en)-464(problem.)]",
+        "[(GUHA)-287(is)-286(realized)-288(by)-287(the)-287(GUHA-procedures.)-421(The)-287(GUHA-)]",
+        "[(procedure)-318(is)-316(a)-316(computer)-318(program,)-334(the)-316(input)-318(of)-316(which)-317(con-)]",
+        "[(sists)-297(of)-298(the)-298(analyzed)-301(data)-298(and)-299(of)-298(a)-298(s)-1(imple)-298(de\\036nition)-299(of)-299(r)-1(el-)]",
+        "[(e)26(v)26(ant)-315(\\(i.e.)-495(potentially)-313(interesting\\))-313(patterns.)-497(The)-312(procedure)]",
+        "[(automatically)-319(generates)-319(each)-319(particular)-318(pattern)-318(and)-318(tests)-318(if)]",
+        "[(it)-288(is)-288(true)-288(in)-288(the)-288(analyzed)-291(data.)-424(The)-289(output)-289(of)-289(the)-288(procedure)]",
+        "[(consists)-326(of)-326(all)-326(prime)-326(patterns.)-539(The)-327(pattern)-327(is)-326(prime)-326(if)-326(it)-326(is)]",
+        "[(true)-252(in)-253(the)-252(analyzed)-254(data)-254(and)-253(if)-253(it)-252(does)-253(not)-253(immediately)-254(f)-1(ol-)]",
+        "[(lo)26(w)-250(from)-250(the)-251(other)39(,)-251(more)-250(simple)-250(output)-251(patterns)-251([2]",
+        "[(Se)26(v)16(eral)-347(GUHA)-346(procedures)-347(were)-345(implemented;)-394(see)-346(e.g.)]",
+        "[([3,)-416(4)-1(,)-416(16]",
+        "(The)",
+        "(most)",
+        "(important)",
+        "(GUHA)",
+        "(procedure)",
+        "(is)",
+        "(the)",
+        "[(procedure)-386(ASSOC)-386([2]",
+        "(which)",
+        "(mines)",
+        "(for)",
+        "(association)",
+        "(r)",
+        "(ules.)",
+        "[(The)-319(association)-320(rules)-319(the)-319(procedure)-320(ASSOC)-320(mines)-320(for)-318(are)]",
+        "[(more)-284(general)-287(than)-285(the)-284(classical)-285(association)-285(rules)-284(de\\036ned)-287(in)]",
+        "[([1]",
+        "(Procedure)",
+        "(ASSOC)",
+        "(mines)",
+        "(among)",
+        "(other)",
+        "(for)",
+        "(association)",
+        "[(rules)-223(corresponding)-224(to)-223(statistical)-222(h)6(ypothesis)-225(tests.)-300(There)-224(are)]",
+        "[(se)26(v)16(eral)-285(implementations)-285(of)-283(the)-283(procedure)-284(ASSOC;)-285(see)-283(e.g.)]",
+        "[([3,)-288(4)-1(,)-288(6,)-288(8)-1(,)-288(16]",
+        "(Namely)",
+        "(the)",
+        "(last)",
+        "(tw)",
+        "(o)",
+        "(implementations)",
+        "(ha)",
+        "(v)",
+        "(e)",
+        "[(signi\\036cantly)-295(more)-294(tools)-294(for)-294(a)-293(de\\036nition)-295(and)-295(tuning)-294(of)-295(a)-293(s)-1(et)]",
+        "[(of)-352(rules)-352(to)-351(be)-352(automatically)-353(generated)-354(and)-353(tested)-351(than)-352(the)]",
+        "[(usual)-251(apriori)-251(algorithm)-251(has.)]",
+        "[(The)-339(association)-340(rule)-338(is)-338(the)-338(e)16(xpression)]",
+        "(where)",
+        "(and)",
+        "[(are)-373(Boolean)-375(attrib)20(utes.)-678(It)-372(means)-374(that)]",
+        "(and)"
+      ],
+      "/T1_4#1#0": [
+        "(\\001)"
+      ],
+      "/T1_1#1#7.9701": [
+        "[(The)-753(w)11(ork)-752(described)-753(here)-753(has)-753(been)-753(supported)-752(by)-752(Grant)-753(No.)]",
+        "[(201/05/0325)-300(of)-303(the)-301(Czech)-303(Science)-303(F)15(oundation)-302(and)-303(by)-302(Grant)-302(N)1(o.)-467(ME913)]",
+        "[(of)-250(Ministry)-251(of)-250(Education,)-250(Y)110(outh)-250(and)-250(Sports)-250(of)-250(the)-250(Czech)-250(Republic)]",
+        "[(achie)26(v)16(ed.)-716(These)-384(results)-383(are)-384(related)-384(to)-384(classes)-384(of)-385(associa-)]",
+        "[(tion)-303(rules.)-470(There)-304(are)-304(classes)-304(of)-303(implicational)-306(rules,)-316(double)]",
+        "[(implicational)-252(rules,)-251(etc.;)-250(s)-1(ee)-251(Sections)-252(4)-250(and)-251(5.)]",
+        "[(Goal)-306(of)-305(this)-305(paper)-306(is)-305(to)-304(present)-306(results)-304(concerning)-307(class)]",
+        "[(of)-216(association)-216(rules)-216(with)-216(F-property)65(.)-299(This)-216(class)-216(contains)-217(im-)]",
+        "[(portant)-286(association)-286(rules)-285(corresponding)-287(to)-285(Fisher\\222)55(s)-285(test)-285(and)]"
+      ],
+      "/T1_5#1#0": [
+        "(\\001)",
+        "(\\002)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)"
+      ],
+      "/T1_6#1#6.9738": [
+        "(2)"
+      ],
+      "/T1_7#1#9.913": [
+        "(\\001)"
+      ],
+      "/T1_8#1#1.096": [
+        "(\\001)"
+      ],
+      "/T1_5#1#1.22": [
+        "(\\003)"
+      ],
+      "/T1_1#1#1.06": [
+        "(are)"
+      ]
+    },
+    "Content#3": {
+      "##": [
+        "(2007 IEEE International Conference on Granular Computing)",
+        "(0-7695-3032-X/07 $25.00 © 2007 IEEE)",
+        "(DOI 10.1109/GrC.2007.88)",
+        "(287)"
+      ]
+    },
+    "Content#4": {
+      "##": [
+        "(2007 IEEE International Conference on Granular Computing)",
+        "(0-7695-3032-X/07 $25.00 © 2007 IEEE)",
+        "(DOI 10.1109/GrC.2007.88)",
+        "(287)"
+      ]
+    }
+  },
+  "Page#2": {
+    "Content#0": {},
+    "Content#1": {},
+    "Content#2": {
+      "/T1_0#1#": [
+        "[(associated)-258(in)-256(the)-256(w)10(ay)-257(gi)25(v)16(en)-259(by)-257(the)-256(symbol)]",
+        "[(called)-258(the)]",
+        "[(.)-557(The)-333(association)-333(rule)]",
+        "[(concerns)-334(the)-332(ana-)]",
+        "[(lyzed)-321(data)-320(matrix)]",
+        "[(if)-317(the)-317(condition)-318(gi)25(v)16(en)-319(by)-318(the)-317(4ft-quanti\\036er)]",
+        "(and)",
+        "(.)",
+        "[(The)-380(four)19(-fold)-378(contingenc)16(y)-383(table)]",
+        "(\\(the)",
+        "(and)",
+        "[(of)-322(natural)-322(numbers)-323(s)-1(uch)-321(that)]",
+        "(and)",
+        "[(is)-210(the)-210(num-)]",
+        "[(ber)-237(of)-236(ro)26(ws)-237(of)]",
+        "[(and)-237(not)-237(satisfying)]",
+        "[(etc.;)-241(s)-1(ee)]",
+        "[(T)81(able)-252(1.)]",
+        "[(The)-422(Boolean)-423(attrib)20(utes)]",
+        "(and)",
+        "[(are)-421(deri)25(v)16(ed)-423(from)-421(the)]",
+        "[(columns)-365(of)-365(the)-365(data)-365(matrix)]",
+        "[(.)-652(W)80(e)-365(assume)-365(there)-364(is)-364(a)-364(\\036-)]",
+        "[(nite)-470(number)-473(of)-471(possible)-471(v)26(alues)-472(for)-471(each)-472(column)-472(of)]",
+        "(.)",
+        "[(Columns)-351(of)-350(the)-349(data)-350(matrix)-349(are)-349(called)]",
+        "[(,)-373(possible)]",
+        "[(v)26(alues)-228(of)-227(the)-226(attrib)20(utes)-227(are)-226(called)]",
+        "[(are)-227(created)-228(\\036rst.)-302(The)-228(basic)-227(Boolean)-229(attrib)20(ute)-226(is)-227(an)]",
+        "[(e)16(xpression)-335(of)-334(the)-334(form)]",
+        "(where)",
+        "(and)",
+        "[(is)-324(the)-325(s)-1(et)-325(of)-325(all)-325(possible)-324(v)26(alues)-327(of)-325(the)-324(column)]",
+        "[(.)-597(The)-346(basic)-347(Boolean)-347(attrib)20(ute)]",
+        "(of)",
+        "(where)",
+        "[(.)-470(Boolean)-305(attrib)20(utes)]",
+        "(and)",
+        "[(are)-304(deri)25(v)16(ed)-305(from)]",
+        "[(basic)-263(Boolean)-266(attrib)20(utes)-263(using)-264(propositional)-265(connecti)25(v)16(es)]",
+        "(,)",
+        "(and)",
+        "[(in)-250(the)-250(usual)-251(w)10(ay)65(.)]",
+        "[(An)-365(e)16(xample)-366(of)-365(the)-365(data)-365(matrix)-364(with)-365(the)-365(columns)-365(-)-365(the)]",
+        "[(attrib)20(utes)]",
+        "(,)",
+        "[(in)-210(Fig.)-299(1.)-298(There)]",
+        "[(are)-278(also)-279(e)16(xamples)-280(of)-279(the)-278(basic)-279(Boolean)-280(attrib)20(utes)]",
+        "[(in)-250(Fig.)-310(1.)]",
+        "(object)",
+        "[]",
+        "[(All)-257(implementations)-259(of)-257(the)-256(ASSOC)-258(procedure)-258(are)-256(based)]",
+        "[(on)-252(the)]",
+        "[([16]",
+        "(The)",
+        "(apriori)",
+        "(approach)",
+        "(is)",
+        "(not)",
+        "(used.)",
+        "(Each)",
+        "(cate)",
+        "(gory)",
+        "(of)",
+        "[(each)-268(attrib)20(ute)-266(is)-266(represented)-267(by)-267(a)-266(string)-266(of)-266(bits,)-270(there)-266(is)-267(one)]",
+        "[(bit)-273(for)-272(each)-274(ro)26(w)-273(of)-273(the)-272(data)-273(matrix.)-378(If)-272(the)-272(cate)16(gory)]",
+        "[(of)-273(the)]",
+        "[(attrib)20(ute)]",
+        "[(is)-244(represented)-246(by)-245(the)-244(string)]",
+        "[(of)-245(bits)-244(then)-245(the)-245(i-)]",
+        "[(th)-233(bit)-234(in)]",
+        "[(is)-234(\\2241\\224)-235(if)-234(and)-236(only)-235(if)-234(it)-233(is)]",
+        "(where)",
+        "[(is)-265(the)-266(v)26(alue)-267(of)-267(the)-266(attrib)20(ute)]",
+        "[(of)-266(the)-266(data)]",
+        "(matrix)",
+        "(.)",
+        "[(This)-302(representation)-302(has)-301(an)-302(important)-302(ef)25(fect)-302(-)-300(it)-301(is)-301(possi-)]",
+        "[(ble)-315(to)-315(easy)-316(de\\036ne)-318(and)-316(automatically)-317(generate)-317(v)26(arious)-317(both)]",
+        "[(basic)-348(and)-348(deri)25(v)16(ed)-348(Boolean)-348(attrib)20(utes.)-600(Let)-347(us)-347(suppose)-348(that)]",
+        "[(the)-227(a)1(ttrib)20(ute)]",
+        "[(has)-228(cate)16(gories)]",
+        "[(.)-305(The)-227(set)-227(of)-227(r)-1(el-)]",
+        "[(e)26(v)26(ant)-269(basic)-267(Boolean)-269(attrib)20(utes)]",
+        "[(can)-268(be)-267(then)]",
+        "[(easy)-332(generated.)-558(It)-332(consists)-331(of)-333(the)-332(basic)-331(Boolean)-334(attrib)20(utes)]",
+        "[(.)-299(Such)-199(set)-199(of)]",
+        "[(the)-370(basic)-370(Boolean)-371(attrib)20(utes)-370(is)-370(usually)-370(called)]",
+        "[(The)-339(association)-340(rule)-338(is)-338(the)-338(e)16(xpression)]",
+        "(where)",
+        "(and)",
+        "[(are)-205(Boolean)-207(attrib)20(utes)-205(and)]",
+        "[(is)-362(true)-362(in)-362(the)-362(analyzed)-365(data)-363(matrix)]",
+        "(of)",
+        "(and)",
+        "[(see)-209(T)81(ab)40(.)-299(1)-209(and)-210(Section)]",
+        "[(2.)-392(Some)-278(important)-278(4ft-quanti\\036ers)-279(are)-277(presented)-278(belo)26(w)65(.)-392(W)80(e)]",
+        "(use)",
+        "(,)",
+        "(and)",
+        "(.)",
+        "[(The)-364(4ft-quanti\\036er)]",
+        "(of)"
+      ],
+      "/T1_1#1#0": [
+        "(\\001)",
+        "(M)",
+        "(M)",
+        "(\\001)",
+        "(M)",
+        "(M)",
+        "(\\002)",
+        "(\\003)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "[]",
+        "(M)",
+        "(M)",
+        "({)",
+        "(M)",
+        "(\\006)",
+        "(\\254)",
+        "(M)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\b)",
+        "(\\001)",
+        "(M)",
+        "(\\001)",
+        "(M)",
+        "(M)",
+        "(\\b)"
+      ],
+      "/T1_2#1#0.0001": [
+        "(4ft-)",
+        "(quanti\\036er)"
+      ],
+      "/T1_3#1#0": [
+        "(\\002)",
+        "(\\002)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\002)",
+        "(\\003)",
+        "(a)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(A)",
+        "(\\004)",
+        "(a)",
+        "(A)",
+        "(A)",
+        "(a)",
+        "(a)",
+        "(o)",
+        "(\\002)",
+        "(\\003)",
+        "(A)",
+        "(B)",
+        "(,)",
+        "(A)",
+        "(B)",
+        "(,)",
+        "(o)",
+        "(o)",
+        "(A)",
+        "(,)",
+        "(a)",
+        "(A)",
+        "(\\005)",
+        "(\\005)",
+        "(A)",
+        "(a)",
+        "(A)",
+        "(o)",
+        "(\\002)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\002)",
+        "(\\003)",
+        "(r)",
+        "(n)"
+      ],
+      "/T1_1#1#1.083": [
+        "(\\001)"
+      ],
+      "/T1_3#1#1.208": [
+        "(\\003)"
+      ],
+      "/T1_0#1#0.5197": [
+        "[(.T)520(h)520(e)199(r)519(u)520(l)520(e)]"
+      ],
+      "/T1_1#1#1.062": [
+        "(\\001)"
+      ],
+      "/T1_3#1#1.184": [
+        "(\\003)"
+      ],
+      "/T1_0#1#0.0002": [
+        "(is)",
+        "(is)",
+        "[(satis\\036ed)-364(in)-363(the)-364(four)19(-fold)-363(contingenc)16(y)-366(table)-364(of)]",
+        "(in)",
+        "(is)",
+        "[(if)-296(it)-296(is)]",
+        "(in)"
+      ],
+      "/T1_2#1#": [
+        "[(true)-320(in)-319(the)-320(data)]",
+        "(matrix)",
+        "[(cate)40(gories)]",
+        "[(Basic)-227(Boolean)]",
+        "[(attrib)20(utes)]",
+        "[(r)37(epr)37(esentation)-253(of)-252(the)-252(analyzed)-253(data)-252(by)-251(s)-1(trings)-251(of)-252(bits)]",
+        "(4ft-quanti\\036er)",
+        "[(founded)-365(implication)]"
+      ],
+      "/T1_0#1#0.0001": [
+        "[(,)-250(o)1(therwise)]",
+        "[(is)-401(the)]",
+        "(quadruple)",
+        "[(is)-320(the)]",
+        "[(number)-212(of)-211(ro)25(ws)-211(of)]",
+        "(satisfying)",
+        "[(in)-303(the)-304(ro)26(w)]",
+        "[(for)-266(the)-266(i-th)-265(ro)26(w)]",
+        "[(is)-203(the)]",
+        "[(if)-362(the)]",
+        "[(condition)-212(related)-211(to)-210(the)-211(4ft-quanti\\036er)]",
+        "[(is)-210(satis\\036ed)-210(in)-211(the)-210(4)1(ft)]",
+        "(table)",
+        "[(is)-362(for)]"
+      ],
+      "/T1_1#1#0.932": [
+        "(\\001)"
+      ],
+      "/T1_3#1#1.055": [
+        "(\\003)",
+        "(a)",
+        "(a)"
+      ],
+      "/T1_2#1#0": [
+        "[(false)-250(in)-250(the)-250(data)-251(matrix)]",
+        "[(attrib)20(utes)]",
+        "[(sliding)-370(win-)]",
+        "(dow)"
+      ],
+      "/T1_1#1#9.528": [
+        "(M)"
+      ],
+      "/T1_4#1#0": [
+        "(4)",
+        "(\\()",
+        "(4)",
+        "(\\()",
+        "(1)",
+        "(4)",
+        "(\\()"
+      ],
+      "/T1_3#1#0.1076": [
+        "(ft)",
+        "(ft)",
+        "(ft)"
+      ],
+      "/T1_3#1#": [
+        "[(\\002,)-166(\\003)-36(,)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(\\002,)-166(\\003)-36(,)]",
+        "(\\003)",
+        "[]",
+        "(\\002)",
+        "[]",
+        "(a)",
+        "(o)",
+        "(AGE)",
+        "(AGE)",
+        "(\\004)",
+        "(AGE)",
+        "[(\\002,)-166(\\003)-36(,)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "(k)"
+      ],
+      "/T1_4#1#": [
+        "(\\)",
+        "(\\)",
+        "(\\()",
+        "(\\()",
+        "(\\(2\\)",
+        "(\\(5)",
+        "(6\\)",
+        "(\\(2\\)",
+        "(\\(5)",
+        "(6\\)",
+        "[]",
+        "(\\(2\\)",
+        "(\\(5)",
+        "(6\\)",
+        "(\\()",
+        "(\\()",
+        "(100)",
+        "[(1;)-166(10)]",
+        "[(2;)-166(11)]",
+        "[(91;)-166(100)]",
+        "(\\)"
+      ],
+      "/T1_2#1#1.934": [
+        "(4ft)",
+        "(table)"
+      ],
+      "/T1_0#1#2.402": [
+        "[(for)-402(short\\))-402(of)]"
+      ],
+      "/T1_0#1#1.089": [
+        "[(in)-402(the)-402(data)-403(matrix)]"
+      ],
+      "/T1_1#1#7.886": [
+        "(M)"
+      ],
+      "/T1_0#1#1.411": [
+        "[(satisfying)-210(both)]"
+      ],
+      "/T1_3#1#6.088": [
+        "(\\002)"
+      ],
+      "/T1_0#1#0.687": [
+        "(,)"
+      ],
+      "/T1_3#1#0.468": [
+        "(b)",
+        "(C)"
+      ],
+      "/T1_5#1#": [
+        "[(T)71(a)-10(bl)-10(e)-271(1)-10(.)-270(4)-10(f)-10(t)-269(t)-11(a)-10(bl)-10(e)]",
+        "(of)",
+        "(and)",
+        "[(and)-397(basic)-398(Boolean)]",
+        "[(attrib)20(utes)]"
+      ],
+      "/T1_5#1#0.0002": [
+        "(in)"
+      ],
+      "/T1_3#1#9.9626": [
+        "(\\003)",
+        "[]",
+        "(\\002)",
+        "[]",
+        "(a)",
+        "[]",
+        "(b)",
+        "[]",
+        "(c)",
+        "[]",
+        "(d)"
+      ],
+      "/T1_1#1#9.9626": [
+        "(\\254)",
+        "(\\254)",
+        "(})",
+        "(})"
+      ],
+      "/T1_0#1#0": [
+        "(.)",
+        "[(is)-211(the)-212(data)-212(matrix)]",
+        "(.)",
+        "[(There)-322(are)-321(lot)-321(of)-321(possibilities)-320(ho)26(w)-322(to)-321(de\\036ne)-322(sets)-321(of)-321(rele-)]",
+        "[(v)26(ant)-312(basic)-311(Boolean)-312(attrib)20(utes)-311(and)-311(consequently)-313(sets)-311(of)-311(rel-)]",
+        "[(e)26(v)26(ant)-270(association)-269(rules.)-363(Bit)-268(string)-267(approach)-271(mak)10(es)-269(possible)]",
+        "[(to)-250(generate)-252(and)-251(v)16(erify)-251(them)-250(in)-250(a)-250(v)16(ery)-252(ef)25(\\036cient)-251(w)10(ay)-251([16]",
+        "[(An)-323(additional)-325(and)-323(v)16(ery)-323(important)-324(ef)25(fect)-324(of)-323(the)-322(f)9(act)-324(that)]",
+        "[(GUHA)-278(is)-277(not)-279(realized)-278(by)-278(apriori)-279(concerns)-280(interesting)-277(asso-)]",
+        "[(ciation)-299(r)-1(ules)-299(that)-299(are)-298(true)-299(e)26(v)16(en)-300(if)-299(their)-299(con\\036dence)-301(and)-300(sup-)]",
+        "[(port)-301(are)-301(e)16(xtremely)-302(lo)26(w)65(.)-463(An)-300(e)16(xample)-303(of)-301(such)-301(rule)-300(concerns)]",
+        "[(the)-286(4ft)-286(quanti\\036er)]"
+      ],
+      "/T1_3#1#1.138": [
+        "(\\004)",
+        "(\\004)",
+        "(o)",
+        "(o)"
+      ],
+      "/T1_4#1#0.643": [
+        "(\\)",
+        "(\\)"
+      ],
+      "/T1_1#1#0.4319": [
+        "(\\004{)"
+      ],
+      "/T1_6#1#6.9738": [
+        "(1)",
+        "(1)",
+        "(1)",
+        "[]",
+        "(2)",
+        "[]",
+        "(+)"
+      ],
+      "/T1_3#1#0.1667": [
+        "(,...a)",
+        "(,...a)",
+        "(,...,)"
+      ],
+      "/T1_7#1#0": [
+        "(k)",
+        "(k)"
+      ],
+      "/T1_0#1#0.735": [
+        "[(is)-344(true)-346(in)-345(the)-346(ro)26(w)]"
+      ],
+      "/T1_3#1#7.478": [
+        "(o)"
+      ],
+      "/T1_1#1#0.893": [
+        "(\\005)"
+      ],
+      "/T1_3#1#1.032": [
+        "(\\004)"
+      ],
+      "/T1_0#1#0.826": [
+        "[(is)-297(the)-298(v)26(alue)-298(of)-298(the)-298(attrib)20(ute)]"
+      ],
+      "/T1_3#1#11.18": [
+        "(A)"
+      ],
+      "/T1_1#1#": [
+        "(\\007)"
+      ],
+      "/T1_3#1#3.914": [
+        "(A)"
+      ],
+      "/T1_3#1#1.219": [
+        "(B)"
+      ],
+      "/T1_0#1#0.809": [
+        "(,)"
+      ],
+      "/T1_0#1#0.786": [
+        "(,)"
+      ],
+      "/T1_3#1#0.1658": [
+        "(...)",
+        "[(,A)166(G)166(E)]",
+        "[(,...)-12(,A)166(G)166(E)]"
+      ],
+      "/T1_1#1#7.01": [
+        "(M)"
+      ],
+      "/T1_0#1#2.306": [
+        "(and)"
+      ],
+      "/T1_3#1#1.2004": [
+        "[(AB)-157(C)]"
+      ],
+      "/T1_0#1#0.1502": [
+        "(...)",
+        "[]",
+        "[(2)-1329(7)-1203(1)151(6)-1051(...)]",
+        "[]",
+        "[(7)-1329(5)-1454(4)-1300(...)]",
+        "[]",
+        "[(1)-1329(6)-1454(5)-1300(...)]",
+        "[]"
+      ],
+      "/T1_0#1#3.2291": [
+        "(10)",
+        "(01)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "[]",
+        "(01)"
+      ],
+      "/T1_0#1#9.9626": [
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "[]",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "[(;)-304(see)-286(section)-287(3)-286(and)-287([18]",
+        "(It)",
+        "(is)",
+        "(possi-)",
+        "[(ble)-294(to)-294(s)-1(kip)-294(uninteresting)-295(r)-1(ules)-294(with)-294(lo)26(w)-294(con\\036dence)-298(already)]",
+        "[(in)-389(the)-390(phase)-390(of)-390(generation)-391(and)-390(v)16(eri\\036cation,)-427(it)-389(is)-389(not)-391(nec-)]",
+        "[(essary)-368(to)-367(\\036lter)-368(v)16(ery)-369(lar)18(ge)-369(set)-368(of)-368(rules)-368(with)-368(e)16(xtremely)-369(lo)26(w)]",
+        "[(con\\036dence)-254(and/or)-252(support.)]",
+        "[(The)-261(bit)-260(string)-258(approach)-262(is)-260(used)-260(in)-259(additional)-261(\\036)26(v)16(e)-261(GUHA)]",
+        "[(procedures)-441(implemented)-441(in)-439(the)-439(LISp-Miner)-440(system)-439([17]",
+        "[(These)-356(procedures)-356(mine)-355(for)-355(v)26(arious)-356(patterns)-356(v)16(eri\\036ed)-356(using)]",
+        "[(one)-285(or)-285(tw)10(o)-284(contingenc)16(y)-288(tables.)-414(General)-286(contingenc)16(y)-289(tables)]",
+        "[(concerning)-253(not)-251(only)-251(Boolean)-252(attrib)20(utes)-251(are)-250(used.)]",
+        "[(The)-748(particular)-747(cate)16(gories,)-872(both)-747(basic)-747(and)-748(deri)25(v)16(ed)]",
+        "[(Boolean)-226(attrib)20(utes)-225(and)-226(patterns)-225(the)-225(GUHA)-225(procedures)-227(mine)]",
+        "[(for)-225(can)-226(be)-226(understood)-227(as)-225(granules.)-303(The)-226(po)26(wer)-227(of)-225(the)-226(GUHA)]",
+        "[(methods)-199(implemented)-199(using)-198(bit)-197(string)-197(representation)-198(of)-198(ana-)]",
+        "[(lyzed)-230(data)-230(is)-229(in)-229(ability)-229(to)-229(easy)-230(de\\036ne)-231(and)-231(v)16(erify)-229(lar)18(ge)-230(sets)-229(of)]",
+        "[(patterns)-278(\\(i.e.)-391(the)-278(granules)-279(composed)-279(from)-276(hierarchical)-279(sys-)]",
+        "[(tem)-352(of)-353(more)-353(simple)-351(granules\\).)-617(F)16(ormulas)-355(of)-352(observ)26(ational)]",
+        "[(calculi)-358(correspond)-358(to)-357(patterns)-357(the)-357(GUHA)-358(procedures)-359(deal)]",
+        "[(with)-204(and)-205(thus)-204(logic)-205(of)-204(observ)26(ational)-206(calculi)-205(is)-204(a)-204(kind)-205(of)-204(logic)]",
+        "[(of)-251(granules.)]"
+      ],
+      "/T1_7#1#6.9738": [
+        "(n)",
+        "[]",
+        "(a)",
+        "(a)",
+        "(i)",
+        "(i)",
+        "(i)"
+      ],
+      "/T1_5#1#0": [
+        "[(Figure)-397(1.)-397(Data)-397(matrix)]",
+        "(,)"
+      ],
+      "/T1_1#1#10.644": [
+        "(M)"
+      ],
+      "/T1_3#1#2.584": [
+        "(B)"
+      ],
+      "/T1_4#1#0.2769": [
+        "(\\)"
+      ],
+      "/T1_4#1#9.9626": [
+        "(\\)"
+      ],
+      "/T1_3#1#10.992": [
+        "(A)"
+      ],
+      "/T1_4#1#1.032": [
+        "(;)"
+      ],
+      "/T1_3#1#0.444": [
+        "(\\004)"
+      ],
+      "/T1_4#1#0.234": [
+        "(+9)"
+      ],
+      "/T1_7#1#": [
+        "(p,B)",
+        "(p,B)"
+      ],
+      "/T1_8#1#0": [
+        "[(3)-1000(Association)-250(Rules)]"
+      ],
+      "/T1_1#1#1.096": [
+        "(\\001)"
+      ],
+      "/T1_3#1#1.22": [
+        "(\\003)"
+      ],
+      "/T1_0#1#0.2965": [
+        "[(.T)297(h)297(e)]",
+        "(rule)"
+      ],
+      "/T1_1#1#1.139": [
+        "(\\001)"
+      ],
+      "/T1_3#1#1.263": [
+        "(\\003)"
+      ],
+      "/T1_0#1#3.615": [
+        "[(see)-372(T)81(ab)40(.)-674(1.)-674(In)-371(addition)-372(we)-372(use)]"
+      ],
+      "/T1_4#1#0.981": [
+        "(=)"
+      ],
+      "/T1_3#1#1.28": [
+        "(a)"
+      ],
+      "/T1_4#1#0.84": [
+        "(+)"
+      ],
+      "/T1_3#1#1.089": [
+        "(b)"
+      ],
+      "/T1_4#1#0.83": [
+        "(=)"
+      ],
+      "/T1_4#1#0.751": [
+        "(+)"
+      ],
+      "/T1_3#1#1": [
+        "(c)",
+        "(b)",
+        "(c)",
+        "(d)"
+      ],
+      "/T1_4#1#0.878": [
+        "(=)"
+      ],
+      "/T1_4#1#0.752": [
+        "(+)"
+      ],
+      "/T1_4#1#0.651": [
+        "(+)"
+      ],
+      "/T1_4#1#0.655": [
+        "(+)"
+      ]
+    },
+    "Content#3": {
+      "##": [
+        "(288)"
+      ]
+    },
+    "Content#4": {
+      "##": [
+        "(288)"
+      ]
+    }
+  },
+  "Page#3": {
+    "Content#0": {},
+    "Content#1": {},
+    "Content#2": {
+      "/T1_0#1#0": [
+        "(0)",
+        "(0)",
+        "(0)",
+        "(0)",
+        "(0)",
+        "(0)",
+        "(0)",
+        "(0)",
+        "(0)",
+        "(0)",
+        "(0)",
+        "(0)",
+        "(0)",
+        "(0)",
+        "(\\002)",
+        "(\\002)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\)",
+        "(\\001)"
+      ],
+      "/T1_1#1#0.5267": [
+        "(<p)",
+        "(<p)"
+      ],
+      "/T1_2#1#0": [
+        "(\\t)",
+        "(M)",
+        "(\\b)",
+        "(\\t)",
+        "(\\212)",
+        "(\\013)",
+        "(\\t)",
+        "(M)",
+        "(\\f)",
+        "(\\t)",
+        "(M)",
+        "(\\r)",
+        "(\\007)",
+        "(\\b)",
+        "(\\001)",
+        "(\\001)",
+        "(\\002)",
+        "(\\003)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\007)",
+        "(\\001)",
+        "(\\002)",
+        "(\\003)",
+        "(\\b)",
+        "(\\b)",
+        "(\\013)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\013)",
+        "(\\b)",
+        "(M)",
+        "(M)"
+      ],
+      "/T1_0#1#3.639": [
+        "(1)",
+        "(1)"
+      ],
+      "/T1_3#1#": [
+        "(and)",
+        "[(de\\036ned)-386(in)-385([2]",
+        "(by)",
+        "(the)",
+        "(condition)",
+        "[(means)-273(that)-271(at)-272(least)]",
+        "[(per)-246(cent)-248(of)-246(objects)-247(s)-1(atisfying)]",
+        "[(and)-247(that)]",
+        "[(there)-251(are)-250(at)-250(least)]",
+        "[(objects)-252(of)]",
+        "(and)",
+        "(of)",
+        "(,)",
+        "[(,)-431(and)]",
+        "(de\\036ned)",
+        "[(in)-333([2]",
+        "(b)",
+        "(y)",
+        "[(corresponds)-315(to)-312(the)-313(statistical)-312(test)]",
+        "[(\\(on)-332(the)-333(le)26(v)16(el)]",
+        "[(\\))-333(of)-333(the)-332(null)-333(h)6(ypothesis)]",
+        "[(ag)6(ainst)-248(the)-246(alternati)25(v)16(e)-248(one)]",
+        "[(is)-283(the)-283(conditional)-285(probability)-284(of)-283(the)-283(v)26(alidity)-284(of)]",
+        "[(under)-285(the)]",
+        "(condition)",
+        "(.)",
+        "[(The)-337(4ft-quanti\\036er)]",
+        "(of)",
+        "(and)",
+        "[(de\\036ned)-264(in)-261([5]",
+        "(by)",
+        "(the)",
+        "(condition)",
+        "[(means)-213(that)-213(at)-212(least)]",
+        "[(per)-214(cent)-214(of)-214(objects)-214(s)-1(atisfying)]",
+        "(or)",
+        "(and)",
+        "[(and)-248(that)-248(there)-247(are)-248(at)-247(least)]",
+        "[(objects)-249(of)]",
+        "(and)",
+        "(of)",
+        "(and)",
+        "[(de\\036ned)-386(in)-385([5]",
+        "(by)",
+        "(the)",
+        "(condition)",
+        "[(means)-301(that)]",
+        "(and)",
+        "[(ha)20(v)16(e)-231(the)-230(s)-1(ame)-230(v)26(alue)-231(\\(either)]",
+        "(or)",
+        "[(\\))-230(for)-230(at)-230(least)]",
+        "[(per)-350(cent)-351(of)-350(all)-350(objects)-351(of)]",
+        "[(and)-351(that)-350(there)-349(are)-350(at)-350(least)]",
+        "[(objects)-252(satisfying)-249(both)]",
+        "(and)",
+        "(and)",
+        "[(de\\036ned)-460(in)-457([2]",
+        "(by)",
+        "[(corresponds)-335(to)]",
+        "[(the)-289(statistical)-287(test)-288(\\(on)-289(the)-289(le)26(v)16(el)]",
+        "[(\\))-289(of)-289(the)-289(null)-289(h)6(ypothesis)-290(of)]",
+        "[(independence)-291(of)]",
+        "(and)",
+        "[(ag)6(ainst)-289(the)-287(alternati)25(v)16(e)-289(one)-288(of)-287(the)]",
+        "[(positi)25(v)16(e)-251(dependence.)]",
+        "[(The)-372(4ft-quanti\\036er)]",
+        "(of)",
+        "(and)",
+        "[(de\\036ned)-343(in)-339([16]",
+        "(by)",
+        "(the)",
+        "(condition)",
+        "(means)",
+        "[(that)-249(among)-249(the)-248(objects)-249(s)-1(atisfying)]",
+        "[(is)-248(at)-248(least)]",
+        "[(per)-249(cent)]",
+        "[(more)-337(objects)-338(satisfying)]",
+        "[(than)-338(among)-339(all)-337(objects)-338(and)-338(that)]",
+        "[(there)-251(are)-250(at)-250(least)]",
+        "[(objects)-252(satisfying)-250(both)]",
+        "(and)",
+        "[(if)-280(the)-281(condition)-281(correspond-)]",
+        "[(ing)-451(to)-450(the)-450(4ft-quanti\\036er)]",
+        "[(is)-449(satis\\036ed)-450(for)-450(the)-449(quadruple)]",
+        "[(of)-360(inte)16(ger)-362(non-ne)16(g)6(ati)25(v)16(e)-365(numbers,)-389(otherwise)-360(we)]",
+        "(write)",
+        "[(Classes)-268(of)-268(association)-269(rules)-268(are)-267(de\\036ned)-270(by)-268(classes)-268(of)-268(4ft)]",
+        "[(quanti\\036ers.)-412(An)-284(e)16(xample)-286(is)-283(the)-284(class)-284(of)]",
+        "[(belongs)-328(to)-325(the)]",
+        "[(if)-271(the)-272(4ft)-272(quanti\\036er)]",
+        "[(belongs)-274(to)-272(the)]",
+        "[(.)-402(I)-1(f)-280(the)-281(4ft)-281(quanti\\036er)]",
+        "[(belongs)-282(to)]",
+        "(the)",
+        "(etc.)",
+        "[(Se)26(v)16(eral)-368(important)-367(classes)-365(of)-366(4ft)-365(quanti\\036ers)-367(are)-365(de\\036ned)]",
+        "(by)",
+        "[(.)-308(W)80(e)-241(call)-241(these)-240(quanti\\036ers)]",
+        "[(quanti\\036ers.)-569(Each)-337(class)]",
+        "(of)",
+        "[(quanti\\036ers)-337(is)-336(de-)]",
+        "[(\\036ned)-252(according)-252(to)-250(this)-250(scheme:)]",
+        "[(The)-490(4ft)-490(quanti\\036er)]",
+        "[(belongs)-491(to)-488(the)-979(class)]",
+        "(implies)",
+        "(for)",
+        "[(all)-236(the)-235(4ft)-236(tables)]",
+        "(,)",
+        "[(.)-310(There)-252(are)-250(the)-250(follo)26(wing)-251(classes)-251(of)]",
+        "(quanti\\036ers:)",
+        "[(\\(e)16(xamples:)]",
+        "(and)",
+        "[(de\\036ned)-459(in)-458([14]",
+        "(by)",
+        "[(\\(e)16(xample:)]",
+        "[(de\\036ned)-599(in)-596([14]",
+        "(by)",
+        "(-)",
+        "[(double)-342(implicational\\),)-363(Note)-341(that)-341(there)-340(are)-341(also)-340(double)-341(im-)]",
+        "[(plicational)-371(quanti\\036ers)-372(that)-370(are)-369(not)]",
+        "[(-double)-371(implicational)]",
+        "[(b)20(ut)-251(the)16(y)-252(s)-1(eem)-250(not)-252(too)-250(much)-251(interesting.)]",
+        "[(and)-393(moreo)16(v)16(er)-395(all)-392(the)-393(abo)16(v)16(e)-394(de\\036ned)-394(classes)-393(are)-393(o)26(wn)-393(s)-1(ub-)]",
+        "[(classes)-235(of)-235(this)-235(class\\).)-305(The)-235(class)-235(of)-235(equi)25(v)26(alence)-239(quanti\\036ers)-237(is)]",
+        "[(de\\036ned)-266(in)-264([2]",
+        "(as)",
+        "(the)",
+        "(class)",
+        "(of)",
+        "[(.)-365(I)-1(t)-266(means)-269(that)-267(the)]",
+        "[(symmetrical)-344(association)-344(rule)]",
+        "[(is)-343(true)-343(if)-343(and)-344(only)-344(if)]",
+        "[(the)-302(association)-302(rule)]",
+        "[(is)-302(true.)-465(The)-303(4ft-quanti\\036er)]",
+        "[(.)-571(The)-337(4ft-)]",
+        "(quanti\\036ers)",
+        "[(,)-270(and)]",
+        "[(of)-303(results)-302(concerns)]",
+        "[(deduction)-305(rules)]",
+        "(of)",
+        "[(the)-227(form)]",
+        "[(where)-228(both)]",
+        "(and)",
+        "[(are)-227(associa-)]",
+        "[(tion)-232(rules.)-304(This)-233(deduction)-234(rule)-232(is)-233(correct)-232(if)-233(it)-232(is)-232(true)-232(for)-233(each)]",
+        "[(data)-256(matrix)]",
+        "[(then)-257(also)]",
+        "[(.)-299(It)-216(is)-216(sho)26(wn)-218(in)-216([14]",
+        "(that)",
+        "(there)",
+        "(is)",
+        "(an)",
+        "(important)",
+        "(sub-)",
+        "[(class)-291(of)]",
+        "[(of)-360(propositional)-361(calculus)-361(such)-359(that)-360(the)-359(de-)]",
+        "[(duction)-262(r)-1(ule)]",
+        "[(with)-260(interesting)-261(implicational)-261(quanti\\036er)]",
+        "[(is)-253(correct)-255(if)-254(and)-254(only)-254(if)-254(the)-253(formula)]",
+        "[(is)-253(a)-254(tau-)]",
+        "[(tology)66(.)-311(There)-251(are)-251(similar)-249(results)-250(for)]",
+        "[(-double)-252(implicational)]",
+        "(and)",
+        "[(-equi)25(v)26(alence)-254(quanti\\036ers.)]",
+        "[(The)-208(s)-1(econd)-209(gr)18(oup)]",
+        "[(of)-207(results)-206(concerns)]",
+        "[(missing)-206(inf)25(orma-)]",
+        "(tion)",
+        "[(.)-397(An)-280(e)16(xample)-281(of)-280(the)-280(data)-280(matrix)]"
+      ],
+      "/T1_1#1#0.5767": [
+        "(B>)",
+        "(B>)"
+      ],
+      "/T1_4#1#0": [
+        "(a)",
+        "[]",
+        "[(p,\\001,B)-49(ase)]",
+        "(a)",
+        "[]",
+        "(a)",
+        "(a)",
+        "[]",
+        "(\\002)",
+        "(\\002)"
+      ],
+      "/T1_4#1#6.9738": [
+        "(a)",
+        "(a)",
+        "(a)",
+        "(i)",
+        "(a)",
+        "(a)",
+        "(n)",
+        "(a)",
+        "(a)",
+        "(n)",
+        "(\\002)",
+        "(\\001)",
+        "(\\002)",
+        "(\\001)",
+        "(X)"
+      ],
+      "/T1_5#1#": [
+        "(+)",
+        "(+)",
+        "(=)",
+        "(+)",
+        "(+)",
+        "(+)",
+        "(+)",
+        "(+)",
+        "(=)",
+        "(+)",
+        "(+)"
+      ],
+      "/T1_4#1#1.498": [
+        "(b)",
+        "(b)",
+        "(i)",
+        "(b)",
+        "(i)",
+        "(b)",
+        "(b)",
+        "(d)",
+        "[]",
+        "(b)",
+        "(c)",
+        "[]"
+      ],
+      "/T1_2#1#9.9626": [
+        "(\\n)",
+        "(\\t)",
+        "(\\n)",
+        "(\\n)",
+        "(\\n)",
+        "(\\007)",
+        "(\\003)",
+        "(\\n)",
+        "(\\t)",
+        "(\\n)",
+        "(\\t)",
+        "(\\n)",
+        "(\\t)",
+        "(\\t)",
+        "(\\n)",
+        "(\\t)",
+        "(\\n)",
+        "(\\t)",
+        "(\\t)",
+        "(\\n)",
+        "(\\001)",
+        "(\\001)"
+      ],
+      "/T1_1#1#1.093": [
+        "(p)"
+      ],
+      "/T1_2#1#0.741": [
+        "(\\007)"
+      ],
+      "/T1_1#1#0.904": [
+        "(a)"
+      ],
+      "/T1_2#1#0.844": [
+        "(\\n)"
+      ],
+      "/T1_1#1#1.094": [
+        "(B)"
+      ],
+      "/T1_3#1#0.3706": [
+        "[(.T)371(h)371(e)100(r)370(u)371(l)370(e)]"
+      ],
+      "/T1_1#1#0": [
+        "(\\002)",
+        "(\\003)",
+        "(p)",
+        "(\\002)",
+        "(\\003)",
+        "(\\003)",
+        "(\\002)",
+        "(\\004)",
+        "(H)",
+        "(H)",
+        "(P)",
+        "(\\003)",
+        "(\\002)",
+        "(\\002)",
+        "(\\003)",
+        "(p)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(B)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(p)",
+        "(B)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(p)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(p)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)"
+      ],
+      "/T1_2#1#0.969": [
+        "(\\b)"
+      ],
+      "/T1_4#1#": [
+        "(p,B)",
+        "(p,\\001,B)",
+        "(i)",
+        "(p,B)",
+        "(p,B)",
+        "(p,B)",
+        "(p,B)",
+        "(\\001,B)",
+        "[(r,)-31(k)]",
+        "(i)",
+        "(\\001,B)",
+        "(p,B)",
+        "(p,B)",
+        "(p,B)",
+        "(p,\\001,B)",
+        "(p,B)",
+        "(p,B)",
+        "(\\001,B)",
+        "(p,B)",
+        "(p,B)",
+        "(p,B)",
+        "(\\001,B)",
+        "(p,B)",
+        "(\\003)",
+        "[]",
+        "(\\003)",
+        "(\\001)",
+        "(\\003)",
+        "[]",
+        "(\\003)",
+        "(\\001)"
+      ],
+      "/T1_0#1#": [
+        "(100)",
+        "(\\(1)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(100)",
+        "(100)",
+        "(\\)",
+        "()",
+        "[(\\(1)-264(+)]",
+        "(\\)",
+        "(100)",
+        "(\\002)"
+      ],
+      "/T1_3#1#0.0002": [
+        "[(satisfy)-244(also)]",
+        "(is)",
+        "(the)",
+        "(if)",
+        "(is)",
+        "[(symmetrical)-336(if)25(f)]",
+        "(is)",
+        "[(true)-216(in)]"
+      ],
+      "/T1_1#1#6.775": [
+        "(B)",
+        "(B)"
+      ],
+      "/T1_3#1#1.451": [
+        "[(satisfying)-250(both)]"
+      ],
+      "/T1_1#1#6.167": [
+        "(\\002)"
+      ],
+      "/T1_3#1#0.687": [
+        "(.)",
+        "[(The)-339(4ft-quanti\\036er)]",
+        "(.)",
+        "[(The)-364(4ft-quanti\\036er)]",
+        "(.)",
+        "[(The)-364(Fisher\\222)55(s)-363(quanti\\036er)]",
+        "(.)",
+        "[(W)81(e)-281(write)]"
+      ],
+      "/T1_5#1#6.9738": [
+        "(!)",
+        "(!)",
+        "(0)",
+        "(1)",
+        "(+)",
+        "(+)",
+        "(!)",
+        "(+)",
+        "(+)"
+      ],
+      "/T1_6#1#": [
+        "[(lower)-339(critical)-339(implication)]",
+        "[(founded)-338(double)-337(implication)]",
+        "(true)",
+        "[(class)-272(of)]",
+        "[(implicational)-282(quanti\\036er)9(s)]",
+        "[(class)-295(of)-295(implicational)-297(quanti\\036er)9(s)]",
+        "[(implicational)-252(4ft)-250(quanti\\036er)]",
+        "[(T)55(ruth)-241(Pr)37(eservation)-241(Conditions)]",
+        "[(Implicational)-364(quanti\\036er)9(s)]",
+        "[(-double)-460(implicational)-459(quanti\\036er)9(s)]",
+        "[(Double)-599(implicational)-598(quanti\\036er)9(s)]",
+        "[(-equivalence)-345(quanti\\036er)9(s)]",
+        "[(Equivalence)-201(quanti\\036er)9(s)]",
+        "[(equivalence)-374(quanti\\036er)9(s)]",
+        "[(pur)36(e)]",
+        "[(double)-569(implicational)]",
+        "[(typical)-569(double)-570(implicational)]",
+        "[(inter)37(esting)-292(implicational)-293(quanti\\036er)9(s)]"
+      ],
+      "/T1_3#1#0.0001": [
+        "[(is)-393(for)]",
+        "[(is)-260(for)]",
+        "[(satisfy)-212(both)]",
+        "[(is)-362(for)]",
+        "[(is)-362(for)]",
+        "[(is)-340(for)]",
+        "(satisfying)",
+        "[(is)-256(true)-255(in)]"
+      ],
+      "/T1_1#1#0.5439": [
+        "(<p)"
+      ],
+      "/T1_0#1#1.322": [
+        "(1)"
+      ],
+      "/T1_0#1#1.18": [
+        "(0)"
+      ],
+      "/T1_1#1#0.5456": [
+        "(<\\004<)"
+      ],
+      "/T1_1#1#": [
+        "(.)",
+        "(\\003)",
+        "(\\003)",
+        "(\\003)",
+        "(\\002)",
+        "(.)",
+        "[(ad)-431(>)-432(bc)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "(a)",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "(a)",
+        "(a)",
+        "(a)",
+        "(a)",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(c,)-166(b,)-166(d)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(c,)-166(b,)-166(d)]",
+        "[(\\002,)-166(\\003)-36(,)-166(\\002)]",
+        "[(\\002,)-166(\\003)-36(,)-166(\\002)]"
+      ],
+      "/T1_0#1#0.777": [
+        "(5)",
+        "(5)"
+      ],
+      "/T1_1#1#0.5939": [
+        "(B>)"
+      ],
+      "/T1_7#1#0": [
+        "(\\001)",
+        "(\\001)"
+      ],
+      "/T1_4#1#1.282": [
+        "(a)",
+        "(a)"
+      ],
+      "/T1_7#1#9.9626": [
+        "(\\002)",
+        "(\\003)"
+      ],
+      "/T1_1#1#0.459": [
+        "(p)"
+      ],
+      "/T1_1#1#1.062": [
+        "(p)"
+      ],
+      "/T1_8#1#": [
+        "(\\212)",
+        "(\\003)",
+        "(\\004)",
+        "(\\005)",
+        "(\\005)"
+      ],
+      "/T1_1#1#1.21": [
+        "(\\004)"
+      ],
+      "/T1_2#1#0.928": [
+        "(\\007)"
+      ],
+      "/T1_1#1#0.95": [
+        "(a)"
+      ],
+      "/T1_2#1#0.961": [
+        "(\\n)"
+      ],
+      "/T1_1#1#0.0509": [
+        "[(Ba)51(s)51(e)]"
+      ],
+      "/T1_3#1#0": [
+        "(.)",
+        "[(The)-314(r)-1(ule)]",
+        "(.)",
+        "[(4)-1000(Classes)-249(of)-250(Association)-250(Rules)]",
+        "(.)",
+        "[(The)-326(association)-327(rule)]",
+        "(,)",
+        "[(to)-371(a)20(v)20(oid)-373(confusion)-373(with)]",
+        "[(the)-326(association)-326(rules)-326(de\\036ned)-328(in)-326([1]",
+        "(It)",
+        "(is)",
+        "(pro)",
+        "(v)",
+        "(ed)",
+        "(moreo)",
+        "(v)",
+        "(er)",
+        "[(in)-266([12]",
+        "(that)",
+        "(the)",
+        "(association)",
+        "(r)",
+        "(ules)",
+        "(de\\036ned)",
+        "(in)",
+        "([1])",
+        "(are)",
+        "(e)",
+        "(v)",
+        "(en)",
+        "(not)",
+        "[(association)-251(in)-250(the)-250(sense)-251(of)-251([2]",
+        "[(There)-277(are)-276(additional)-279(classes)-276(of)-277(4ft-quanti\\036ers,)-283(e.g.,)]",
+        "(,)",
+        "(,)",
+        "(,)"
+      ],
+      "/T1_2#1#1.048": [
+        "(\\b)"
+      ],
+      "/T1_1#1#9.9626": [
+        "(\\003)"
+      ],
+      "/T1_0#1#9.9626": [
+        "(:)",
+        "(:)",
+        "(\\()",
+        "(\\)",
+        "[]",
+        "(\\()",
+        "(\\)",
+        "(+)",
+        "(+)",
+        "(+)",
+        "(\\)",
+        "(\\)"
+      ],
+      "/T1_1#1#0.707": [
+        "(P)"
+      ],
+      "/T1_0#1#0.781": [
+        "(\\()",
+        "(\\()",
+        "(\\()"
+      ],
+      "/T1_2#1#1.076": [
+        "(|)",
+        "(|)",
+        "(|)"
+      ],
+      "/T1_1#1#0.277": [
+        "(\\002)",
+        "(\\002)",
+        "(\\002)"
+      ],
+      "/T1_2#1#1.474": [
+        "(\\t)"
+      ],
+      "/T1_1#1#1.208": [
+        "(p)"
+      ],
+      "/T1_1#1#0.556": [
+        "(P)"
+      ],
+      "/T1_1#1#0.2774": [
+        "(>p)"
+      ],
+      "/T1_3#1#0.3092": [
+        "[(.H)309(e)310(r)309(e)]"
+      ],
+      "/T1_1#1#0.2991": [
+        "(<p)"
+      ],
+      "/T1_0#1#1.077": [
+        "(1)"
+      ],
+      "/T1_1#1#0.349": [
+        "(B>)"
+      ],
+      "/T1_4#1#1.38": [
+        "(c)"
+      ],
+      "/T1_1#1#1.056": [
+        "(p)",
+        "(a)",
+        "(a)",
+        "(\\003)"
+      ],
+      "/T1_2#1#0.583": [
+        "(\\007)"
+      ],
+      "/T1_1#1#0.746": [
+        "(a)"
+      ],
+      "/T1_2#1#0.806": [
+        "(\\n)"
+      ],
+      "/T1_1#1#1.055": [
+        "(B)",
+        "(b)",
+        "(a)",
+        "(b)",
+        "(a)",
+        "(b)",
+        "(b)",
+        "(c)",
+        "(d)",
+        "(\\003)"
+      ],
+      "/T1_3#1#0.2965": [
+        "[(.T)297(h)297(e)84(r)296(u)297(l)296(e)]"
+      ],
+      "/T1_2#1#0.932": [
+        "(\\013)",
+        "(\\001)"
+      ],
+      "/T1_3#1#1.447": [
+        "[(satisfying)-247(both)]"
+      ],
+      "/T1_6#1#1.195": [
+        "[(founded)-366(equivalence)]"
+      ],
+      "/T1_1#1#1.146": [
+        "(p)",
+        "(B)"
+      ],
+      "/T1_2#1#0.762": [
+        "(\\007)"
+      ],
+      "/T1_1#1#0.925": [
+        "(a)"
+      ],
+      "/T1_2#1#0.896": [
+        "(\\n)"
+      ],
+      "/T1_3#1#0.4564": [
+        "[(.T)457(h)457(e)157(r)456(u)457(l)456(e)]"
+      ],
+      "/T1_2#1#1.023": [
+        "(\\f)"
+      ],
+      "/T1_6#1#0.0001": [
+        "(false)"
+      ],
+      "/T1_1#1#0.4878": [
+        "(<\\004<)"
+      ],
+      "/T1_1#1#0.7122": [
+        "(B>)"
+      ],
+      "/T1_5#1#0.0002": [
+        "(min\\()"
+      ],
+      "/T1_5#1#0": [
+        "(\\)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\002)",
+        "(\\002)"
+      ],
+      "/T1_9#1#4.9813": [
+        "(k)",
+        "(i)",
+        "(r)",
+        "(n)"
+      ],
+      "/T1_9#1#0": [
+        "(n)",
+        "(\\212)"
+      ],
+      "/T1_9#1#1.965": [
+        "(k)",
+        "(r)",
+        "(\\212)"
+      ],
+      "/T1_9#1#1.084": [
+        "(i)"
+      ],
+      "/T1_2#1#2.218": [
+        "(\\t)"
+      ],
+      "/T1_1#1#1.439": [
+        "(\\004)"
+      ],
+      "/T1_2#1#1.558": [
+        "(\\007)"
+      ],
+      "/T1_1#1#1.283": [
+        "(a)"
+      ],
+      "/T1_2#1#0.959": [
+        "(\\n)"
+      ],
+      "/T1_1#1#1.209": [
+        "(B)"
+      ],
+      "/T1_3#1#0.5576": [
+        "[(.T)558(h)558(e)224(r)557(u)558(l)557(e)]"
+      ],
+      "/T1_2#1#1.085": [
+        "(\\r)"
+      ],
+      "/T1_1#1#12.579": [
+        "(\\004)"
+      ],
+      "/T1_6#1#1.203": [
+        "[(abo)10(ve)-374(aver)15(a)10(g)10(e)-373(dependence)]"
+      ],
+      "/T1_1#1#0.4445": [
+        "(<p)"
+      ],
+      "/T1_1#1#0.4954": [
+        "(B>)"
+      ],
+      "/T1_1#1#0.93": [
+        "(a)"
+      ],
+      "/T1_2#1#0.908": [
+        "(\\n)"
+      ],
+      "/T1_1#1#1.157": [
+        "(B)"
+      ],
+      "/T1_3#1#0.4736": [
+        "[(.T)474(h)474(e)168(r)473(u)474(l)473(e)]"
+      ],
+      "/T1_2#1#1.034": [
+        "(\\b)"
+      ],
+      "/T1_0#1#1.112": [
+        "(\\()"
+      ],
+      "/T1_0#1#0.3363": [
+        "(\\)"
+      ],
+      "/T1_0#1#1.056": [
+        "(\\()"
+      ],
+      "/T1_0#1#0.2794": [
+        "(\\)"
+      ],
+      "/T1_6#1#15.846": [
+        "[(implicational)-285(rules)]"
+      ],
+      "/T1_2#1#1.071": [
+        "(\\001)"
+      ],
+      "/T1_1#1#1.195": [
+        "(\\003)"
+      ],
+      "/T1_6#1#0": [
+        "[(class)-326(of)-326(impli-)]",
+        "[(cational)-274(rules)]"
+      ],
+      "/T1_3#1#13.558": [
+        "[(then)-296(we)-294(say)-295(that)]"
+      ],
+      "/T1_2#1#0.254": [
+        "[(TP)172(C)]"
+      ],
+      "/T1_2#1#0.2539": [
+        "[(TP)172(C)]",
+        "[(TP)172(C)]"
+      ],
+      "/T1_0#1#1.055": [
+        "(\\()",
+        "(\\()"
+      ],
+      "/T1_0#1#0.2799": [
+        "(\\)"
+      ],
+      "/T1_1#1#0.1393": [
+        "(TPC)",
+        "(TPC)",
+        "(TPC)",
+        "(TPC)",
+        "(TPC)",
+        "(TPC)",
+        "(TPC)",
+        "(TPC)"
+      ],
+      "/T1_8#1#6.9738": [
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\005)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\005)"
+      ],
+      "/T1_1#1#0.1658": [
+        "(,b)",
+        "(,c)",
+        "(,d)",
+        "(,b)",
+        "(,c)",
+        "(,d)",
+        "(,\\003)",
+        "(,\\003)"
+      ],
+      "/T1_8#1#0": [
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\002)",
+        "(\\003)",
+        "(\\004)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)"
+      ],
+      "/T1_0#1#0.2776": [
+        "(\\)"
+      ],
+      "/T1_2#1#0.882": [
+        "(\\002)"
+      ],
+      "/T1_3#1#9.9626": [
+        "(.)",
+        "(Here)",
+        "[(is)-273(the)-273(true)-273(preserv)26(ation)-274(condition)-275(for)-273(the)-273(class)]",
+        "(:)",
+        "(:)",
+        "(:)",
+        "(:)",
+        "(:)",
+        "[(are)-266(symmetrical.)]",
+        "[(The)-197(class)-196(of)-196(the)-197(4ft)-195(quanti\\036ers)-198(with)]",
+        "[(with)-279(missing)-278(in-)]"
+      ],
+      "/T1_3#1#10.745": [
+        "[(de\\036ned)-727(in)-363([2]",
+        "(by)"
+      ],
+      "/T1_2#1#1": [
+        "(\\007)"
+      ],
+      "/T1_1#1#1.139": [
+        "(b)",
+        "(b)"
+      ],
+      "/T1_3#1#0.0004": [
+        "(\\)",
+        "(\\)"
+      ],
+      "/T1_4#1#0.816": [
+        "(,)",
+        "(,)"
+      ],
+      "/T1_1#1#0.588": [
+        "(a)"
+      ],
+      "/T1_2#1#1.001": [
+        "(\\007)"
+      ],
+      "/T1_1#1#0.889": [
+        "(b)"
+      ],
+      "/T1_1#1#1": [
+        "(c)",
+        "(c)",
+        "(d)",
+        "(d)",
+        "(c)",
+        "(c)"
+      ],
+      "/T1_0#1#0.651": [
+        "(+)",
+        "(+)"
+      ],
+      "/T1_1#1#0.781": [
+        "(a)"
+      ],
+      "/T1_1#1#1.234": [
+        "(a)",
+        "(b)",
+        "(c)"
+      ],
+      "/T1_2#1#1.169": [
+        "(\\007)"
+      ],
+      "/T1_1#1#1.306": [
+        "(b)",
+        "(c)"
+      ],
+      "/T1_2#1#0.724": [
+        "(\\007)"
+      ],
+      "/T1_3#1#0.78": [
+        "[(\\(e)16(xamples:)-504(all)]"
+      ],
+      "/T1_0#1#6.222": [
+        "(\\001)"
+      ],
+      "/T1_3#1#10.782": [
+        "[(de\\036ned)-343(in)-341([14]",
+        "(by)"
+      ],
+      "/T1_0#1#0.751": [
+        "(+)"
+      ],
+      "/T1_2#1#0.993": [
+        "(\\007)"
+      ],
+      "/T1_3#1#0.683": [
+        "[(\\(e)16(xamples:)]"
+      ],
+      "/T1_2#1#4.683": [
+        "(\\f)"
+      ],
+      "/T1_3#1#0.0003": [
+        "(\\)"
+      ],
+      "/T1_3#1#9.607": [
+        "[(de\\036ned)-200(by)-199(the)-199(condition)]"
+      ],
+      "/T1_2#1#0.755": [
+        "(\\007)"
+      ],
+      "/T1_1#1#0.894": [
+        "(b)"
+      ],
+      "/T1_2#1#0.657": [
+        "(\\007)"
+      ],
+      "/T1_1#1#1.092": [
+        "(c)"
+      ],
+      "/T1_2#1#0.66": [
+        "(\\007)"
+      ],
+      "/T1_1#1#0.893": [
+        "(d)"
+      ],
+      "/T1_3#1#0.718": [
+        "[(\\(e)16(xamples:)]"
+      ],
+      "/T1_2#1#4.657": [
+        "(\\r)"
+      ],
+      "/T1_2#1#0.458": [
+        "(\\b)"
+      ],
+      "/T1_6#1#11.565": [
+        "[(association)-264(quanti\\036er)9(s)]"
+      ],
+      "/T1_3#1#0.3517": [
+        "[(.W)432(e)87(u)352(s)]",
+        "[(the)-372(name)]"
+      ],
+      "/T1_3#1#0.7266": [
+        "[(;s)726(e)727(e)]",
+        "[([12]",
+        "(The)",
+        "(symmetrical)",
+        "(quanti\\036ers)",
+        "(are)",
+        "(de\\036ned)",
+        "(in)",
+        "([2])",
+        "(by)",
+        "(the)",
+        "(condition)"
+      ],
+      "/T1_0#1#1.087": [
+        "(\\()",
+        "(\\()"
+      ],
+      "/T1_0#1#0.846": [
+        "(\\)"
+      ],
+      "/T1_0#1#3.63": [
+        "(\\)"
+      ],
+      "/T1_2#1#1.104": [
+        "(\\001)"
+      ],
+      "/T1_1#1#1.228": [
+        "(\\003)"
+      ],
+      "/T1_1#1#8.126": [
+        "(\\003)"
+      ],
+      "/T1_2#1#1.061": [
+        "(\\001)"
+      ],
+      "/T1_1#1#1.151": [
+        "(\\002)"
+      ],
+      "/T1_0#1#1.214": [
+        "(\\()"
+      ],
+      "/T1_0#1#1.1107": [
+        "(\\)"
+      ],
+      "/T1_0#1#1.213": [
+        "(\\()"
+      ],
+      "/T1_2#1#0.519": [
+        "(\\f)"
+      ],
+      "/T1_2#1#0.518": [
+        "(\\r)"
+      ],
+      "/T1_6#1#14.035": [
+        "[(F-pr)45(operty)]"
+      ],
+      "/T1_3#1#4.54": [
+        "[(is)-196(introduced)]",
+        "[(in)-250(Section)-252(6.)]",
+        "[(5)-1000(Results)-249(on)-250(Classes)-249(of)-250(Association)-250(Rules)]",
+        "[(The)-304(\\336rst)-303(gr)18(oup)]"
+      ],
+      "/T1_2#1#4.789": [
+        "(M)"
+      ],
+      "/T1_3#1#0.3218": [
+        "[(:I)321(f)]"
+      ],
+      "/T1_2#1#0.942": [
+        "(\\001)"
+      ],
+      "/T1_1#1#1.067": [
+        "(\\003)"
+      ],
+      "/T1_1#1#1.066": [
+        "(\\003)"
+      ],
+      "/T1_2#1#2.767": [
+        "(M)"
+      ],
+      "/T1_3#1#14.717": [
+        "[(and)-292(a)-292(f)-1(ormula)]"
+      ],
+      "/T1_0#1#0.0001": [
+        "(\\003\\()",
+        "(\\003\\()"
+      ],
+      "/T1_0#1#14.409": [
+        "(\\001)"
+      ]
+    },
+    "Content#3": {
+      "##": [
+        "(289)"
+      ]
+    },
+    "Content#4": {
+      "##": [
+        "(289)"
+      ]
+    }
+  },
+  "Page#4": {
+    "Content#0": {},
+    "Content#1": {},
+    "Content#2": {
+      "/T1_0#1#": [
+        "[(formation)-269(is)-268(in)-268(Fig.)-365(2)-268(\\(cf.)-364(Fig.)-365(1)-268(in)-268(section)-269(2\\).)-364(The)-269(symbol)]",
+        "(object)",
+        "[]",
+        "(.)",
+        "(.)",
+        "(.)",
+        "[]",
+        "[(we)-250(interpret)-251(as)-251(\\224the)-251(corresponding)-253(v)26(alue)-251(is)-250(not)-252(kno)26(wn\\224.)]",
+        "[(One)-395(of)-395(w)10(ays)-395(ho)26(w)-396(to)-394(deal)-396(with)-394(missing)-393(information)-395(is)]",
+        "[(done)-417(by)-417(the)-416(principle)-417(of)-417(the)]",
+        "[(of)-398(basic)-398(Boolean)-399(at-)]",
+        "[(trib)20(ute)]",
+        "[(for)-255(the)-255(object)]",
+        "(\\()",
+        "(\\)",
+        "[(if)-297(it)-297(is)-297(sure)]",
+        "(\\()",
+        "[(\\))-299(respecti)25(v)16(ely)-300(in)-298(all)-298(possible)-298(completions)-300(of)]",
+        "[(.)-300(The)-222(completion)-223(of)]",
+        "[(is)-221(each)-222(data)-222(matrix)]",
+        "[(that)-222(is)]",
+        "[(a)-278(result)-279(of)-278(completion)-280(of)-279(each)]",
+        "[(by)-279(one)-279(of)-279(possible)-278(v)26(alues)]",
+        "[(of)-248(the)-247(corresponding)-249(attrib)20(ute)-247(-)-247(the)-247(column)-248(of)]",
+        "(,)",
+        "(,)",
+        "(and)",
+        "[(e)16(xtended)-297(by)-294(the)]",
+        "[(principle)-251(of)-251(s)-1(ecured)-251(X-e)16(xtension)-252([2]",
+        "(s)",
+        "(ee)",
+        "(Fig.)",
+        "(3.)",
+        "[]",
+        "(0)",
+        "[]",
+        "[(The)-295(principle)-295(of)-295(the)]",
+        "[(.)-454(The)-299(association)-299(rule)-298(is)-298(true)]",
+        "[(in)-267(the)-268(data)-269(matrix)]",
+        "(of)",
+        "[(.)-491(The)-310(core)-311(of)-310(the)-310(problem)-312(is)-310(that)-311(we)-310(ha)20(v)16(e)-311(to)-310(e)26(v)26(aluate)]",
+        "[(the)-281(condition)-283(related)-564(to)-562(the)-563(4ft-quanti\\036er)-565(in)-281(the)-282(4ft)-281(table)]",
+        "(,)",
+        "[(for)-250(each)-252(completion)]",
+        "(of)",
+        "(of)",
+        "(and)",
+        "[(is)-348(the)-348(number)-351(of)-349(ro)26(ws)]",
+        "(of)",
+        "(such)",
+        "[(that)-310(both)]",
+        "(and)",
+        "(of)",
+        "[(such)-338(that)-338(both)]",
+        "(and)",
+        "[(we)-247(can)-247(for)]",
+        "[(each)-197(nine-fold)-197(table)]",
+        "[(compute)-199(the)-197(quadruple)]",
+        "[(such)-269(that)]",
+        "(of)",
+        "[(is)-299(called)-299(the)]",
+        "[(.)-516(The)-320(secured)-320(completion)]",
+        "(of)",
+        "[(for)-232(implicational)]",
+        "(quanti\\036er)",
+        "[(-double)-399(implicational)]",
+        "(and)",
+        "[(-equi)25(v)26(alence)-289(quanti\\036ers)-286([)-1(15]",
+        "(and)",
+        "(for)",
+        "(quanti\\036ers)",
+        "(with)",
+        "[(F-property;)-251(see)-250(section)-251(7.)]",
+        "[(The)-353(t)-1(hird)-352(gr)18(oup)]",
+        "[(of)-352(results)-352(concerns)]",
+        "[(tables)-352(of)-352(critical)]",
+        "[(fr)18(equencies)]",
+        "[(de\\036ned)-441(by)]",
+        "(\\001)",
+        "[(and)-361(the)-360(Fisher\\222)55(s)-360(quanti\\036er)]",
+        "[(de\\036ned)-362(by)-361(the)-360(condition)]",
+        "(\\001)",
+        "[(for)-300(each)-302(implicational)-301(quanti\\036er)]",
+        "[(such)-301(that)-301(for)-300(each)-301(in-)]",
+        "[(te)16(ger)]",
+        "[(there)-291(is)]",
+        "(such)",
+        "[(that)-342(for)]",
+        "[([2]",
+        "(The)",
+        "(function)",
+        "[(is)-330(called)-330(the)]",
+        "[(for)-369(implicational)-371(quanti\\036er)]",
+        "[(.)-666(Similar)-370(tables)-369(can)-370(be)]",
+        "[(found)-277(for)]",
+        "[(-double)-278(implicational)-278(and)]",
+        "[(-equi)25(v)25(alence)-280(quan-)]",
+        "[(ti\\036ers)-309([2,)-308(11]",
+        "(and)",
+        "(for)",
+        "(quanti\\036ers)",
+        "(with)",
+        "(F-property;)",
+        "(s)",
+        "(ee)",
+        "(Sec-)",
+        "[(tion)-250(7.)]",
+        "(The)",
+        "[(f)25(ourth)-194(gr)18(oup)-194(of)-193(r)18(esults)]",
+        "(concerns)",
+        "[(r)18(elation)-194(of)-193(associ-)]",
+        "[(ation)-285(rules)-287(to)-285(classical)-286(pr)18(edicate)-287(calculus)]",
+        "[(.)-418(Observ)26(ational)]",
+        "[(calculi)-211(are)-209(de\\036ned)-212(in)-209([2]",
+        "(by)",
+        "(modi\\036cations)",
+        "(of)",
+        "(classical)",
+        "(predi-)",
+        "[(cate)-234(calculi;)-239(see)-233(also)-233(section)-234(1.)-305(Thus)-233(there)-233(is)-233(a)-233(natural)-233(ques-)]",
+        "[(tion)-357(if)-357(s)-1(ome)-357(association)-358(r)-1(ules)-358(can)-358(be)-358(de\\036ned)-359(by)-358(formulas)]",
+        "[(of)-316(classical)-316(predicate)-317(calculus)-317(\\(i.e)-315(calculus)-317(with)-316(only)-316(clas-)]",
+        "[(sical)-351(quanti\\036ers)]",
+        "(and)",
+        "[(\\).)-611(There)-351(is)-350(a)-351(reasonable)-352(criterion)]",
+        "[(of)-223(de\\036nability)-223(of)-223(association)-223(rules)-222(in)-222(classical)-222(predicate)-224(cal-)]",
+        "[(culus)-272(with)-271(equality)-272(that)-271(can)-272(be)-271(further)-271(simpli\\036ed)-272(for)-271(impli-)]",
+        "(cational,)",
+        "[(-double)-238(implicational)-238(and)]",
+        "[(-equi)25(v)26(alence)-240(quanti-)]",
+        "[(\\036ers)-251([13]",
+        "[(6)-1000(F-pr)18(operty)]",
+        "[(De\\036nition)-573(of)-571(the)-571(class)-572(of)-571(association)-572(rules)-571(with)-571(F-)]",
+        "[(property)-438(w)10(as)-438(inspired)-438(by)-438(considerations)-439(on)-438(dealing)-439(with)]",
+        "[(missing)-321(information)-321(for)-322(Fisher\\222)55(s)-321(quanti\\036er)55(.)-526(Especially)-322(the)]",
+        "[(task)-418(of)-418(\\036nding)-419(a)-418(s)-1(ecured)-419(completion)]",
+        "(of)",
+        "[(nine-fold)-451(table)]",
+        "(of)",
+        "(and)",
+        "[(in)-450(data)-452(ma-)]",
+        "(trix)",
+        "[(with)-365(missing)-364(information)-365(for)-365(the)-365(Fisher\\222)55(s)-364(quan-)]",
+        "[(ti\\036er)-345(w)10(as)-346(solv)16(ed)-346(in)-345([9]",
+        "(It)",
+        "(is)",
+        "(pro)",
+        "(v)",
+        "(ed)",
+        "(that)",
+        "(it)",
+        "(is)"
+      ],
+      "/T1_1#1#1.3278": [
+        "[(AB)-78(C)]"
+      ],
+      "/T1_0#1#0.1502": [
+        "(...)",
+        "[]",
+        "[(7)-1253(1)151(6)-1050(...)]",
+        "[]",
+        "[(4)-1300(...)]",
+        "[]",
+        "[(1)-1457(6)-1503(5)-1300(...)]",
+        "[]",
+        "[(,)-201(...i)150(n)-181(F)151(i)150(g)151(.)-404(2)151(\\))150(.)-404(T)151(h)151(e)-182(v)176(a)151(l)150(u)151(e)151(s)-183(o)151(f)-181(t)150(h)151(e)-182(B)151(o)151(o)151(l)150(e)151(a)151(n)-183(a)151(t)150(t)150(r)150(i)150(b)171(u)151(t)150(e)151(s)]",
+        "[(deri)25(v)16(ed)-236(from)-235(the)-235(basic)-235(Boolean)-236(attrib)20(utes)-235(are)-235(de\\036ned)-237(by)-235(the)]",
+        "[(truth)-293(tables)-295(of)-295(the)-294(connecti)25(v)16(es)]"
+      ],
+      "/T1_1#1#0": [
+        "(A)",
+        "(B)",
+        "(,)",
+        "(o)",
+        "(X)",
+        "(A)",
+        "(A)",
+        "(o)",
+        "(X)",
+        "(A)",
+        "(X)",
+        "[]",
+        "(\\002)",
+        "(\\003)",
+        "(f)",
+        "(o)",
+        "(f)",
+        "(f)",
+        "(f)",
+        "(\\002)",
+        "(\\003)",
+        "(o)",
+        "(\\002)",
+        "(\\003)",
+        "(X)",
+        "(\\002)",
+        "(,)",
+        "(a)",
+        "(b)",
+        "(\\002)",
+        "(\\003)",
+        "(a)"
+      ],
+      "/T1_2#1#": [
+        "(\\(2\\)",
+        "(\\(5)",
+        "(6\\)",
+        "[]",
+        "(\\()",
+        "(\\)",
+        "()",
+        "(\\()",
+        "(0)",
+        "(0)",
+        "(\\)",
+        "(\\()",
+        "(\\()",
+        "(\\(1)",
+        "(\\)"
+      ],
+      "/T1_3#1#6.9738": [
+        "(1)",
+        "[]",
+        "(2)",
+        "[]",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(0)",
+        "(0)",
+        "(0)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(!)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(0)",
+        "(0)",
+        "(2)"
+      ],
+      "/T1_2#1#9.9626": [
+        "(2)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(+)",
+        "(+)",
+        "(\\()",
+        "(k)",
+        "(i)",
+        "(\\)",
+        "[]",
+        "(\\()",
+        "(r)",
+        "(n)",
+        "(\\)",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\)",
+        "(=)",
+        "(=)",
+        "(+)",
+        "(+)",
+        "(=)",
+        "(+)",
+        "(+)"
+      ],
+      "/T1_2#1#0": [
+        "(1)",
+        "(1)",
+        "(1)",
+        "(4)",
+        "(\\()",
+        "(9)",
+        "(\\()",
+        "(\\()",
+        "(9)",
+        "(\\()",
+        "(9)",
+        "(\\()",
+        "(9)",
+        "(\\()",
+        "(+)",
+        "(\\001)",
+        "(\\001)",
+        "(0)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(9)",
+        "(\\()",
+        "(+)",
+        "(+)"
+      ],
+      "/T1_0#1#3.73": [
+        "(0)"
+      ],
+      "/T1_1#1#": [
+        "(o)",
+        "(o)",
+        "(B)",
+        "(X)",
+        "[]",
+        "(X)",
+        "[]",
+        "(\\002)",
+        "(\\003)",
+        "[(\\002,)-166(\\003)-36(,)]",
+        "[(\\002,)-166(\\003)-36(,)]",
+        "(\\003)",
+        "[]",
+        "(\\002)",
+        "[]",
+        "[(\\002,)-166(\\003)-36(,)]",
+        "(a)",
+        "(a)",
+        "(a)",
+        "[(\\002,)-166(\\003)-36(,)]",
+        "(a)",
+        "[(\\002,)-166(\\003)-36(,)]",
+        "(f)",
+        "(,)",
+        "[(ad)-277(>)-278(bc)]",
+        "(a)",
+        "(,)",
+        "(,)",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "(a)",
+        "(a)",
+        "(a)",
+        "[(\\002,)-166(\\003)-36(,)]",
+        "(b)"
+      ],
+      "/T1_1#1#1.2782": [
+        "(XX)",
+        "(XX)",
+        "(XX)"
+      ],
+      "/T1_0#1#0": [
+        "(0)",
+        "(0)",
+        "(0)",
+        "[]",
+        "(0)",
+        "[]",
+        "[(is)-294(applied)-296(also)]",
+        "[(to)-298(the)-298(association)-299(rule)]",
+        "(,)"
+      ],
+      "/T1_1#1#3.526": [
+        "(X)"
+      ],
+      "/T1_0#1#9.9626": [
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "[]",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(.)",
+        "(1)",
+        "[]",
+        "(0)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "[]",
+        "(1)",
+        "(1)",
+        "(1)",
+        "[]",
+        "(1)",
+        "(1)",
+        "[(with)-268(missing)-267(information)-268(if)-268(this)-267(as-)]",
+        "[(sociation)-313(rule)-312(is)-313(true)-312(in)-312(all)-313(the)-312(possible)-313(completions)]",
+        "(.)",
+        "[(This)-338(problem)-339(can)-338(be)-338(solv)16(ed)-338(by)-338(the)-338(s)-1(ecured)-338(completion)]",
+        "[(of)-291(nine-fold)-291(table)]",
+        "(,)",
+        "(,)",
+        "(,)"
+      ],
+      "/T1_4#1#6.9738": [
+        "(n)",
+        "[]",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "[]",
+        "(X)",
+        "[]",
+        "(X)",
+        "[]",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(X)",
+        "(a)",
+        "(a)",
+        "(i)",
+        "(a)",
+        "(F)",
+        "(X)",
+        "(X)",
+        "(F)",
+        "(F)",
+        "(F)"
+      ],
+      "/T1_0#1#3.23": [
+        "(01)"
+      ],
+      "/T1_5#1#0": [
+        "[(Figure)-287(2.)-286(Data)-286(matrix)]",
+        "[(T)81(ab)10(le)-280(2.)-278(Nine-f)20(old)-278(tab)10(le)]"
+      ],
+      "/T1_6#1#10.202": [
+        "(M)"
+      ],
+      "/T1_5#1#": [
+        "[(w)-19(i)-20(t)-20(h)-305(m)-19(i)-20(s)-19(s)-19(i)-20(n)-19(g)-306(i)-20(n)-19(fo)-19(r-)]",
+        "(mation)",
+        "[(Figure)-279(3.)-279(Extended)-280(truth)-277(tab)10(les)-279(of)]",
+        "(,)",
+        "(and)"
+      ],
+      "/T1_7#1#12.273": [
+        "[(secur)37(ed)-417(X-e)20(xtension)]"
+      ],
+      "/T1_0#1#0.0002": [
+        "[([2]",
+        "(It)",
+        "[(means)-399(that)-399(the)-398(v)25(alue)]",
+        "(is)",
+        "(in)",
+        "[(if)25(f)]",
+        "(is)",
+        "[(it)-341(is)]",
+        "[(if)25(f)]"
+      ],
+      "/T1_1#1#1.138": [
+        "(\\004)",
+        "(\\004)",
+        "(a)"
+      ],
+      "/T1_1#1#0.0004": [
+        "(o,)",
+        "(o,)",
+        "(o,)",
+        "(o,)",
+        "(o,)"
+      ],
+      "/T1_6#1#0": [
+        "(M)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "(\\254)",
+        "(\\006)",
+        "(\\254)",
+        "[]",
+        "(\\006)",
+        "[]",
+        "(\\006)",
+        "(\\254)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "(M)",
+        "(\\001)",
+        "(M)",
+        "(\\002)",
+        "(M)",
+        "(M)",
+        "(\\001)",
+        "(\\002)",
+        "(M)",
+        "(\\001)",
+        "(\\002)",
+        "(M)",
+        "(\\b)",
+        "(\\002)",
+        "(\\b)",
+        "(\\212)",
+        "(\\r)",
+        "(\\007)",
+        "(\\b)",
+        "(\\b)",
+        "(\\b)",
+        "(\\020)",
+        "(\\021)",
+        "(\\002)",
+        "(M)",
+        "(M)"
+      ],
+      "/T1_2#1#0.643": [
+        "(\\)"
+      ],
+      "/T1_0#1#0.741": [
+        "[(in)-254(the)-256(data)-256(matrix)]"
+      ],
+      "/T1_6#1#7.298": [
+        "(M)"
+      ],
+      "/T1_0#1#0.0001": [
+        "(\\(i.e.,)",
+        "[(is)-309(the)]",
+        "[(number)-339(of)-338(ro)26(ws)]",
+        "[([2]",
+        "(There)",
+        "(a)",
+        "(re)",
+        "(similar)",
+        "(results)",
+        "(for)"
+      ],
+      "/T1_0#1#0.809": [
+        "(,)",
+        "(.)",
+        "[(There)-343(is)-342(a)-341(non-ne)16(g)6(ati)25(v)16(e)-346(non-decreasing)-345(function)]"
+      ],
+      "/T1_1#1#0.601": [
+        "(C)"
+      ],
+      "/T1_6#1#1.221": [
+        "(\\007)"
+      ],
+      "/T1_1#1#9.9626": [
+        "(X)",
+        "(\\003)",
+        "[]",
+        "(\\003)",
+        "(\\002)",
+        "[]",
+        "(f)",
+        "(f)",
+        "(\\002)",
+        "(f)",
+        "(f)",
+        "(f)",
+        "(f)"
+      ],
+      "/T1_6#1#3.524": [
+        "(\\007)",
+        "[]"
+      ],
+      "/T1_1#1#1.903": [
+        "(X)",
+        "(X)"
+      ],
+      "/T1_0#1#2.108": [
+        "(0)",
+        "[]",
+        "(0)"
+      ],
+      "/T1_0#1#1.6076": [
+        "[(00)204(0)]"
+      ],
+      "/T1_1#1#1.7": [
+        "(X)",
+        "(X)"
+      ],
+      "/T1_0#1#2.311": [
+        "(0)",
+        "[]",
+        "(0)"
+      ],
+      "/T1_0#1#1.4034": [
+        "[(11)-204(1)]"
+      ],
+      "/T1_6#1#1.222": [
+        "(\\007)"
+      ],
+      "/T1_7#1#8.342": [
+        "[(secur)37(ed)-295(X-e)20(xtension)]"
+      ],
+      "/T1_1#1#9.19": [
+        "(\\002)"
+      ],
+      "/T1_6#1#1.021": [
+        "(\\001)"
+      ],
+      "/T1_1#1#1.145": [
+        "(\\003)"
+      ],
+      "/T1_6#1#7.347": [
+        "(M)"
+      ],
+      "/T1_8#1#6.9738": [
+        "(X)",
+        "(\\005)",
+        "(\\005)",
+        "(\\005)",
+        "(\\002)",
+        "(\\006)",
+        "(\\006)",
+        "(\\006)",
+        "(\\006)"
+      ],
+      "/T1_1#1#0.1076": [
+        "(ft)",
+        "(ft)",
+        "(ft)",
+        "(ft)",
+        "(ft)",
+        "(ft)",
+        "(ft)"
+      ],
+      "/T1_0#1#1.981": [
+        "(,)"
+      ],
+      "/T1_6#1#0.5": [
+        "(M)"
+      ],
+      "/T1_0#1#0.311": [
+        "[(;s)311(e)311(e)]",
+        "[(T)81(able)-350(2.)-606(Here)]"
+      ],
+      "/T1_4#1#": [
+        "(,)",
+        "(,)",
+        "(,)",
+        "(,)",
+        "(,)",
+        "(,)",
+        "(,)",
+        "(p,\\001,B)",
+        "(i)",
+        "(\\001,B)",
+        "[(r,)-31(k)]",
+        "(i)",
+        "(,)",
+        "(,)",
+        "(,)"
+      ],
+      "/T1_3#1#": [
+        "(1)",
+        "(1)",
+        "[]",
+        "(0)",
+        "[]",
+        "(1)",
+        "[]",
+        "(0)",
+        "(1)",
+        "(1)",
+        "(+)",
+        "(=)",
+        "(+)",
+        "(+)",
+        "(=)",
+        "(1)",
+        "(0)",
+        "(1)"
+      ],
+      "/T1_2#1#11.105": [
+        "(9)"
+      ],
+      "/T1_6#1#": [
+        "(M)",
+        "(\\003)"
+      ],
+      "/T1_6#1#9.9626": [
+        "(\\254)",
+        "(\\254)",
+        "(\\003)",
+        "(\\003)",
+        "(\\003)",
+        "(\\t)",
+        "(\\003)"
+      ],
+      "/T1_4#1#0.0002": [
+        "(,X)",
+        "[]",
+        "(,X)",
+        "[]",
+        "(,X)",
+        "(,X)",
+        "(,X)",
+        "(,X)"
+      ],
+      "/T1_4#1#0.0169": [
+        "(X,)",
+        "[(X,)17(X)]",
+        "[]",
+        "(X,)",
+        "(X,)",
+        "[(X,)17(X)]",
+        "(X,)",
+        "(X,)"
+      ],
+      "/T1_3#1#0": [
+        "(1)",
+        "[]",
+        "(0)",
+        "[]",
+        "(0)",
+        "(0)",
+        "(\\)",
+        "(0)",
+        "(0)"
+      ],
+      "/T1_2#1#0.3878": [
+        "(\\)"
+      ],
+      "/T1_2#1#0.687": [
+        "(\\()",
+        "(\\()"
+      ],
+      "/T1_2#1#0.3883": [
+        "(\\)"
+      ],
+      "/T1_1#1#0.575": [
+        "(f)"
+      ],
+      "/T1_2#1#0.4402": [
+        "(\\)"
+      ],
+      "/T1_2#1#0.2778": [
+        "(\\)"
+      ],
+      "/T1_0#1#0.2505": [
+        "[(,e)251(t)250(c)251(.)]",
+        "[(It)-247(is)-246(important)-248(that)-248(for)-247(lot)-247(of)-247(4ft)-247(quanti\\036ers)]"
+      ],
+      "/T1_1#1#0.1658": [
+        "(,b)",
+        "(,c)",
+        "(,d)",
+        "(,b)",
+        "(,c)",
+        "(,d)",
+        "(,b)",
+        "(,c)",
+        "(,d)",
+        "(,b)",
+        "(,c)",
+        "(,d)",
+        "(,f)",
+        "(,...)",
+        "(,b)",
+        "(,c)",
+        "(,d)"
+      ],
+      "/T1_8#1#0": [
+        "(\\005)",
+        "(\\005)",
+        "(\\005)",
+        "(\\005)",
+        "(\\005)",
+        "(\\005)",
+        "(\\005)",
+        "(\\005)",
+        "(\\005)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)"
+      ],
+      "/T1_6#1#0.966": [
+        "(\\001)"
+      ],
+      "/T1_1#1#1.089": [
+        "(\\003)"
+      ],
+      "/T1_0#1#0.956": [
+        "[(is)-269(true)-268(in)-269(all)-268(the)-268(possible)]",
+        "(completions)"
+      ],
+      "/T1_2#1#1.056": [
+        "(\\()"
+      ],
+      "/T1_2#1#0.2781": [
+        "(\\)"
+      ],
+      "/T1_0#1#0.0004": [
+        "[([2,)-233(1)1(5]",
+        "[(The)-300(quadruple)]"
+      ],
+      "/T1_7#1#": [
+        "[(secur)36(ed)-300(com-)]",
+        "[(pletion)-319(of)]",
+        "(for)",
+        "[(table)-329(of)-331(maximal)]",
+        "(b)"
+      ],
+      "/T1_9#1#4.9813": [
+        "(\\002)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)"
+      ],
+      "/T1_1#1#1.118": [
+        "(f)"
+      ],
+      "/T1_1#1#1.119": [
+        "(f)",
+        "(f)"
+      ],
+      "/T1_2#1#0.444": [
+        "(0)"
+      ],
+      "/T1_2#1#0.943": [
+        "(0)",
+        "(1)",
+        "(2)"
+      ],
+      "/T1_0#1#5.141": [
+        "[(which)-273(can)-273(help)-273(to)-272(a)20(v)20(oid)-273(comple)16(x)-273(computation)]",
+        "[(related)-318(to)-318(some)-318(4ft-quanti\\036ers)-318(de\\036ned)-319(using)-318(statistical)-316(h)6(y-)]",
+        "[(pothesis)-252(tests.)-311(Examples)-252(of)-252(such)-251(4ft-quanti\\036ers)-252(are)]"
+      ],
+      "/T1_4#1#1.498": [
+        "(b)",
+        "(i)",
+        "(b)",
+        "(i)",
+        "(\\003)",
+        "(b)"
+      ],
+      "/T1_4#1#1.282": [
+        "(a)",
+        "(\\002)",
+        "(a)"
+      ],
+      "/T1_1#1#0.459": [
+        "(p)"
+      ],
+      "/T1_1#1#1.139": [
+        "(p)"
+      ],
+      "/T1_8#1#": [
+        "(\\212)"
+      ],
+      "/T1_1#1#1.404": [
+        "(\\004)",
+        "(B)"
+      ],
+      "/T1_6#1#1.005": [
+        "(\\007)"
+      ],
+      "/T1_1#1#1.028": [
+        "(a)"
+      ],
+      "/T1_6#1#1.155": [
+        "(\\n)"
+      ],
+      "/T1_3#1#0.0002": [
+        "(min\\()"
+      ],
+      "/T1_2#1#0.0005": [
+        "(\\)",
+        "()",
+        "(n)"
+      ],
+      "/T1_9#1#": [
+        "(\\212)",
+        "(k)",
+        "(r)"
+      ],
+      "/T1_9#1#0.706": [
+        "(\\212)",
+        "(i)"
+      ],
+      "/T1_6#1#1.834": [
+        "(\\t)"
+      ],
+      "/T1_1#1#1.055": [
+        "(\\004)"
+      ],
+      "/T1_6#1#1.116": [
+        "(\\007)"
+      ],
+      "/T1_6#1#0.807": [
+        "(\\n)"
+      ],
+      "/T1_1#1#1.056": [
+        "(B)",
+        "(f)",
+        "(f)"
+      ],
+      "/T1_1#1#0.1392": [
+        "(Tb)",
+        "(Tb)",
+        "(Tb)"
+      ],
+      "/T1_6#1#0.881": [
+        "(\\n)"
+      ],
+      "/T1_2#1#1.13": [
+        "(0)"
+      ],
+      "/T1_2#1#0.917": [
+        "(\\)",
+        "(\\)",
+        "(\\)"
+      ],
+      "/T1_6#1#0.3533": [
+        "(\\005{)"
+      ],
+      "/T1_6#1#0.2523": [
+        "[(}\\016{)253(\\017)252(})]"
+      ],
+      "/T1_6#1#0.875": [
+        "(\\n)"
+      ],
+      "/T1_2#1#1.223": [
+        "(0)"
+      ],
+      "/T1_2#1#0.4479": [
+        "(\\)"
+      ],
+      "/T1_1#1#0.4463": [
+        "[(b<T)307(b)]"
+      ],
+      "/T1_4#1#0": [
+        "(F)",
+        "(F)",
+        "(F)"
+      ],
+      "/T1_1#1#1.231": [
+        "(f)"
+      ],
+      "/T1_1#1#0.835": [
+        "(f)",
+        "(f)",
+        "(F)",
+        "(f)",
+        "(f)",
+        "(F)"
+      ],
+      "/T1_1#1#0.464": [
+        "(c)"
+      ]
+    },
+    "Content#3": {
+      "##": [
+        "(290)"
+      ]
+    },
+    "Content#4": {
+      "##": [
+        "(290)"
+      ]
+    }
+  },
+  "Page#5": {
+    "Content#0": {},
+    "Content#1": {},
+    "Content#2": {
+      "/T1_0#1#0": [
+        "(d)",
+        "(F)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\006)",
+        "(\\001)",
+        "(\\001)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\001)",
+        "(b)",
+        "(c)",
+        "(\\001)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)",
+        "(\\002)",
+        "(\\003)",
+        "(P)",
+        "(\\002)",
+        "(\\003)",
+        "(P)",
+        "(A)",
+        "(P)",
+        "(\\002)",
+        "(\\003)",
+        "(P)",
+        "(p)",
+        "(p)",
+        "(\\b)",
+        "(\\005)",
+        "(P)",
+        "(\\b)",
+        "(p)",
+        "(P)",
+        "(p)",
+        "(p)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(a)",
+        "(F)",
+        "(\\002)",
+        "(\\003)"
+      ],
+      "/T1_1#1#6.9738": [
+        "(F)",
+        "(F)",
+        "(F)",
+        "(S)",
+        "[(\\004,)-26(B)]",
+        "(S)",
+        "[(\\004,)-26(B)]",
+        "(\\005)",
+        "(\\001,B)",
+        "(n)",
+        "(\\005)",
+        "[(\\001,B)-49(ase)]",
+        "(S)",
+        "[(\\004,)-26(B)]",
+        "(\\005)",
+        "(\\001,B)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(\\003)",
+        "[]",
+        "(\\002)",
+        "(\\001)",
+        "(\\003)",
+        "(\\001)",
+        "(F)",
+        "(F)",
+        "(i)",
+        "(i)",
+        "(i)",
+        "(i)",
+        "(i)",
+        "(i)",
+        "(F)",
+        "(\\003)",
+        "(1)",
+        "[]",
+        "(\\002)",
+        "(2)",
+        "(\\003)",
+        "(2)"
+      ],
+      "/T1_2#1#9.9626": [
+        "(=)",
+        "(+)",
+        "(=)",
+        "(\\)",
+        "(\\)",
+        "(+)",
+        "(+)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)"
+      ],
+      "/T1_0#1#1.147": [
+        "(f)",
+        "(f)"
+      ],
+      "/T1_3#1#6.9738": [
+        "(0)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(\\()",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(3)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(3)",
+        "(4)",
+        "(+)",
+        "(+)",
+        "(+)",
+        "(1)",
+        "(2)",
+        "(1)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)"
+      ],
+      "/T1_1#1#": [
+        "(,)"
+      ],
+      "/T1_3#1#": [
+        "(0)",
+        "(\\()",
+        "(\\)",
+        "[]",
+        "(+)",
+        "(+)",
+        "(+)",
+        "(+)",
+        "(\\)"
+      ],
+      "/T1_4#1#": [
+        "(where)",
+        "[(such)-301(that)]",
+        "(of)",
+        "[(is)-316(de\\036ned)-319(for)]",
+        "(and)",
+        "[(by)-245(the)-245(condition)]",
+        "[(.)-307(The)-245(association)-245(rule)]",
+        "[(can)-276(be)-276(interpreted)-275(as)]",
+        "(quanti\\036er)",
+        "(and)",
+        "(by)",
+        "[(quantile)-251(of)-250(the)]",
+        "[(distrib)20(ution)-249(function.)]",
+        "[(The)-284(association)-284(rule)]",
+        "[(can)-285(be)-283(deri)25(v)16(ed)-286(from)-283(the)]",
+        "(statistical)",
+        "[(\\))-277(of)-277(the)-277(null)-278(h)6(ypothesis)]",
+        "(H0:)",
+        "(and)",
+        "[(are)-222(independent)-225(ag)6(ainst)-224(the)-223(alternati)25(v)16(e)-223(H1:)-297(the)]",
+        "[(log)6(arithmic)-300(interaction)-300(of)]",
+        "(and)",
+        "(and)",
+        "[(ha)20(v)16(e)-246(the)-245(s)-1(ame)-245(s)-1(ecured)-246(com-)]",
+        "(pletion)",
+        "[(as)-251(the)-251(Fisher\\222)55(s)-250(quanti\\036er)55(.)]",
+        "[(Still)-551(the)-551(question)-552(remains)-552(if)-551(there)-552(is)-551(a)-552(whole)-552(class)]",
+        "[(of)-433(4ft-quanti\\036ers)-435(that)-433(ha)20(v)16(e)-435(the)-433(s)-1(ame)-433(s)-1(ecured)-434(completion)]",
+        "[(.)-1270(The)-571(class)-570(of)-570(4ft-quanti\\036ers)-570(with)-570(F-)]",
+        "[(property)-309(is)-308(de\\036ned)-309(in)-308([10]",
+        "(\\(see)",
+        "(also)",
+        "([15]\\)",
+        "(such)",
+        "(that)",
+        "(the)",
+        "(4ft)",
+        "(quanti\\036er)",
+        "[(has)-252(the)]",
+        "(and)",
+        "(then)",
+        "(and)",
+        "(then)",
+        "[(has)-242(the)-241(s)-1(ame)-241(s)-1(ecured)-242(completion)]",
+        "(as)",
+        "[(the)-326(Fisher\\222)55(s)-326(quanti\\036er)-328(if)-325(and)-327(only)-326(if)]",
+        "[(has)-327(the)-326(F-property)65(.)]",
+        "[(There)-329(is)-328(also)-328(a)-328(direct)-329(proof)-328(in)-329([10]",
+        "(that)",
+        "(the)",
+        "(Fisher\\222)",
+        "(s)",
+        "(quan-)",
+        "[(ti\\036er)39(,)-398(the)-369(quanti\\036er)-370(of)-369(simple)-368(de)26(viation)-371(and)-369(the)]",
+        "(quan-)",
+        "[(ti\\036er)-424(ha)20(v)16(e)-425(the)-423(F-property)65(.)-832(It)-423(is)-423(an)-424(alternati)25(v)16(e)-425(proof)-425(that)]",
+        "[(these)-216(quanti\\036ers)-217(ha)20(v)16(e)-217(the)-216(abo)16(v)16(e)-217(de\\036ned)-217(secured)-217(completion)]",
+        "(.)",
+        "[(W)80(e)-251(are)-250(interested)-251(in)-250(the)-250(deduction)-253(rules)-250(of)-251(the)-251(form)]",
+        "[(where)-351(both)]",
+        "(and)",
+        "[(are)-351(association)-351(rules)]",
+        "(and)",
+        "[(is)-215(the)-216(4ft-quanti\\036er)-218(with)-216(the)-216(F-property)65(.)-300(Remember)]",
+        "[(that)-342(there)-341(are)-341(interesting)-341(results)-341(concerning)-343(correctness)-343(of)]",
+        "[(analogous)-252(rules)-251(with)-250(v)26(arious)-252(4ft-quanti\\036ers;)-251(see)-251(Section)-251(5.)]",
+        "[(There)-411(is)-410(a)-409(criterion)-410(of)-410(correctness)-411(of)-411(the)-410(rule)]",
+        "[(ho)26(we)26(v)16(er)-344(it)-340(is)-339(not)-341(too)-341(much)-341(simple.)-580(It)-340(is)-339(moreo)16(v)16(er)-344(kno)26(wn)]",
+        "[(only)-349(for)-349(association)-349(rules)]",
+        "[(such)-349(that)-349(the)-349(Boolean)]",
+        "[(attrib)20(utes)]",
+        "(and)",
+        "[(are)-237(deri)25(v)16(ed)-238(from)-237(the)-237(data)-237(matrix)-236(with)-236(the)]",
+        "[(Boolean)-350(columns)]",
+        "[(.)-605(I)-1(t)-348(means)-350(that)]",
+        "(and)",
+        "[(are)-375(deri)25(v)16(ed)-376(from)-375(predicates)]",
+        "[(and)-376(not)-375(from)]",
+        "[(basic)-286(Boolean)-288(attrib)20(utes)]",
+        "[(etc.)-419(The)-287(e)16(xample)]",
+        "[(of)-251(such)-251(the)-250(rule)-250(is)]",
+        "(and)",
+        "[(is)-338(one)-339(of)-338(Boolean)]",
+        "[(attrib)20(utes)]",
+        "[(then)-476(the)-476(propositional)-476(formula)]",
+        "[(related)-384(to)]",
+        "[(is)-385(de\\036ned)-386(as)]",
+        "(where)",
+        "[(is)-351(a)-350(propositional)-352(v)26(ariable.)-613(If)]",
+        "(and)",
+        "[(are)-351(Boolean)-352(at-)]",
+        "[(trib)20(utes)-227(deri)25(v)16(ed)-228(from)]",
+        "[(then)-227(the)-227(propositional)]",
+        "(formula)",
+        "[(related)-216(to)]",
+        "[(is)-217(de\\036ned)-218(as)]",
+        "[(and)-284(analogously)-285(for)-283(Boolean)-285(connecti)25(v)16(es)]",
+        "(and)",
+        "[(.)-409(Thus)-285(it)]",
+        "(is)",
+        "(etc.)",
+        "[(The)-361(presented)-361(criterion)-360(concerns)-363(a)-360(s)-1(peci\\036c)-361(subclass)-361(of)]",
+        "[(quanti\\036ers)-301(with)-300(the)-300(F-property)65(.)-460(W)80(e)-300(need)-300(notions)-301(of)-300(strong)]",
+        "[(symmetrical)-317(quanti\\036ers)-318(and)-318(the)]",
+        "[(property)65(.)-510(W)80(e)-317(s)-1(ay)-317(that)]",
+        "[(the)-250(4ft-quanti\\036er)]",
+        "[(if)-291(it)-290(has)-292(the)]",
+        "(prop-)",
+        "[(erty)-250(and)-251(if)-250(it)-250(satis\\036es)-251(the)-250(follo)26(wing)-251(conditions:)]",
+        "[(for)-247(each)-248(4ft-table)]",
+        "(and)",
+        "[(it)-249(is)]",
+        "[(for)-251(each)-252(4ft-table)]",
+        "(and)",
+        "(such)",
+        "(that)",
+        "(,)",
+        "(and)",
+        "(be)",
+        "[(the)-292(s)-1(trong)-292(symmetrical)-293(equi)25(v)26(alence)-296(quanti\\036er)-294(with)-292(the)]",
+        "[(property)65(.)-570(Then)-338(the)-337(deduction)-338(r)-1(ule)]",
+        "(where)",
+        "[(,)-322(and)]",
+        "[(is)-308(correct)-309(if)-308(and)]",
+        "[(only)-233(if)-233(at)-233(least)-233(one)-233(of)-234(the)-232(f)-1(ollo)26(wing)-234(conditions)-234(a\\))-234(\\226)-232(g\\))-233(is)-233(s)-1(at-)]",
+        "[(is\\036ed.)-300(\\(The)-220(symbol)]",
+        "[(denotes)-222(the)-220(propositional)-221(connecti)25(v)16(e)]",
+        "[(of)-251(implication.\\))]",
+        "[(The)-251(follo)26(wing)-251(formulas)-251(are)-250(tautologies)]",
+        "(,)",
+        "(,)",
+        "(,)",
+        "(.)",
+        "[(At)-250(least)-251(one)-251(of)-251(formulas)]",
+        "(and)",
+        "[(are)-250(tautologies.)]",
+        "[(The)-251(f)-1(ollo)26(wing)-251(formulas)-251(are)-250(tautologies)]",
+        "(.)"
+      ],
+      "/T1_0#1#1.037": [
+        "(F)"
+      ],
+      "/T1_1#1#0.0169": [
+        "[(X,)17(X)]"
+      ],
+      "/T1_5#1#0": [
+        "(|)",
+        "(\\r)",
+        "(\\007)",
+        "(\\r)",
+        "(\\007)",
+        "(\\212)",
+        "(\\r)",
+        "(\\002)",
+        "(\\002)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\212)",
+        "(\\001)",
+        "(\\001)",
+        "(\\212)",
+        "(\\001)",
+        "(\\002)",
+        "(\\001)",
+        "(\\002)",
+        "(\\001)",
+        "(P)",
+        "(P)",
+        "(P)",
+        "(P)",
+        "(\\006)",
+        "(\\254)",
+        "(P)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\200)",
+        "(\\001)",
+        "(\\002)",
+        "(\\003)",
+        "(\\001)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\001)",
+        "(\\001)",
+        "(\\022)",
+        "(P)",
+        "(P)",
+        "(\\254P)",
+        "(P)"
+      ],
+      "/T1_0#1#0.277": [
+        "(b)"
+      ],
+      "/T1_5#1#9.9626": [
+        "(\\212)",
+        "(|)",
+        "(\\n)",
+        "(\\007)",
+        "(\\003)",
+        "(\\003)",
+        "(\\003)",
+        "(\\003)",
+        "(\\001)",
+        "(\\001)",
+        "(\\007)",
+        "(\\001)",
+        "(\\006)",
+        "(\\007)",
+        "(\\007)"
+      ],
+      "/T1_0#1#1.036": [
+        "(c)"
+      ],
+      "/T1_4#1#0.0002": [
+        "(is)",
+        "[(minimal.)-310(The)-251(proof)-252(is)-250(rather)-251(complicated.)]",
+        "[(There)-330(is)-329(a)-329(natural)-330(question)-330(if)-329(there)-329(are)-329(some)-329(additional)]",
+        "[(4ft-quanti\\036ers)-258(that)-258(ha)20(v)16(e)-258(the)-257(s)-1(ame)-257(s)-1(ecured)-258(completion.)-333(T)81(w)10(o)]",
+        "[(additional)-313(4ft)-310(quanti\\036ers)-313(are)-310(de\\036ned)-313(in)-310([2]",
+        "(The)",
+        "(quanti\\036er)",
+        "(is)",
+        "(is)",
+        "[(if)25(f)]"
+      ],
+      "/T1_6#1#": [
+        "[(simple)-316(de)16(viation)]",
+        "[(the)-275(lo)10(garithmic)-275(inter)15(action)]",
+        "(of)",
+        "(and)",
+        "[(is)-250(estimated)-250(to)-250(be)-251(gr)37(eater)-251(than)]",
+        "[(F-pr)45(operty)]",
+        "[(str)45(ong)-251(symmetrical)]",
+        "(has)",
+        "[(pr)45(operty)]"
+      ],
+      "/T1_0#1#0.4382": [
+        "(\\006>)"
+      ],
+      "/T1_2#1#0": [
+        "(0)",
+        "(0)",
+        "(0)",
+        "(0)",
+        "(0)",
+        "(\\()",
+        "(\\()",
+        "(\\)",
+        "(0)",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()"
+      ],
+      "/T1_0#1#0.4511": [
+        "(B>)"
+      ],
+      "/T1_0#1#": [
+        "[(ad)-277(>)-278(e)]",
+        "(bc)",
+        "(.)",
+        "[(ad)-278(>)-277(bc)]",
+        "(a)",
+        "(a)",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(b)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(b)]",
+        "(a)",
+        "(a)",
+        "(\\007)",
+        "(P)",
+        "(P)",
+        "(P)",
+        "(\\b)",
+        "(\\b)",
+        "(\\005)",
+        "(P)",
+        "(P)",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(c,)-166(b,)-166(d)]",
+        "[(d,)-166(b,)-166(c,)-166(a)]",
+        "[(a,)-166(b,)-166(c,)]",
+        "[(a,)-166(b,)-166(c,)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(b)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(b)]",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)"
+      ],
+      "/T1_1#1#0": [
+        "(\\004)",
+        "(b)",
+        "(a)",
+        "(a)",
+        "(\\001)",
+        "(\\001)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(F)",
+        "(\\002)",
+        "(N)",
+        "(N)",
+        "(N)",
+        "(N)",
+        "(\\002)",
+        "(1)",
+        "(N)"
+      ],
+      "/T1_0#1#1.114": [
+        "(a)"
+      ],
+      "/T1_5#1#0.806": [
+        "(\\n)"
+      ],
+      "/T1_0#1#1.056": [
+        "(B)",
+        "(c)",
+        "(b)",
+        "(a)"
+      ],
+      "/T1_5#1#0.978": [
+        "(\\r)"
+      ],
+      "/T1_4#1#0.482": [
+        "(.)",
+        "(The)"
+      ],
+      "/T1_4#1#9.9626": [
+        "[(is)-284(de\\036ned)-285(for)]",
+        "[(test)-277(\\(on)-276(the)-277(le)26(v)16(el)-278(of)]",
+        "(.)",
+        "[(W)80(e)-468(are)-467(going)-468(to)-468(present)-468(this)-467(criterion)-467(in)-468(a)-467(bit)-468(infor)19(-)]",
+        "[(mal)-338(w)10(ay)65(,)-360(the)-338(formal)-338(one)-339(is)-338(out)-338(of)-338(the)-338(s)-1(cope)-339(of)-338(this)-338(paper)55(.)]",
+        "[(The)-270(criterion)-269(is)-270(based)-270(on)-270(propositional)-270(formulas)-270(associated)]",
+        "[(with)-337(Boolean)-339(attrib)20(utes)]",
+        "(,)",
+        "(,)",
+        "(,)",
+        "[(are)-308(b)20(uilt)-308(from)]"
+      ],
+      "/T1_0#1#0.3424": [
+        "(<\\004<)"
+      ],
+      "/T1_2#1#0.777": [
+        "(5)"
+      ],
+      "/T1_0#1#0.3283": [
+        "(B>)"
+      ],
+      "/T1_1#1#1.153": [
+        "(ad>bc)"
+      ],
+      "/T1_1#1#0.447": [
+        "(a)"
+      ],
+      "/T1_1#1#1.498": [
+        "(c)",
+        "(b)",
+        "(c)"
+      ],
+      "/T1_3#1#0.0001": [
+        "(\\)",
+        "()",
+        "(\\)",
+        "()",
+        "(\\)",
+        "()"
+      ],
+      "/T1_1#1#1.38": [
+        "(d)"
+      ],
+      "/T1_0#1#1.254": [
+        "(\\001)"
+      ],
+      "/T1_0#1#0.896": [
+        "(a)"
+      ],
+      "/T1_5#1#0.807": [
+        "(\\n)"
+      ],
+      "/T1_0#1#1.055": [
+        "(B)"
+      ],
+      "/T1_4#1#0.809": [
+        "(.)",
+        "(Here)"
+      ],
+      "/T1_0#1#2.193": [
+        "(\\001)"
+      ],
+      "/T1_2#1#": [
+        "(\\(1)",
+        "(\\()",
+        "(\\(0)",
+        "(0)",
+        "[(0\\))-282(=)-278(0)]"
+      ],
+      "/T1_0#1#0.997": [
+        "(\\004)"
+      ],
+      "/T1_2#1#0.643": [
+        "(\\)",
+        "(\\)"
+      ],
+      "/T1_5#1#0.994": [
+        "(\\r)"
+      ],
+      "/T1_0#1#4.054": [
+        "(\\001)"
+      ],
+      "/T1_0#1#8.065": [
+        "(\\004)"
+      ],
+      "/T1_4#1#0.0001": [
+        "[(is)-298(positi)25(v)16(e)1(.)-456(It)-298(is)-298(p)1(ro)16(v)16(e)1(d)]",
+        "[(in)-245([2]",
+        "(that)",
+        "(both)",
+        "[(if)-250(it)-250(satis\\036es:)]",
+        "[(1.)-501(If)]"
+      ],
+      "/T1_0#1#0.1658": [
+        "(,b)",
+        "(,c)",
+        "(,d)",
+        "(,b)",
+        "(,c)",
+        "(,d)",
+        "(,c)",
+        "(,d)",
+        "(,c)",
+        "(,d)",
+        "(,b)",
+        "(,c)",
+        "(,d)",
+        "(,b)",
+        "(,c)",
+        "(,d)",
+        "(,P)",
+        "(,P)",
+        "(,B)",
+        "(,...)",
+        "(,P)",
+        "(,P)",
+        "[(,b)166(,c)166(,d)]",
+        "[(,b)166(,c)166(,d)]",
+        "(,c)",
+        "(,d)",
+        "(,c)",
+        "(,d)",
+        "(,P)"
+      ],
+      "/T1_2#1#1.055": [
+        "(\\()",
+        "(0)",
+        "(\\()",
+        "(\\()",
+        "(0)",
+        "(\\()",
+        "(\\()",
+        "(\\()"
+      ],
+      "/T1_2#1#0.2794": [
+        "(\\)",
+        "(\\)"
+      ],
+      "/T1_5#1#0.706": [
+        "(\\n)"
+      ],
+      "/T1_5#1#0.655": [
+        "(\\212)"
+      ],
+      "/T1_2#1#1": [
+        "(1)",
+        "(1)",
+        "(1)",
+        "(1)"
+      ],
+      "/T1_5#1#0.778": [
+        "(\\n)",
+        "(\\n)"
+      ],
+      "/T1_2#1#0.2223": [
+        "(+1)",
+        "(+1)"
+      ],
+      "/T1_2#1#0.2785": [
+        "(\\)",
+        "(\\)",
+        "(\\)"
+      ],
+      "/T1_4#1#0": [
+        "(.)",
+        "[(2.)-501(If)]",
+        "(.)",
+        "[(It)-393(is)-393(also)-394(pro)16(v)16(ed)-395(in)-393([10]",
+        "(that)",
+        "(each)",
+        "(equi)",
+        "(v)",
+        "(alence)",
+        "(quanti-)",
+        "(\\036er)",
+        "(.)",
+        "[(The)-488(criterion)-487(of)-487(correctness)-488(is)-486(pro)16(v)16(ed)-489(in)-487([10]",
+        "(and)",
+        "(it)",
+        "[(can)-328(be)-328(a)-328(bit)-328(informally)-328(formulated)-328(as)-328(follo)26(ws.)-544(Let)]"
+      ],
+      "/T1_5#1#0.71": [
+        "(\\n)"
+      ],
+      "/T1_5#1#0.651": [
+        "(\\212)"
+      ],
+      "/T1_7#1#0.0001": [
+        "[(7)-1000(Results)-249(on)-250(F-pr)18(operty)]"
+      ],
+      "/T1_8#1#0": [
+        "[(7.1)-1150(Deduction)-383(Rules)-383(and)-383(F-prop)-32(ert)32(y)]"
+      ],
+      "/T1_5#1#0.931": [
+        "(\\001)"
+      ],
+      "/T1_0#1#9.9626": [
+        "(\\003)",
+        "[]",
+        "(\\002)",
+        "(\\003)",
+        "(\\003)",
+        "(\\003)",
+        "(\\003)",
+        "(P)"
+      ],
+      "/T1_9#1#6.9738": [
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\005)",
+        "(F)",
+        "(\\001)",
+        "(\\001)",
+        "(\\005)",
+        "(F)",
+        "(\\005)",
+        "(F)"
+      ],
+      "/T1_5#1#1.118": [
+        "(\\001)"
+      ],
+      "/T1_9#1#": [
+        "(\\005)",
+        "(F)"
+      ],
+      "/T1_5#1#1.114": [
+        "(\\001)"
+      ],
+      "/T1_0#1#3.939": [
+        "(\\002)"
+      ],
+      "/T1_3#1#0": [
+        "(2)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(2)"
+      ],
+      "/T1_0#1#0.1664": [
+        "(,...,P)",
+        "(,...,P)",
+        "(,...,P)",
+        "(,...,P)"
+      ],
+      "/T1_0#1#1.138": [
+        "(\\004)"
+      ],
+      "/T1_2#1#1.007": [
+        "(\\)"
+      ],
+      "/T1_0#1#0.889": [
+        "(P)",
+        "(P)",
+        "(P)",
+        "(p)"
+      ],
+      "/T1_4#1#0.5721": [
+        "[(.I)572(f)]"
+      ],
+      "/T1_0#1#4.177": [
+        "(P)"
+      ],
+      "/T1_2#1#0.778": [
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()"
+      ],
+      "/T1_2#1#0.5253": [
+        "(\\)"
+      ],
+      "/T1_0#1#0.1663": [
+        "(,...,P)"
+      ],
+      "/T1_5#1#3.382": [
+        "(P)"
+      ],
+      "/T1_5#1#1.037": [
+        "(\\007)"
+      ],
+      "/T1_0#1#0.763": [
+        "(\\005)",
+        "(\\005)"
+      ],
+      "/T1_2#1#0.659": [
+        "(\\)"
+      ],
+      "/T1_5#1#0.648": [
+        "(\\007)"
+      ],
+      "/T1_2#1#0.939": [
+        "(\\)"
+      ],
+      "/T1_5#1#0.0967": [
+        "(\\007P)"
+      ],
+      "/T1_2#1#1.048": [
+        "(\\)"
+      ],
+      "/T1_2#1#0.2778": [
+        "(\\)",
+        "(\\)"
+      ],
+      "/T1_5#1#0.5": [
+        "(P)"
+      ],
+      "/T1_5#1#0.2223": [
+        "(\\006\\254)",
+        "(\\006\\254)",
+        "(\\007P)",
+        "(\\007P)",
+        "[(\\007\\254)222(P)]",
+        "[(\\007\\254)222(P)]",
+        "(\\007P)",
+        "(\\007P)",
+        "[(\\007\\254)222(P)]",
+        "[(\\007\\254)222(P)]",
+        "(\\007P)",
+        "(\\007P)",
+        "[(\\007\\254)222(P)]",
+        "(\\007P)",
+        "(\\007P)",
+        "[(\\007\\254)222(P)]",
+        "[(\\007\\254)222(P)]",
+        "[(\\007\\254)222(P)]"
+      ],
+      "/T1_2#1#1.056": [
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()"
+      ],
+      "/T1_2#1#0.781": [
+        "(\\)"
+      ],
+      "/T1_2#1#0.2814": [
+        "(\\)"
+      ],
+      "/T1_4#1#0.642": [
+        "(.)",
+        "[(The)-292(4ft-quanti\\036er)]"
+      ],
+      "/T1_4#1#0.0003": [
+        "[(It)-247(is)]"
+      ],
+      "/T1_2#1#0.2799": [
+        "(\\)",
+        "(\\)"
+      ],
+      "/T1_5#1#": [
+        "(\\003)",
+        "(\\200)",
+        "(P)",
+        "(\\254P)",
+        "(\\254P)",
+        "(P)",
+        "(\\254P)",
+        "(\\254P)"
+      ],
+      "/T1_4#1#0.888": [
+        "(.)"
+      ],
+      "/T1_4#1#1": [
+        "[(There)-418(are)-417(4ft-tables)]"
+      ],
+      "/T1_5#1#8.58": [
+        "(\\002)"
+      ],
+      "/T1_9#1#0": [
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)"
+      ],
+      "/T1_2#1#0.711": [
+        "(+)",
+        "(+)"
+      ],
+      "/T1_0#1#0.96": [
+        "(b)",
+        "(c)",
+        "(d)",
+        "(b)",
+        "(c)",
+        "(d)"
+      ],
+      "/T1_2#1#0.612": [
+        "(+)"
+      ],
+      "/T1_2#1#0.615": [
+        "(+)"
+      ],
+      "/T1_2#1#0.798": [
+        "(=)"
+      ],
+      "/T1_5#1#1.012": [
+        "(\\001)"
+      ],
+      "/T1_0#1#0.608": [
+        "(\\002)"
+      ],
+      "/T1_0#1#5.904": [
+        "(P)"
+      ],
+      "/T1_7#1#": [
+        "(a\\)",
+        "(b\\)",
+        "(c\\)"
+      ],
+      "/T1_5#1#0.2774": [
+        "(\\022P)",
+        "(\\022P)",
+        "[(\\022\\254)277(P)]",
+        "[(\\022\\254)277(P)]",
+        "(\\022P)",
+        "[(\\022\\254)277(P)]",
+        "(\\022P)",
+        "[(\\022\\254)277(P)]"
+      ],
+      "/T1_2#1#1.444": [
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()"
+      ],
+      "/T1_5#1#0.2783": [
+        "[(\\022\\254)278(P)]"
+      ],
+      "/T1_5#1#0.5276": [
+        "(\\022P)"
+      ]
+    },
+    "Content#3": {
+      "##": [
+        "(291)"
+      ]
+    },
+    "Content#4": {
+      "##": [
+        "(291)"
+      ]
+    }
+  },
+  "Page#6": {
+    "Content#0": {},
+    "Content#1": {},
+    "Content#2": {
+      "/T1_0#1#": [
+        "(d\\)",
+        "(e\\)",
+        "(g\\)"
+      ],
+      "/T1_1#1#": [
+        "[(The)-251(follo)26(wing)-251(formulas)-251(are)-250(tautologies)]",
+        "(,)",
+        "(,)",
+        "(,)",
+        "(.)",
+        "[(The)-251(follo)26(wing)-251(formulas)-251(are)-250(tautologies)]",
+        "(,)",
+        "(,)",
+        "(,)",
+        "(.)",
+        "[(Both)-250(the)-251(follo)26(wing)-251(tw)10(o)-250(formulas)-251(are)-250(tautologies)]",
+        "(,)",
+        "(,)",
+        "[(and)-251(at)-251(least)-251(one)-251(of)-251(formulas)]",
+        "(,)",
+        "[(are)-250(tautologies.)]",
+        "[(Both)-250(the)-251(follo)26(wing)-251(tw)10(o)-250(formulas)-251(are)-250(tautologies)]",
+        "(,)",
+        "(,)",
+        "[(and)-251(at)-251(least)-251(one)-251(of)-251(formulas)]",
+        "(,)",
+        "[(are)-250(tautologies.)]",
+        "[(W)80(e)-328(already)-329(kno)25(w)-329(that)-328(the)-328(Fisher\\222)55(s)-327(quanti\\036er)39(,)-348(the)-327(quan-)]",
+        "[(ti\\036er)-321(of)-321(simple)-320(de)26(viation)-322(and)-321(the)]",
+        "[(quanti\\036er)-322(are)-321(equi)25(v)25(a-)]",
+        "[(lence)-303(quanti\\036ers.)-469(It)-302(is)-302(pro)16(v)16(ed)-304(in)-302([10]",
+        "(that)",
+        "(these)",
+        "(quanti\\036ers)",
+        "[(are)-213(also)-213(strong)-213(symmetrical)-213(and)-214(that)-213(the)16(y)-214(ha)20(v)16(e)]",
+        "[(property)65(.)]",
+        "[(It)-215(is)-215(pro)16(v)16(ed)-217(in)-215([10]",
+        "(that)",
+        "(for)",
+        "(the)",
+        "(symmetrical)",
+        "(4ft-quanti\\036er)",
+        "[(that)-254(assigns)-254(to)]",
+        "[(each)-221(triple)]",
+        "[(of)-220(natural)-221(numbers)-221(s)-1(atisfying)]",
+        "[(the)-269(number)]",
+        "[(such)-269(that)-270(for)-269(each)]",
+        "(and)",
+        "(where)",
+        "[(can)-354(be)-353(used)-354(in)-353(the)-353(s)-1(ame)-353(w)10(ay)]",
+        "[(as)-475(the)-475(function)]",
+        "[(called)-475(table)-476(of)-475(maximal)-476(b)-474(for)]",
+        "[(implicational)-378(quanti\\036er)]",
+        "[(,)-408(s)-1(ee)-377(Section)-377(5.)-690(The)-377(function)]",
+        "[(is)-251(called)]",
+        "[(There)-438(w)10(as)-438(a)-437(conjecture)-439(that)-438(ha)20(ving)-439(the)-437(s)-1(ame)-437(s)-1(ecured)]",
+        "[(completion)-516(as)-515(the)-515(Fisher\\222)55(s)-515(quanti\\036er)-516(is)-515(for)-515(equi)25(v)26(alence)]",
+        "[(quanti\\036ers)-288(the)-287(same)-286(as)-287(being)-288(symmetrical.)-419(Ho)26(we)26(v)16(er)-290(it)-287(can)]",
+        "[(be)-250(easy)-251(v)16(eri\\036ed)-251(that)-251(the)-250(4ft-quanti\\036er)]",
+        "[(de\\036ned)-252(such)-251(that)]",
+        "[(if)-250(and)-251(only)-251(if)]",
+        "[([10]",
+        "(such)",
+        "(that)",
+        "(it)",
+        "(is)",
+        "[(is)-202(equi)25(v)26(alence)-206(and)-203(symmetrical)]",
+        "[(b)20(ut)-299(it)-299(has)-300(not)-299(the)-299(F-property)-300(and)-300(thus)-300(it)-299(is)-299(equi)25(v)26(alence)-303(and)]",
+        "[(symmetrical)-299(b)20(ut)-299(it)-298(has)-299(not)-299(the)-298(s)-1(ame)-299(s)-1(ecured)-299(completion)-300(as)]",
+        "[(the)-250(Fisher\\222)55(s)-251(quanti\\036er)55(.)]",
+        "[(Thus)-252(the)-250(abo)16(v)16(e)-253(mentioned)-253(conjecture)-252(is)-250(denied.)]",
+        "[(The)-274(Fisher\\222)55(s)-273(quanti\\036er)39(,)-281(the)-273(quanti\\036er)-276(of)-274(simple)-273(de)26(via-)]",
+        "[(tion)-255(and)-257(the)]",
+        "[(quanti\\036er)-258(belong)-257(to)-255(the)-256(class)-255(of)-256(equi)25(v-)]",
+        "[(alence)-252(quanti\\036ers;)-251(see)-250([2]",
+        "[(is)-290(the)-290(Fisher\\222)55(s)-290(quanti\\036er)39(,)-300(the)-291(quanti\\036er)-291(of)-290(simple)]",
+        "[(de)26(viation)-281(or)-280(the)]",
+        "[(quanti\\036er)-281(then)-280(the)-279(rule)]",
+        "[(ex)-15(-)]",
+        "[(presses)-284(a)-283(tendenc)16(y)-286(of)]",
+        "(and)",
+        "[(to)-283(ha)20(v)16(e)-285(the)-283(s)-1(ame)-284(v)26(alue)]",
+        "(\\(either)",
+        "(or)",
+        "(The)",
+        "[(are)-199(de\\036ned)-201(by)]",
+        "[(,)-221(thus)-213(the)16(y)-214(also)-212(e)16(xpress)]",
+        "[(a)-353(t)-1(endenc)15(y)-356(of)]",
+        "(and)",
+        "[(to)-352(ha)20(v)16(e)-355(the)-353(same)-353(v)26(alues.)-620(An)]",
+        "[(e)16(xample)-197(is)-195(the)-196(quanti\\036er)]",
+        "[(de\\036ned)-198(by)-196(the)-195(condition)]",
+        "(a)",
+        "[(;)-250(s)-1(ee)-250(Section)-252(3.)]",
+        "[(Thus)-252(it)-250(is)-250(natural)-251(to)-250(ask)-250(the)-251(follo)26(wing)-251(questions:)]",
+        "[(Do)-278(the)-278(Fisher\\222)55(s)-278(quanti\\036er)39(,)-286(the)-278(quanti\\036er)-281(of)-278(simple)-277(de-)]",
+        "[(viation)-282(and)-282(the)]",
+        "[(quanti\\036er)-283(belong)-282(to)-281(the)-281(class)-281(of)]",
+        "(-)",
+        "[(equi)25(v)26(alence)-254(quanti\\036ers?)]",
+        "[(What)-256(is)-254(the)-255(relation)-255(of)-256(the)-255(class)-255(of)-255(quanti\\036ers)-257(with)-254(the)]",
+        "[(F-property)-251(to)-250(the)-250(class)-251(of)]",
+        "[(-equi)25(v)26(alence)-254(quanti\\036ers?)]",
+        "[(It)-240(is)-239(easy)-240(to)-239(pro)16(v)16(e)-242(that)-240(each)]",
+        "[(-equi)25(v)25(alence)-243(quanti\\036er)-242(has)]",
+        "[(the)-280(F-property)65(.)-401(Let)-280(us)-281(suppose)-281(that)]",
+        "[(-equi)25(v)25(alence)]",
+        "[(quanti\\036er)55(.)-312(W)80(e)-251(ha)20(v)16(e)-252(to)-249(pro)16(v)16(e)-253(\\(see)-249(Section)-252(6\\):)]",
+        "[(1.)-501(If)]",
+        "(and)",
+        "(then)",
+        "(and)",
+        "(then)",
+        "(and)",
+        "(for)",
+        "[(-equi)25(v)25(alence)]",
+        "[(quanti\\036ers.)-311(The)]",
+        "[(says)-248(that)-249(if)]",
+        "(and)",
+        "(then)"
+      ],
+      "/T1_2#1#0": [
+        "(P)",
+        "(P)",
+        "(P)",
+        "(P)",
+        "(P)",
+        "(P)",
+        "(\\001)",
+        "(\\002)",
+        "(\\003)",
+        "(\\001)",
+        "(|)",
+        "(\\b)",
+        "(|)",
+        "(\\001)",
+        "(A)",
+        "(\\001)",
+        "(A)",
+        "(\\006)",
+        "(\\007)",
+        "(\\006)",
+        "(\\007)",
+        "(\\006)",
+        "(\\007)",
+        "(\\001)",
+        "(B)",
+        "(\\001)",
+        "(B)",
+        "(\\001)",
+        "(B)",
+        "(\\200)",
+        "(\\001)",
+        "(\\200)",
+        "(\\f)",
+        "(p,B)",
+        "(\\200)",
+        "(\\200)",
+        "(\\001)",
+        "(\\001)",
+        "(\\212)",
+        "(\\001)",
+        "(\\212)",
+        "(\\001)",
+        "(\\001)",
+        "(\\212)",
+        "(\\001)",
+        "(\\001)"
+      ],
+      "/T1_3#1#0.778": [
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()"
+      ],
+      "/T1_4#1#": [
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "[(a,)-166(d,)-166(n)]",
+        "[(a,)-166(d,)-166(n)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(d,)-166(n)]",
+        "[(a,)-166(d,)-166(n)]",
+        "(a)",
+        "[(a,)-166(d,)-166(n)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(b)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(b)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "(c)",
+        "[(a,)-166(b)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "(a)",
+        "[(a,)-166(b)]"
+      ],
+      "/T1_5#1#6.9738": [
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(1)",
+        "(1)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(2)",
+        "(+)",
+        "(2)",
+        "(2)",
+        "(2)"
+      ],
+      "/T1_3#1#9.9626": [
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(+)",
+        "(+)",
+        "(+)",
+        "(+)",
+        "(+)",
+        "(+)",
+        "(=)",
+        "(=)",
+        "(=)",
+        "(=)"
+      ],
+      "/T1_2#1#0.2223": [
+        "(\\007P)",
+        "[(\\007\\254)222(P)]",
+        "[(\\007\\254)222(P)]",
+        "[(\\007\\254)222(P)]",
+        "(\\007P)",
+        "(\\007P)",
+        "[(\\007\\254)222(P)]",
+        "(\\007P)",
+        "(\\007P)",
+        "[(\\007\\254)222(P)]",
+        "[(\\007\\254)222(P)]",
+        "(\\007P)",
+        "(\\007P)",
+        "[(\\007\\254)222(P)]",
+        "[(\\007\\254)222(P)]",
+        "(\\007P)",
+        "(\\007P)",
+        "(\\007P)",
+        "[(\\007\\254)222(P)]",
+        "[(\\007\\254)222(P)]",
+        "(\\007P)",
+        "[(\\007\\254)222(P)]",
+        "[(\\007\\254)222(P)]",
+        "(\\007P)"
+      ],
+      "/T1_3#1#0": [
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)"
+      ],
+      "/T1_2#1#0.2774": [
+        "[(\\022\\254)277(P)]",
+        "(\\022P)",
+        "[(\\022\\254)277(P)]",
+        "(\\022P)",
+        "[(\\022\\254)277(P)]",
+        "[(\\022\\254)277(P)]",
+        "(\\022P)",
+        "(\\022P)",
+        "(\\022P)",
+        "[(\\022\\254)277(P)]",
+        "(\\022P)",
+        "[(\\022\\254)277(P)]",
+        "[(\\022\\254)277(P)]",
+        "(\\022P)",
+        "(\\022P)",
+        "[(\\022\\254)277(P)]"
+      ],
+      "/T1_2#1#": [
+        "(P)",
+        "(\\254P)",
+        "(\\254P)",
+        "(P)",
+        "(\\254P)",
+        "(\\254P)",
+        "(\\254P)",
+        "(\\254P)",
+        "(\\254P)",
+        "(\\254P)",
+        "(|)",
+        "(\\200)"
+      ],
+      "/T1_3#1#1.444": [
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()",
+        "(\\()"
+      ],
+      "/T1_0#1#0.0003": [
+        "(f\\)"
+      ],
+      "/T1_4#1#0": [
+        "(\\001)",
+        "(F)",
+        "(a)",
+        "(T)",
+        "(b)",
+        "(c)",
+        "(a)",
+        "(T)",
+        "(T)",
+        "(T)",
+        "(b)",
+        "(b)",
+        "(\\001)",
+        "(\\001)",
+        "(\\002)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\001)",
+        "(b)",
+        "(c)",
+        "(b)",
+        "(a)",
+        "(a)"
+      ],
+      "/T1_6#1#0": [
+        "[(7.2)-1150(T)96(ables)-446(of)-447(Critical)-447(F)96(requencies)-446(and)-447(F-)]",
+        "[(prop)-32(ert)32(y)]"
+      ],
+      "/T1_1#1#1.032": [
+        "[(with)-253(the)-253(F-property)-254(there)-254(is)-253(a)-253(function)]"
+      ],
+      "/T1_4#1#15.495": [
+        "(T)"
+      ],
+      "/T1_7#1#6.9738": [
+        "(\\005)",
+        "(\\005)",
+        "(\\005)",
+        "(\\005)",
+        "(\\006)",
+        "(\\005)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)"
+      ],
+      "/T1_3#1#0.637": [
+        "(+)"
+      ],
+      "/T1_4#1#0.886": [
+        "(d)"
+      ],
+      "/T1_2#1#0.798": [
+        "(\\t)"
+      ],
+      "/T1_4#1#1.056": [
+        "(n)",
+        "(a)",
+        "(c)",
+        "(b)",
+        "(a)"
+      ],
+      "/T1_2#1#0.742": [
+        "(\\n)"
+      ],
+      "/T1_3#1#1.09": [
+        "(0)",
+        "(0)"
+      ],
+      "/T1_2#1#0.745": [
+        "(\\n)"
+      ],
+      "/T1_3#1#0.751": [
+        "(+)"
+      ],
+      "/T1_4#1#1": [
+        "(b)",
+        "(c)",
+        "(d)",
+        "(c)",
+        "(c)"
+      ],
+      "/T1_3#1#0.651": [
+        "(+)"
+      ],
+      "/T1_3#1#0.655": [
+        "(+)"
+      ],
+      "/T1_3#1#0.799": [
+        "(=)"
+      ],
+      "/T1_4#1#1.055": [
+        "(n)",
+        "(c)",
+        "(b)",
+        "(p)",
+        "(B)",
+        "(b)",
+        "(a)",
+        "(b)"
+      ],
+      "/T1_1#1#0.0002": [
+        "[(it)-250(is)]",
+        "[(if)25(f)]",
+        "(is)",
+        "[(equi)25(v)26(alence,)-236(has)-229(the)-228(F-property)-229(\\(i.e.)-302(it)-228(has)-229(the)-228(s)-1(ame)-228(s)-1(ecured)]",
+        "[(completion)-266(as)-265(the)-265(Fisher\\222)55(s)-264(quanti\\036er\\))-266(and)-266(it)-264(is)-264(not)-266(symmet-)]",
+        "(rical.)",
+        "[(Let)-367(us)-366(de\\036ne)-368(the)-366(4ft-quanti\\036er)]",
+        "[(if)25(f)]"
+      ],
+      "/T1_3#1#1.056": [
+        "(\\()"
+      ],
+      "/T1_3#1#0.2794": [
+        "(\\)",
+        "(\\)",
+        "(\\)",
+        "(\\)"
+      ],
+      "/T1_4#1#0.277": [
+        "(b)",
+        "(b)"
+      ],
+      "/T1_2#1#0.652": [
+        "(\\212)"
+      ],
+      "/T1_2#1#0.2778": [
+        "(|\\n)"
+      ],
+      "/T1_1#1#0.642": [
+        "(.)",
+        "[(The)-354(f)-1(unction)]"
+      ],
+      "/T1_4#1#0.1392": [
+        "(Tb)"
+      ],
+      "/T1_7#1#0": [
+        "(\\002)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)"
+      ],
+      "/T1_8#1#4.9813": [
+        "(\\002)"
+      ],
+      "/T1_3#1#0.917": [
+        "(\\)"
+      ],
+      "/T1_9#1#3.556": [
+        "[(table)-250(of)-251(minimal)]"
+      ],
+      "/T1_2#1#0.651": [
+        "(\\212)",
+        "(\\212)"
+      ],
+      "/T1_1#1#0.71": [
+        "(.)"
+      ],
+      "/T1_6#1#0.0001": [
+        "[(7.3)-1150(Symmetry)-382(and)-383(F-prop)-32(ert)32(y)]"
+      ],
+      "/T1_3#1#0.707": [
+        "(=)"
+      ],
+      "/T1_3#1#0.2774": [
+        "(=0)",
+        "(=1)",
+        "(=0)",
+        "(=0)",
+        "(=1)"
+      ],
+      "/T1_4#1#0.718": [
+        "(b)",
+        "(b)",
+        "(b)"
+      ],
+      "/T1_4#1#0.922": [
+        "(c)",
+        "(c)",
+        "(c)"
+      ],
+      "/T1_3#1#0.2783": [
+        "(=2)",
+        "(=0)"
+      ],
+      "/T1_3#1#0.3499": [
+        "(\\)"
+      ],
+      "/T1_2#1#0.777": [
+        "(\\t)"
+      ],
+      "/T1_3#1#1.127": [
+        "(2)",
+        "(1)"
+      ],
+      "/T1_2#1#0.751": [
+        "(\\007)",
+        "(\\007)"
+      ],
+      "/T1_4#1#0.917": [
+        "(c)",
+        "(b)",
+        "(c)"
+      ],
+      "/T1_2#1#0.78": [
+        "(\\t)"
+      ],
+      "/T1_2#1#0.75": [
+        "(\\006)"
+      ],
+      "/T1_2#1#0.778": [
+        "(\\t)",
+        "(\\n)",
+        "(\\n)"
+      ],
+      "/T1_3#1#1.126": [
+        "(1)",
+        "(2)"
+      ],
+      "/T1_2#1#0.781": [
+        "(\\t)"
+      ],
+      "/T1_1#1#0.4248": [
+        "[(.I)424(t)]",
+        "[(can)-203(be)-203(easy)-202(v)16(eri\\036ed)-204(that)]"
+      ],
+      "/T1_0#1#0.0001": [
+        "[(8)-1000(F-pr)18(operty)-249(and)]",
+        "(\\001)",
+        "[(-equi)10(v)10(alence)-249(Rules)]"
+      ],
+      "/T1_1#1#0": [
+        "[(There)-251(are)-251(the)-250(follo)26(wing)-251(f)10(acts:)]",
+        "(.)",
+        "[(2.)-501(If)]",
+        "(.)",
+        "[(W)80(e)-399(pro)16(v)16(e)-400(the)-399(condition)-400(1\\),)-436(the)-399(proof)-400(of)-399(the)-399(condition)-400(2\\))]",
+        "[(is)-350(analogous.)-614(Let)-352(us)-351(suppose)]",
+        "(.)",
+        "[(Ho)26(we)26(v)16(er)39(,)-403(it)-370(follo)26(ws)-371(from)-370(the)-370(truth)-370(preserv)26(ation)-372(condition)]",
+        "(.)",
+        "[(In)-272(our)-273(case)-272(we)-272(ha)20(v)16(e)]"
+      ],
+      "/T1_1#1#0.0003": [
+        "(If)",
+        "(\\)"
+      ],
+      "/T1_2#1#0.986": [
+        "(\\001)"
+      ],
+      "/T1_4#1#1.109": [
+        "(\\003)"
+      ],
+      "/T1_9#1#2.86": [
+        "(true)"
+      ],
+      "/T1_9#1#0.0001": [
+        "(false)"
+      ],
+      "/T1_9#1#": [
+        "[(-equivalence)-202(quanti\\036er)9(s)]"
+      ],
+      "/T1_4#1#0.1393": [
+        "(TPC)",
+        "(TPC)",
+        "(TPC)"
+      ],
+      "/T1_5#1#0": [
+        "(\\002)",
+        "(,)",
+        "(\\002)",
+        "(,)",
+        "(\\002)",
+        "(,)"
+      ],
+      "/T1_7#1#": [
+        "(\\004)",
+        "(\\004)",
+        "(\\004)"
+      ],
+      "/T1_4#1#9.9626": [
+        "(a)"
+      ],
+      "/T1_4#1#0.86": [
+        "(d)",
+        "(d)",
+        "(c)",
+        "(c)"
+      ],
+      "/T1_2#1#9.9626": [
+        "(\\n)",
+        "(\\t)",
+        "(\\n)",
+        "(\\n)",
+        "(\\t)",
+        "(\\n)",
+        "(\\t)"
+      ],
+      "/T1_3#1#0.611": [
+        "(+)"
+      ],
+      "/T1_2#1#0.816": [
+        "(\\007)"
+      ],
+      "/T1_4#1#0.961": [
+        "(b)"
+      ],
+      "/T1_3#1#0.511": [
+        "(+)"
+      ],
+      "/T1_5#1#": [
+        "(+)",
+        "(d)",
+        "[]",
+        "(n)"
+      ],
+      "/T1_2#1#0.725": [
+        "(\\007)"
+      ],
+      "/T1_4#1#0.889": [
+        "(a)"
+      ],
+      "/T1_2#1#0.807": [
+        "(\\n)"
+      ],
+      "/T1_3#1#10.304": [
+        "(\\001)"
+      ],
+      "/T1_1#1#0.0001": [
+        "[(is)-279(the)]"
+      ],
+      "/T1_2#1#2.417": [
+        "(\\001)",
+        "(\\001)"
+      ],
+      "/T1_3#1#1.055": [
+        "(\\()",
+        "(0)",
+        "(\\()",
+        "(\\()",
+        "(0)",
+        "(\\()",
+        "(\\()",
+        "(\\()"
+      ],
+      "/T1_2#1#0.706": [
+        "(\\n)"
+      ],
+      "/T1_2#1#0.655": [
+        "(\\212)"
+      ],
+      "/T1_3#1#1": [
+        "(1)",
+        "(1)",
+        "(1)",
+        "(1)"
+      ],
+      "/T1_3#1#0.2223": [
+        "(+1)",
+        "(+1)"
+      ],
+      "/T1_4#1#0.1658": [
+        "(,c)",
+        "(,d)",
+        "(,c)",
+        "(,d)",
+        "(,c)",
+        "(,d)",
+        "(,b)",
+        "(,c)",
+        "(,d)",
+        "(,c)",
+        "(,d)"
+      ],
+      "/T1_3#1#0.2785": [
+        "(\\)",
+        "(\\)"
+      ],
+      "/T1_2#1#0.71": [
+        "(\\n)"
+      ],
+      "/T1_3#1#1.242": [
+        "(\\()"
+      ],
+      "/T1_3#1#0.4655": [
+        "(\\)"
+      ],
+      "/T1_2#1#0.892": [
+        "(\\n)"
+      ],
+      "/T1_2#1#0.723": [
+        "(\\212)"
+      ],
+      "/T1_3#1#1.068": [
+        "(1)",
+        "(1)"
+      ],
+      "/T1_2#1#0.948": [
+        "(\\n)"
+      ],
+      "/T1_3#1#1.225": [
+        "(0)"
+      ],
+      "/T1_1#1#0.3422": [
+        "[(,)-23(w)342(eh)343(a)363(v)358(et)342(os)342(h)343(o)368(w)]"
+      ],
+      "/T1_3#1#9.589": [
+        "(\\()"
+      ],
+      "/T1_3#1#0.29": [
+        "(+1)"
+      ],
+      "/T1_3#1#0.4483": [
+        "(\\)"
+      ],
+      "/T1_1#1#9.9626": [
+        "(:)"
+      ],
+      "/T1_4#1#0.563": [
+        "(a)"
+      ],
+      "/T1_4#1#0.809": [
+        "(d)",
+        "(d)",
+        "(c)",
+        "(c)"
+      ],
+      "/T1_3#1#0.56": [
+        "(+)"
+      ],
+      "/T1_2#1#0.752": [
+        "(\\007)"
+      ],
+      "/T1_4#1#0.897": [
+        "(b)"
+      ],
+      "/T1_3#1#0.461": [
+        "(+)"
+      ],
+      "/T1_3#1#0.2799": [
+        "(\\)"
+      ],
+      "/T1_4#1#0.919": [
+        "(d)",
+        "(d)",
+        "(c)",
+        "(c)"
+      ],
+      "/T1_3#1#0.669": [
+        "(+)"
+      ],
+      "/T1_2#1#0.889": [
+        "(\\007)"
+      ],
+      "/T1_4#1#1.035": [
+        "(b)"
+      ],
+      "/T1_3#1#0.57": [
+        "(+)"
+      ],
+      "/T1_3#1#0.2781": [
+        "(\\)"
+      ],
+      "/T1_4#1#1.097": [
+        "(b)",
+        "(c)",
+        "(d)"
+      ],
+      "/T1_3#1#0.2385": [
+        "(+1)"
+      ],
+      "/T1_2#1#0.671": [
+        "(\\212)"
+      ],
+      "/T1_3#1#1.016": [
+        "(1)"
+      ]
+    },
+    "Content#3": {
+      "##": [
+        "(292)"
+      ]
+    },
+    "Content#4": {
+      "##": [
+        "(292)"
+      ]
+    }
+  },
+  "Page#7": {
+    "Content#0": {},
+    "Content#1": {},
+    "Content#2": {
+      "/T1_0#1#": [
+        "[(and)-230(thus)]",
+        "[(and)-230(according)-231(to)]",
+        "[(.)-414(This)-285(\\036nishes)-285(the)]",
+        "(proof.)",
+        "[(The)-401(question)-400(remains)-401(if)-400(there)-399(are)-400(some)-400(4ft-quanti\\036ers)]",
+        "[(with)-256(the)-257(F-property)-257(that)-257(are)-257(not)]",
+        "[(-equi)25(v)26(alence.)-334(It)-256(is)-256(pro)16(v)16(ed)]",
+        "[(in)-308([12]",
+        "(that)",
+        "(the)",
+        "(Fisher\\222)",
+        "(s)",
+        "(quanti\\036er)",
+        "(,)",
+        "(the)",
+        "(quanti\\036er)",
+        "(of)",
+        "(simple)",
+        "[(de)26(viation)-344(and)-344(the)]",
+        "[(quanti\\036er)-345(are)-343(e)16(xamples)-345(of)-343(important)]",
+        "[(quanti\\036ers)-414(with)-412(the)-413(F-property)-413(that)-414(do)-413(not)-413(belong)-414(to)-412(the)]",
+        "[(class)-309(of)]",
+        "[(-equi)25(v)26(alence)-313(quanti\\036ers.)-489(The)-310(proof)-310(is)-309(out)-310(of)-309(the)]",
+        "[(scope)-276(of)-276(this)-276(paper)55(.)-388(It)-275(is)-275(based)-277(on)-276(the)-275(notion)-276(of)-276(the)]",
+        "[(has)-335(the)]",
+        "(and)",
+        "[(such)-500(that)]",
+        "[(has)-354(the)]",
+        "[(-property)-470(then)-469(it)-467(is)-468(not)]",
+        "[(-equi)25(v)26(alence.)-970(It)-468(is)-468(also)]",
+        "[(pro)16(v)16(ed)-241(in)-238([12]",
+        "(that)",
+        "(Fisher\\222)",
+        "(s)",
+        "(quanti\\036er)",
+        "(,)",
+        "(the)",
+        "(quanti\\036er)",
+        "(of)",
+        "(sim-)",
+        "[(ple)-205(de)26(viation)-206(and)-206(the)]",
+        "[(quanti\\036er)-207(ha)20(v)16(e)-206(the)]",
+        "[(-equi)25(v)25(alence.)]",
+        "[(Association)-479(rules)-479(can)-480(be)-479(de\\036ned)-481(as)-479(general)-481(relations)]",
+        "[(of)-465(tw)10(o)-463(Boolean)-466(attrib)20(utes)-465(deri)25(v)16(ed)-466(in)-463(v)26(arious)-466(w)10(ays)-465(from)]",
+        "[(columns)-253(of)-251(analyzed)-253(data)-252(matrix.)-312(Se)26(v)16(eral)-252(classes)-252(of)-251(associ-)]",
+        "[(ation)-293(rules)-293(related)-293(to)-292(types)-294(of)-293(these)-292(r)-1(elations)-294(is)-292(introduced.)]",
+        "[(Ov)16(ervie)26(w)-214(of)-212(the)-212(theoretically)-213(interesting)-211(and)-213(practically)-212(im-)]",
+        "[(portant)-251(results)-250(related)-250(to)-250(these)-251(classes)-251(is)-250(gi)25(v)16(en.)]",
+        "[(A)-332(ne)26(w)-333(class)-332(of)-332(association)-333(rules)-332(with)-332(F-property)-333(is)-331(de-)]",
+        "[(scribed)-266(in)-266(a)-266(detailed)-267(w)10(ay)65(.)-360(This)-266(class)-267(contains)-268(important)-267(as-)]",
+        "[(sociation)-272(rules)-271(corresponding)-272(to)-272(the)-271(Fisher\\222)55(s)-271(test)-270(and)-272(to)-271(the)]",
+        "[(-equi)25(v)26(alence)-254(rules)-251(is)-250(s)-1(tudied.)]",
+        "[(There)-205(are)-205(tens)-205(of)-204(additional)-206(measures)-205(for)-205(association)-205(pat-)]",
+        "[(terns)-323(described)-324(in)-322(literature;)-359(see)-322(e.g.)-528([7]",
+        "(These)",
+        "(measures)",
+        "[(can)-235(be)-234(understood)-235(as)-234(the)-234(additional)-235(4ft-quanti\\036ers.)-306(W)80(e)-234(sup-)]",
+        "[(pose)-271(to)-270(s)-1(tudy)-271(relations)-271(of)-271(these)-270(additional)-272(4ft-quanti\\036ers)-272(to)]",
+        "[(kno)26(wn)-252(classes)-251(of)-251(association)-251(rules.)]",
+        "[([1]",
+        "(Aggra)",
+        "(v)",
+        "(al)",
+        "(R)",
+        "(et)",
+        "(al.)",
+        "(\\(1996\\)",
+        "(F)",
+        "(ast)",
+        "(Disco)",
+        "(v)",
+        "(ery)",
+        "(of)",
+        "(Associa-)",
+        "[(tion)-294(Rules.)-294(I)-1(n:)-397(F)16(ayyad,)-308(U.)-294(M.)-294(et)-294(al.\\(Eds.\\))-294(Adv)26(ances)-297(in)]",
+        "[(Kno)26(wledge)-253(Disco)16(v)16(ery)-252(and)-252(Data)-250(Mining.)-251(AAAI)-251(Press)]",
+        "[([2]",
+        "(H)",
+        "(\\264)",
+        "[(ajek)-360(P)111(,)-360(Ha)20(vr)]",
+        "(\\264)",
+        "[(anek)-361(T)-359(\\()-1(1978\\))-361(Mechanising)-361(Hypothesis)]",
+        "[(F)16(ormation)-394(-)-393(Mathematical)-395(F)16(oundations)-397(for)-393(a)-394(General)]",
+        "[(Theory)65(.)-252(Springer)39(,)-251(Berlin)-250(Heidelber)18(g)-252(Ne)26(w)-251(Y)110(ork)]",
+        "[([3]",
+        "(H)",
+        "(\\264)",
+        "[(ajek)-513(P)-511(\\(guest)-513(ed.\\))-512(\\(1978\\))-513(International)-514(Journal)-513(of)]",
+        "[(Man-Machine)-253(Studies,)-251(s)-1(pecial)-252(issue)-250(on)-250(GUHA,)-252(10)]",
+        "[([4]",
+        "(H)",
+        "(\\264)",
+        "[(ajek)-513(P)-511(\\(guest)-513(ed.\\))-512(\\(1981\\))-513(International)-514(Journal)-513(of)]",
+        "[(Man-Machine)-252(Studies,)-251(s)-1(econd)-251(special)-251(issue)-248(on)-250(GUHA,)]",
+        "(15)",
+        "[([5]",
+        "(H)",
+        "(\\264)",
+        "[(ajek)-253(P)111(,)-252(Ha)20(vr)]",
+        "(\\264)",
+        "[(anek)-254(T)74(,)-253(Ch)6(ytil)-253(M)-251(\\()-1(1983\\))-253(GUHA)-253(Method.)]",
+        "[(Academia,)-252(Prague)-252(\\(in)-250(Czech\\))]",
+        "[([6]",
+        "(H)",
+        "(\\264)",
+        "[(ajek)-414(P)111(,)-414(Sochoro)16(v)]",
+        "(\\264)",
+        "[(aA)415(,Z)415(v)]",
+        "(\\264)",
+        "[(aro)16(v)]",
+        "(\\264)",
+        "[(a)-415(J)-413(\\(1995\\))-414(GUHA)-414(for)]",
+        "[(personal)-406(computers.)-406(Computational)-407(Statistics)-403(&)-405(Data)]",
+        "[(Analysis,)-250(19)]",
+        "[([7]",
+        "(P)",
+        "(ang-Ning)",
+        "(T)",
+        "(,)",
+        "(K)",
+        "(umar)",
+        "(V)",
+        "(,)",
+        "(Sri)",
+        "(v)",
+        "(asta)",
+        "(v)",
+        "(a)",
+        "(J)",
+        "(\\(2004\\)",
+        "(Selecting)",
+        "[(the)-280(Right)-279(Objecti)25(v)16(e)-281(Measure)-280(for)-279(Association)-280(Analysis.)]",
+        "[(Information)-251(Systems,)-250(29)]",
+        "[([8]",
+        "(Ralbo)",
+        "(vsk)",
+        "(\\264)",
+        "[(y)-320(M,)-317(K)15(ucha)]",
+        "(\\030)",
+        "[(r)-319(T)-317(\\(2007\\))-318(Using)-317(Disjunctions)-318(in)]",
+        "[(Association)-360(Mining.)-360(In:)-529(Perner)-361(P)-359(\\(Ed.\\):)-528(Adv)26(ances)-363(in)]",
+        "[(Data)-394(Mining)-394(-)-393(Theoretical)-395(Aspects)-393(and)-394(Applications.)]",
+        "[(Springer)39(,)-251(Berlin)-250(Heidelber)18(g)-252(Ne)26(w)-251(Y)110(ork)]",
+        "[([9]",
+        "(Rauch)",
+        "(J)",
+        "(\\(1975\\)",
+        "(Ein)",
+        "(Beitrag)",
+        "(zu)",
+        "(der)",
+        "(GUHA)",
+        "(Methode)",
+        "(in)",
+        "[(der)-251(dreiwertigen)-252(Logik.)-252(K)25(ybernetika,)-252(11)]",
+        "[([10]",
+        "(Rauch)",
+        "(J)",
+        "(\\()",
+        "(1986\\)",
+        "(Logical)",
+        "(F)",
+        "(oundations)",
+        "(of)",
+        "(Hypothesis)",
+        "[(F)16(ormation)-409(from)-407(Databases.)-410(Mathematical)-410(Institute)-407(of)]",
+        "[(the)-342(Czechoslo)16(v)26(ak)-345(Academy)-344(of)-341(Sciences,)-366(Prague,)-366(Dis-)]",
+        "[(sertation)-250(\\(in)-250(Czech\\))]",
+        "[([11]",
+        "(Rauch)",
+        "(J)",
+        "(\\()",
+        "(1998\\)",
+        "(Classes)",
+        "(of)",
+        "(F)",
+        "(our)",
+        "(-F)",
+        "(old)",
+        "(T)",
+        "(able)",
+        "(Quanti-)",
+        "[(\\036ers.)-476(In:)-761(Zytk)10(o)26(w)-478(J,)-475(Quaf)10(afou)-477(M)-475(\\(Eds.\\):)-761(Principles)]",
+        "[(of)-406(Data)-406(Mining)-406(and)-407(Kno)26(wledge)-408(Disco)16(v)16(ery)65(.)-408(Springer)39(,)]",
+        "[(Berlin)-250(Heidelber)18(g)-252(Ne)26(w)-251(Y)110(ork)]",
+        "[([12]",
+        "(Rauch)",
+        "(J)",
+        "(\\()",
+        "(1998\\)",
+        "(Contrib)",
+        "(ution)",
+        "(to)",
+        "(Logical)",
+        "(F)",
+        "(oundations)",
+        "[(of)-235(KDD.)-236(Uni)25(v)16(ersity)-236(of)-235(Economics)-237(Prague,)-240(Assoc.)-235(Prof.)]",
+        "[(Thesis)-251(\\(in)-250(Czech\\))]",
+        "[([13]",
+        "(Rauch)",
+        "(J)",
+        "(\\(2004\\)",
+        "(De\\036nability)",
+        "(of)",
+        "(Association)",
+        "(Rules)",
+        "(and)",
+        "[(T)81(ables)-227(of)-226(Critical)-225(Frequencies.)-228(In:)-298(Lin)-225(T)-226(Y)-226(et)-225(al.)-226(\\(Eds.\\):)]",
+        "[(F)16(oundations)-207(of)-204(Data)-204(Mining.)-205(Brighton,)-214(IEEE)-204(Computer)]",
+        "(Society)",
+        "[([14]",
+        "(Rauch)",
+        "(J)",
+        "(\\()",
+        "(2005\\)",
+        "(Logic)",
+        "(of)",
+        "(Association)",
+        "(Rules.)",
+        "(Applied)",
+        "[(Intelligence,)-252(22)]",
+        "[([15]",
+        "(Rauch)",
+        "(J)",
+        "(\\(2005\\)",
+        "(Classes)",
+        "(of)",
+        "(Association)",
+        "(Rules,)",
+        "(an)",
+        "[(Ov)16(ervie)26(w)65(.)-260(In:)-323(Lin)-257(T)-257(Y)129(,)-257(Xie)-257(Y)-256(\\(Eds.\\).)-256(F)16(oundation)-260(of)-257(se-)]",
+        "[(mantic)-242(Oriented)-241(Data)-242(and)-242(W)80(eb)-241(Mining.)-242(Houston,)-243(IEEE)]",
+        "[(Computer)-253(Society)]",
+        "[([16]",
+        "(Rauch)",
+        "(J,)",
+        "(\\030)",
+        "(Sim)",
+        "(\\035)",
+        "[(unek)-234(M)-231(\\()-1(2005\\))-233(An)-231(Alternati)25(v)16(e)-233(Approach)]",
+        "[(to)-302(Mining)-302(Association)-302(Rules.)-303(In:)-414(Lin)-302(T)-301(Y)-302(et)-302(al.)-303(\\(Eds.\\))]",
+        "[(Data)-225(Mining:)-298(F)16(oundations,)-232(Methods,)-231(and)-225(Applications.)]",
+        "[(Springer)39(,)-251(Berlin)-250(Heidelber)18(g)-252(Ne)26(w)-251(Y)110(ork)]",
+        "[([17]",
+        "(Rauch)",
+        "(J,)",
+        "(\\030)",
+        "(Sim)",
+        "(\\035)",
+        "[(unek)-545(M)-543(\\()-1(2005\\))-544(GUHA)-544(Method)-545(and)]",
+        "[(Granular)-328(Computing.)-330(In:)-465(Hu,)-347(X)-327(et)-327(al.)-327(\\(Eds.\\))-328(Proceed-)]",
+        "[(ings)-250(of)-250(IEEE)-250(conference)-252(Granular)-251(Computing.)-252(Beijing,)]",
+        "[(IEEE)-251(Computer)-252(Society)]",
+        "[([18]",
+        "(Rauch)",
+        "(J,)",
+        "(\\030)",
+        "(Sim)",
+        "(\\035)",
+        "[(unek)-334(M:)-332(Semantic)-334(W)80(eb)-333(Presentation)-333(of)]",
+        "[(Analytical)-464(Reports)-463(from)-461(Data)-463(Mining)-462(\\226)-462(Preliminary)]",
+        "[(Considerations.)-252(I)-1(n)-250(Proceedings)-253(of)-251(W)80(eb)-251(Intelligence)-251(07)]"
+      ],
+      "/T1_1#1#0": [
+        "(a)",
+        "(\\001)",
+        "(b)",
+        "(\\001)",
+        "(\\001)"
+      ],
+      "/T1_2#1#6.9738": [
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)"
+      ],
+      "/T1_3#1#9.9626": [
+        "(+)",
+        "(=)",
+        "(+)",
+        "(=)",
+        "(+)"
+      ],
+      "/T1_1#1#0.922": [
+        "(d)",
+        "(d)",
+        "(c)",
+        "(c)"
+      ],
+      "/T1_1#1#1.055": [
+        "(a)"
+      ],
+      "/T1_3#1#0.673": [
+        "(+)"
+      ],
+      "/T1_4#1#0.894": [
+        "(\\007)"
+      ],
+      "/T1_1#1#1.041": [
+        "(b)"
+      ],
+      "/T1_1#1#1.056": [
+        "(b)"
+      ],
+      "/T1_3#1#0.574": [
+        "(+)"
+      ],
+      "/T1_1#1#0.1393": [
+        "(TPC)"
+      ],
+      "/T1_5#1#0": [
+        "(\\002)"
+      ],
+      "/T1_6#1#0.816": [
+        "(,)"
+      ],
+      "/T1_2#1#": [
+        "(\\004)"
+      ],
+      "/T1_0#1#0.0002": [
+        "[(it)-284(is)]"
+      ],
+      "/T1_4#1#0": [
+        "(\\001)",
+        "(\\212)",
+        "(\\001)",
+        "(\\002)",
+        "(\\003)",
+        "(\\002)",
+        "(\\003)",
+        "(\\001)"
+      ],
+      "/T1_3#1#1.119": [
+        "(\\()"
+      ],
+      "/T1_1#1#": [
+        "[(a,)-166(b)]",
+        "(AD)",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(b)]",
+        "[(a,)-166(b,)-166(c,)-166(d)]",
+        "[(a,)-166(b)]",
+        "(AD)",
+        "(AD)"
+      ],
+      "/T1_3#1#0.2476": [
+        "(+1)"
+      ],
+      "/T1_1#1#0.1658": [
+        "(,c)",
+        "(,d)",
+        "(,c)",
+        "(,d)",
+        "(,c)",
+        "(,d)"
+      ],
+      "/T1_3#1#1.025": [
+        "(1)"
+      ],
+      "/T1_3#1#0.3417": [
+        "(\\)"
+      ],
+      "/T1_3#1#0": [
+        "(\\001)",
+        "(\\001)",
+        "(\\()",
+        "(\\()",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)"
+      ],
+      "/T1_5#1#6.9738": [
+        "(2)",
+        "(2)",
+        "(2)"
+      ],
+      "/T1_1#1#20.775": [
+        "(AD)"
+      ],
+      "/T1_3#1#": [
+        "(01)",
+        "(01)",
+        "(01)",
+        "(01)"
+      ],
+      "/T1_0#1#0": [
+        "(-)",
+        "[(property)65(.)-562(W)80(e)-334(s)-1(ay)-334(that)-334(the)-334(4ft)-334(quanti\\036er)]",
+        "(.)",
+        "[(There)-354(is)-353(a)-354(theorem)-354(saying)-354(that)-355(if)-353(the)-353(quanti\\036er)]",
+        "[(-property)66(.)]",
+        "[(Thus)-252(these)-250(quanti\\036ers)-252(are)-251(not)]"
+      ],
+      "/T1_7#1#0": [
+        "(-)",
+        "[(pr)45(operty)]"
+      ],
+      "/T1_0#1#0.0001": [
+        "[(if)-250(there)-251(a)1(re)]"
+      ],
+      "/T1_2#1#0": [
+        "(\\001)",
+        "(\\001)",
+        "(\\001)",
+        "(\\001)"
+      ],
+      "/T1_3#1#0.655": [
+        "(+)"
+      ],
+      "/T1_1#1#1.004": [
+        "(c)",
+        "(c)"
+      ],
+      "/T1_3#1#0.72": [
+        "(=)"
+      ],
+      "/T1_1#1#1.065": [
+        "(b)"
+      ],
+      "/T1_4#1#0.5421": [
+        "(\\007\\001)",
+        "(\\007\\001)"
+      ],
+      "/T1_3#1#0.2889": [
+        "(\\)"
+      ],
+      "/T1_3#1#0.288": [
+        "(\\)"
+      ],
+      "/T1_8#1#0.0001": [
+        "[(9)-1000(Conclusions)-248(and)-250(Further)-248(W)76(ork)]",
+        "[(Refer)18(ences)]"
+      ],
+      "/T1_0#1#9.9626": [
+        "[(test.)-308(Relation)-248(of)-248(the)-247(class)-248(of)-247(rules)-248(with)-247(the)-247(F-property)-248(to)]",
+        "[(the)-250(class)-251(of)]"
+      ]
+    },
+    "Content#3": {
+      "##": [
+        "(293)"
+      ]
+    },
+    "Content#4": {
+      "##": [
+        "(293)"
+      ]
+    }
+  }
+}

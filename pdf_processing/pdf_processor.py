@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-06 16:58:51
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-11 23:30:26
+# @Last Modified time: 2017-03-14 00:06:14
 
 
 
@@ -23,6 +23,8 @@ from json import loads
 from pprint import pprint
 from re import compile
 from re import findall
+from re import IGNORECASE
+from collections import defaultdict
 
 
 
@@ -31,6 +33,12 @@ from re import findall
 from pdfminer.pdfdocument import PDFDocument
 from pdfminer.pdfparser import PDFParser
 from pdfminer.pdftypes import PDFStream
+
+
+
+
+# chardet library imports
+from chardet import detect
 
 
 
@@ -50,6 +58,8 @@ KIDS = 'Kids'
 # Globals
 # The global dict that holds the mapping of the page to its corressponding contents.
 __pdf_contents_dict__ = {}
+TEST_PDF = 'obscalculi_testing_pdf_conv.pdf'
+TEST_PDF_2 = '07817034.pdf'
 
 
 
@@ -174,9 +184,13 @@ def extract_page_contents(page_nbr, page):
 
   # contruct the page_dict
   # The value is converted to string since the JSON conversion of bytes is hard.
+  # using chardet's detection of encoding, encode the bytes into the str format
+  # using the detected encoding.
   for index, stream_obj in enumerate(contents):
     stream_obj.decode()
-    page_dict['Content#{}'.format(index)] = str(stream_obj.data)
+    chardet_detected_encoding = detect(stream_obj.data)['encoding']
+    page_dict['Content#{}'.format(index)] = str(stream_obj.data, \
+      encoding = chardet_detected_encoding)
 
   # contruct the __pdf_contents_dict__
   __pdf_contents_dict__['Page#{}'.format(page_nbr)] = page_dict
@@ -302,6 +316,114 @@ def extract_words(json_file_name):
     op_file.write(json_string)
 
   return json_string
+
+
+
+
+# EXPERIMENTAL
+# Trying to parse the PDF and make the metadata for the entire PDF
+# {
+#   "title": "",
+#   "authors": [""],
+#   "abstract": "",
+#   "contents": [{
+#     "page#1": "",
+#     "page#n": ""
+#   }]
+# }
+def __build_pdf_json_pattern__():
+  '''
+  Builds and returns the regex pattern to extract the information from the contents of the PDF
+  pages.
+
+  :return: pattern `_sre.SRE_Pattern`
+  '''
+
+  # compile this long regex for extracting information from the page contents
+  regex_font_name = r'(?P<font_name>/T\d_\d)'
+  regex_font_size = r'(?P<size>\d)'
+  regex_font_weight = r'(?P<weight>\d*\.{0,1}\d*)'
+  regex_text_group = r'(\[.*?\]|\(.*?\))'
+
+  # compound regex pattern since it is too long
+  regex_pattern_string = r'(%s\s%s\sTf\s%s\s*?.*?\s*?.*?%s)|%s' % (regex_font_name, \
+    regex_font_size, regex_font_weight, regex_text_group, regex_text_group)
+
+  pattern = compile(regex_pattern_string, IGNORECASE)
+
+  return pattern
+
+
+
+
+def __extract_content__(matching_pattern):
+  '''
+  Extracts the text from the PostScript code.
+  '''
+
+  return matching_pattern
+
+
+
+
+# Text extractor
+def __get_content__(content):
+  '''
+  Extracts the textual contents from the PostScript code decompressed from PDF page.
+
+  :param content: The decompressed PostScript code from the PDF page. :class: `str`
+
+  :return: contents `dict`
+  '''
+
+  # get the pattern that will parse the contents of the PDF page
+  regex_pattern = __build_pdf_json_pattern__()
+
+  contents = defaultdict(list)
+
+  matching_patterns = findall(regex_pattern, content)
+
+  index = -1
+  seeker = 0
+
+  while index < len(matching_patterns) and seeker < len(matching_patterns):
+    
+    if matching_patterns[seeker][5] == '':
+      index = seeker
+
+    contents_key = '{}#{}#{}'.format(matching_patterns[index][1], \
+        matching_patterns[index][2], matching_patterns[index][3])
+
+    if matching_patterns[seeker][5] == '':
+      contents[contents_key].append(__extract_content__(matching_patterns[seeker][4]))
+    else:
+      contents[contents_key].append(__extract_content__(matching_patterns[seeker][5]))
+
+    seeker += 1
+
+  return contents
+
+
+
+
+# EXPERIMENTAL
+# Builds the JSON structure for the PDF
+def build_pdf_json():
+  '''
+  WIP, do not try to use this method yet.
+  '''
+
+  global __pdf_contents_dict__
+
+  pdf_dict = {}
+
+  # {'Page#x':{'Content#y':""}}
+  for page, contents in __pdf_contents_dict__.items():
+    pdf_dict[page] = {}
+    for content_key, content in contents.items():
+      pdf_dict[page][content_key] = __get_content__(content)
+
+  return pdf_dict
 
 
 

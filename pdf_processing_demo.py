@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-06 17:14:07
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-11 23:34:46
+# @Last Modified time: 2017-03-14 00:14:43
 
 
 
@@ -35,6 +35,7 @@ from pdf_processing.pdf_processor import extract_page_contents
 from pdf_processing.pdf_processor import get_pdf_contents
 from pdf_processing.pdf_processor import create_json_file
 from pdf_processing.pdf_processor import extract_words
+from pdf_processing.pdf_processor import build_pdf_json
 
 
 
@@ -53,6 +54,11 @@ if __name__ == '__main__':
   # creates the next phase of JSON file that has the text only from the decoded streams
   json_string = extract_words('phase2.json')
   pprint(json_string)
+
+  def_dict = build_pdf_json()
+
+  with open('phase3.json', 'w') as fp_open:
+    fp_open.write(dumps(def_dict))
 
 
 
