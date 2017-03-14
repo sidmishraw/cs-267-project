@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-06 16:58:51
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-14 00:06:14
+# @Last Modified time: 2017-03-14 00:27:10
 
 
 
@@ -342,7 +342,7 @@ def __build_pdf_json_pattern__():
   # compile this long regex for extracting information from the page contents
   regex_font_name = r'(?P<font_name>/T\d_\d)'
   regex_font_size = r'(?P<size>\d)'
-  regex_font_weight = r'(?P<weight>\d*\.{0,1}\d*)'
+  regex_font_weight = r'(?P<weight>[\-|\+]{0,1}\d*\.{0,1}\d*)'
   regex_text_group = r'(\[.*?\]|\(.*?\))'
 
   # compound regex pattern since it is too long
@@ -387,7 +387,7 @@ def __get_content__(content):
   seeker = 0
 
   while index < len(matching_patterns) and seeker < len(matching_patterns):
-    
+
     if matching_patterns[seeker][5] == '':
       index = seeker
 
