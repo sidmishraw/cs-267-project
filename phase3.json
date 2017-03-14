@@ -1,1 +1,5803 @@
-{"Page#1": {"Content#0": {}, "Content#1": {}, "Content#2": {"/T1_0#1#0": ["Obser,v,ational,Calculi,,Classes,of,Association,Rules,and,F-pr,operty", "1,Intr,oduction", "2,GUHA,and,Granular,Computing"], "/T1_1#1#0.0001": ["Jan,Rauch", "F,aculty,of,Informatics,and,Statistics"], "/T1_2#1#0": ["\\001"], "/T1_1#1#11.9551": [",,Uni,v,ersity,of,Economics,,Prague", "n", "\\264", "am.,W,.,Churchilla,4,,130,67,Praha,3,,Czech,Republic", "rauch@vse.cz"], "/T1_0#1#0.0001": ["Abstract"], "/T1_3#1#-0.0001": ["An,o,vervie,w,of,se,ver,al,classes,of,association,rules,is", "given.,It,is,shown,that,these,classes,have,theor,etically,inter,-", "esting,and,pr,actically,useful,pr,operties.,The,class,of,asso-", "ciation,rules,with,the,F-pr,operty,is,intr,oduced.,It,is,shown", "that,association,rules,fr,om,this,class,have,pr,operties,simi-", "lar,to,pr,operties,of,the,F,isher\\222,s,test.,Results,concerning,the", "association,rules,with,the,F-pr,operty,ar,e,pr,esented."], "/T1_1#1#-0.0002": ["This,paper,tries,to,contrib,ute,to,foundations,of,granu-", "lar,computing.,The,paper,deals,with,observ,ational,calculi", "\\(OC,for,short\\,which,were,de\\036ned,and,studied,in", "as", "a", "theoretical,basis,for,the,GUHA,method,of,mechanizing,h,y-", "potheses,formation.,GUHA,is,an,original,Czech,method,of", "e,xploratory,data,analysis,de,v,eloped,since,the,1960s,,that,is", "closely,related,to,granular,computing;,see,Section,2.", "The,most,simple,OC,is", "which,is,a,modi\\036cation,of,classical,predicate,calculus", "\\(gene-ralized,quanti\\036ers,are,added,and,only,\\036nite,structures", "as,models,are,allo,wed\\,F,ormulas,of,OC,correspond,to,v,ar,-", "ious,assertions,concerning,analyzed,data,matrices.,There", "are,also,the,assertions,corresponding,to,statistical,h,ypothe-", "ses,tests.,OC,were,further,modi\\036ed,and,studied,to,get,the", "additional,results,which,help,to,better,understand,associa-", "tion,rules.,W,e,mean,not,only,\\224classical\\224,association,rules", "de\\036ned,in", "as", "a", "pattern", "describing", "mark", "et", "bask", "ets.", "The", "association,rule,we,are,interested,in,is,a,relation,of,tw,o", "Boolean,attrib,utes,deri,v,ed,in,a,general,w,ay,from,columns", "of,analyzed,data,matrix;,see,Section,3.", "Both,theoretically,interesting,and,practically,important", "results,about,deduction,r,ules,concerning,association,r,ules,", "de\\036nability,of,association,rules,in,predicate,calculus,,and", "about,association,rules,with,missing,information,were", "", "-equi,v,alence,rules,and,rules,with", "F-property,are,in,Section,8.,Se,v,eral,concluding,remarks,are", "in,Section,9.", "where"], "/T1_3#1#-0.0002": ["pr,edicate,observational,calcu-", "lus"], "/T1_4#1#0": ["\\001"], "/T1_1#1#7.9701": ["The,w,ork,described,here,has,been,supported,by,Grant,No.", "201/05/0325,of,the,Czech,Science,F,oundation,and,by,Grant,N,o.,ME913", "of,Ministry,of,Education,,Y,outh,and,Sports,of,the,Czech,Republic", "achie,v,ed.,These,results,are,related,to,classes,of,associa-", "tion,rules.,There,are,classes,of,implicational,rules,,double", "implicational,rules,,etc.;,s,ee,Sections,4,and,5.", "Goal,of,this,paper,is,to,present,results,concerning,class", "of,association,rules,with,F-property,.,This,class,contains,im-", "portant,association,rules,corresponding,to,Fisher\\222,s,test,and"], "/T1_5#1#0": ["\\001", "\\002", "\\002", "\\003", "\\002", "\\003"], "/T1_6#1#6.9738": ["2"], "/T1_1#1#-0.0001": ["test;,see,Section,6.,Some,of,these,results,were,published", "in,last,30,years,under,v,arious,names,,s,ome,of,them,are,ne,w,.", "Ov,ervie,w,of,these,results,is,in,Section,7.,Results,concern-", "ing,relation,of,classes,of", "Aim,of,the,GUHA,method,is,to,of,fer,all,interesting,f,acts", "follo,wing,from,the,analyzed,data,to,the,gi,v,en,problem.", "GUHA,is,realized,by,the,GUHA-procedures.,The,GUHA-", "procedure,is,a,computer,program,,the,input,of,which,con-", "sists,of,the,analyzed,data,and,of,a,s,imple,de\\036nition,of,r,el-", "e,v,ant,\\(i.e.,potentially,interesting\\,patterns.,The,procedure", "automatically,generates,each,particular,pattern,and,tests,if", "it,is,true,in,the,analyzed,data.,The,output,of,the,procedure", "consists,of,all,prime,patterns.,The,pattern,is,prime,if,it,is", "true,in,the,analyzed,data,and,if,it,does,not,immediately,f,ol-", "lo,w,from,the,other,,,more,simple,output,patterns", "Se,v,eral,GUHA,procedures,were,implemented;,see,e.g.", "[3,,4,,", "The", "most", "important", "GUHA", "procedure", "is", "the", "procedure,ASSOC", "which", "mines", "for", "association", "r", "ules.", "The,association,rules,the,procedure,ASSOC,mines,for,are", "more,general,than,the,classical,association,rules,de\\036ned,in", "", "Procedure", "ASSOC", "mines", "among", "other", "for", "association", "rules,corresponding,to,statistical,h,ypothesis,tests.,There,are", "se,v,eral,implementations,of,the,procedure,ASSOC;,see,e.g.", "[3,,4,,,6,,8,,", "Namely", "the", "last", "tw", "o", "implementations", "ha", "v", "e", "signi\\036cantly,more,tools,for,a,de\\036nition,and,tuning,of,a,s,et", "of,rules,to,be,automatically,generated,and,tested,than,the", "usual,apriori,algorithm,has.", "The,association,rule,is,the,e,xpression", "are,Boolean,attrib,utes.,It,means,that"], "/T1_7#1#9.913": ["\\001"], "/T1_8#1#1.096": ["\\001"], "/T1_5#1#1.22": ["\\003"], "/T1_1#1#-0.0004": ["and", "and"], "/T1_1#1#1.06": ["are"]}, "Content#3": {"##": ["2007 IEEE International Conference on Granular Computing", "0-7695-3032-X/07 $25.00 \u00a9 2007 IEEE", "DOI 10.1109/GrC.2007.88", "287"]}, "Content#4": {"##": ["2007 IEEE International Conference on Granular Computing", "0-7695-3032-X/07 $25.00 \u00a9 2007 IEEE", "DOI 10.1109/GrC.2007.88", "287"]}}, "Page#2": {"Content#0": {}, "Content#1": {}, "Content#2": {"/T1_0#1#-0.0002": ["associated,in,the,w,ay,gi,v,en,by,the,symbol", "called,the", "if,the,condition,gi,v,en,by,the,4ft-quanti\\036er", "etc.;,s,ee", "T,able,1.", "The,Boolean,attrib,utes", "where", "is,the,s,et,of,all,possible,v,alues,of,the,column", "where", "in,Fig.,1.,There", "are,also,e,xamples,of,the,basic,Boolean,attrib,utes", "in,Fig.,1.", "object", "", "All,implementations,of,the,ASSOC,procedure,are,based", "on,the", "of,bits,then,the,i-", "th,bit,in", "is,\\2241\\224,if,and,only,if,it,is", "where", "of,the,data", "matrix", "has,cate,gories", ".,The,set,of,r,el-", "e,v,ant,basic,Boolean,attrib,utes", "where", "are,Boolean,attrib,utes,and", "see,T,ab,.,1,and,Section", "2.,Some,important,4ft-quanti\\036ers,are,presented,belo,w,.,W,e", "use"], "/T1_1#1#0": ["\\001", "M", "M", "\\001", "M", "M", "\\002", "\\003", "M", "M", "M", "M", "M", "", "M", "M", "{", "M", "\\006", "\\254", "M", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\b", "\\001", "M", "\\001", "M", "M", "\\b"], "/T1_2#1#0.0001": ["4ft-", "quanti\\036er"], "/T1_0#1#-0.0001": [".,The,association,rule", "\\(the", "is,the,num-", "ber,of,ro,ws,of", "and,not,satisfying", "are,deri,v,ed,from,the", "columns,of,the,data,matrix", ".,W,e,assume,there,is,a,\\036-", "nite,number,of,possible,v,alues,for,each,column,of", "are,created,\\036rst.,The,basic,Boolean,attrib,ute,is,an", "e,xpression,of,the,form", ".,The,basic,Boolean,attrib,ute", ".,Boolean,attrib,utes", "are,deri,v,ed,from", "basic,Boolean,attrib,utes,using,propositional,connecti,v,es", "in,the,usual,w,ay,.", "An,e,xample,of,the,data,matrix,with,the,columns,-,the", "attrib,utes", "is,represented,by,the,string", "The,association,rule,is,the,e,xpression", "is,true,in,the,analyzed,data,matrix"], "/T1_3#1#0": ["\\002", "\\002", "\\002", "\\003", "\\002", "\\002", "\\003", "a", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "A", "\\004", "a", "A", "A", "a", "a", "o", "\\002", "\\003", "A", "B", ",", "A", "B", ",", "o", "o", "A", ",", "a", "A", "\\005", "\\005", "A", "a", "A", "o", "\\002", "\\002", "\\003", "\\002", "\\002", "\\003", "r", "n"], "/T1_1#1#1.083": ["\\001"], "/T1_3#1#1.208": ["\\003"], "/T1_0#1#-0.0003": ["concerns,the,ana-", "lyzed,data,matrix", "of,natural,numbers,s,uch,that", "of,the", "attrib,ute", "can,be,then", "easy,generated.,It,consists,of,the,basic,Boolean,attrib,utes", ".,Such,set,of", "the,basic,Boolean,attrib,utes,is,usually,called"], "/T1_0#1#0.5197": [".T,h,e,r,u,l,e"], "/T1_1#1#1.062": ["\\001"], "/T1_3#1#1.184": ["\\003"], "/T1_0#1#0.0002": ["is", "is", "satis\\036ed,in,the,four,-fold,contingenc,y,table,of", "in", "is", "if,it,is", "in"], "/T1_2#1#-0.0001": ["true,in,the,data", "matrix"], "/T1_0#1#-0.0004": ["and", "and", "and", "and", "and", "of", "and", "and", "and", "of", "and", "and", "of"], "/T1_0#1#0.0001": [",,o,therwise", "is,the", "quadruple", "is,the", "number,of,ro,ws,of", "satisfying", "in,the,ro,w", "for,the,i-th,ro,w", "is,the", "if,the", "condition,related,to,the,4ft-quanti\\036er", "is,satis\\036ed,in,the,4,ft", "table", "is,for"], "/T1_1#1#0.932": ["\\001"], "/T1_3#1#1.055": ["\\003", "a", "a"], "/T1_2#1#0": ["false,in,the,data,matrix", "attrib,utes", "sliding,win-", "dow"], "/T1_1#1#9.528": ["M"], "/T1_0#1#": [".", "The,four,-fold,contingenc,y,table", ".", "Columns,of,the,data,matrix,are,called", ",,possible", "v,alues,of,the,attrib,utes,are,called", ",", ",", ".", "This,representation,has,an,important,ef,fect,-,it,is,possi-", "ble,to,easy,de\\036ne,and,automatically,generate,v,arious,both", "basic,and,deri,v,ed,Boolean,attrib,utes.,Let,us,suppose,that", "the,a,ttrib,ute", ",", ".", "The,4ft-quanti\\036er"], "/T1_4#1#0": ["4", "\\(", "4", "\\(", "1", "4", "\\("], "/T1_3#1#0.1076": ["ft", "ft", "ft"], "/T1_3#1#-0.0001": ["\\002,,\\003,,", "a,,b,,c,,d", "\\002,,\\003,,", "\\002,,\\003,,", "a,,b,,c,,d"], "/T1_4#1#": ["\\", "\\", "\\(", "\\(", "\\(", "\\(", "\\"], "/T1_2#1#1.934": ["4ft", "table"], "/T1_0#1#2.402": ["for,short\\,of"], "/T1_0#1#1.089": ["in,the,data,matrix"], "/T1_1#1#7.886": ["M"], "/T1_0#1#1.411": ["satisfying,both"], "/T1_3#1#6.088": ["\\002"], "/T1_0#1#0.687": [","], "/T1_3#1#0.468": ["b", "C"], "/T1_5#1#-0.0102": ["T,a,bl,e,1,.,4,f,t,t,a,bl,e"], "/T1_5#1#-0.0003": ["of", "and,basic,Boolean", "attrib,utes"], "/T1_5#1#-0.0004": ["and"], "/T1_5#1#0.0002": ["in"], "/T1_3#1#9.9626": ["\\003", "", "\\002", "", "a", "", "b", "", "c", "", "d"], "/T1_1#1#9.9626": ["\\254", "\\254", "}", "}"], "/T1_3#1#": ["\\003", "", "\\002", "", "a", "\\004"], "/T1_2#1#-0.0002": ["cate,gories", "Basic,Boolean", "attrib,utes", "r,epr,esentation,of,the,analyzed,data,by,s,trings,of,bits", "4ft-quanti\\036er", "founded,implication"], "/T1_0#1#0": [".", "is,the,data,matrix", ".", "There,are,lot,of,possibilities,ho,w,to,de\\036ne,sets,of,rele-", "v,ant,basic,Boolean,attrib,utes,and,consequently,sets,of,rel-", "e,v,ant,association,rules.,Bit,string,approach,mak,es,possible", "to,generate,and,v,erify,them,in,a,v,ery,ef,\\036cient,w,ay", "An,additional,and,v,ery,important,ef,fect,of,the,f,act,that", "GUHA,is,not,realized,by,apriori,concerns,interesting,asso-", "ciation,r,ules,that,are,true,e,v,en,if,their,con\\036dence,and,sup-", "port,are,e,xtremely,lo,w,.,An,e,xample,of,such,rule,concerns", "the,4ft,quanti\\036er"], "/T1_3#1#1.138": ["\\004", "\\004", "o", "o"], "/T1_4#1#0.643": ["\\", "\\"], "/T1_1#1#0.4319": ["\\004{"], "/T1_6#1#6.9738": ["1", "1", "1", "", "2", "", "+"], "/T1_3#1#0.1667": [",...a", ",...a", ",...,"], "/T1_7#1#0": ["k", "k"], "/T1_0#1#0.735": ["is,true,in,the,ro,w"], "/T1_3#1#7.478": ["o"], "/T1_1#1#0.893": ["\\005"], "/T1_3#1#1.032": ["\\004"], "/T1_0#1#0.826": ["is,the,v,alue,of,the,attrib,ute"], "/T1_3#1#11.18": ["A"], "/T1_1#1#-22.797": ["\\007"], "/T1_3#1#3.914": ["A"], "/T1_3#1#1.219": ["B"], "/T1_0#1#0.809": [","], "/T1_0#1#0.786": [","], "/T1_3#1#0.1658": ["...", ",A,G,E", ",...,,A,G,E"], "/T1_1#1#7.01": ["M"], "/T1_4#1#-0.0004": ["\\(2\\", "\\(5", "6\\", "\\(2\\", "\\(5", "6\\", "", "\\(2\\", "\\(5", "6\\", "100", "1;,10", "2;,11", "91;,100"], "/T1_0#1#2.306": ["and"], "/T1_3#1#1.2004": ["AB,C"], "/T1_0#1#0.1502": ["...", "", "2,7,1,6,...", "", "7,5,4,...", "", "1,6,5,...", ""], "/T1_0#1#3.2291": ["10", "01", ".", ".", ".", "", "01"], "/T1_0#1#9.9626": [".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "", ".", ".", ".", ".", ".", ".", ";,see,section,3,and", "It", "is", "possi-", "ble,to,s,kip,uninteresting,r,ules,with,lo,w,con\\036dence,already", "in,the,phase,of,generation,and,v,eri\\036cation,,it,is,not,nec-", "essary,to,\\036lter,v,ery,lar,ge,set,of,rules,with,e,xtremely,lo,w", "con\\036dence,and/or,support.", "The,bit,string,approach,is,used,in,additional,\\036,v,e,GUHA", "procedures,implemented,in,the,LISp-Miner,system", "These,procedures,mine,for,v,arious,patterns,v,eri\\036ed,using", "one,or,tw,o,contingenc,y,tables.,General,contingenc,y,tables", "concerning,not,only,Boolean,attrib,utes,are,used.", "The,particular,cate,gories,,both,basic,and,deri,v,ed", "Boolean,attrib,utes,and,patterns,the,GUHA,procedures,mine", "for,can,be,understood,as,granules.,The,po,wer,of,the,GUHA", "methods,implemented,using,bit,string,representation,of,ana-", "lyzed,data,is,in,ability,to,easy,de\\036ne,and,v,erify,lar,ge,sets,of", "patterns,\\(i.e.,the,granules,composed,from,hierarchical,sys-", "tem,of,more,simple,granules\\,F,ormulas,of,observ,ational", "calculi,correspond,to,patterns,the,GUHA,procedures,deal", "with,and,thus,logic,of,observ,ational,calculi,is,a,kind,of,logic", "of,granules."], "/T1_3#1#-16.113": ["o"], "/T1_7#1#6.9738": ["n", "", "a", "a", "i", "i", "i"], "/T1_5#1#0": ["Figure,1.,Data,matrix", ","], "/T1_1#1#10.644": ["M"], "/T1_3#1#2.584": ["B"], "/T1_0#1#-2.724": ["", "The", "apriori", "approach", "is", "not", "used.", "Each", "cate", "gory", "of", "each,attrib,ute,is,represented,by,a,string,of,bits,,there,is,one", "bit,for,each,ro,w,of,the,data,matrix.,If,the,cate,gory"], "/T1_4#1#0.2769": ["\\"], "/T1_4#1#9.9626": ["\\"], "/T1_0#1#-23.325": ["is,the,v,alue,of,the,attrib,ute"], "/T1_3#1#10.992": ["A"], "/T1_3#1#-0.0003": ["AGE", "AGE", "AGE"], "/T1_4#1#1.032": [";"], "/T1_3#1#0.444": ["\\004"], "/T1_4#1#0.234": ["+9"], "/T1_7#1#-0.0001": ["p,B", "p,B"], "/T1_8#1#0": ["3,Association,Rules"], "/T1_1#1#1.096": ["\\001"], "/T1_3#1#1.22": ["\\003"], "/T1_0#1#0.2965": [".T,h,e", "rule"], "/T1_1#1#1.139": ["\\001"], "/T1_3#1#1.263": ["\\003"], "/T1_0#1#3.615": ["see,T,ab,.,1.,In,addition,we,use"], "/T1_4#1#0.981": ["="], "/T1_3#1#1.28": ["a"], "/T1_4#1#0.84": ["+"], "/T1_3#1#1.089": ["b"], "/T1_3#1#-23.035": ["k"], "/T1_4#1#0.83": ["="], "/T1_4#1#0.751": ["+"], "/T1_3#1#1": ["c", "b", "c", "d"], "/T1_4#1#0.878": ["="], "/T1_4#1#0.752": ["+"], "/T1_4#1#0.651": ["+"], "/T1_4#1#0.655": ["+"]}, "Content#3": {"##": ["288"]}, "Content#4": {"##": ["288"]}}, "Page#3": {"Content#0": {}, "Content#1": {}, "Content#2": {"/T1_0#1#0": ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "\\002", "\\002", "\\001", "\\001", "\\001", "\\", "\\001"], "/T1_1#1#0.5267": ["<p", "<p"], "/T1_2#1#0": ["\\t", "M", "\\b", "\\t", "\\212", "\\013", "\\t", "M", "\\f", "\\t", "M", "\\r", "\\007", "\\b", "\\001", "\\001", "\\002", "\\003", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\007", "\\001", "\\002", "\\003", "\\b", "\\b", "\\013", "\\001", "\\001", "\\001", "\\001", "\\001", "\\013", "\\b", "M", "M"], "/T1_0#1#3.639": ["1", "1"], "/T1_3#1#-0.0004": ["and", "and", "of", ",,and", "de\\036ned", "in", "b", "y", "of", "and", "or", "and", "and", "of", "and", "and", "or", "and", "and", "and", "of", "and", "means", "that,among,the,objects,s,atisfying", "per,cent", "more,objects,satisfying", "and", "of", "and", ",,and", "of", "the,form", "and"], "/T1_1#1#0.5767": ["B>", "B>"], "/T1_3#1#-0.0002": ["de\\036ned,in", "by", "the", "condition", "per,cent,of,objects,s,atisfying", "objects,of", "\\,of,the,null,h,ypothesis", "ag,ainst,the,alternati,v,e,one", "de\\036ned,in", "by", "the", "condition", "per,cent,of,objects,s,atisfying", "and,that,there,are,at,least", "objects,of", "de\\036ned,in", "by", "the", "condition", "ha,v,e,the,s,ame,v,alue,\\(either", "\\,for,at,least", "and,that,there,are,at,least", "de\\036ned,in", "by", "\\,of,the,null,h,ypothesis,of", "independence,of", "ag,ainst,the,alternati,v,e,one,of,the", "positi,v,e,dependence.", "The,4ft-quanti\\036er", "belongs,to,the", "belongs,to,the", "belongs,to", "the", ".,W,e,call,these,quanti\\036ers", "quanti\\036ers,is,de-", "\\036ned,according,to,this,scheme:", "The,4ft,quanti\\036er", "-double,implicational", "b,ut,the,y,s,eem,not,too,much,interesting.", "and,moreo,v,er,all,the,abo,v,e,de\\036ned,classes,are,o,wn,s,ub-", "classes,of,this,class\\,The,class,of,equi,v,alence,quanti\\036ers,is", "de\\036ned,in", "as", "the", "class", "of", "of,results,concerns", "deduction,rules", "where,both", "of,propositional,calculus,such,that,the,de-", "duction,r,ule", "is,a,tau-", "tology,.,There,are,similar,results,for", "-double,implicational", "and", "-equi,v,alence,quanti\\036ers.", "The,s,econd,gr,oup", "of,results,concerns", "missing,inf,orma-", "tion", ".,An,e,xample,of,the,data,matrix"], "/T1_4#1#0": ["a", "", "p,\\001,B,ase", "a", "", "a", "a", "", "\\002", "\\002"], "/T1_4#1#6.9738": ["a", "a", "a", "i", "a", "a", "n", "a", "a", "n", "\\002", "\\001", "\\002", "\\001", "X"], "/T1_5#1#": ["+", "+", "=", "+", "+", "+", "+", "+", "=", "+", "+"], "/T1_4#1#1.498": ["b", "b", "i", "b", "i", "b", "b", "d", "", "b", "c", ""], "/T1_2#1#9.9626": ["\\n", "\\t", "\\n", "\\n", "\\n", "\\007", "\\003", "\\n", "\\t", "\\n", "\\t", "\\n", "\\t", "\\t", "\\n", "\\t", "\\n", "\\t", "\\t", "\\n", "\\001", "\\001"], "/T1_1#1#1.093": ["p"], "/T1_2#1#0.741": ["\\007"], "/T1_1#1#0.904": ["a"], "/T1_2#1#0.844": ["\\n"], "/T1_1#1#1.094": ["B"], "/T1_3#1#0.3706": [".T,h,e,r,u,l,e"], "/T1_1#1#0": ["\\002", "\\003", "p", "\\002", "\\003", "\\003", "\\002", "\\004", "H", "H", "P", "\\003", "\\002", "\\002", "\\003", "p", "\\002", "\\003", "\\002", "\\003", "B", "\\003", "\\002", "\\003", "\\002", "\\003", "p", "B", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "p", "\\002", "\\003", "\\002", "p", "\\003", "\\002", "\\003", "\\002", "\\002", "\\002", "\\002", "\\002", "\\002"], "/T1_2#1#0.969": ["\\b"], "/T1_4#1#-0.0001": ["p,B", "p,B", "p,B", "p,B", "p,B", "p,B", "p,B", "p,B", "p,\\001,B", "p,B", "p,B", "p,B", "p,B", "p,B", "p,B"], "/T1_3#1#-0.0003": ["means,that,at,least", "and,that", "there,are,at,least", "under,the", "condition", "means,that,at,least", "means,that", "per,cent,of,all,objects,of", "than,among,all,objects,and,that", "there,are,at,least", ".,I,f,the,4ft,quanti\\036er", "etc.", "Se,v,eral,important,classes,of,4ft,quanti\\036ers,are,de\\036ned", "by", ".,I,t,means,that,the", "symmetrical,association,rule"], "/T1_0#1#-16.292": ["100"], "/T1_3#1#0.0002": ["satisfy,also", "is", "the", "if", "is", "symmetrical,if,f", "is", "true,in"], "/T1_1#1#6.775": ["B", "B"], "/T1_3#1#1.451": ["satisfying,both"], "/T1_1#1#6.167": ["\\002"], "/T1_3#1#0.687": [".", "The,4ft-quanti\\036er", ".", "The,4ft-quanti\\036er", ".", "The,Fisher\\222,s,quanti\\036er", ".", "W,e,write"], "/T1_5#1#6.9738": ["!", "!", "0", "1", "+", "+", "!", "+", "+"], "/T1_4#1#-0.0002": ["p,\\001,B", "\\001,B", "\\001,B", "\\001,B", "\\001,B"], "/T1_6#1#-0.0001": ["lower,critical,implication", "true", "class,of", "implicational,quanti\\036er,s", "T,ruth,Pr,eservation,Conditions"], "/T1_3#1#0.0001": ["is,for", "is,for", "satisfy,both", "is,for", "is,for", "is,for", "satisfying", "is,true,in"], "/T1_1#1#0.5439": ["<p"], "/T1_0#1#1.322": ["1"], "/T1_3#1#": [",", ".", "The,4ft-quanti\\036er", ",", ".,There,are,the,follo,wing,classes,of", "-", "double,implicational\\,Note,that,there,are,also,double,im-", "plicational,quanti\\036ers,that,are,not"], "/T1_0#1#1.18": ["0"], "/T1_1#1#0.5456": ["<\\004<"], "/T1_1#1#": [".", "\\003", "\\003", "\\003", ".", "a", "a", "a,,c,,b,,d"], "/T1_0#1#0.777": ["5", "5"], "/T1_1#1#0.5939": ["B>"], "/T1_7#1#0": ["\\001", "\\001"], "/T1_4#1#1.282": ["a", "a"], "/T1_7#1#9.9626": ["\\002", "\\003"], "/T1_1#1#0.459": ["p"], "/T1_0#1#-0.0004": ["\\(1", "100", "\\", "", "\\(1,+", "100"], "/T1_1#1#1.062": ["p"], "/T1_0#1#": ["\\", "\\", "\\", "\\", "\\"], "/T1_8#1#": ["\\212", "\\003", "\\004", "\\005", "\\005"], "/T1_4#1#": ["i", "\\003", "", "\\003", "\\001", "\\003", "", "\\003", "\\001"], "/T1_1#1#1.21": ["\\004"], "/T1_2#1#0.928": ["\\007"], "/T1_1#1#0.95": ["a"], "/T1_2#1#0.961": ["\\n"], "/T1_1#1#0.0509": ["Ba,s,e"], "/T1_3#1#0": [".", "The,r,ule", ".", "4,Classes,of,Association,Rules", ".", "The,association,rule", ",", "to,a,v,oid,confusion,with", "the,association,rules,de\\036ned,in", "It", "is", "pro", "v", "ed", "moreo", "v", "er", "in", "that", "the", "association", "r", "ules", "de\\036ned", "in", "[1]", "are", "e", "v", "en", "not", "association,in,the,sense,of", "There,are,additional,classes,of,4ft-quanti\\036ers,,e.g.,", ",", ",", ","], "/T1_2#1#1.048": ["\\b"], "/T1_1#1#9.9626": ["\\003"], "/T1_3#1#-0.0001": ["corresponds,to,the,statistical,test", "\\(on,the,le,v,el", "is,the,conditional,probability,of,the,v,alidity,of", "objects,satisfying,both", "corresponds,to", "the,statistical,test,\\(on,the,le,v,el", "de\\036ned,in", "by", "the", "condition", "is,at,least", "objects,satisfying,both", "if,the,condition,correspond-", "ing,to,the,4ft-quanti\\036er", "is,satis\\036ed,for,the,quadruple", "of,inte,ger,non-ne,g,ati,v,e,numbers,,otherwise,we", "write", "Classes,of,association,rules,are,de\\036ned,by,classes,of,4ft", "quanti\\036ers.,An,e,xample,is,the,class,of", "if,the,4ft,quanti\\036er", "quanti\\036ers.,Each,class", "belongs,to,the,class", "implies", "for", "all,the,4ft,tables", "quanti\\036ers:", "\\(e,xamples:", "de\\036ned,in", "by", "\\(e,xample:", "de\\036ned,in", "by", "is,true,if,and,only,if", "the,association,rule", "is,true.,The,4ft-quanti\\036er", ".,The,4ft-", "quanti\\036ers", "are,associa-", "tion,rules.,This,deduction,rule,is,correct,if,it,is,true,for,each", "data,matrix", "then,also", ".,It,is,sho,wn,in", "that", "there", "is", "an", "important", "sub-", "class,of", "with,interesting,implicational,quanti\\036er", "is,correct,if,and,only,if,the,formula"], "/T1_0#1#9.9626": [":", ":", "\\(", "\\", "", "\\(", "\\", "+", "+", "+", "\\", "\\"], "/T1_1#1#0.707": ["P"], "/T1_0#1#0.781": ["\\(", "\\(", "\\("], "/T1_2#1#1.076": ["|", "|", "|"], "/T1_1#1#0.277": ["\\002", "\\002", "\\002"], "/T1_2#1#1.474": ["\\t"], "/T1_1#1#1.208": ["p"], "/T1_1#1#0.556": ["P"], "/T1_1#1#0.2774": [">p"], "/T1_3#1#0.3092": [".H,e,r,e"], "/T1_6#1#-0.0002": ["founded,double,implication", "class,of,implicational,quanti\\036er,s", "implicational,4ft,quanti\\036er", "Implicational,quanti\\036er,s", "-double,implicational,quanti\\036er,s", "Double,implicational,quanti\\036er,s", "typical,double,implicational", "inter,esting,implicational,quanti\\036er,s"], "/T1_1#1#0.2991": ["<p"], "/T1_0#1#1.077": ["1"], "/T1_1#1#0.349": ["B>"], "/T1_4#1#1.38": ["c"], "/T1_1#1#1.056": ["p", "a", "a", "\\003"], "/T1_2#1#0.583": ["\\007"], "/T1_1#1#0.746": ["a"], "/T1_2#1#0.806": ["\\n"], "/T1_1#1#1.055": ["B", "b", "a", "b", "a", "b", "b", "c", "d", "\\003"], "/T1_3#1#0.2965": [".T,h,e,r,u,l,e"], "/T1_2#1#0.932": ["\\013", "\\001"], "/T1_0#1#-16.469": ["100"], "/T1_3#1#1.447": ["satisfying,both"], "/T1_1#1#-17.799": ["\\002"], "/T1_6#1#1.195": ["founded,equivalence"], "/T1_1#1#1.146": ["p", "B"], "/T1_2#1#0.762": ["\\007"], "/T1_1#1#0.925": ["a"], "/T1_2#1#0.896": ["\\n"], "/T1_3#1#0.4564": [".T,h,e,r,u,l,e"], "/T1_2#1#1.023": ["\\f"], "/T1_6#1#0.0001": ["false"], "/T1_1#1#0.4878": ["<\\004<"], "/T1_1#1#0.7122": ["B>"], "/T1_5#1#0.0002": ["min\\("], "/T1_4#1#-0.0309": ["r,,k"], "/T1_5#1#0": ["\\", "\\001", "\\001", "\\001", "\\002", "\\002"], "/T1_4#1#-3.811": ["i"], "/T1_9#1#4.9813": ["k", "i", "r", "n"], "/T1_9#1#0": ["n", "\\212"], "/T1_9#1#1.965": ["k", "r", "\\212"], "/T1_9#1#1.084": ["i"], "/T1_2#1#2.218": ["\\t"], "/T1_1#1#1.439": ["\\004"], "/T1_2#1#1.558": ["\\007"], "/T1_1#1#-0.0001": ["ad,>,bc", "a,,b,,c,,d", "a,,b,,c,,d", "a,,b,,c,,d", "a,,b,,c,,d", "a,,b,,c,,d", "a,,b,,c,,d", "a,,b,,c,,d", "a,,c,,b,,d", "\\002,,\\003,,,\\002", "\\002,,\\003,,,\\002"], "/T1_1#1#1.283": ["a"], "/T1_2#1#0.959": ["\\n"], "/T1_1#1#1.209": ["B"], "/T1_3#1#0.5576": [".T,h,e,r,u,l,e"], "/T1_2#1#1.085": ["\\r"], "/T1_1#1#12.579": ["\\004"], "/T1_6#1#1.203": ["abo,ve,aver,a,g,e,dependence"], "/T1_1#1#0.4445": ["<p"], "/T1_1#1#0.4954": ["B>"], "/T1_1#1#0.93": ["a"], "/T1_2#1#0.908": ["\\n"], "/T1_1#1#1.157": ["B"], "/T1_3#1#0.4736": [".T,h,e,r,u,l,e"], "/T1_2#1#1.034": ["\\b"], "/T1_0#1#1.112": ["\\("], "/T1_0#1#0.3363": ["\\"], "/T1_0#1#1.056": ["\\("], "/T1_0#1#0.2794": ["\\"], "/T1_6#1#15.846": ["implicational,rules"], "/T1_2#1#1.071": ["\\001"], "/T1_1#1#1.195": ["\\003"], "/T1_6#1#0": ["class,of,impli-", "cational,rules"], "/T1_3#1#13.558": ["then,we,say,that"], "/T1_2#1#0.254": ["TP,C"], "/T1_2#1#0.2539": ["TP,C", "TP,C"], "/T1_0#1#1.055": ["\\(", "\\("], "/T1_0#1#0.2799": ["\\"], "/T1_1#1#0.1393": ["TPC", "TPC", "TPC", "TPC", "TPC", "TPC", "TPC", "TPC"], "/T1_8#1#6.9738": ["\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\005", "\\001", "\\001", "\\001", "\\001", "\\005"], "/T1_1#1#0.1658": [",b", ",c", ",d", ",b", ",c", ",d", ",\\003", ",\\003"], "/T1_8#1#0": ["\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\002", "\\003", "\\004", "\\001", "\\001", "\\001", "\\001"], "/T1_0#1#0.2776": ["\\"], "/T1_2#1#0.882": ["\\002"], "/T1_3#1#9.9626": [".", "Here", "is,the,true,preserv,ation,condition,for,the,class", ":", ":", ":", ":", ":", "are,symmetrical.", "The,class,of,the,4ft,quanti\\036ers,with", "with,missing,in-"], "/T1_0#1#-5.329": ["\\002"], "/T1_3#1#10.745": ["de\\036ned,in", "by"], "/T1_1#1#-23.435": ["a", "a", "a"], "/T1_2#1#1": ["\\007"], "/T1_1#1#1.139": ["b", "b"], "/T1_3#1#0.0004": ["\\", "\\"], "/T1_4#1#0.816": [",", ","], "/T1_1#1#0.588": ["a"], "/T1_2#1#1.001": ["\\007"], "/T1_1#1#0.889": ["b"], "/T1_1#1#1": ["c", "c", "d", "d", "c", "c"], "/T1_0#1#0.651": ["+", "+"], "/T1_1#1#0.781": ["a"], "/T1_1#1#1.234": ["a", "b", "c"], "/T1_2#1#1.169": ["\\007"], "/T1_1#1#1.306": ["b", "c"], "/T1_2#1#0.724": ["\\007"], "/T1_3#1#0.78": ["\\(e,xamples:,all"], "/T1_0#1#6.222": ["\\001"], "/T1_6#1#-0.0003": ["-equivalence,quanti\\036er,s", "Equivalence,quanti\\036er,s", "equivalence,quanti\\036er,s"], "/T1_3#1#10.782": ["de\\036ned,in", "by"], "/T1_0#1#0.751": ["+"], "/T1_2#1#0.993": ["\\007"], "/T1_3#1#0.683": ["\\(e,xamples:"], "/T1_2#1#4.683": ["\\f"], "/T1_3#1#0.0003": ["\\"], "/T1_3#1#9.607": ["de\\036ned,by,the,condition"], "/T1_2#1#0.755": ["\\007"], "/T1_1#1#0.894": ["b"], "/T1_2#1#0.657": ["\\007"], "/T1_1#1#1.092": ["c"], "/T1_2#1#0.66": ["\\007"], "/T1_1#1#0.893": ["d"], "/T1_3#1#0.718": ["\\(e,xamples:"], "/T1_2#1#4.657": ["\\r"], "/T1_2#1#0.458": ["\\b"], "/T1_6#1#11.565": ["association,quanti\\036er,s"], "/T1_3#1#0.3517": [".W,e,u,s", "the,name"], "/T1_6#1#-0.0004": ["pur,e", "double,implicational"], "/T1_3#1#0.7266": [";s,e,e", "", "The", "symmetrical", "quanti\\036ers", "are", "de\\036ned", "in", "[2]", "by", "the", "condition"], "/T1_0#1#1.087": ["\\(", "\\("], "/T1_0#1#0.846": ["\\"], "/T1_0#1#3.63": ["\\"], "/T1_2#1#1.104": ["\\001"], "/T1_1#1#1.228": ["\\003"], "/T1_1#1#8.126": ["\\003"], "/T1_2#1#1.061": ["\\001"], "/T1_1#1#1.151": ["\\002"], "/T1_0#1#1.214": ["\\("], "/T1_0#1#1.1107": ["\\"], "/T1_0#1#1.213": ["\\("], "/T1_2#1#0.519": ["\\f"], "/T1_2#1#0.518": ["\\r"], "/T1_6#1#14.035": ["F-pr,operty"], "/T1_3#1#4.54": ["is,introduced", "in,Section,6.", "5,Results,on,Classes,of,Association,Rules", "The,\\336rst,gr,oup"], "/T1_2#1#4.789": ["M"], "/T1_3#1#0.3218": [":I,f"], "/T1_2#1#0.942": ["\\001"], "/T1_1#1#1.067": ["\\003"], "/T1_1#1#1.066": ["\\003"], "/T1_2#1#2.767": ["M"], "/T1_3#1#14.717": ["and,a,f,ormula"], "/T1_0#1#0.0001": ["\\003\\(", "\\003\\("], "/T1_0#1#14.409": ["\\001"]}, "Content#3": {"##": ["289"]}, "Content#4": {"##": ["289"]}}, "Page#4": {"Content#0": {}, "Content#1": {}, "Content#2": {"/T1_0#1#-0.0001": ["formation,is,in,Fig.,2,\\(cf.,Fig.,1,in,section,2\\,The,symbol", "object", "", "\\,respecti,v,ely,in,all,possible,completions,of", "is,each,data,matrix", "that,is", "a,result,of,completion,of,each", ".,The,association,rule,is,true", "in,the,data,matrix", "is,called,the", "there,is", "", "The", "function", "is,called,the", ".,Observ,ational", "calculi,are,de\\036ned,in", "by", "modi\\036cations", "of", "classical", "predi-", "cate,calculi;,see,also,section,1.,Thus,there,is,a,natural,ques-", "tion,if,s,ome,association,r,ules,can,be,de\\036ned,by,formulas", "of,classical,predicate,calculus,\\(i.e,calculus,with,only,clas-", "sical,quanti\\036ers", "De\\036nition,of,the,class,of,association,rules,with,F-", "property,w,as,inspired,by,considerations,on,dealing,with", "missing,information,for,Fisher\\222,s,quanti\\036er,.,Especially,the", "task,of,\\036nding,a,s,ecured,completion", "in,data,ma-", "trix", "with,missing,information,for,the,Fisher\\222,s,quan-", "ti\\036er,w,as,solv,ed,in", "It", "is", "pro", "v", "ed", "that", "it", "is"], "/T1_1#1#1.3278": ["AB,C"], "/T1_0#1#0.1502": ["...", "", "7,1,6,...", "", "4,...", "", "1,6,5,...", "", ",,...i,n,F,i,g,.,2,\\,.,T,h,e,v,a,l,u,e,s,o,f,t,h,e,B,o,o,l,e,a,n,a,t,t,r,i,b,u,t,e,s", "deri,v,ed,from,the,basic,Boolean,attrib,utes,are,de\\036ned,by,the", "truth,tables,of,the,connecti,v,es"], "/T1_1#1#0": ["A", "B", ",", "o", "X", "A", "A", "o", "X", "A", "X", "", "\\002", "\\003", "f", "o", "f", "f", "f", "\\002", "\\003", "o", "\\002", "\\003", "X", "\\002", ",", "a", "b", "\\002", "\\003", "a"], "/T1_2#1#-0.0004": ["\\(2\\", "\\(5", "6\\", "", "\\", "", "\\(1"], "/T1_3#1#6.9738": ["1", "", "2", "", "1", "1", "1", "1", "0", "0", "0", "1", "1", "1", "!", "1", "1", "1", "1", "0", "0", "2"], "/T1_2#1#9.9626": ["2", "\\", "\\", "\\", "\\", "\\", "\\", "+", "+", "\\(", "k", "i", "\\", "", "\\(", "r", "n", "\\", "\\(", "\\(", "\\(", "\\(", "\\", "=", "=", "+", "+", "=", "+", "+"], "/T1_2#1#0": ["1", "1", "1", "4", "\\(", "9", "\\(", "\\(", "9", "\\(", "9", "\\(", "9", "\\(", "+", "\\001", "\\001", "0", "\\001", "\\001", "\\001", "\\001", "9", "\\(", "+", "+"], "/T1_0#1#3.73": ["0"], "/T1_1#1#-16.196": ["o"], "/T1_1#1#1.2782": ["XX", "XX", "XX"], "/T1_0#1#0": ["0", "0", "0", "", "0", "", "is,applied,also", "to,the,association,rule", ","], "/T1_1#1#3.526": ["X"], "/T1_0#1#-15.65": [".", ".", ".", ""], "/T1_0#1#9.9626": [".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "", ".", ".", ".", ".", ".", ".", "1", "", "0", "1", "1", "1", "", "1", "1", "1", "", "1", "1", "with,missing,information,if,this,as-", "sociation,rule,is,true,in,all,the,possible,completions", ".", "This,problem,can,be,solv,ed,by,the,s,ecured,completion", "of,nine-fold,table", ",", ",", ","], "/T1_1#1#-16.368": ["o"], "/T1_4#1#6.9738": ["n", "", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "", "X", "", "X", "", "X", "X", "X", "X", "X", "X", "X", "X", "X", "a", "a", "i", "a", "F", "X", "X", "F", "F", "F"], "/T1_0#1#3.23": ["01"], "/T1_5#1#0": ["Figure,2.,Data,matrix", "T,ab,le,2.,Nine-f,old,tab,le"], "/T1_6#1#10.202": ["M"], "/T1_5#1#-0.0195": ["w,i,t,h,m,i,s,s,i,n,g,i,n,fo,r-", "mation"], "/T1_0#1#-0.0002": ["we,interpret,as,\\224the,corresponding,v,alue,is,not,kno,wn\\224.", "One,of,w,ays,ho,w,to,deal,with,missing,information,is", "done,by,the,principle,of,the", "of,basic,Boolean,at-", "trib,ute", ".,The,completion,of", "by,one,of,possible,v,alues", "of,the,corresponding,attrib,ute,-,the,column,of", "The,principle,of,the", ".,The,core,of,the,problem,is,that,we,ha,v,e,to,e,v,aluate", "the,condition,related,to,the,4ft-quanti\\036er,in,the,4ft,table", "for,each,completion", "is,the,number,of,ro,ws", "such", "that,both", "such,that,both", "we,can,for", "each,nine-fold,table", "such,that", ".,The,secured,completion", "for,implicational", "quanti\\036er", "-double,implicational", "and", "-equi,v,alence,quanti\\036ers,[", "and", "for", "quanti\\036ers", "with", "F-property;,see,section,7.", "The,t,hird,gr,oup", "of,results,concerns", "tables,of,critical", "fr,equencies", "and,the,Fisher\\222,s,quanti\\036er", "for,each,implicational,quanti\\036er", "such,that,for,each,in-", "te,ger", "such", "that,for", "for,implicational,quanti\\036er", ".,Similar,tables,can,be", "found,for", "-double,implicational,and", "-double,implicational,and", "-equi,v,alence,quanti-", "\\036ers", "6,F-pr,operty"], "/T1_7#1#12.273": ["secur,ed,X-e,xtension"], "/T1_0#1#0.0002": ["", "It", "means,that,the,v,alue", "is", "in", "if,f", "is", "it,is", "if,f"], "/T1_2#1#": ["\\(", "\\(", "0", "0", "\\", "\\(", "\\(", "\\"], "/T1_1#1#1.138": ["\\004", "\\004", "a"], "/T1_1#1#0.0004": ["o,", "o,", "o,", "o,", "o,"], "/T1_6#1#0": ["M", "M", "M", "M", "M", "\\254", "\\006", "\\254", "", "\\006", "", "\\006", "\\254", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "\\001", "M", "\\002", "M", "M", "\\001", "\\002", "M", "\\001", "\\002", "M", "\\b", "\\002", "\\b", "\\212", "\\r", "\\007", "\\b", "\\b", "\\b", "\\020", "\\021", "\\002", "M", "M"], "/T1_2#1#0.643": ["\\"], "/T1_0#1#-0.0003": ["for,the,object", "e,xtended,by,the", "principle,of,s,ecured,X-e,xtension", "s", "ee", "Fig.", "3.", "", "compute,the,quadruple", "de\\036ned,by,the,condition", "\\001", "-equi,v,alence,quan-", "ti\\036ers,[2,", "and", "for", "quanti\\036ers", "with", "F-property;", "s", "ee", "Sec-", "tion,7.", "The", "f,ourth,gr,oup,of,r,esults", "concerns", "r,elation,of,associ-", "ation,rules,to,classical,pr,edicate,calculus"], "/T1_0#1#0.741": ["in,the,data,matrix"], "/T1_6#1#7.298": ["M"], "/T1_0#1#": ["\\(", "\\", "if,it,is,sure", "\\(", ",", ",", ",", "\\,There,is,a,reasonable,criterion", "of,de\\036nability,of,association,rules,in,classical,predicate,cal-", "culus,with,equality,that,can,be,further,simpli\\036ed,for,impli-", "cational,"], "/T1_0#1#0.0001": ["\\(i.e.,", "is,the", "number,of,ro,ws", "", "There", "a", "re", "similar", "results", "for"], "/T1_1#1#-22.714": ["B"], "/T1_0#1#0.809": [",", ".", "There,is,a,non-ne,g,ati,v,e,non-decreasing,function"], "/T1_1#1#0.601": ["C"], "/T1_6#1#1.221": ["\\007"], "/T1_0#1#-0.0004": ["and", "of", "of", "of", "and", "of", "and", "of", "and", "of", "of", "de\\036ned,by", "\\001", "and", "of", "nine-fold,table", "of", "and"], "/T1_1#1#-2.31": ["X", ""], "/T1_1#1#9.9626": ["X", "\\003", "", "\\003", "\\002", "", "f", "f", "\\002", "f", "f", "f", "f"], "/T1_0#1#-1.903": ["0", ""], "/T1_6#1#3.524": ["\\007", ""], "/T1_1#1#1.903": ["X", "X"], "/T1_0#1#2.108": ["0", "", "0"], "/T1_1#1#-6.321": ["X", ""], "/T1_0#1#1.6076": ["00,0"], "/T1_1#1#1.7": ["X", "X"], "/T1_0#1#2.311": ["0", "", "0"], "/T1_0#1#1.4034": ["11,1"], "/T1_5#1#-0.0001": ["Figure,3.,Extended,truth,tab,les,of"], "/T1_5#1#": [","], "/T1_6#1#1.222": ["\\007"], "/T1_5#1#-0.0004": ["and"], "/T1_7#1#8.342": ["secur,ed,X-e,xtension"], "/T1_1#1#9.19": ["\\002"], "/T1_6#1#1.021": ["\\001"], "/T1_1#1#1.145": ["\\003"], "/T1_6#1#7.347": ["M"], "/T1_8#1#6.9738": ["X", "\\005", "\\005", "\\005", "\\002", "\\006", "\\006", "\\006", "\\006"], "/T1_1#1#0.1076": ["ft", "ft", "ft", "ft", "ft", "ft", "ft"], "/T1_1#1#": ["\\002", "\\003", "\\003", "", "\\002", "", "a", "a", "a", "a", "f", ",", "a", ",", ",", "a", "a", "a"], "/T1_0#1#1.981": [","], "/T1_6#1#0.5": ["M"], "/T1_1#1#-0.0001": ["\\002,,\\003,,", "\\002,,\\003,,", "\\002,,\\003,,", "\\002,,\\003,,", "\\002,,\\003,,", "ad,>,bc", "a,,b,,c,,d", "\\002,,\\003,,"], "/T1_0#1#0.311": [";s,e,e", "T,able,2.,Here"], "/T1_4#1#": [",", ",", ",", ",", ",", ",", ",", "i", ",", ",", ","], "/T1_3#1#": ["1", "1", "", "0", "", "1", "", "0", "1", "1", "+", "=", "+", "+", "=", "1", "0", "1"], "/T1_2#1#11.105": ["9"], "/T1_6#1#-15.689": ["M"], "/T1_6#1#9.9626": ["\\254", "\\254", "\\003", "\\003", "\\003", "\\t", "\\003"], "/T1_4#1#0.0002": [",X", "", ",X", "", ",X", ",X", ",X", ",X"], "/T1_4#1#0.0169": ["X,", "X,,X", "", "X,", "X,", "X,,X", "X,", "X,"], "/T1_3#1#0": ["1", "", "0", "", "0", "0", "\\", "0", "0"], "/T1_2#1#0.3878": ["\\"], "/T1_2#1#0.687": ["\\(", "\\("], "/T1_2#1#0.3883": ["\\"], "/T1_1#1#0.575": ["f"], "/T1_2#1#0.4402": ["\\"], "/T1_2#1#0.2778": ["\\"], "/T1_0#1#0.2505": [",e,t,c,.", "It,is,important,that,for,lot,of,4ft,quanti\\036ers"], "/T1_1#1#0.1658": [",b", ",c", ",d", ",b", ",c", ",d", ",b", ",c", ",d", ",b", ",c", ",d", ",f", ",...", ",b", ",c", ",d"], "/T1_8#1#0": ["\\005", "\\005", "\\005", "\\005", "\\005", "\\005", "\\005", "\\005", "\\005", "\\002", "\\002", "\\002", "\\002", "\\002", "\\002", "\\002"], "/T1_6#1#0.966": ["\\001"], "/T1_1#1#1.089": ["\\003"], "/T1_0#1#0.956": ["is,true,in,all,the,possible", "completions"], "/T1_2#1#1.056": ["\\("], "/T1_2#1#0.2781": ["\\"], "/T1_0#1#0.0004": ["[2,,1", "The,quadruple"], "/T1_7#1#-0.0003": ["secur,ed,com-", "pletion,of"], "/T1_7#1#-0.0001": ["for"], "/T1_9#1#4.9813": ["\\002", "\\002", "\\002", "\\002", "\\002", "\\002", "\\002", "\\002"], "/T1_1#1#1.118": ["f"], "/T1_1#1#1.119": ["f", "f"], "/T1_2#1#0.444": ["0"], "/T1_2#1#0.943": ["0", "1", "2"], "/T1_6#1#": ["\\003"], "/T1_0#1#5.141": ["which,can,help,to,a,v,oid,comple,x,computation", "related,to,some,4ft-quanti\\036ers,de\\036ned,using,statistical,h,y-", "pothesis,tests.,Examples,of,such,4ft-quanti\\036ers,are"], "/T1_4#1#-0.0002": ["p,\\001,B", "\\001,B"], "/T1_4#1#1.498": ["b", "i", "b", "i", "\\003", "b"], "/T1_4#1#1.282": ["a", "\\002", "a"], "/T1_1#1#0.459": ["p"], "/T1_1#1#1.139": ["p"], "/T1_8#1#": ["\\212"], "/T1_1#1#1.404": ["\\004", "B"], "/T1_6#1#1.005": ["\\007"], "/T1_1#1#1.028": ["a"], "/T1_6#1#1.155": ["\\n"], "/T1_3#1#0.0002": ["min\\("], "/T1_4#1#-0.0309": ["r,,k"], "/T1_4#1#-3.811": ["i"], "/T1_2#1#0.0005": ["\\", "", "n"], "/T1_9#1#": ["\\212", "k", "r"], "/T1_9#1#0.706": ["\\212", "i"], "/T1_6#1#1.834": ["\\t"], "/T1_1#1#1.055": ["\\004"], "/T1_6#1#1.116": ["\\007"], "/T1_6#1#0.807": ["\\n"], "/T1_1#1#1.056": ["B", "f", "f"], "/T1_1#1#0.1392": ["Tb", "Tb", "Tb"], "/T1_6#1#0.881": ["\\n"], "/T1_2#1#1.13": ["0"], "/T1_2#1#0.917": ["\\", "\\", "\\"], "/T1_6#1#0.3533": ["\\005{"], "/T1_6#1#0.2523": ["}\\016{,\\017,}"], "/T1_6#1#0.875": ["\\n"], "/T1_2#1#1.223": ["0"], "/T1_2#1#0.4479": ["\\"], "/T1_1#1#0.4463": ["b<T,b"], "/T1_7#1#-0.0002": ["table,of,maximal", "b"], "/T1_4#1#0": ["F", "F", "F"], "/T1_1#1#1.231": ["f"], "/T1_1#1#-23.463": ["b"], "/T1_1#1#0.835": ["f", "f", "F", "f", "f", "F"], "/T1_1#1#0.464": ["c"]}, "Content#3": {"##": ["290"]}, "Content#4": {"##": ["290"]}}, "Page#5": {"Content#0": {}, "Content#1": {}, "Content#2": {"/T1_0#1#0": ["d", "F", "\\002", "\\003", "\\002", "\\003", "\\006", "\\001", "\\001", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\001", "b", "c", "\\001", "\\002", "\\002", "\\002", "\\002", "\\003", "P", "\\002", "\\003", "P", "A", "P", "\\002", "\\003", "P", "p", "p", "\\b", "\\005", "P", "\\b", "p", "P", "p", "p", "F", "F", "F", "a", "F", "\\002", "\\003"], "/T1_1#1#6.9738": ["F", "F", "F", "S", "\\004,,B", "S", "\\004,,B", "\\005", "\\001,B", "n", "\\005", "\\001,B,ase", "S", "\\004,,B", "\\005", "\\001,B", "F", "F", "F", "F", "F", "F", "F", "F", "F", "\\003", "", "\\002", "\\001", "\\003", "\\001", "F", "F", "i", "i", "i", "i", "i", "i", "F", "\\003", "1", "", "\\002", "2", "\\003", "2"], "/T1_2#1#9.9626": ["=", "+", "=", "\\", "\\", "+", "+", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\"], "/T1_0#1#1.147": ["f", "f"], "/T1_3#1#6.9738": ["0", "1", "2", "2", "\\(", "2", "2", "2", "2", "2", "1", "1", "1", "2", "3", "2", "1", "1", "1", "2", "1", "2", "3", "4", "3", "4", "+", "+", "+", "1", "2", "1", "2", "1", "1", "1", "2", "2", "2", "2", "1", "1", "2", "2", "1", "1", "1", "1", "2", "2", "1", "1", "1", "1", "1", "1", "2", "2", "2", "2", "1", "1", "2", "2", "1", "1", "1", "1", "2", "2"], "/T1_1#1#": [","], "/T1_3#1#": ["0", "\\(", "\\", "", "+", "+", "+", "+", "\\"], "/T1_4#1#-0.0002": ["where", "such,that", "is,de\\036ned,for", "by,the,condition", "can,be,interpreted,as", "quantile,of,the", "\\,of,the,null,h,ypothesis", "H0:", "are,independent,ag,ainst,the,alternati,v,e,H1:,the", "log,arithmic,interaction,of", "as,the,Fisher\\222,s,quanti\\036er,.", "Still,the,question,remains,if,there,is,a,whole,class", "of,4ft-quanti\\036ers,that,ha,v,e,the,s,ame,s,ecured,completion", "has,the,s,ame,s,ecured,completion", "W,e,are,interested,in,the,deduction,rules,of,the,form", "where,both", "ho,we,v,er,it,is,not,too,much,simple.,It,is,moreo,v,er,kno,wn", "only,for,association,rules", "such,that,the,Boolean", "attrib,utes", "are,deri,v,ed,from,predicates", "and,not,from", "basic,Boolean,attrib,utes", "where", "are,Boolean,at-", "trib,utes,deri,v,ed,from", "then,the,propositional", "formula", ".,Thus,it", "is", "property,.,W,e,s,ay,that", "the,4ft-quanti\\036er", "such", "that", "property,.,Then,the,deduction,r,ule", "where", "denotes,the,propositional,connecti,v,e", "of,implication.\\", "At,least,one,of,formulas", "The,f,ollo,wing,formulas,are,tautologies"], "/T1_0#1#1.037": ["F"], "/T1_1#1#0.0169": ["X,,X"], "/T1_5#1#0": ["|", "\\r", "\\007", "\\r", "\\007", "\\212", "\\r", "\\002", "\\002", "\\001", "\\001", "\\001", "\\212", "\\001", "\\001", "\\212", "\\001", "\\002", "\\001", "\\002", "\\001", "P", "P", "P", "P", "\\006", "\\254", "P", "\\001", "\\001", "\\001", "\\001", "\\001", "\\200", "\\001", "\\002", "\\003", "\\001", "\\002", "\\003", "\\002", "\\003", "\\001", "\\001", "\\022", "P", "P", "\\254P", "P"], "/T1_0#1#0.277": ["b"], "/T1_5#1#9.9626": ["\\212", "|", "\\n", "\\007", "\\003", "\\003", "\\003", "\\003", "\\001", "\\001", "\\007", "\\001", "\\006", "\\007", "\\007"], "/T1_0#1#1.036": ["c"], "/T1_4#1#0.0002": ["is", "minimal.,The,proof,is,rather,complicated.", "There,is,a,natural,question,if,there,are,some,additional", "4ft-quanti\\036ers,that,ha,v,e,the,s,ame,s,ecured,completion.,T,w,o", "additional,4ft,quanti\\036ers,are,de\\036ned,in", "The", "quanti\\036er", "is", "is", "if,f"], "/T1_4#1#-0.0004": ["of", "and", "and", "by", "and", "and", "and", "and", "and", "as", "the,Fisher\\222,s,quanti\\036er,if,and,only,if", "quan-", "ti\\036er,ha,v,e,the,F-property,.,It,is,an,alternati,v,e,proof,that", "these,quanti\\036ers,ha,v,e,the,abo,v,e,de\\036ned,secured,completion", "and", "and", "and", "and", "and", "and", "and", "it,is", "and", "and", "be", "the,s,trong,symmetrical,equi,v,alence,quanti\\036er,with,the", ",,and", "and"], "/T1_6#1#-0.0001": ["simple,de,viation", "the,lo,garithmic,inter,action", "of", "F-pr,operty", "str,ong,symmetrical"], "/T1_0#1#0.4382": ["\\006>"], "/T1_2#1#0": ["0", "0", "0", "0", "0", "\\(", "\\(", "\\", "0", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\("], "/T1_0#1#0.4511": ["B>"], "/T1_0#1#-0.0001": ["ad,>,e", "bc", "ad,>,bc", "a,,b,,c,,d", "a,,b", "a,,b,,c,,d", "a,,b", "a,,b,,c,,d", "a,,c,,b,,d", "d,,b,,c,,a", "a,,b,,c,", "a,,b,,c,", "a,,b,,c,,d", "a,,b", "a,,b,,c,,d", "a,,b"], "/T1_1#1#0": ["\\004", "b", "a", "a", "\\001", "\\001", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "\\002", "N", "N", "N", "N", "\\002", "1", "N"], "/T1_0#1#1.114": ["a"], "/T1_5#1#0.806": ["\\n"], "/T1_0#1#1.056": ["B", "c", "b", "a"], "/T1_4#1#-0.0001": [".,The,association,rule", "distrib,ution,function.", "The,association,rule", ".,The,class,of,4ft-quanti\\036ers,with,F-", "property,is,de\\036ned,in", "\\(see", "also", "[15]\\", "such", "that", "the", "4ft", "quanti\\036er", "has,the,F-property,.", "There,is,also,a,direct,proof,in", "that", "the", "Fisher\\222", "s", "quan-", "ti\\036er,,,the,quanti\\036er,of,simple,de,viation,and,the", "are,association,rules", "and", "is,the,4ft-quanti\\036er,with,the,F-property,.,Remember", "that,there,are,interesting,results,concerning,correctness,of", "analogous,rules,with,v,arious,4ft-quanti\\036ers;,see,Section,5.", "There,is,a,criterion,of,correctness,of,the,rule", "are,deri,v,ed,from,the,data,matrix,with,the", "Boolean,columns", "then,the,propositional,formula", "related,to", "is,a,propositional,v,ariable.,If", "related,to", "if,it,has,the", "for,each,4ft-table", "for,each,4ft-table", "is,correct,if,and", "only,if,at,least,one,of,the,f,ollo,wing,conditions,a\\,\\226,g\\,is,s,at-", "is\\036ed.,\\(The,symbol", "The,follo,wing,formulas,are,tautologies", "are,tautologies."], "/T1_5#1#0.978": ["\\r"], "/T1_6#1#-0.0004": ["and", "has"], "/T1_6#1#-0.0002": ["is,estimated,to,be,gr,eater,than", "pr,operty"], "/T1_4#1#0.482": [".", "The"], "/T1_4#1#-0.0003": ["quanti\\036er", "can,be,deri,v,ed,from,the", "statistical", "ha,v,e,the,s,ame,s,ecured,com-", "pletion", "has,the", "then", "then", ".,I,t,means,that", "etc.,The,e,xample", "of,such,the,rule,is", "is,one,of,Boolean", "attrib,utes", "is,de\\036ned,as", "is,de\\036ned,as", "and,analogously,for,Boolean,connecti,v,es", "etc.", "The,presented,criterion,concerns,a,s,peci\\036c,subclass,of", "quanti\\036ers,with,the,F-property,.,W,e,need,notions,of,strong", "symmetrical,quanti\\036ers,and,the", "prop-", "erty,and,if,it,satis\\036es,the,follo,wing,conditions:"], "/T1_4#1#9.9626": ["is,de\\036ned,for", "test,\\(on,the,le,v,el,of", ".", "W,e,are,going,to,present,this,criterion,in,a,bit,infor,-", "mal,w,ay,,,the,formal,one,is,out,of,the,s,cope,of,this,paper,.", "The,criterion,is,based,on,propositional,formulas,associated", "with,Boolean,attrib,utes", ",", ",", ",", "are,b,uilt,from"], "/T1_0#1#0.3424": ["<\\004<"], "/T1_0#1#": [".", "a", "a", "a", "a", "\\007", "P", "P", "P", "\\b", "\\b", "\\005", "P", "P", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003"], "/T1_2#1#0.777": ["5"], "/T1_0#1#0.3283": ["B>"], "/T1_1#1#1.153": ["ad>bc"], "/T1_1#1#0.447": ["a"], "/T1_1#1#1.498": ["c", "b", "c"], "/T1_3#1#0.0001": ["\\", "", "\\", "", "\\", ""], "/T1_1#1#1.38": ["d"], "/T1_0#1#1.254": ["\\001"], "/T1_0#1#0.896": ["a"], "/T1_5#1#0.807": ["\\n"], "/T1_0#1#1.055": ["B"], "/T1_4#1#0.809": [".", "Here"], "/T1_0#1#2.193": ["\\001"], "/T1_2#1#-0.0004": ["\\(1", "\\(0", "0\\,=,0"], "/T1_0#1#0.997": ["\\004"], "/T1_2#1#0.643": ["\\", "\\"], "/T1_5#1#0.994": ["\\r"], "/T1_0#1#4.054": ["\\001"], "/T1_0#1#8.065": ["\\004"], "/T1_4#1#0.0001": ["is,positi,v,e,.,It,is,p,ro,v,e,d", "in", "that", "both", "if,it,satis\\036es:", "1.,If"], "/T1_0#1#0.1658": [",b", ",c", ",d", ",b", ",c", ",d", ",c", ",d", ",c", ",d", ",b", ",c", ",d", ",b", ",c", ",d", ",P", ",P", ",B", ",...", ",P", ",P", ",b,,c,,d", ",b,,c,,d", ",c", ",d", ",c", ",d", ",P"], "/T1_2#1#1.055": ["\\(", "0", "\\(", "\\(", "0", "\\(", "\\(", "\\("], "/T1_2#1#0.2794": ["\\", "\\"], "/T1_5#1#0.706": ["\\n"], "/T1_5#1#0.655": ["\\212"], "/T1_2#1#1": ["1", "1", "1", "1"], "/T1_5#1#0.778": ["\\n", "\\n"], "/T1_2#1#0.2223": ["+1", "+1"], "/T1_2#1#0.2785": ["\\", "\\", "\\"], "/T1_4#1#0": [".", "2.,If", ".", "It,is,also,pro,v,ed,in", "that", "each", "equi", "v", "alence", "quanti-", "\\036er", ".", "The,criterion,of,correctness,is,pro,v,ed,in", "and", "it", "can,be,a,bit,informally,formulated,as,follo,ws.,Let"], "/T1_5#1#0.71": ["\\n"], "/T1_5#1#0.651": ["\\212"], "/T1_4#1#": [".", ",", ",", ",", ",", ".", "."], "/T1_7#1#0.0001": ["7,Results,on,F-pr,operty"], "/T1_8#1#0": ["7.1,Deduction,Rules,and,F-prop,ert,y"], "/T1_5#1#0.931": ["\\001"], "/T1_0#1#9.9626": ["\\003", "", "\\002", "\\003", "\\003", "\\003", "\\003", "P"], "/T1_9#1#6.9738": ["\\001", "\\001", "\\001", "\\001", "\\005", "F", "\\001", "\\001", "\\005", "F", "\\005", "F"], "/T1_5#1#1.118": ["\\001"], "/T1_9#1#": ["\\005", "F"], "/T1_5#1#1.114": ["\\001"], "/T1_0#1#3.939": ["\\002"], "/T1_3#1#0": ["2", "2", "2", "2", "2"], "/T1_0#1#0.1664": [",...,P", ",...,P", ",...,P", ",...,P"], "/T1_2#1#": ["\\(", "0"], "/T1_0#1#1.138": ["\\004"], "/T1_2#1#1.007": ["\\"], "/T1_0#1#0.889": ["P", "P", "P", "p"], "/T1_4#1#0.5721": [".I,f"], "/T1_0#1#4.177": ["P"], "/T1_2#1#0.778": ["\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\("], "/T1_2#1#0.5253": ["\\"], "/T1_0#1#0.1663": [",...,P"], "/T1_5#1#3.382": ["P"], "/T1_5#1#1.037": ["\\007"], "/T1_0#1#0.763": ["\\005", "\\005"], "/T1_2#1#0.659": ["\\"], "/T1_5#1#0.648": ["\\007"], "/T1_2#1#0.939": ["\\"], "/T1_5#1#0.0967": ["\\007P"], "/T1_2#1#1.048": ["\\"], "/T1_2#1#0.2778": ["\\", "\\"], "/T1_5#1#0.5": ["P"], "/T1_5#1#0.2223": ["\\006\\254", "\\006\\254", "\\007P", "\\007P", "\\007\\254,P", "\\007\\254,P", "\\007P", "\\007P", "\\007\\254,P", "\\007\\254,P", "\\007P", "\\007P", "\\007\\254,P", "\\007P", "\\007P", "\\007\\254,P", "\\007\\254,P", "\\007\\254,P"], "/T1_2#1#1.056": ["\\(", "\\(", "\\(", "\\("], "/T1_2#1#0.781": ["\\"], "/T1_2#1#0.2814": ["\\"], "/T1_4#1#0.642": [".", "The,4ft-quanti\\036er"], "/T1_4#1#0.0003": ["It,is"], "/T1_2#1#0.2799": ["\\", "\\"], "/T1_5#1#": ["\\003"], "/T1_4#1#0.888": ["."], "/T1_5#1#-20.997": ["\\200"], "/T1_4#1#1": ["There,are,4ft-tables"], "/T1_5#1#8.58": ["\\002"], "/T1_9#1#0": ["\\001", "\\001", "\\001", "\\001"], "/T1_2#1#0.711": ["+", "+"], "/T1_0#1#0.96": ["b", "c", "d", "b", "c", "d"], "/T1_2#1#0.612": ["+"], "/T1_2#1#0.615": ["+"], "/T1_2#1#0.798": ["="], "/T1_5#1#1.012": ["\\001"], "/T1_0#1#0.608": ["\\002"], "/T1_0#1#-23.463": ["\\003"], "/T1_0#1#5.904": ["P"], "/T1_7#1#-0.0004": ["a\\", "b\\", "c\\"], "/T1_5#1#0.2774": ["\\022P", "\\022P", "\\022\\254,P", "\\022\\254,P", "\\022P", "\\022\\254,P", "\\022P", "\\022\\254,P"], "/T1_5#1#-14.016": ["P"], "/T1_5#1#-15.35": ["\\254P", "\\254P", "\\254P", "\\254P"], "/T1_2#1#1.444": ["\\(", "\\(", "\\(", "\\(", "\\("], "/T1_5#1#0.2783": ["\\022\\254,P"], "/T1_5#1#0.5276": ["\\022P"], "/T1_5#1#-14.017": ["P"]}, "Content#3": {"##": ["291"]}, "Content#4": {"##": ["291"]}}, "Page#6": {"Content#0": {}, "Content#1": {}, "Content#2": {"/T1_0#1#-0.0004": ["d\\", "e\\", "g\\"], "/T1_1#1#-0.0002": ["The,follo,wing,formulas,are,tautologies", "of,natural,numbers,s,atisfying", "where", "can,be,used,in,the,s,ame,w,ay", "as,the,function", "called,table,of,maximal,b,for", "implicational,quanti\\036er", ",,s,ee,Section,5.,The,function", "if,and,only,if", "is,equi,v,alence,and,symmetrical", "b,ut,it,has,not,the,F-property,and,thus,it,is,equi,v,alence,and", "symmetrical,b,ut,it,has,not,the,s,ame,s,ecured,completion,as", "the,Fisher\\222,s,quanti\\036er,.", "Thus,the,abo,v,e,mentioned,conjecture,is,denied.", "The,Fisher\\222,s,quanti\\036er,,,the,quanti\\036er,of,simple,de,via-", "tion,and,the", "quanti\\036er,belong,to,the,class,of,equi,v-", "alence,quanti\\036ers;,see", "is,the,Fisher\\222,s,quanti\\036er,,,the,quanti\\036er,of,simple", "de,viation,or,the", "quanti\\036er,then,the,rule", "to,ha,v,e,the,s,ame,v,alue", "\\(either", "Do,the,Fisher\\222,s,quanti\\036er,,,the,quanti\\036er,of,simple,de-", "viation,and,the", "quanti\\036er,belong,to,the,class,of", "-equi,v,alence,quanti\\036ers?", "It,is,easy,to,pro,v,e,that,each"], "/T1_2#1#0": ["P", "P", "P", "P", "P", "P", "\\001", "\\002", "\\003", "\\001", "|", "\\b", "|", "\\001", "A", "\\001", "A", "\\006", "\\007", "\\006", "\\007", "\\006", "\\007", "\\001", "B", "\\001", "B", "\\001", "B", "\\200", "\\001", "\\200", "\\f", "p,B", "\\200", "\\200", "\\001", "\\001", "\\212", "\\001", "\\212", "\\001", "\\001", "\\212", "\\001", "\\001"], "/T1_3#1#0.778": ["\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\("], "/T1_4#1#": ["\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "\\002", "\\003", "a", "a"], "/T1_5#1#6.9738": ["1", "1", "2", "2", "2", "2", "1", "1", "2", "2", "1", "1", "1", "1", "2", "2", "1", "1", "2", "2", "2", "2", "1", "1", "2", "2", "1", "1", "1", "1", "2", "2", "1", "1", "2", "2", "1", "1", "2", "2", "2", "2", "2", "2", "1", "1", "2", "2", "1", "1", "2", "2", "2", "2", "2", "2", "2", "+", "2", "2", "2"], "/T1_3#1#9.9626": ["\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "+", "+", "+", "+", "+", "+", "=", "=", "=", "="], "/T1_2#1#0.2223": ["\\007P", "\\007\\254,P", "\\007\\254,P", "\\007\\254,P", "\\007P", "\\007P", "\\007\\254,P", "\\007P", "\\007P", "\\007\\254,P", "\\007\\254,P", "\\007P", "\\007P", "\\007\\254,P", "\\007\\254,P", "\\007P", "\\007P", "\\007P", "\\007\\254,P", "\\007\\254,P", "\\007P", "\\007\\254,P", "\\007\\254,P", "\\007P"], "/T1_3#1#0": ["\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\", "\\", "\\", "\\", "\\001", "\\001", "\\001", "\\001", "\\001"], "/T1_2#1#0.2774": ["\\022\\254,P", "\\022P", "\\022\\254,P", "\\022P", "\\022\\254,P", "\\022\\254,P", "\\022P", "\\022P", "\\022P", "\\022\\254,P", "\\022P", "\\022\\254,P", "\\022\\254,P", "\\022P", "\\022P", "\\022\\254,P"], "/T1_1#1#": [",", ",", ",", ".", ",", ",", ",", ".", ",", ",", "and,at,least,one,of,formulas", ",", ",", ",", "and,at,least,one,of,formulas", ",", "-", "equi,v,alence,quanti\\036ers?"], "/T1_2#1#-15.35": ["P", "\\254P", "\\254P", "P", "\\254P", "\\254P", "\\254P"], "/T1_3#1#1.444": ["\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\(", "\\("], "/T1_1#1#-0.0001": ["The,follo,wing,formulas,are,tautologies", "Both,the,follo,wing,tw,o,formulas,are,tautologies", "are,tautologies.", "Both,the,follo,wing,tw,o,formulas,are,tautologies", "are,tautologies.", "W,e,already,kno,w,that,the,Fisher\\222,s,quanti\\036er,,,the,quan-", "ti\\036er,of,simple,de,viation,and,the", "property,.", "It,is,pro,v,ed,in", "that", "for", "the", "symmetrical", "4ft-quanti\\036er", "that,assigns,to", "each,triple", "is,called", "", "such", "that", "it", "is", ",,thus,the,y,also,e,xpress", "a,t,endenc,y,of", "to,ha,v,e,the,same,v,alues.,An", "e,xample,is,the,quanti\\036er", "What,is,the,relation,of,the,class,of,quanti\\036ers,with,the", "F-property,to,the,class,of", "for", "says,that,if"], "/T1_0#1#0.0003": ["f\\"], "/T1_2#1#-14.016": ["\\254P"], "/T1_2#1#-17.81": ["\\254P", "\\254P"], "/T1_4#1#0": ["\\001", "F", "a", "T", "b", "c", "a", "T", "T", "T", "b", "b", "\\001", "\\001", "\\002", "\\002", "\\003", "\\002", "\\003", "\\001", "b", "c", "b", "a", "a"], "/T1_1#1#-0.0003": ["quanti\\036er,are,equi,v,a-", "lence,quanti\\036ers.,It,is,pro,v,ed,in", "that", "these", "quanti\\036ers", "are,also,strong,symmetrical,and,that,the,y,ha,v,e", "the,number", "such,that,for,each", "There,w,as,a,conjecture,that,ha,ving,the,s,ame,s,ecured", "completion,as,the,Fisher\\222,s,quanti\\036er,is,for,equi,v,alence", "quanti\\036ers,the,same,as,being,symmetrical.,Ho,we,v,er,it,can", "be,easy,v,eri\\036ed,that,the,4ft-quanti\\036er", "de\\036ned,such,that", "are,de\\036ned,by", "de\\036ned,by,the,condition", "a", ";,s,ee,Section,3.", "Thus,it,is,natural,to,ask,the,follo,wing,questions:", "-equi,v,alence,quanti\\036er,has", "the,F-property,.,Let,us,suppose,that", "-equi,v,alence", "quanti\\036er,.,W,e,ha,v,e,to,pro,v,e,\\(see,Section,6\\", "1.,If", "then", "then", "-equi,v,alence", "quanti\\036ers.,The", "then"], "/T1_6#1#0": ["7.2,T,ables,of,Critical,F,requencies,and,F-", "prop,ert,y"], "/T1_1#1#1.032": ["with,the,F-property,there,is,a,function"], "/T1_4#1#15.495": ["T"], "/T1_7#1#6.9738": ["\\005", "\\005", "\\005", "\\005", "\\006", "\\005", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001"], "/T1_4#1#-0.0001": ["a,,d,,n", "a,,d,,n", "a,,b,,c,,d", "a,,d,,n", "a,,d,,n", "a,,d,,n", "a,,b,,c,,d", "a,,b,,c,,d", "a,,b,,c,,d", "a,,b", "a,,b,,c,,d", "a,,b", "a,,b,,c,,d", "a,,b", "a,,b,,c,,d", "a,,b"], "/T1_3#1#0.637": ["+"], "/T1_4#1#0.886": ["d"], "/T1_2#1#0.798": ["\\t"], "/T1_4#1#1.056": ["n", "a", "c", "b", "a"], "/T1_2#1#0.742": ["\\n"], "/T1_3#1#1.09": ["0", "0"], "/T1_1#1#-0.0004": ["and", "and", "or", "The", "and", "and", "and", "and", "and"], "/T1_2#1#0.745": ["\\n"], "/T1_3#1#0.751": ["+"], "/T1_4#1#1": ["b", "c", "d", "c", "c"], "/T1_3#1#0.651": ["+"], "/T1_3#1#0.655": ["+"], "/T1_3#1#0.799": ["="], "/T1_4#1#1.055": ["n", "c", "b", "p", "B", "b", "a", "b"], "/T1_1#1#0.0002": ["it,is", "if,f", "is", "equi,v,alence,,has,the,F-property,\\(i.e.,it,has,the,s,ame,s,ecured", "completion,as,the,Fisher\\222,s,quanti\\036er\\,and,it,is,not,symmet-", "rical.", "Let,us,de\\036ne,the,4ft-quanti\\036er", "if,f"], "/T1_3#1#1.056": ["\\("], "/T1_3#1#0.2794": ["\\", "\\", "\\", "\\"], "/T1_4#1#0.277": ["b", "b"], "/T1_2#1#0.652": ["\\212"], "/T1_2#1#0.2778": ["|\\n"], "/T1_1#1#0.642": [".", "The,f,unction"], "/T1_4#1#0.1392": ["Tb"], "/T1_7#1#0": ["\\002", "\\001", "\\001", "\\001", "\\001", "\\001", "\\001"], "/T1_8#1#4.9813": ["\\002"], "/T1_3#1#0.917": ["\\"], "/T1_9#1#3.556": ["table,of,minimal"], "/T1_2#1#0.651": ["\\212", "\\212"], "/T1_2#1#": ["|"], "/T1_1#1#0.71": ["."], "/T1_6#1#0.0001": ["7.3,Symmetry,and,F-prop,ert,y"], "/T1_3#1#0.707": ["="], "/T1_3#1#0.2774": ["=0", "=1", "=0", "=0", "=1"], "/T1_4#1#0.718": ["b", "b", "b"], "/T1_4#1#0.922": ["c", "c", "c"], "/T1_3#1#0.2783": ["=2", "=0"], "/T1_3#1#0.3499": ["\\"], "/T1_2#1#0.777": ["\\t"], "/T1_3#1#1.127": ["2", "1"], "/T1_2#1#0.751": ["\\007", "\\007"], "/T1_4#1#0.917": ["c", "b", "c"], "/T1_2#1#0.78": ["\\t"], "/T1_2#1#0.75": ["\\006"], "/T1_2#1#0.778": ["\\t", "\\n", "\\n"], "/T1_3#1#1.126": ["1", "2"], "/T1_2#1#0.781": ["\\t"], "/T1_1#1#0.4248": [".I,t", "can,be,easy,v,eri\\036ed,that"], "/T1_0#1#0.0001": ["8,F-pr,operty,and", "\\001", "-equi,v,alence,Rules"], "/T1_1#1#0": ["There,are,the,follo,wing,f,acts:", ".", "2.,If", ".", "W,e,pro,v,e,the,condition,1\\,the,proof,of,the,condition,2\\", "is,analogous.,Let,us,suppose", ".", "Ho,we,v,er,,,it,follo,ws,from,the,truth,preserv,ation,condition", ".", "In,our,case,we,ha,v,e"], "/T1_2#1#-0.2": ["\\200"], "/T1_1#1#0.0003": ["If", "\\"], "/T1_2#1#0.986": ["\\001"], "/T1_4#1#1.109": ["\\003"], "/T1_1#1#-0.0158": ["ex,-", "presses,a,tendenc,y,of"], "/T1_9#1#2.86": ["true"], "/T1_9#1#0.0001": ["false"], "/T1_9#1#-0.0002": ["-equivalence,quanti\\036er,s"], "/T1_4#1#0.1393": ["TPC", "TPC", "TPC"], "/T1_5#1#0": ["\\002", ",", "\\002", ",", "\\002", ","], "/T1_7#1#": ["\\004", "\\004", "\\004"], "/T1_4#1#9.9626": ["a"], "/T1_4#1#0.86": ["d", "d", "c", "c"], "/T1_2#1#9.9626": ["\\n", "\\t", "\\n", "\\n", "\\t", "\\n", "\\t"], "/T1_3#1#0.611": ["+"], "/T1_2#1#0.816": ["\\007"], "/T1_4#1#0.961": ["b"], "/T1_3#1#0.511": ["+"], "/T1_5#1#": ["+", "d", "", "n"], "/T1_2#1#0.725": ["\\007"], "/T1_4#1#0.889": ["a"], "/T1_2#1#0.807": ["\\n"], "/T1_3#1#10.304": ["\\001"], "/T1_1#1#0.0001": ["is,the"], "/T1_2#1#2.417": ["\\001", "\\001"], "/T1_3#1#1.055": ["\\(", "0", "\\(", "\\(", "0", "\\(", "\\(", "\\("], "/T1_2#1#0.706": ["\\n"], "/T1_2#1#0.655": ["\\212"], "/T1_3#1#1": ["1", "1", "1", "1"], "/T1_3#1#0.2223": ["+1", "+1"], "/T1_4#1#0.1658": [",c", ",d", ",c", ",d", ",c", ",d", ",b", ",c", ",d", ",c", ",d"], "/T1_3#1#0.2785": ["\\", "\\"], "/T1_2#1#0.71": ["\\n"], "/T1_3#1#1.242": ["\\("], "/T1_3#1#0.4655": ["\\"], "/T1_2#1#0.892": ["\\n"], "/T1_4#1#-22.936": ["c"], "/T1_2#1#0.723": ["\\212"], "/T1_3#1#1.068": ["1", "1"], "/T1_2#1#0.948": ["\\n"], "/T1_3#1#1.225": ["0"], "/T1_1#1#0.3422": [",,w,eh,a,v,et,os,h,o,w"], "/T1_3#1#9.589": ["\\("], "/T1_3#1#0.29": ["+1"], "/T1_3#1#0.4483": ["\\"], "/T1_1#1#9.9626": [":"], "/T1_4#1#0.563": ["a"], "/T1_4#1#0.809": ["d", "d", "c", "c"], "/T1_3#1#0.56": ["+"], "/T1_2#1#0.752": ["\\007"], "/T1_4#1#0.897": ["b"], "/T1_3#1#0.461": ["+"], "/T1_3#1#0.2799": ["\\"], "/T1_4#1#0.919": ["d", "d", "c", "c"], "/T1_3#1#0.669": ["+"], "/T1_2#1#0.889": ["\\007"], "/T1_4#1#1.035": ["b"], "/T1_3#1#0.57": ["+"], "/T1_3#1#0.2781": ["\\"], "/T1_4#1#1.097": ["b", "c", "d"], "/T1_3#1#0.2385": ["+1"], "/T1_2#1#0.671": ["\\212"], "/T1_3#1#1.016": ["1"]}, "Content#3": {"##": ["292"]}, "Content#4": {"##": ["292"]}}, "Page#7": {"Content#0": {}, "Content#1": {}, "Content#2": {"/T1_0#1#-0.0003": ["and,thus", "has,the", "has,the", "quanti\\036er,ha,v,e,the", "-equi,v,alence."], "/T1_1#1#0": ["a", "\\001", "b", "\\001", "\\001"], "/T1_2#1#6.9738": ["\\001", "\\001", "\\001", "\\001", "\\001", "\\001"], "/T1_3#1#9.9626": ["+", "=", "+", "=", "+"], "/T1_1#1#0.922": ["d", "d", "c", "c"], "/T1_1#1#1.055": ["a"], "/T1_3#1#0.673": ["+"], "/T1_4#1#0.894": ["\\007"], "/T1_1#1#1.041": ["b"], "/T1_1#1#1.056": ["b"], "/T1_3#1#0.574": ["+"], "/T1_0#1#-0.0002": ["and,according,to", ".,This,\\036nishes,the", "proof.", "The,question,remains,if,there,are,some,4ft-quanti\\036ers", "with,the,F-property,that,are,not", "quanti\\036er,are,e,xamples,of,important", "quanti\\036ers,with,the,F-property,that,do,not,belong,to,the", "class,of", "-equi,v,alence,quanti\\036ers.,The,proof,is,out,of,the", "scope,of,this,paper,.,It,is,based,on,the,notion,of,the", "such,that", "Association,rules,can,be,de\\036ned,as,general,relations", "of,tw,o,Boolean,attrib,utes,deri,v,ed,in,v,arious,w,ays,from", "columns,of,analyzed,data,matrix.,Se,v,eral,classes,of,associ-", "ation,rules,related,to,types,of,these,r,elations,is,introduced.", "Ov,ervie,w,of,the,theoretically,interesting,and,practically,im-", "portant,results,related,to,these,classes,is,gi,v,en.", "A,ne,w,class,of,association,rules,with,F-property,is,de-", "scribed,in,a,detailed,w,ay,.,This,class,contains,important,as-", "sociation,rules,corresponding,to,the,Fisher\\222,s,test,and,to,the", "-equi,v,alence,rules,is,s,tudied.", "There,are,tens,of,additional,measures,for,association,pat-", "terns,described,in,literature;,see,e.g.", "These", "measures", "can,be,understood,as,the,additional,4ft-quanti\\036ers.,W,e,sup-", "pose,to,s,tudy,relations,of,these,additional,4ft-quanti\\036ers,to", "kno,wn,classes,of,association,rules."], "/T1_1#1#0.1393": ["TPC"], "/T1_5#1#0": ["\\002"], "/T1_6#1#0.816": [","], "/T1_2#1#": ["\\004"], "/T1_0#1#0.0002": ["it,is"], "/T1_4#1#0": ["\\001", "\\212", "\\001", "\\002", "\\003", "\\002", "\\003", "\\001"], "/T1_3#1#1.119": ["\\("], "/T1_1#1#-0.0001": ["a,,b", "a,,b,,c,,d", "a,,b", "a,,b,,c,,d", "a,,b"], "/T1_3#1#0.2476": ["+1"], "/T1_1#1#0.1658": [",c", ",d", ",c", ",d", ",c", ",d"], "/T1_3#1#1.025": ["1"], "/T1_3#1#0.3417": ["\\"], "/T1_3#1#0": ["\\001", "\\001", "\\(", "\\(", "\\001", "\\001", "\\001"], "/T1_0#1#-0.0001": ["-equi,v,alence.,It,is,pro,v,ed", "in", "that", "the", "Fisher\\222", "s", "quanti\\036er", ",", "the", "quanti\\036er", "of", "simple", "de,viation,and,the", "-property,then,it,is,not", "-equi,v,alence.,It,is,also", "pro,v,ed,in", "that", "Fisher\\222", "s", "quanti\\036er", ",", "the", "quanti\\036er", "of", "sim-", "ple,de,viation,and,the", "", "Aggra", "v", "al", "R", "et", "al.", "\\(1996\\", "F", "ast", "Disco", "v", "ery", "of", "Associa-", "tion,Rules.,I,n:,F,ayyad,,U.,M.,et,al.\\(Eds.\\,Adv,ances,in", "Kno,wledge,Disco,v,ery,and,Data,Mining.,AAAI,Press", "", "H", "\\264", "ajek,P,,,Ha,vr", "\\264", "anek,T,\\(,1978\\,Mechanising,Hypothesis", "F,ormation,-,Mathematical,F,oundations,for,a,General", "Theory,.,Springer,,,Berlin,Heidelber,g,Ne,w,Y,ork", "", "H", "\\264", "ajek,P,\\(guest,ed.\\,\\(1978\\,International,Journal,of", "Man-Machine,Studies,,s,pecial,issue,on,GUHA,,10", "", "H", "\\264", "ajek,P,\\(guest,ed.\\,\\(1981\\,International,Journal,of", "Man-Machine,Studies,,s,econd,special,issue,on,GUHA,", "15", "", "H", "\\264", "ajek,P,,,Ha,vr", "\\264", "anek,T,,,Ch,ytil,M,\\(,1983\\,GUHA,Method.", "Academia,,Prague,\\(in,Czech\\", "", "H", "\\264", "ajek,P,,,Sochoro,v", "\\264", "aA,,Z,v", "\\264", "aro,v", "\\264", "a,J,\\(1995\\,GUHA,for", "personal,computers.,Computational,Statistics,&,Data", "Analysis,,19", "", "P", "ang-Ning", "T", ",", "K", "umar", "V", ",", "Sri", "v", "asta", "v", "a", "J", "\\(2004\\", "Selecting", "the,Right,Objecti,v,e,Measure,for,Association,Analysis.", "Information,Systems,,29", "", "Ralbo", "vsk", "\\264", "y,M,,K,ucha", "\\030", "r,T,\\(2007\\,Using,Disjunctions,in", "Association,Mining.,In:,Perner,P,\\(Ed.\\,Adv,ances,in", "Data,Mining,-,Theoretical,Aspects,and,Applications.", "Springer,,,Berlin,Heidelber,g,Ne,w,Y,ork", "", "Rauch", "J", "\\(1975\\", "Ein", "Beitrag", "zu", "der", "GUHA", "Methode", "in", "der,dreiwertigen,Logik.,K,ybernetika,,11", "", "Rauch", "J", "\\(", "1986\\", "Logical", "F", "oundations", "of", "Hypothesis", "F,ormation,from,Databases.,Mathematical,Institute,of", "the,Czechoslo,v,ak,Academy,of,Sciences,,Prague,,Dis-", "sertation,\\(in,Czech\\", "", "Rauch", "J", "\\(", "1998\\", "Classes", "of", "F", "our", "-F", "old", "T", "able", "Quanti-", "\\036ers.,In:,Zytk,o,w,J,,Quaf,afou,M,\\(Eds.\\,Principles", "of,Data,Mining,and,Kno,wledge,Disco,v,ery,.,Springer,,", "Berlin,Heidelber,g,Ne,w,Y,ork", "", "Rauch", "J", "\\(", "1998\\", "Contrib", "ution", "to", "Logical", "F", "oundations", "of,KDD.,Uni,v,ersity,of,Economics,Prague,,Assoc.,Prof.", "Thesis,\\(in,Czech\\", "", "Rauch", "J", "\\(2004\\", "De\\036nability", "of", "Association", "Rules", "and", "T,ables,of,Critical,Frequencies.,In:,Lin,T,Y,et,al.,\\(Eds.\\", "F,oundations,of,Data,Mining.,Brighton,,IEEE,Computer", "Society", "", "Rauch", "J", "\\(", "2005\\", "Logic", "of", "Association", "Rules.", "Applied", "Intelligence,,22", "", "Rauch", "J", "\\(2005\\", "Classes", "of", "Association", "Rules,", "an", "Ov,ervie,w,.,In:,Lin,T,Y,,,Xie,Y,\\(Eds.\\,F,oundation,of,se-", "mantic,Oriented,Data,and,W,eb,Mining.,Houston,,IEEE", "Computer,Society", "", "Rauch", "J,", "\\030", "Sim", "\\035", "unek,M,\\(,2005\\,An,Alternati,v,e,Approach", "to,Mining,Association,Rules.,In:,Lin,T,Y,et,al.,\\(Eds.\\", "Data,Mining:,F,oundations,,Methods,,and,Applications.", "Springer,,,Berlin,Heidelber,g,Ne,w,Y,ork", "", "Rauch", "J,", "\\030", "Sim", "\\035", "unek,M,\\(,2005\\,GUHA,Method,and", "Granular,Computing.,In:,Hu,,X,et,al.,\\(Eds.\\,Proceed-", "ings,of,IEEE,conference,Granular,Computing.,Beijing,", "IEEE,Computer,Society", "", "Rauch", "J,", "\\030", "Sim", "\\035", "unek,M:,Semantic,W,eb,Presentation,of", "Analytical,Reports,from,Data,Mining,\\226,Preliminary", "Considerations.,I,n,Proceedings,of,W,eb,Intelligence,07"], "/T1_5#1#6.9738": ["2", "2", "2"], "/T1_1#1#20.775": ["AD"], "/T1_3#1#-0.0004": ["01", "01", "01", "01"], "/T1_0#1#0": ["-", "property,.,W,e,s,ay,that,the,4ft,quanti\\036er", ".", "There,is,a,theorem,saying,that,if,the,quanti\\036er", "-property,.", "Thus,these,quanti\\036ers,are,not"], "/T1_1#1#-0.0002": ["AD", "AD", "AD"], "/T1_7#1#0": ["-", "pr,operty"], "/T1_0#1#0.0001": ["if,there,a,re"], "/T1_0#1#-0.0004": ["and"], "/T1_2#1#0": ["\\001", "\\001", "\\001", "\\001"], "/T1_3#1#0.655": ["+"], "/T1_1#1#1.004": ["c", "c"], "/T1_3#1#0.72": ["="], "/T1_1#1#1.065": ["b"], "/T1_4#1#0.5421": ["\\007\\001", "\\007\\001"], "/T1_3#1#0.2889": ["\\"], "/T1_3#1#0.288": ["\\"], "/T1_8#1#0.0001": ["9,Conclusions,and,Further,W,ork", "Refer,ences"], "/T1_0#1#9.9626": ["test.,Relation,of,the,class,of,rules,with,the,F-property,to", "the,class,of"]}, "Content#3": {"##": ["293"]}, "Content#4": {"##": ["293"]}}}
+{
+  "Page#1": {
+    "Content#0": {},
+    "Content#1": {},
+    "Content#2": {
+      "/T1_0#1#0": [
+        "Obser,v,ational,Calculi,,Classes,of,Association,Rules,and,F-pr,operty",
+        "1,Intr,oduction",
+        "2,GUHA,and,Granular,Computing"
+      ],
+      "/T1_1#1#0.0001": [
+        "Jan,Rauch",
+        "F,aculty,of,Informatics,and,Statistics"
+      ],
+      "/T1_2#1#0": [
+        "\\001"
+      ],
+      "/T1_1#1#11.9551": [
+        ",,Uni,v,ersity,of,Economics,,Prague",
+        "n",
+        "\\264",
+        "am.,W,.,Churchilla,4,,130,67,Praha,3,,Czech,Republic",
+        "rauch@vse.cz"
+      ],
+      "/T1_0#1#0.0001": [
+        "Abstract"
+      ],
+      "/T1_3#1#-0.0001": [
+        "An,o,vervie,w,of,se,ver,al,classes,of,association,rules,is",
+        "given.,It,is,shown,that,these,classes,have,theor,etically,inter,-",
+        "esting,and,pr,actically,useful,pr,operties.,The,class,of,asso-",
+        "ciation,rules,with,the,F-pr,operty,is,intr,oduced.,It,is,shown",
+        "that,association,rules,fr,om,this,class,have,pr,operties,simi-",
+        "lar,to,pr,operties,of,the,F,isher\\222,s,test.,Results,concerning,the",
+        "association,rules,with,the,F-pr,operty,ar,e,pr,esented."
+      ],
+      "/T1_1#1#-0.0002": [
+        "This,paper,tries,to,contrib,ute,to,foundations,of,granu-",
+        "lar,computing.,The,paper,deals,with,observ,ational,calculi",
+        "\\(OC,for,short\\,which,were,de\\036ned,and,studied,in",
+        "as",
+        "a",
+        "theoretical,basis,for,the,GUHA,method,of,mechanizing,h,y-",
+        "potheses,formation.,GUHA,is,an,original,Czech,method,of",
+        "e,xploratory,data,analysis,de,v,eloped,since,the,1960s,,that,is",
+        "closely,related,to,granular,computing;,see,Section,2.",
+        "The,most,simple,OC,is",
+        "which,is,a,modi\\036cation,of,classical,predicate,calculus",
+        "\\(gene-ralized,quanti\\036ers,are,added,and,only,\\036nite,structures",
+        "as,models,are,allo,wed\\,F,ormulas,of,OC,correspond,to,v,ar,-",
+        "ious,assertions,concerning,analyzed,data,matrices.,There",
+        "are,also,the,assertions,corresponding,to,statistical,h,ypothe-",
+        "ses,tests.,OC,were,further,modi\\036ed,and,studied,to,get,the",
+        "additional,results,which,help,to,better,understand,associa-",
+        "tion,rules.,W,e,mean,not,only,\\224classical\\224,association,rules",
+        "de\\036ned,in",
+        "as",
+        "a",
+        "pattern",
+        "describing",
+        "mark",
+        "et",
+        "bask",
+        "ets.",
+        "The",
+        "association,rule,we,are,interested,in,is,a,relation,of,tw,o",
+        "Boolean,attrib,utes,deri,v,ed,in,a,general,w,ay,from,columns",
+        "of,analyzed,data,matrix;,see,Section,3.",
+        "Both,theoretically,interesting,and,practically,important",
+        "results,about,deduction,r,ules,concerning,association,r,ules,",
+        "de\\036nability,of,association,rules,in,predicate,calculus,,and",
+        "about,association,rules,with,missing,information,were",
+        "",
+        "-equi,v,alence,rules,and,rules,with",
+        "F-property,are,in,Section,8.,Se,v,eral,concluding,remarks,are",
+        "in,Section,9.",
+        "where"
+      ],
+      "/T1_3#1#-0.0002": [
+        "pr,edicate,observational,calcu-",
+        "lus"
+      ],
+      "/T1_4#1#0": [
+        "\\001"
+      ],
+      "/T1_1#1#7.9701": [
+        "The,w,ork,described,here,has,been,supported,by,Grant,No.",
+        "201/05/0325,of,the,Czech,Science,F,oundation,and,by,Grant,N,o.,ME913",
+        "of,Ministry,of,Education,,Y,outh,and,Sports,of,the,Czech,Republic",
+        "achie,v,ed.,These,results,are,related,to,classes,of,associa-",
+        "tion,rules.,There,are,classes,of,implicational,rules,,double",
+        "implicational,rules,,etc.;,s,ee,Sections,4,and,5.",
+        "Goal,of,this,paper,is,to,present,results,concerning,class",
+        "of,association,rules,with,F-property,.,This,class,contains,im-",
+        "portant,association,rules,corresponding,to,Fisher\\222,s,test,and"
+      ],
+      "/T1_5#1#0": [
+        "\\001",
+        "\\002",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003"
+      ],
+      "/T1_6#1#6.9738": [
+        "2"
+      ],
+      "/T1_1#1#-0.0001": [
+        "test;,see,Section,6.,Some,of,these,results,were,published",
+        "in,last,30,years,under,v,arious,names,,s,ome,of,them,are,ne,w,.",
+        "Ov,ervie,w,of,these,results,is,in,Section,7.,Results,concern-",
+        "ing,relation,of,classes,of",
+        "Aim,of,the,GUHA,method,is,to,of,fer,all,interesting,f,acts",
+        "follo,wing,from,the,analyzed,data,to,the,gi,v,en,problem.",
+        "GUHA,is,realized,by,the,GUHA-procedures.,The,GUHA-",
+        "procedure,is,a,computer,program,,the,input,of,which,con-",
+        "sists,of,the,analyzed,data,and,of,a,s,imple,de\\036nition,of,r,el-",
+        "e,v,ant,\\(i.e.,potentially,interesting\\,patterns.,The,procedure",
+        "automatically,generates,each,particular,pattern,and,tests,if",
+        "it,is,true,in,the,analyzed,data.,The,output,of,the,procedure",
+        "consists,of,all,prime,patterns.,The,pattern,is,prime,if,it,is",
+        "true,in,the,analyzed,data,and,if,it,does,not,immediately,f,ol-",
+        "lo,w,from,the,other,,,more,simple,output,patterns",
+        "Se,v,eral,GUHA,procedures,were,implemented;,see,e.g.",
+        "[3,,4,,",
+        "The",
+        "most",
+        "important",
+        "GUHA",
+        "procedure",
+        "is",
+        "the",
+        "procedure,ASSOC",
+        "which",
+        "mines",
+        "for",
+        "association",
+        "r",
+        "ules.",
+        "The,association,rules,the,procedure,ASSOC,mines,for,are",
+        "more,general,than,the,classical,association,rules,de\\036ned,in",
+        "",
+        "Procedure",
+        "ASSOC",
+        "mines",
+        "among",
+        "other",
+        "for",
+        "association",
+        "rules,corresponding,to,statistical,h,ypothesis,tests.,There,are",
+        "se,v,eral,implementations,of,the,procedure,ASSOC;,see,e.g.",
+        "[3,,4,,,6,,8,,",
+        "Namely",
+        "the",
+        "last",
+        "tw",
+        "o",
+        "implementations",
+        "ha",
+        "v",
+        "e",
+        "signi\\036cantly,more,tools,for,a,de\\036nition,and,tuning,of,a,s,et",
+        "of,rules,to,be,automatically,generated,and,tested,than,the",
+        "usual,apriori,algorithm,has.",
+        "The,association,rule,is,the,e,xpression",
+        "are,Boolean,attrib,utes.,It,means,that"
+      ],
+      "/T1_7#1#9.913": [
+        "\\001"
+      ],
+      "/T1_8#1#1.096": [
+        "\\001"
+      ],
+      "/T1_5#1#1.22": [
+        "\\003"
+      ],
+      "/T1_1#1#-0.0004": [
+        "and",
+        "and"
+      ],
+      "/T1_1#1#1.06": [
+        "are"
+      ]
+    },
+    "Content#3": {
+      "##": [
+        "2007 IEEE International Conference on Granular Computing",
+        "0-7695-3032-X/07 $25.00 © 2007 IEEE",
+        "DOI 10.1109/GrC.2007.88",
+        "287"
+      ]
+    },
+    "Content#4": {
+      "##": [
+        "2007 IEEE International Conference on Granular Computing",
+        "0-7695-3032-X/07 $25.00 © 2007 IEEE",
+        "DOI 10.1109/GrC.2007.88",
+        "287"
+      ]
+    }
+  },
+  "Page#2": {
+    "Content#0": {},
+    "Content#1": {},
+    "Content#2": {
+      "/T1_0#1#-0.0002": [
+        "associated,in,the,w,ay,gi,v,en,by,the,symbol",
+        "called,the",
+        "if,the,condition,gi,v,en,by,the,4ft-quanti\\036er",
+        "etc.;,s,ee",
+        "T,able,1.",
+        "The,Boolean,attrib,utes",
+        "where",
+        "is,the,s,et,of,all,possible,v,alues,of,the,column",
+        "where",
+        "in,Fig.,1.,There",
+        "are,also,e,xamples,of,the,basic,Boolean,attrib,utes",
+        "in,Fig.,1.",
+        "object",
+        "",
+        "All,implementations,of,the,ASSOC,procedure,are,based",
+        "on,the",
+        "of,bits,then,the,i-",
+        "th,bit,in",
+        "is,\\2241\\224,if,and,only,if,it,is",
+        "where",
+        "of,the,data",
+        "matrix",
+        "has,cate,gories",
+        ".,The,set,of,r,el-",
+        "e,v,ant,basic,Boolean,attrib,utes",
+        "where",
+        "are,Boolean,attrib,utes,and",
+        "see,T,ab,.,1,and,Section",
+        "2.,Some,important,4ft-quanti\\036ers,are,presented,belo,w,.,W,e",
+        "use"
+      ],
+      "/T1_1#1#0": [
+        "\\001",
+        "M",
+        "M",
+        "\\001",
+        "M",
+        "M",
+        "\\002",
+        "\\003",
+        "M",
+        "M",
+        "M",
+        "M",
+        "M",
+        "",
+        "M",
+        "M",
+        "{",
+        "M",
+        "\\006",
+        "\\254",
+        "M",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\b",
+        "\\001",
+        "M",
+        "\\001",
+        "M",
+        "M",
+        "\\b"
+      ],
+      "/T1_2#1#0.0001": [
+        "4ft-",
+        "quanti\\036er"
+      ],
+      "/T1_0#1#-0.0001": [
+        ".,The,association,rule",
+        "\\(the",
+        "is,the,num-",
+        "ber,of,ro,ws,of",
+        "and,not,satisfying",
+        "are,deri,v,ed,from,the",
+        "columns,of,the,data,matrix",
+        ".,W,e,assume,there,is,a,\\036-",
+        "nite,number,of,possible,v,alues,for,each,column,of",
+        "are,created,\\036rst.,The,basic,Boolean,attrib,ute,is,an",
+        "e,xpression,of,the,form",
+        ".,The,basic,Boolean,attrib,ute",
+        ".,Boolean,attrib,utes",
+        "are,deri,v,ed,from",
+        "basic,Boolean,attrib,utes,using,propositional,connecti,v,es",
+        "in,the,usual,w,ay,.",
+        "An,e,xample,of,the,data,matrix,with,the,columns,-,the",
+        "attrib,utes",
+        "is,represented,by,the,string",
+        "The,association,rule,is,the,e,xpression",
+        "is,true,in,the,analyzed,data,matrix"
+      ],
+      "/T1_3#1#0": [
+        "\\002",
+        "\\002",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\002",
+        "\\003",
+        "a",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "A",
+        "\\004",
+        "a",
+        "A",
+        "A",
+        "a",
+        "a",
+        "o",
+        "\\002",
+        "\\003",
+        "A",
+        "B",
+        ",",
+        "A",
+        "B",
+        ",",
+        "o",
+        "o",
+        "A",
+        ",",
+        "a",
+        "A",
+        "\\005",
+        "\\005",
+        "A",
+        "a",
+        "A",
+        "o",
+        "\\002",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\002",
+        "\\003",
+        "r",
+        "n"
+      ],
+      "/T1_1#1#1.083": [
+        "\\001"
+      ],
+      "/T1_3#1#1.208": [
+        "\\003"
+      ],
+      "/T1_0#1#-0.0003": [
+        "concerns,the,ana-",
+        "lyzed,data,matrix",
+        "of,natural,numbers,s,uch,that",
+        "of,the",
+        "attrib,ute",
+        "can,be,then",
+        "easy,generated.,It,consists,of,the,basic,Boolean,attrib,utes",
+        ".,Such,set,of",
+        "the,basic,Boolean,attrib,utes,is,usually,called"
+      ],
+      "/T1_0#1#0.5197": [
+        ".T,h,e,r,u,l,e"
+      ],
+      "/T1_1#1#1.062": [
+        "\\001"
+      ],
+      "/T1_3#1#1.184": [
+        "\\003"
+      ],
+      "/T1_0#1#0.0002": [
+        "is",
+        "is",
+        "satis\\036ed,in,the,four,-fold,contingenc,y,table,of",
+        "in",
+        "is",
+        "if,it,is",
+        "in"
+      ],
+      "/T1_2#1#-0.0001": [
+        "true,in,the,data",
+        "matrix"
+      ],
+      "/T1_0#1#-0.0004": [
+        "and",
+        "and",
+        "and",
+        "and",
+        "and",
+        "of",
+        "and",
+        "and",
+        "and",
+        "of",
+        "and",
+        "and",
+        "of"
+      ],
+      "/T1_0#1#0.0001": [
+        ",,o,therwise",
+        "is,the",
+        "quadruple",
+        "is,the",
+        "number,of,ro,ws,of",
+        "satisfying",
+        "in,the,ro,w",
+        "for,the,i-th,ro,w",
+        "is,the",
+        "if,the",
+        "condition,related,to,the,4ft-quanti\\036er",
+        "is,satis\\036ed,in,the,4,ft",
+        "table",
+        "is,for"
+      ],
+      "/T1_1#1#0.932": [
+        "\\001"
+      ],
+      "/T1_3#1#1.055": [
+        "\\003",
+        "a",
+        "a"
+      ],
+      "/T1_2#1#0": [
+        "false,in,the,data,matrix",
+        "attrib,utes",
+        "sliding,win-",
+        "dow"
+      ],
+      "/T1_1#1#9.528": [
+        "M"
+      ],
+      "/T1_0#1#": [
+        ".",
+        "The,four,-fold,contingenc,y,table",
+        ".",
+        "Columns,of,the,data,matrix,are,called",
+        ",,possible",
+        "v,alues,of,the,attrib,utes,are,called",
+        ",",
+        ",",
+        ".",
+        "This,representation,has,an,important,ef,fect,-,it,is,possi-",
+        "ble,to,easy,de\\036ne,and,automatically,generate,v,arious,both",
+        "basic,and,deri,v,ed,Boolean,attrib,utes.,Let,us,suppose,that",
+        "the,a,ttrib,ute",
+        ",",
+        ".",
+        "The,4ft-quanti\\036er"
+      ],
+      "/T1_4#1#0": [
+        "4",
+        "\\(",
+        "4",
+        "\\(",
+        "1",
+        "4",
+        "\\("
+      ],
+      "/T1_3#1#0.1076": [
+        "ft",
+        "ft",
+        "ft"
+      ],
+      "/T1_3#1#-0.0001": [
+        "\\002,,\\003,,",
+        "a,,b,,c,,d",
+        "\\002,,\\003,,",
+        "\\002,,\\003,,",
+        "a,,b,,c,,d"
+      ],
+      "/T1_4#1#": [
+        "\\",
+        "\\",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\"
+      ],
+      "/T1_2#1#1.934": [
+        "4ft",
+        "table"
+      ],
+      "/T1_0#1#2.402": [
+        "for,short\\,of"
+      ],
+      "/T1_0#1#1.089": [
+        "in,the,data,matrix"
+      ],
+      "/T1_1#1#7.886": [
+        "M"
+      ],
+      "/T1_0#1#1.411": [
+        "satisfying,both"
+      ],
+      "/T1_3#1#6.088": [
+        "\\002"
+      ],
+      "/T1_0#1#0.687": [
+        ","
+      ],
+      "/T1_3#1#0.468": [
+        "b",
+        "C"
+      ],
+      "/T1_5#1#-0.0102": [
+        "T,a,bl,e,1,.,4,f,t,t,a,bl,e"
+      ],
+      "/T1_5#1#-0.0003": [
+        "of",
+        "and,basic,Boolean",
+        "attrib,utes"
+      ],
+      "/T1_5#1#-0.0004": [
+        "and"
+      ],
+      "/T1_5#1#0.0002": [
+        "in"
+      ],
+      "/T1_3#1#9.9626": [
+        "\\003",
+        "",
+        "\\002",
+        "",
+        "a",
+        "",
+        "b",
+        "",
+        "c",
+        "",
+        "d"
+      ],
+      "/T1_1#1#9.9626": [
+        "\\254",
+        "\\254",
+        "}",
+        "}"
+      ],
+      "/T1_3#1#": [
+        "\\003",
+        "",
+        "\\002",
+        "",
+        "a",
+        "\\004"
+      ],
+      "/T1_2#1#-0.0002": [
+        "cate,gories",
+        "Basic,Boolean",
+        "attrib,utes",
+        "r,epr,esentation,of,the,analyzed,data,by,s,trings,of,bits",
+        "4ft-quanti\\036er",
+        "founded,implication"
+      ],
+      "/T1_0#1#0": [
+        ".",
+        "is,the,data,matrix",
+        ".",
+        "There,are,lot,of,possibilities,ho,w,to,de\\036ne,sets,of,rele-",
+        "v,ant,basic,Boolean,attrib,utes,and,consequently,sets,of,rel-",
+        "e,v,ant,association,rules.,Bit,string,approach,mak,es,possible",
+        "to,generate,and,v,erify,them,in,a,v,ery,ef,\\036cient,w,ay",
+        "An,additional,and,v,ery,important,ef,fect,of,the,f,act,that",
+        "GUHA,is,not,realized,by,apriori,concerns,interesting,asso-",
+        "ciation,r,ules,that,are,true,e,v,en,if,their,con\\036dence,and,sup-",
+        "port,are,e,xtremely,lo,w,.,An,e,xample,of,such,rule,concerns",
+        "the,4ft,quanti\\036er"
+      ],
+      "/T1_3#1#1.138": [
+        "\\004",
+        "\\004",
+        "o",
+        "o"
+      ],
+      "/T1_4#1#0.643": [
+        "\\",
+        "\\"
+      ],
+      "/T1_1#1#0.4319": [
+        "\\004{"
+      ],
+      "/T1_6#1#6.9738": [
+        "1",
+        "1",
+        "1",
+        "",
+        "2",
+        "",
+        "+"
+      ],
+      "/T1_3#1#0.1667": [
+        ",...a",
+        ",...a",
+        ",...,"
+      ],
+      "/T1_7#1#0": [
+        "k",
+        "k"
+      ],
+      "/T1_0#1#0.735": [
+        "is,true,in,the,ro,w"
+      ],
+      "/T1_3#1#7.478": [
+        "o"
+      ],
+      "/T1_1#1#0.893": [
+        "\\005"
+      ],
+      "/T1_3#1#1.032": [
+        "\\004"
+      ],
+      "/T1_0#1#0.826": [
+        "is,the,v,alue,of,the,attrib,ute"
+      ],
+      "/T1_3#1#11.18": [
+        "A"
+      ],
+      "/T1_1#1#-22.797": [
+        "\\007"
+      ],
+      "/T1_3#1#3.914": [
+        "A"
+      ],
+      "/T1_3#1#1.219": [
+        "B"
+      ],
+      "/T1_0#1#0.809": [
+        ","
+      ],
+      "/T1_0#1#0.786": [
+        ","
+      ],
+      "/T1_3#1#0.1658": [
+        "...",
+        ",A,G,E",
+        ",...,,A,G,E"
+      ],
+      "/T1_1#1#7.01": [
+        "M"
+      ],
+      "/T1_4#1#-0.0004": [
+        "\\(2\\",
+        "\\(5",
+        "6\\",
+        "\\(2\\",
+        "\\(5",
+        "6\\",
+        "",
+        "\\(2\\",
+        "\\(5",
+        "6\\",
+        "100",
+        "1;,10",
+        "2;,11",
+        "91;,100"
+      ],
+      "/T1_0#1#2.306": [
+        "and"
+      ],
+      "/T1_3#1#1.2004": [
+        "AB,C"
+      ],
+      "/T1_0#1#0.1502": [
+        "...",
+        "",
+        "2,7,1,6,...",
+        "",
+        "7,5,4,...",
+        "",
+        "1,6,5,...",
+        ""
+      ],
+      "/T1_0#1#3.2291": [
+        "10",
+        "01",
+        ".",
+        ".",
+        ".",
+        "",
+        "01"
+      ],
+      "/T1_0#1#9.9626": [
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        "",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ";,see,section,3,and",
+        "It",
+        "is",
+        "possi-",
+        "ble,to,s,kip,uninteresting,r,ules,with,lo,w,con\\036dence,already",
+        "in,the,phase,of,generation,and,v,eri\\036cation,,it,is,not,nec-",
+        "essary,to,\\036lter,v,ery,lar,ge,set,of,rules,with,e,xtremely,lo,w",
+        "con\\036dence,and/or,support.",
+        "The,bit,string,approach,is,used,in,additional,\\036,v,e,GUHA",
+        "procedures,implemented,in,the,LISp-Miner,system",
+        "These,procedures,mine,for,v,arious,patterns,v,eri\\036ed,using",
+        "one,or,tw,o,contingenc,y,tables.,General,contingenc,y,tables",
+        "concerning,not,only,Boolean,attrib,utes,are,used.",
+        "The,particular,cate,gories,,both,basic,and,deri,v,ed",
+        "Boolean,attrib,utes,and,patterns,the,GUHA,procedures,mine",
+        "for,can,be,understood,as,granules.,The,po,wer,of,the,GUHA",
+        "methods,implemented,using,bit,string,representation,of,ana-",
+        "lyzed,data,is,in,ability,to,easy,de\\036ne,and,v,erify,lar,ge,sets,of",
+        "patterns,\\(i.e.,the,granules,composed,from,hierarchical,sys-",
+        "tem,of,more,simple,granules\\,F,ormulas,of,observ,ational",
+        "calculi,correspond,to,patterns,the,GUHA,procedures,deal",
+        "with,and,thus,logic,of,observ,ational,calculi,is,a,kind,of,logic",
+        "of,granules."
+      ],
+      "/T1_3#1#-16.113": [
+        "o"
+      ],
+      "/T1_7#1#6.9738": [
+        "n",
+        "",
+        "a",
+        "a",
+        "i",
+        "i",
+        "i"
+      ],
+      "/T1_5#1#0": [
+        "Figure,1.,Data,matrix",
+        ","
+      ],
+      "/T1_1#1#10.644": [
+        "M"
+      ],
+      "/T1_3#1#2.584": [
+        "B"
+      ],
+      "/T1_0#1#-2.724": [
+        "",
+        "The",
+        "apriori",
+        "approach",
+        "is",
+        "not",
+        "used.",
+        "Each",
+        "cate",
+        "gory",
+        "of",
+        "each,attrib,ute,is,represented,by,a,string,of,bits,,there,is,one",
+        "bit,for,each,ro,w,of,the,data,matrix.,If,the,cate,gory"
+      ],
+      "/T1_4#1#0.2769": [
+        "\\"
+      ],
+      "/T1_4#1#9.9626": [
+        "\\"
+      ],
+      "/T1_0#1#-23.325": [
+        "is,the,v,alue,of,the,attrib,ute"
+      ],
+      "/T1_3#1#10.992": [
+        "A"
+      ],
+      "/T1_3#1#-0.0003": [
+        "AGE",
+        "AGE",
+        "AGE"
+      ],
+      "/T1_4#1#1.032": [
+        ";"
+      ],
+      "/T1_3#1#0.444": [
+        "\\004"
+      ],
+      "/T1_4#1#0.234": [
+        "+9"
+      ],
+      "/T1_7#1#-0.0001": [
+        "p,B",
+        "p,B"
+      ],
+      "/T1_8#1#0": [
+        "3,Association,Rules"
+      ],
+      "/T1_1#1#1.096": [
+        "\\001"
+      ],
+      "/T1_3#1#1.22": [
+        "\\003"
+      ],
+      "/T1_0#1#0.2965": [
+        ".T,h,e",
+        "rule"
+      ],
+      "/T1_1#1#1.139": [
+        "\\001"
+      ],
+      "/T1_3#1#1.263": [
+        "\\003"
+      ],
+      "/T1_0#1#3.615": [
+        "see,T,ab,.,1.,In,addition,we,use"
+      ],
+      "/T1_4#1#0.981": [
+        "="
+      ],
+      "/T1_3#1#1.28": [
+        "a"
+      ],
+      "/T1_4#1#0.84": [
+        "+"
+      ],
+      "/T1_3#1#1.089": [
+        "b"
+      ],
+      "/T1_3#1#-23.035": [
+        "k"
+      ],
+      "/T1_4#1#0.83": [
+        "="
+      ],
+      "/T1_4#1#0.751": [
+        "+"
+      ],
+      "/T1_3#1#1": [
+        "c",
+        "b",
+        "c",
+        "d"
+      ],
+      "/T1_4#1#0.878": [
+        "="
+      ],
+      "/T1_4#1#0.752": [
+        "+"
+      ],
+      "/T1_4#1#0.651": [
+        "+"
+      ],
+      "/T1_4#1#0.655": [
+        "+"
+      ]
+    },
+    "Content#3": {
+      "##": [
+        "288"
+      ]
+    },
+    "Content#4": {
+      "##": [
+        "288"
+      ]
+    }
+  },
+  "Page#3": {
+    "Content#0": {},
+    "Content#1": {},
+    "Content#2": {
+      "/T1_0#1#0": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "\\002",
+        "\\002",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\",
+        "\\001"
+      ],
+      "/T1_1#1#0.5267": [
+        "<p",
+        "<p"
+      ],
+      "/T1_2#1#0": [
+        "\\t",
+        "M",
+        "\\b",
+        "\\t",
+        "\\212",
+        "\\013",
+        "\\t",
+        "M",
+        "\\f",
+        "\\t",
+        "M",
+        "\\r",
+        "\\007",
+        "\\b",
+        "\\001",
+        "\\001",
+        "\\002",
+        "\\003",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\007",
+        "\\001",
+        "\\002",
+        "\\003",
+        "\\b",
+        "\\b",
+        "\\013",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\013",
+        "\\b",
+        "M",
+        "M"
+      ],
+      "/T1_0#1#3.639": [
+        "1",
+        "1"
+      ],
+      "/T1_3#1#-0.0004": [
+        "and",
+        "and",
+        "of",
+        ",,and",
+        "de\\036ned",
+        "in",
+        "b",
+        "y",
+        "of",
+        "and",
+        "or",
+        "and",
+        "and",
+        "of",
+        "and",
+        "and",
+        "or",
+        "and",
+        "and",
+        "and",
+        "of",
+        "and",
+        "means",
+        "that,among,the,objects,s,atisfying",
+        "per,cent",
+        "more,objects,satisfying",
+        "and",
+        "of",
+        "and",
+        ",,and",
+        "of",
+        "the,form",
+        "and"
+      ],
+      "/T1_1#1#0.5767": [
+        "B>",
+        "B>"
+      ],
+      "/T1_3#1#-0.0002": [
+        "de\\036ned,in",
+        "by",
+        "the",
+        "condition",
+        "per,cent,of,objects,s,atisfying",
+        "objects,of",
+        "\\,of,the,null,h,ypothesis",
+        "ag,ainst,the,alternati,v,e,one",
+        "de\\036ned,in",
+        "by",
+        "the",
+        "condition",
+        "per,cent,of,objects,s,atisfying",
+        "and,that,there,are,at,least",
+        "objects,of",
+        "de\\036ned,in",
+        "by",
+        "the",
+        "condition",
+        "ha,v,e,the,s,ame,v,alue,\\(either",
+        "\\,for,at,least",
+        "and,that,there,are,at,least",
+        "de\\036ned,in",
+        "by",
+        "\\,of,the,null,h,ypothesis,of",
+        "independence,of",
+        "ag,ainst,the,alternati,v,e,one,of,the",
+        "positi,v,e,dependence.",
+        "The,4ft-quanti\\036er",
+        "belongs,to,the",
+        "belongs,to,the",
+        "belongs,to",
+        "the",
+        ".,W,e,call,these,quanti\\036ers",
+        "quanti\\036ers,is,de-",
+        "\\036ned,according,to,this,scheme:",
+        "The,4ft,quanti\\036er",
+        "-double,implicational",
+        "b,ut,the,y,s,eem,not,too,much,interesting.",
+        "and,moreo,v,er,all,the,abo,v,e,de\\036ned,classes,are,o,wn,s,ub-",
+        "classes,of,this,class\\,The,class,of,equi,v,alence,quanti\\036ers,is",
+        "de\\036ned,in",
+        "as",
+        "the",
+        "class",
+        "of",
+        "of,results,concerns",
+        "deduction,rules",
+        "where,both",
+        "of,propositional,calculus,such,that,the,de-",
+        "duction,r,ule",
+        "is,a,tau-",
+        "tology,.,There,are,similar,results,for",
+        "-double,implicational",
+        "and",
+        "-equi,v,alence,quanti\\036ers.",
+        "The,s,econd,gr,oup",
+        "of,results,concerns",
+        "missing,inf,orma-",
+        "tion",
+        ".,An,e,xample,of,the,data,matrix"
+      ],
+      "/T1_4#1#0": [
+        "a",
+        "",
+        "p,\\001,B,ase",
+        "a",
+        "",
+        "a",
+        "a",
+        "",
+        "\\002",
+        "\\002"
+      ],
+      "/T1_4#1#6.9738": [
+        "a",
+        "a",
+        "a",
+        "i",
+        "a",
+        "a",
+        "n",
+        "a",
+        "a",
+        "n",
+        "\\002",
+        "\\001",
+        "\\002",
+        "\\001",
+        "X"
+      ],
+      "/T1_5#1#": [
+        "+",
+        "+",
+        "=",
+        "+",
+        "+",
+        "+",
+        "+",
+        "+",
+        "=",
+        "+",
+        "+"
+      ],
+      "/T1_4#1#1.498": [
+        "b",
+        "b",
+        "i",
+        "b",
+        "i",
+        "b",
+        "b",
+        "d",
+        "",
+        "b",
+        "c",
+        ""
+      ],
+      "/T1_2#1#9.9626": [
+        "\\n",
+        "\\t",
+        "\\n",
+        "\\n",
+        "\\n",
+        "\\007",
+        "\\003",
+        "\\n",
+        "\\t",
+        "\\n",
+        "\\t",
+        "\\n",
+        "\\t",
+        "\\t",
+        "\\n",
+        "\\t",
+        "\\n",
+        "\\t",
+        "\\t",
+        "\\n",
+        "\\001",
+        "\\001"
+      ],
+      "/T1_1#1#1.093": [
+        "p"
+      ],
+      "/T1_2#1#0.741": [
+        "\\007"
+      ],
+      "/T1_1#1#0.904": [
+        "a"
+      ],
+      "/T1_2#1#0.844": [
+        "\\n"
+      ],
+      "/T1_1#1#1.094": [
+        "B"
+      ],
+      "/T1_3#1#0.3706": [
+        ".T,h,e,r,u,l,e"
+      ],
+      "/T1_1#1#0": [
+        "\\002",
+        "\\003",
+        "p",
+        "\\002",
+        "\\003",
+        "\\003",
+        "\\002",
+        "\\004",
+        "H",
+        "H",
+        "P",
+        "\\003",
+        "\\002",
+        "\\002",
+        "\\003",
+        "p",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "B",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "p",
+        "B",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "p",
+        "\\002",
+        "\\003",
+        "\\002",
+        "p",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\002",
+        "\\002",
+        "\\002",
+        "\\002",
+        "\\002"
+      ],
+      "/T1_2#1#0.969": [
+        "\\b"
+      ],
+      "/T1_4#1#-0.0001": [
+        "p,B",
+        "p,B",
+        "p,B",
+        "p,B",
+        "p,B",
+        "p,B",
+        "p,B",
+        "p,B",
+        "p,\\001,B",
+        "p,B",
+        "p,B",
+        "p,B",
+        "p,B",
+        "p,B",
+        "p,B"
+      ],
+      "/T1_3#1#-0.0003": [
+        "means,that,at,least",
+        "and,that",
+        "there,are,at,least",
+        "under,the",
+        "condition",
+        "means,that,at,least",
+        "means,that",
+        "per,cent,of,all,objects,of",
+        "than,among,all,objects,and,that",
+        "there,are,at,least",
+        ".,I,f,the,4ft,quanti\\036er",
+        "etc.",
+        "Se,v,eral,important,classes,of,4ft,quanti\\036ers,are,de\\036ned",
+        "by",
+        ".,I,t,means,that,the",
+        "symmetrical,association,rule"
+      ],
+      "/T1_0#1#-16.292": [
+        "100"
+      ],
+      "/T1_3#1#0.0002": [
+        "satisfy,also",
+        "is",
+        "the",
+        "if",
+        "is",
+        "symmetrical,if,f",
+        "is",
+        "true,in"
+      ],
+      "/T1_1#1#6.775": [
+        "B",
+        "B"
+      ],
+      "/T1_3#1#1.451": [
+        "satisfying,both"
+      ],
+      "/T1_1#1#6.167": [
+        "\\002"
+      ],
+      "/T1_3#1#0.687": [
+        ".",
+        "The,4ft-quanti\\036er",
+        ".",
+        "The,4ft-quanti\\036er",
+        ".",
+        "The,Fisher\\222,s,quanti\\036er",
+        ".",
+        "W,e,write"
+      ],
+      "/T1_5#1#6.9738": [
+        "!",
+        "!",
+        "0",
+        "1",
+        "+",
+        "+",
+        "!",
+        "+",
+        "+"
+      ],
+      "/T1_4#1#-0.0002": [
+        "p,\\001,B",
+        "\\001,B",
+        "\\001,B",
+        "\\001,B",
+        "\\001,B"
+      ],
+      "/T1_6#1#-0.0001": [
+        "lower,critical,implication",
+        "true",
+        "class,of",
+        "implicational,quanti\\036er,s",
+        "T,ruth,Pr,eservation,Conditions"
+      ],
+      "/T1_3#1#0.0001": [
+        "is,for",
+        "is,for",
+        "satisfy,both",
+        "is,for",
+        "is,for",
+        "is,for",
+        "satisfying",
+        "is,true,in"
+      ],
+      "/T1_1#1#0.5439": [
+        "<p"
+      ],
+      "/T1_0#1#1.322": [
+        "1"
+      ],
+      "/T1_3#1#": [
+        ",",
+        ".",
+        "The,4ft-quanti\\036er",
+        ",",
+        ".,There,are,the,follo,wing,classes,of",
+        "-",
+        "double,implicational\\,Note,that,there,are,also,double,im-",
+        "plicational,quanti\\036ers,that,are,not"
+      ],
+      "/T1_0#1#1.18": [
+        "0"
+      ],
+      "/T1_1#1#0.5456": [
+        "<\\004<"
+      ],
+      "/T1_1#1#": [
+        ".",
+        "\\003",
+        "\\003",
+        "\\003",
+        ".",
+        "a",
+        "a",
+        "a,,c,,b,,d"
+      ],
+      "/T1_0#1#0.777": [
+        "5",
+        "5"
+      ],
+      "/T1_1#1#0.5939": [
+        "B>"
+      ],
+      "/T1_7#1#0": [
+        "\\001",
+        "\\001"
+      ],
+      "/T1_4#1#1.282": [
+        "a",
+        "a"
+      ],
+      "/T1_7#1#9.9626": [
+        "\\002",
+        "\\003"
+      ],
+      "/T1_1#1#0.459": [
+        "p"
+      ],
+      "/T1_0#1#-0.0004": [
+        "\\(1",
+        "100",
+        "\\",
+        "",
+        "\\(1,+",
+        "100"
+      ],
+      "/T1_1#1#1.062": [
+        "p"
+      ],
+      "/T1_0#1#": [
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\"
+      ],
+      "/T1_8#1#": [
+        "\\212",
+        "\\003",
+        "\\004",
+        "\\005",
+        "\\005"
+      ],
+      "/T1_4#1#": [
+        "i",
+        "\\003",
+        "",
+        "\\003",
+        "\\001",
+        "\\003",
+        "",
+        "\\003",
+        "\\001"
+      ],
+      "/T1_1#1#1.21": [
+        "\\004"
+      ],
+      "/T1_2#1#0.928": [
+        "\\007"
+      ],
+      "/T1_1#1#0.95": [
+        "a"
+      ],
+      "/T1_2#1#0.961": [
+        "\\n"
+      ],
+      "/T1_1#1#0.0509": [
+        "Ba,s,e"
+      ],
+      "/T1_3#1#0": [
+        ".",
+        "The,r,ule",
+        ".",
+        "4,Classes,of,Association,Rules",
+        ".",
+        "The,association,rule",
+        ",",
+        "to,a,v,oid,confusion,with",
+        "the,association,rules,de\\036ned,in",
+        "It",
+        "is",
+        "pro",
+        "v",
+        "ed",
+        "moreo",
+        "v",
+        "er",
+        "in",
+        "that",
+        "the",
+        "association",
+        "r",
+        "ules",
+        "de\\036ned",
+        "in",
+        "[1]",
+        "are",
+        "e",
+        "v",
+        "en",
+        "not",
+        "association,in,the,sense,of",
+        "There,are,additional,classes,of,4ft-quanti\\036ers,,e.g.,",
+        ",",
+        ",",
+        ","
+      ],
+      "/T1_2#1#1.048": [
+        "\\b"
+      ],
+      "/T1_1#1#9.9626": [
+        "\\003"
+      ],
+      "/T1_3#1#-0.0001": [
+        "corresponds,to,the,statistical,test",
+        "\\(on,the,le,v,el",
+        "is,the,conditional,probability,of,the,v,alidity,of",
+        "objects,satisfying,both",
+        "corresponds,to",
+        "the,statistical,test,\\(on,the,le,v,el",
+        "de\\036ned,in",
+        "by",
+        "the",
+        "condition",
+        "is,at,least",
+        "objects,satisfying,both",
+        "if,the,condition,correspond-",
+        "ing,to,the,4ft-quanti\\036er",
+        "is,satis\\036ed,for,the,quadruple",
+        "of,inte,ger,non-ne,g,ati,v,e,numbers,,otherwise,we",
+        "write",
+        "Classes,of,association,rules,are,de\\036ned,by,classes,of,4ft",
+        "quanti\\036ers.,An,e,xample,is,the,class,of",
+        "if,the,4ft,quanti\\036er",
+        "quanti\\036ers.,Each,class",
+        "belongs,to,the,class",
+        "implies",
+        "for",
+        "all,the,4ft,tables",
+        "quanti\\036ers:",
+        "\\(e,xamples:",
+        "de\\036ned,in",
+        "by",
+        "\\(e,xample:",
+        "de\\036ned,in",
+        "by",
+        "is,true,if,and,only,if",
+        "the,association,rule",
+        "is,true.,The,4ft-quanti\\036er",
+        ".,The,4ft-",
+        "quanti\\036ers",
+        "are,associa-",
+        "tion,rules.,This,deduction,rule,is,correct,if,it,is,true,for,each",
+        "data,matrix",
+        "then,also",
+        ".,It,is,sho,wn,in",
+        "that",
+        "there",
+        "is",
+        "an",
+        "important",
+        "sub-",
+        "class,of",
+        "with,interesting,implicational,quanti\\036er",
+        "is,correct,if,and,only,if,the,formula"
+      ],
+      "/T1_0#1#9.9626": [
+        ":",
+        ":",
+        "\\(",
+        "\\",
+        "",
+        "\\(",
+        "\\",
+        "+",
+        "+",
+        "+",
+        "\\",
+        "\\"
+      ],
+      "/T1_1#1#0.707": [
+        "P"
+      ],
+      "/T1_0#1#0.781": [
+        "\\(",
+        "\\(",
+        "\\("
+      ],
+      "/T1_2#1#1.076": [
+        "|",
+        "|",
+        "|"
+      ],
+      "/T1_1#1#0.277": [
+        "\\002",
+        "\\002",
+        "\\002"
+      ],
+      "/T1_2#1#1.474": [
+        "\\t"
+      ],
+      "/T1_1#1#1.208": [
+        "p"
+      ],
+      "/T1_1#1#0.556": [
+        "P"
+      ],
+      "/T1_1#1#0.2774": [
+        ">p"
+      ],
+      "/T1_3#1#0.3092": [
+        ".H,e,r,e"
+      ],
+      "/T1_6#1#-0.0002": [
+        "founded,double,implication",
+        "class,of,implicational,quanti\\036er,s",
+        "implicational,4ft,quanti\\036er",
+        "Implicational,quanti\\036er,s",
+        "-double,implicational,quanti\\036er,s",
+        "Double,implicational,quanti\\036er,s",
+        "typical,double,implicational",
+        "inter,esting,implicational,quanti\\036er,s"
+      ],
+      "/T1_1#1#0.2991": [
+        "<p"
+      ],
+      "/T1_0#1#1.077": [
+        "1"
+      ],
+      "/T1_1#1#0.349": [
+        "B>"
+      ],
+      "/T1_4#1#1.38": [
+        "c"
+      ],
+      "/T1_1#1#1.056": [
+        "p",
+        "a",
+        "a",
+        "\\003"
+      ],
+      "/T1_2#1#0.583": [
+        "\\007"
+      ],
+      "/T1_1#1#0.746": [
+        "a"
+      ],
+      "/T1_2#1#0.806": [
+        "\\n"
+      ],
+      "/T1_1#1#1.055": [
+        "B",
+        "b",
+        "a",
+        "b",
+        "a",
+        "b",
+        "b",
+        "c",
+        "d",
+        "\\003"
+      ],
+      "/T1_3#1#0.2965": [
+        ".T,h,e,r,u,l,e"
+      ],
+      "/T1_2#1#0.932": [
+        "\\013",
+        "\\001"
+      ],
+      "/T1_0#1#-16.469": [
+        "100"
+      ],
+      "/T1_3#1#1.447": [
+        "satisfying,both"
+      ],
+      "/T1_1#1#-17.799": [
+        "\\002"
+      ],
+      "/T1_6#1#1.195": [
+        "founded,equivalence"
+      ],
+      "/T1_1#1#1.146": [
+        "p",
+        "B"
+      ],
+      "/T1_2#1#0.762": [
+        "\\007"
+      ],
+      "/T1_1#1#0.925": [
+        "a"
+      ],
+      "/T1_2#1#0.896": [
+        "\\n"
+      ],
+      "/T1_3#1#0.4564": [
+        ".T,h,e,r,u,l,e"
+      ],
+      "/T1_2#1#1.023": [
+        "\\f"
+      ],
+      "/T1_6#1#0.0001": [
+        "false"
+      ],
+      "/T1_1#1#0.4878": [
+        "<\\004<"
+      ],
+      "/T1_1#1#0.7122": [
+        "B>"
+      ],
+      "/T1_5#1#0.0002": [
+        "min\\("
+      ],
+      "/T1_4#1#-0.0309": [
+        "r,,k"
+      ],
+      "/T1_5#1#0": [
+        "\\",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\002",
+        "\\002"
+      ],
+      "/T1_4#1#-3.811": [
+        "i"
+      ],
+      "/T1_9#1#4.9813": [
+        "k",
+        "i",
+        "r",
+        "n"
+      ],
+      "/T1_9#1#0": [
+        "n",
+        "\\212"
+      ],
+      "/T1_9#1#1.965": [
+        "k",
+        "r",
+        "\\212"
+      ],
+      "/T1_9#1#1.084": [
+        "i"
+      ],
+      "/T1_2#1#2.218": [
+        "\\t"
+      ],
+      "/T1_1#1#1.439": [
+        "\\004"
+      ],
+      "/T1_2#1#1.558": [
+        "\\007"
+      ],
+      "/T1_1#1#-0.0001": [
+        "ad,>,bc",
+        "a,,b,,c,,d",
+        "a,,b,,c,,d",
+        "a,,b,,c,,d",
+        "a,,b,,c,,d",
+        "a,,b,,c,,d",
+        "a,,b,,c,,d",
+        "a,,b,,c,,d",
+        "a,,c,,b,,d",
+        "\\002,,\\003,,,\\002",
+        "\\002,,\\003,,,\\002"
+      ],
+      "/T1_1#1#1.283": [
+        "a"
+      ],
+      "/T1_2#1#0.959": [
+        "\\n"
+      ],
+      "/T1_1#1#1.209": [
+        "B"
+      ],
+      "/T1_3#1#0.5576": [
+        ".T,h,e,r,u,l,e"
+      ],
+      "/T1_2#1#1.085": [
+        "\\r"
+      ],
+      "/T1_1#1#12.579": [
+        "\\004"
+      ],
+      "/T1_6#1#1.203": [
+        "abo,ve,aver,a,g,e,dependence"
+      ],
+      "/T1_1#1#0.4445": [
+        "<p"
+      ],
+      "/T1_1#1#0.4954": [
+        "B>"
+      ],
+      "/T1_1#1#0.93": [
+        "a"
+      ],
+      "/T1_2#1#0.908": [
+        "\\n"
+      ],
+      "/T1_1#1#1.157": [
+        "B"
+      ],
+      "/T1_3#1#0.4736": [
+        ".T,h,e,r,u,l,e"
+      ],
+      "/T1_2#1#1.034": [
+        "\\b"
+      ],
+      "/T1_0#1#1.112": [
+        "\\("
+      ],
+      "/T1_0#1#0.3363": [
+        "\\"
+      ],
+      "/T1_0#1#1.056": [
+        "\\("
+      ],
+      "/T1_0#1#0.2794": [
+        "\\"
+      ],
+      "/T1_6#1#15.846": [
+        "implicational,rules"
+      ],
+      "/T1_2#1#1.071": [
+        "\\001"
+      ],
+      "/T1_1#1#1.195": [
+        "\\003"
+      ],
+      "/T1_6#1#0": [
+        "class,of,impli-",
+        "cational,rules"
+      ],
+      "/T1_3#1#13.558": [
+        "then,we,say,that"
+      ],
+      "/T1_2#1#0.254": [
+        "TP,C"
+      ],
+      "/T1_2#1#0.2539": [
+        "TP,C",
+        "TP,C"
+      ],
+      "/T1_0#1#1.055": [
+        "\\(",
+        "\\("
+      ],
+      "/T1_0#1#0.2799": [
+        "\\"
+      ],
+      "/T1_1#1#0.1393": [
+        "TPC",
+        "TPC",
+        "TPC",
+        "TPC",
+        "TPC",
+        "TPC",
+        "TPC",
+        "TPC"
+      ],
+      "/T1_8#1#6.9738": [
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\005",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\005"
+      ],
+      "/T1_1#1#0.1658": [
+        ",b",
+        ",c",
+        ",d",
+        ",b",
+        ",c",
+        ",d",
+        ",\\003",
+        ",\\003"
+      ],
+      "/T1_8#1#0": [
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\002",
+        "\\003",
+        "\\004",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001"
+      ],
+      "/T1_0#1#0.2776": [
+        "\\"
+      ],
+      "/T1_2#1#0.882": [
+        "\\002"
+      ],
+      "/T1_3#1#9.9626": [
+        ".",
+        "Here",
+        "is,the,true,preserv,ation,condition,for,the,class",
+        ":",
+        ":",
+        ":",
+        ":",
+        ":",
+        "are,symmetrical.",
+        "The,class,of,the,4ft,quanti\\036ers,with",
+        "with,missing,in-"
+      ],
+      "/T1_0#1#-5.329": [
+        "\\002"
+      ],
+      "/T1_3#1#10.745": [
+        "de\\036ned,in",
+        "by"
+      ],
+      "/T1_1#1#-23.435": [
+        "a",
+        "a",
+        "a"
+      ],
+      "/T1_2#1#1": [
+        "\\007"
+      ],
+      "/T1_1#1#1.139": [
+        "b",
+        "b"
+      ],
+      "/T1_3#1#0.0004": [
+        "\\",
+        "\\"
+      ],
+      "/T1_4#1#0.816": [
+        ",",
+        ","
+      ],
+      "/T1_1#1#0.588": [
+        "a"
+      ],
+      "/T1_2#1#1.001": [
+        "\\007"
+      ],
+      "/T1_1#1#0.889": [
+        "b"
+      ],
+      "/T1_1#1#1": [
+        "c",
+        "c",
+        "d",
+        "d",
+        "c",
+        "c"
+      ],
+      "/T1_0#1#0.651": [
+        "+",
+        "+"
+      ],
+      "/T1_1#1#0.781": [
+        "a"
+      ],
+      "/T1_1#1#1.234": [
+        "a",
+        "b",
+        "c"
+      ],
+      "/T1_2#1#1.169": [
+        "\\007"
+      ],
+      "/T1_1#1#1.306": [
+        "b",
+        "c"
+      ],
+      "/T1_2#1#0.724": [
+        "\\007"
+      ],
+      "/T1_3#1#0.78": [
+        "\\(e,xamples:,all"
+      ],
+      "/T1_0#1#6.222": [
+        "\\001"
+      ],
+      "/T1_6#1#-0.0003": [
+        "-equivalence,quanti\\036er,s",
+        "Equivalence,quanti\\036er,s",
+        "equivalence,quanti\\036er,s"
+      ],
+      "/T1_3#1#10.782": [
+        "de\\036ned,in",
+        "by"
+      ],
+      "/T1_0#1#0.751": [
+        "+"
+      ],
+      "/T1_2#1#0.993": [
+        "\\007"
+      ],
+      "/T1_3#1#0.683": [
+        "\\(e,xamples:"
+      ],
+      "/T1_2#1#4.683": [
+        "\\f"
+      ],
+      "/T1_3#1#0.0003": [
+        "\\"
+      ],
+      "/T1_3#1#9.607": [
+        "de\\036ned,by,the,condition"
+      ],
+      "/T1_2#1#0.755": [
+        "\\007"
+      ],
+      "/T1_1#1#0.894": [
+        "b"
+      ],
+      "/T1_2#1#0.657": [
+        "\\007"
+      ],
+      "/T1_1#1#1.092": [
+        "c"
+      ],
+      "/T1_2#1#0.66": [
+        "\\007"
+      ],
+      "/T1_1#1#0.893": [
+        "d"
+      ],
+      "/T1_3#1#0.718": [
+        "\\(e,xamples:"
+      ],
+      "/T1_2#1#4.657": [
+        "\\r"
+      ],
+      "/T1_2#1#0.458": [
+        "\\b"
+      ],
+      "/T1_6#1#11.565": [
+        "association,quanti\\036er,s"
+      ],
+      "/T1_3#1#0.3517": [
+        ".W,e,u,s",
+        "the,name"
+      ],
+      "/T1_6#1#-0.0004": [
+        "pur,e",
+        "double,implicational"
+      ],
+      "/T1_3#1#0.7266": [
+        ";s,e,e",
+        "",
+        "The",
+        "symmetrical",
+        "quanti\\036ers",
+        "are",
+        "de\\036ned",
+        "in",
+        "[2]",
+        "by",
+        "the",
+        "condition"
+      ],
+      "/T1_0#1#1.087": [
+        "\\(",
+        "\\("
+      ],
+      "/T1_0#1#0.846": [
+        "\\"
+      ],
+      "/T1_0#1#3.63": [
+        "\\"
+      ],
+      "/T1_2#1#1.104": [
+        "\\001"
+      ],
+      "/T1_1#1#1.228": [
+        "\\003"
+      ],
+      "/T1_1#1#8.126": [
+        "\\003"
+      ],
+      "/T1_2#1#1.061": [
+        "\\001"
+      ],
+      "/T1_1#1#1.151": [
+        "\\002"
+      ],
+      "/T1_0#1#1.214": [
+        "\\("
+      ],
+      "/T1_0#1#1.1107": [
+        "\\"
+      ],
+      "/T1_0#1#1.213": [
+        "\\("
+      ],
+      "/T1_2#1#0.519": [
+        "\\f"
+      ],
+      "/T1_2#1#0.518": [
+        "\\r"
+      ],
+      "/T1_6#1#14.035": [
+        "F-pr,operty"
+      ],
+      "/T1_3#1#4.54": [
+        "is,introduced",
+        "in,Section,6.",
+        "5,Results,on,Classes,of,Association,Rules",
+        "The,\\336rst,gr,oup"
+      ],
+      "/T1_2#1#4.789": [
+        "M"
+      ],
+      "/T1_3#1#0.3218": [
+        ":I,f"
+      ],
+      "/T1_2#1#0.942": [
+        "\\001"
+      ],
+      "/T1_1#1#1.067": [
+        "\\003"
+      ],
+      "/T1_1#1#1.066": [
+        "\\003"
+      ],
+      "/T1_2#1#2.767": [
+        "M"
+      ],
+      "/T1_3#1#14.717": [
+        "and,a,f,ormula"
+      ],
+      "/T1_0#1#0.0001": [
+        "\\003\\(",
+        "\\003\\("
+      ],
+      "/T1_0#1#14.409": [
+        "\\001"
+      ]
+    },
+    "Content#3": {
+      "##": [
+        "289"
+      ]
+    },
+    "Content#4": {
+      "##": [
+        "289"
+      ]
+    }
+  },
+  "Page#4": {
+    "Content#0": {},
+    "Content#1": {},
+    "Content#2": {
+      "/T1_0#1#-0.0001": [
+        "formation,is,in,Fig.,2,\\(cf.,Fig.,1,in,section,2\\,The,symbol",
+        "object",
+        "",
+        "\\,respecti,v,ely,in,all,possible,completions,of",
+        "is,each,data,matrix",
+        "that,is",
+        "a,result,of,completion,of,each",
+        ".,The,association,rule,is,true",
+        "in,the,data,matrix",
+        "is,called,the",
+        "there,is",
+        "",
+        "The",
+        "function",
+        "is,called,the",
+        ".,Observ,ational",
+        "calculi,are,de\\036ned,in",
+        "by",
+        "modi\\036cations",
+        "of",
+        "classical",
+        "predi-",
+        "cate,calculi;,see,also,section,1.,Thus,there,is,a,natural,ques-",
+        "tion,if,s,ome,association,r,ules,can,be,de\\036ned,by,formulas",
+        "of,classical,predicate,calculus,\\(i.e,calculus,with,only,clas-",
+        "sical,quanti\\036ers",
+        "De\\036nition,of,the,class,of,association,rules,with,F-",
+        "property,w,as,inspired,by,considerations,on,dealing,with",
+        "missing,information,for,Fisher\\222,s,quanti\\036er,.,Especially,the",
+        "task,of,\\036nding,a,s,ecured,completion",
+        "in,data,ma-",
+        "trix",
+        "with,missing,information,for,the,Fisher\\222,s,quan-",
+        "ti\\036er,w,as,solv,ed,in",
+        "It",
+        "is",
+        "pro",
+        "v",
+        "ed",
+        "that",
+        "it",
+        "is"
+      ],
+      "/T1_1#1#1.3278": [
+        "AB,C"
+      ],
+      "/T1_0#1#0.1502": [
+        "...",
+        "",
+        "7,1,6,...",
+        "",
+        "4,...",
+        "",
+        "1,6,5,...",
+        "",
+        ",,...i,n,F,i,g,.,2,\\,.,T,h,e,v,a,l,u,e,s,o,f,t,h,e,B,o,o,l,e,a,n,a,t,t,r,i,b,u,t,e,s",
+        "deri,v,ed,from,the,basic,Boolean,attrib,utes,are,de\\036ned,by,the",
+        "truth,tables,of,the,connecti,v,es"
+      ],
+      "/T1_1#1#0": [
+        "A",
+        "B",
+        ",",
+        "o",
+        "X",
+        "A",
+        "A",
+        "o",
+        "X",
+        "A",
+        "X",
+        "",
+        "\\002",
+        "\\003",
+        "f",
+        "o",
+        "f",
+        "f",
+        "f",
+        "\\002",
+        "\\003",
+        "o",
+        "\\002",
+        "\\003",
+        "X",
+        "\\002",
+        ",",
+        "a",
+        "b",
+        "\\002",
+        "\\003",
+        "a"
+      ],
+      "/T1_2#1#-0.0004": [
+        "\\(2\\",
+        "\\(5",
+        "6\\",
+        "",
+        "\\",
+        "",
+        "\\(1"
+      ],
+      "/T1_3#1#6.9738": [
+        "1",
+        "",
+        "2",
+        "",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1",
+        "1",
+        "1",
+        "!",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0",
+        "2"
+      ],
+      "/T1_2#1#9.9626": [
+        "2",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "+",
+        "+",
+        "\\(",
+        "k",
+        "i",
+        "\\",
+        "",
+        "\\(",
+        "r",
+        "n",
+        "\\",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\",
+        "=",
+        "=",
+        "+",
+        "+",
+        "=",
+        "+",
+        "+"
+      ],
+      "/T1_2#1#0": [
+        "1",
+        "1",
+        "1",
+        "4",
+        "\\(",
+        "9",
+        "\\(",
+        "\\(",
+        "9",
+        "\\(",
+        "9",
+        "\\(",
+        "9",
+        "\\(",
+        "+",
+        "\\001",
+        "\\001",
+        "0",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "9",
+        "\\(",
+        "+",
+        "+"
+      ],
+      "/T1_0#1#3.73": [
+        "0"
+      ],
+      "/T1_1#1#-16.196": [
+        "o"
+      ],
+      "/T1_1#1#1.2782": [
+        "XX",
+        "XX",
+        "XX"
+      ],
+      "/T1_0#1#0": [
+        "0",
+        "0",
+        "0",
+        "",
+        "0",
+        "",
+        "is,applied,also",
+        "to,the,association,rule",
+        ","
+      ],
+      "/T1_1#1#3.526": [
+        "X"
+      ],
+      "/T1_0#1#-15.65": [
+        ".",
+        ".",
+        ".",
+        ""
+      ],
+      "/T1_0#1#9.9626": [
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        "",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        "1",
+        "",
+        "0",
+        "1",
+        "1",
+        "1",
+        "",
+        "1",
+        "1",
+        "1",
+        "",
+        "1",
+        "1",
+        "with,missing,information,if,this,as-",
+        "sociation,rule,is,true,in,all,the,possible,completions",
+        ".",
+        "This,problem,can,be,solv,ed,by,the,s,ecured,completion",
+        "of,nine-fold,table",
+        ",",
+        ",",
+        ","
+      ],
+      "/T1_1#1#-16.368": [
+        "o"
+      ],
+      "/T1_4#1#6.9738": [
+        "n",
+        "",
+        "X",
+        "X",
+        "X",
+        "X",
+        "X",
+        "X",
+        "X",
+        "X",
+        "X",
+        "X",
+        "X",
+        "X",
+        "X",
+        "",
+        "X",
+        "",
+        "X",
+        "",
+        "X",
+        "X",
+        "X",
+        "X",
+        "X",
+        "X",
+        "X",
+        "X",
+        "X",
+        "a",
+        "a",
+        "i",
+        "a",
+        "F",
+        "X",
+        "X",
+        "F",
+        "F",
+        "F"
+      ],
+      "/T1_0#1#3.23": [
+        "01"
+      ],
+      "/T1_5#1#0": [
+        "Figure,2.,Data,matrix",
+        "T,ab,le,2.,Nine-f,old,tab,le"
+      ],
+      "/T1_6#1#10.202": [
+        "M"
+      ],
+      "/T1_5#1#-0.0195": [
+        "w,i,t,h,m,i,s,s,i,n,g,i,n,fo,r-",
+        "mation"
+      ],
+      "/T1_0#1#-0.0002": [
+        "we,interpret,as,\\224the,corresponding,v,alue,is,not,kno,wn\\224.",
+        "One,of,w,ays,ho,w,to,deal,with,missing,information,is",
+        "done,by,the,principle,of,the",
+        "of,basic,Boolean,at-",
+        "trib,ute",
+        ".,The,completion,of",
+        "by,one,of,possible,v,alues",
+        "of,the,corresponding,attrib,ute,-,the,column,of",
+        "The,principle,of,the",
+        ".,The,core,of,the,problem,is,that,we,ha,v,e,to,e,v,aluate",
+        "the,condition,related,to,the,4ft-quanti\\036er,in,the,4ft,table",
+        "for,each,completion",
+        "is,the,number,of,ro,ws",
+        "such",
+        "that,both",
+        "such,that,both",
+        "we,can,for",
+        "each,nine-fold,table",
+        "such,that",
+        ".,The,secured,completion",
+        "for,implicational",
+        "quanti\\036er",
+        "-double,implicational",
+        "and",
+        "-equi,v,alence,quanti\\036ers,[",
+        "and",
+        "for",
+        "quanti\\036ers",
+        "with",
+        "F-property;,see,section,7.",
+        "The,t,hird,gr,oup",
+        "of,results,concerns",
+        "tables,of,critical",
+        "fr,equencies",
+        "and,the,Fisher\\222,s,quanti\\036er",
+        "for,each,implicational,quanti\\036er",
+        "such,that,for,each,in-",
+        "te,ger",
+        "such",
+        "that,for",
+        "for,implicational,quanti\\036er",
+        ".,Similar,tables,can,be",
+        "found,for",
+        "-double,implicational,and",
+        "-double,implicational,and",
+        "-equi,v,alence,quanti-",
+        "\\036ers",
+        "6,F-pr,operty"
+      ],
+      "/T1_7#1#12.273": [
+        "secur,ed,X-e,xtension"
+      ],
+      "/T1_0#1#0.0002": [
+        "",
+        "It",
+        "means,that,the,v,alue",
+        "is",
+        "in",
+        "if,f",
+        "is",
+        "it,is",
+        "if,f"
+      ],
+      "/T1_2#1#": [
+        "\\(",
+        "\\(",
+        "0",
+        "0",
+        "\\",
+        "\\(",
+        "\\(",
+        "\\"
+      ],
+      "/T1_1#1#1.138": [
+        "\\004",
+        "\\004",
+        "a"
+      ],
+      "/T1_1#1#0.0004": [
+        "o,",
+        "o,",
+        "o,",
+        "o,",
+        "o,"
+      ],
+      "/T1_6#1#0": [
+        "M",
+        "M",
+        "M",
+        "M",
+        "M",
+        "\\254",
+        "\\006",
+        "\\254",
+        "",
+        "\\006",
+        "",
+        "\\006",
+        "\\254",
+        "M",
+        "M",
+        "M",
+        "M",
+        "M",
+        "M",
+        "M",
+        "M",
+        "M",
+        "M",
+        "M",
+        "M",
+        "M",
+        "\\001",
+        "M",
+        "\\002",
+        "M",
+        "M",
+        "\\001",
+        "\\002",
+        "M",
+        "\\001",
+        "\\002",
+        "M",
+        "\\b",
+        "\\002",
+        "\\b",
+        "\\212",
+        "\\r",
+        "\\007",
+        "\\b",
+        "\\b",
+        "\\b",
+        "\\020",
+        "\\021",
+        "\\002",
+        "M",
+        "M"
+      ],
+      "/T1_2#1#0.643": [
+        "\\"
+      ],
+      "/T1_0#1#-0.0003": [
+        "for,the,object",
+        "e,xtended,by,the",
+        "principle,of,s,ecured,X-e,xtension",
+        "s",
+        "ee",
+        "Fig.",
+        "3.",
+        "",
+        "compute,the,quadruple",
+        "de\\036ned,by,the,condition",
+        "\\001",
+        "-equi,v,alence,quan-",
+        "ti\\036ers,[2,",
+        "and",
+        "for",
+        "quanti\\036ers",
+        "with",
+        "F-property;",
+        "s",
+        "ee",
+        "Sec-",
+        "tion,7.",
+        "The",
+        "f,ourth,gr,oup,of,r,esults",
+        "concerns",
+        "r,elation,of,associ-",
+        "ation,rules,to,classical,pr,edicate,calculus"
+      ],
+      "/T1_0#1#0.741": [
+        "in,the,data,matrix"
+      ],
+      "/T1_6#1#7.298": [
+        "M"
+      ],
+      "/T1_0#1#": [
+        "\\(",
+        "\\",
+        "if,it,is,sure",
+        "\\(",
+        ",",
+        ",",
+        ",",
+        "\\,There,is,a,reasonable,criterion",
+        "of,de\\036nability,of,association,rules,in,classical,predicate,cal-",
+        "culus,with,equality,that,can,be,further,simpli\\036ed,for,impli-",
+        "cational,"
+      ],
+      "/T1_0#1#0.0001": [
+        "\\(i.e.,",
+        "is,the",
+        "number,of,ro,ws",
+        "",
+        "There",
+        "a",
+        "re",
+        "similar",
+        "results",
+        "for"
+      ],
+      "/T1_1#1#-22.714": [
+        "B"
+      ],
+      "/T1_0#1#0.809": [
+        ",",
+        ".",
+        "There,is,a,non-ne,g,ati,v,e,non-decreasing,function"
+      ],
+      "/T1_1#1#0.601": [
+        "C"
+      ],
+      "/T1_6#1#1.221": [
+        "\\007"
+      ],
+      "/T1_0#1#-0.0004": [
+        "and",
+        "of",
+        "of",
+        "of",
+        "and",
+        "of",
+        "and",
+        "of",
+        "and",
+        "of",
+        "of",
+        "de\\036ned,by",
+        "\\001",
+        "and",
+        "of",
+        "nine-fold,table",
+        "of",
+        "and"
+      ],
+      "/T1_1#1#-2.31": [
+        "X",
+        ""
+      ],
+      "/T1_1#1#9.9626": [
+        "X",
+        "\\003",
+        "",
+        "\\003",
+        "\\002",
+        "",
+        "f",
+        "f",
+        "\\002",
+        "f",
+        "f",
+        "f",
+        "f"
+      ],
+      "/T1_0#1#-1.903": [
+        "0",
+        ""
+      ],
+      "/T1_6#1#3.524": [
+        "\\007",
+        ""
+      ],
+      "/T1_1#1#1.903": [
+        "X",
+        "X"
+      ],
+      "/T1_0#1#2.108": [
+        "0",
+        "",
+        "0"
+      ],
+      "/T1_1#1#-6.321": [
+        "X",
+        ""
+      ],
+      "/T1_0#1#1.6076": [
+        "00,0"
+      ],
+      "/T1_1#1#1.7": [
+        "X",
+        "X"
+      ],
+      "/T1_0#1#2.311": [
+        "0",
+        "",
+        "0"
+      ],
+      "/T1_0#1#1.4034": [
+        "11,1"
+      ],
+      "/T1_5#1#-0.0001": [
+        "Figure,3.,Extended,truth,tab,les,of"
+      ],
+      "/T1_5#1#": [
+        ","
+      ],
+      "/T1_6#1#1.222": [
+        "\\007"
+      ],
+      "/T1_5#1#-0.0004": [
+        "and"
+      ],
+      "/T1_7#1#8.342": [
+        "secur,ed,X-e,xtension"
+      ],
+      "/T1_1#1#9.19": [
+        "\\002"
+      ],
+      "/T1_6#1#1.021": [
+        "\\001"
+      ],
+      "/T1_1#1#1.145": [
+        "\\003"
+      ],
+      "/T1_6#1#7.347": [
+        "M"
+      ],
+      "/T1_8#1#6.9738": [
+        "X",
+        "\\005",
+        "\\005",
+        "\\005",
+        "\\002",
+        "\\006",
+        "\\006",
+        "\\006",
+        "\\006"
+      ],
+      "/T1_1#1#0.1076": [
+        "ft",
+        "ft",
+        "ft",
+        "ft",
+        "ft",
+        "ft",
+        "ft"
+      ],
+      "/T1_1#1#": [
+        "\\002",
+        "\\003",
+        "\\003",
+        "",
+        "\\002",
+        "",
+        "a",
+        "a",
+        "a",
+        "a",
+        "f",
+        ",",
+        "a",
+        ",",
+        ",",
+        "a",
+        "a",
+        "a"
+      ],
+      "/T1_0#1#1.981": [
+        ","
+      ],
+      "/T1_6#1#0.5": [
+        "M"
+      ],
+      "/T1_1#1#-0.0001": [
+        "\\002,,\\003,,",
+        "\\002,,\\003,,",
+        "\\002,,\\003,,",
+        "\\002,,\\003,,",
+        "\\002,,\\003,,",
+        "ad,>,bc",
+        "a,,b,,c,,d",
+        "\\002,,\\003,,"
+      ],
+      "/T1_0#1#0.311": [
+        ";s,e,e",
+        "T,able,2.,Here"
+      ],
+      "/T1_4#1#": [
+        ",",
+        ",",
+        ",",
+        ",",
+        ",",
+        ",",
+        ",",
+        "i",
+        ",",
+        ",",
+        ","
+      ],
+      "/T1_3#1#": [
+        "1",
+        "1",
+        "",
+        "0",
+        "",
+        "1",
+        "",
+        "0",
+        "1",
+        "1",
+        "+",
+        "=",
+        "+",
+        "+",
+        "=",
+        "1",
+        "0",
+        "1"
+      ],
+      "/T1_2#1#11.105": [
+        "9"
+      ],
+      "/T1_6#1#-15.689": [
+        "M"
+      ],
+      "/T1_6#1#9.9626": [
+        "\\254",
+        "\\254",
+        "\\003",
+        "\\003",
+        "\\003",
+        "\\t",
+        "\\003"
+      ],
+      "/T1_4#1#0.0002": [
+        ",X",
+        "",
+        ",X",
+        "",
+        ",X",
+        ",X",
+        ",X",
+        ",X"
+      ],
+      "/T1_4#1#0.0169": [
+        "X,",
+        "X,,X",
+        "",
+        "X,",
+        "X,",
+        "X,,X",
+        "X,",
+        "X,"
+      ],
+      "/T1_3#1#0": [
+        "1",
+        "",
+        "0",
+        "",
+        "0",
+        "0",
+        "\\",
+        "0",
+        "0"
+      ],
+      "/T1_2#1#0.3878": [
+        "\\"
+      ],
+      "/T1_2#1#0.687": [
+        "\\(",
+        "\\("
+      ],
+      "/T1_2#1#0.3883": [
+        "\\"
+      ],
+      "/T1_1#1#0.575": [
+        "f"
+      ],
+      "/T1_2#1#0.4402": [
+        "\\"
+      ],
+      "/T1_2#1#0.2778": [
+        "\\"
+      ],
+      "/T1_0#1#0.2505": [
+        ",e,t,c,.",
+        "It,is,important,that,for,lot,of,4ft,quanti\\036ers"
+      ],
+      "/T1_1#1#0.1658": [
+        ",b",
+        ",c",
+        ",d",
+        ",b",
+        ",c",
+        ",d",
+        ",b",
+        ",c",
+        ",d",
+        ",b",
+        ",c",
+        ",d",
+        ",f",
+        ",...",
+        ",b",
+        ",c",
+        ",d"
+      ],
+      "/T1_8#1#0": [
+        "\\005",
+        "\\005",
+        "\\005",
+        "\\005",
+        "\\005",
+        "\\005",
+        "\\005",
+        "\\005",
+        "\\005",
+        "\\002",
+        "\\002",
+        "\\002",
+        "\\002",
+        "\\002",
+        "\\002",
+        "\\002"
+      ],
+      "/T1_6#1#0.966": [
+        "\\001"
+      ],
+      "/T1_1#1#1.089": [
+        "\\003"
+      ],
+      "/T1_0#1#0.956": [
+        "is,true,in,all,the,possible",
+        "completions"
+      ],
+      "/T1_2#1#1.056": [
+        "\\("
+      ],
+      "/T1_2#1#0.2781": [
+        "\\"
+      ],
+      "/T1_0#1#0.0004": [
+        "[2,,1",
+        "The,quadruple"
+      ],
+      "/T1_7#1#-0.0003": [
+        "secur,ed,com-",
+        "pletion,of"
+      ],
+      "/T1_7#1#-0.0001": [
+        "for"
+      ],
+      "/T1_9#1#4.9813": [
+        "\\002",
+        "\\002",
+        "\\002",
+        "\\002",
+        "\\002",
+        "\\002",
+        "\\002",
+        "\\002"
+      ],
+      "/T1_1#1#1.118": [
+        "f"
+      ],
+      "/T1_1#1#1.119": [
+        "f",
+        "f"
+      ],
+      "/T1_2#1#0.444": [
+        "0"
+      ],
+      "/T1_2#1#0.943": [
+        "0",
+        "1",
+        "2"
+      ],
+      "/T1_6#1#": [
+        "\\003"
+      ],
+      "/T1_0#1#5.141": [
+        "which,can,help,to,a,v,oid,comple,x,computation",
+        "related,to,some,4ft-quanti\\036ers,de\\036ned,using,statistical,h,y-",
+        "pothesis,tests.,Examples,of,such,4ft-quanti\\036ers,are"
+      ],
+      "/T1_4#1#-0.0002": [
+        "p,\\001,B",
+        "\\001,B"
+      ],
+      "/T1_4#1#1.498": [
+        "b",
+        "i",
+        "b",
+        "i",
+        "\\003",
+        "b"
+      ],
+      "/T1_4#1#1.282": [
+        "a",
+        "\\002",
+        "a"
+      ],
+      "/T1_1#1#0.459": [
+        "p"
+      ],
+      "/T1_1#1#1.139": [
+        "p"
+      ],
+      "/T1_8#1#": [
+        "\\212"
+      ],
+      "/T1_1#1#1.404": [
+        "\\004",
+        "B"
+      ],
+      "/T1_6#1#1.005": [
+        "\\007"
+      ],
+      "/T1_1#1#1.028": [
+        "a"
+      ],
+      "/T1_6#1#1.155": [
+        "\\n"
+      ],
+      "/T1_3#1#0.0002": [
+        "min\\("
+      ],
+      "/T1_4#1#-0.0309": [
+        "r,,k"
+      ],
+      "/T1_4#1#-3.811": [
+        "i"
+      ],
+      "/T1_2#1#0.0005": [
+        "\\",
+        "",
+        "n"
+      ],
+      "/T1_9#1#": [
+        "\\212",
+        "k",
+        "r"
+      ],
+      "/T1_9#1#0.706": [
+        "\\212",
+        "i"
+      ],
+      "/T1_6#1#1.834": [
+        "\\t"
+      ],
+      "/T1_1#1#1.055": [
+        "\\004"
+      ],
+      "/T1_6#1#1.116": [
+        "\\007"
+      ],
+      "/T1_6#1#0.807": [
+        "\\n"
+      ],
+      "/T1_1#1#1.056": [
+        "B",
+        "f",
+        "f"
+      ],
+      "/T1_1#1#0.1392": [
+        "Tb",
+        "Tb",
+        "Tb"
+      ],
+      "/T1_6#1#0.881": [
+        "\\n"
+      ],
+      "/T1_2#1#1.13": [
+        "0"
+      ],
+      "/T1_2#1#0.917": [
+        "\\",
+        "\\",
+        "\\"
+      ],
+      "/T1_6#1#0.3533": [
+        "\\005{"
+      ],
+      "/T1_6#1#0.2523": [
+        "}\\016{,\\017,}"
+      ],
+      "/T1_6#1#0.875": [
+        "\\n"
+      ],
+      "/T1_2#1#1.223": [
+        "0"
+      ],
+      "/T1_2#1#0.4479": [
+        "\\"
+      ],
+      "/T1_1#1#0.4463": [
+        "b<T,b"
+      ],
+      "/T1_7#1#-0.0002": [
+        "table,of,maximal",
+        "b"
+      ],
+      "/T1_4#1#0": [
+        "F",
+        "F",
+        "F"
+      ],
+      "/T1_1#1#1.231": [
+        "f"
+      ],
+      "/T1_1#1#-23.463": [
+        "b"
+      ],
+      "/T1_1#1#0.835": [
+        "f",
+        "f",
+        "F",
+        "f",
+        "f",
+        "F"
+      ],
+      "/T1_1#1#0.464": [
+        "c"
+      ]
+    },
+    "Content#3": {
+      "##": [
+        "290"
+      ]
+    },
+    "Content#4": {
+      "##": [
+        "290"
+      ]
+    }
+  },
+  "Page#5": {
+    "Content#0": {},
+    "Content#1": {},
+    "Content#2": {
+      "/T1_0#1#0": [
+        "d",
+        "F",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\006",
+        "\\001",
+        "\\001",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\001",
+        "b",
+        "c",
+        "\\001",
+        "\\002",
+        "\\002",
+        "\\002",
+        "\\002",
+        "\\003",
+        "P",
+        "\\002",
+        "\\003",
+        "P",
+        "A",
+        "P",
+        "\\002",
+        "\\003",
+        "P",
+        "p",
+        "p",
+        "\\b",
+        "\\005",
+        "P",
+        "\\b",
+        "p",
+        "P",
+        "p",
+        "p",
+        "F",
+        "F",
+        "F",
+        "a",
+        "F",
+        "\\002",
+        "\\003"
+      ],
+      "/T1_1#1#6.9738": [
+        "F",
+        "F",
+        "F",
+        "S",
+        "\\004,,B",
+        "S",
+        "\\004,,B",
+        "\\005",
+        "\\001,B",
+        "n",
+        "\\005",
+        "\\001,B,ase",
+        "S",
+        "\\004,,B",
+        "\\005",
+        "\\001,B",
+        "F",
+        "F",
+        "F",
+        "F",
+        "F",
+        "F",
+        "F",
+        "F",
+        "F",
+        "\\003",
+        "",
+        "\\002",
+        "\\001",
+        "\\003",
+        "\\001",
+        "F",
+        "F",
+        "i",
+        "i",
+        "i",
+        "i",
+        "i",
+        "i",
+        "F",
+        "\\003",
+        "1",
+        "",
+        "\\002",
+        "2",
+        "\\003",
+        "2"
+      ],
+      "/T1_2#1#9.9626": [
+        "=",
+        "+",
+        "=",
+        "\\",
+        "\\",
+        "+",
+        "+",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\"
+      ],
+      "/T1_0#1#1.147": [
+        "f",
+        "f"
+      ],
+      "/T1_3#1#6.9738": [
+        "0",
+        "1",
+        "2",
+        "2",
+        "\\(",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "1",
+        "1",
+        "1",
+        "2",
+        "3",
+        "2",
+        "1",
+        "1",
+        "1",
+        "2",
+        "1",
+        "2",
+        "3",
+        "4",
+        "3",
+        "4",
+        "+",
+        "+",
+        "+",
+        "1",
+        "2",
+        "1",
+        "2",
+        "1",
+        "1",
+        "1",
+        "2",
+        "2",
+        "2",
+        "2",
+        "1",
+        "1",
+        "2",
+        "2",
+        "1",
+        "1",
+        "1",
+        "1",
+        "2",
+        "2",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "2",
+        "2",
+        "2",
+        "2",
+        "1",
+        "1",
+        "2",
+        "2",
+        "1",
+        "1",
+        "1",
+        "1",
+        "2",
+        "2"
+      ],
+      "/T1_1#1#": [
+        ","
+      ],
+      "/T1_3#1#": [
+        "0",
+        "\\(",
+        "\\",
+        "",
+        "+",
+        "+",
+        "+",
+        "+",
+        "\\"
+      ],
+      "/T1_4#1#-0.0002": [
+        "where",
+        "such,that",
+        "is,de\\036ned,for",
+        "by,the,condition",
+        "can,be,interpreted,as",
+        "quantile,of,the",
+        "\\,of,the,null,h,ypothesis",
+        "H0:",
+        "are,independent,ag,ainst,the,alternati,v,e,H1:,the",
+        "log,arithmic,interaction,of",
+        "as,the,Fisher\\222,s,quanti\\036er,.",
+        "Still,the,question,remains,if,there,is,a,whole,class",
+        "of,4ft-quanti\\036ers,that,ha,v,e,the,s,ame,s,ecured,completion",
+        "has,the,s,ame,s,ecured,completion",
+        "W,e,are,interested,in,the,deduction,rules,of,the,form",
+        "where,both",
+        "ho,we,v,er,it,is,not,too,much,simple.,It,is,moreo,v,er,kno,wn",
+        "only,for,association,rules",
+        "such,that,the,Boolean",
+        "attrib,utes",
+        "are,deri,v,ed,from,predicates",
+        "and,not,from",
+        "basic,Boolean,attrib,utes",
+        "where",
+        "are,Boolean,at-",
+        "trib,utes,deri,v,ed,from",
+        "then,the,propositional",
+        "formula",
+        ".,Thus,it",
+        "is",
+        "property,.,W,e,s,ay,that",
+        "the,4ft-quanti\\036er",
+        "such",
+        "that",
+        "property,.,Then,the,deduction,r,ule",
+        "where",
+        "denotes,the,propositional,connecti,v,e",
+        "of,implication.\\",
+        "At,least,one,of,formulas",
+        "The,f,ollo,wing,formulas,are,tautologies"
+      ],
+      "/T1_0#1#1.037": [
+        "F"
+      ],
+      "/T1_1#1#0.0169": [
+        "X,,X"
+      ],
+      "/T1_5#1#0": [
+        "|",
+        "\\r",
+        "\\007",
+        "\\r",
+        "\\007",
+        "\\212",
+        "\\r",
+        "\\002",
+        "\\002",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\212",
+        "\\001",
+        "\\001",
+        "\\212",
+        "\\001",
+        "\\002",
+        "\\001",
+        "\\002",
+        "\\001",
+        "P",
+        "P",
+        "P",
+        "P",
+        "\\006",
+        "\\254",
+        "P",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\200",
+        "\\001",
+        "\\002",
+        "\\003",
+        "\\001",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\001",
+        "\\001",
+        "\\022",
+        "P",
+        "P",
+        "\\254P",
+        "P"
+      ],
+      "/T1_0#1#0.277": [
+        "b"
+      ],
+      "/T1_5#1#9.9626": [
+        "\\212",
+        "|",
+        "\\n",
+        "\\007",
+        "\\003",
+        "\\003",
+        "\\003",
+        "\\003",
+        "\\001",
+        "\\001",
+        "\\007",
+        "\\001",
+        "\\006",
+        "\\007",
+        "\\007"
+      ],
+      "/T1_0#1#1.036": [
+        "c"
+      ],
+      "/T1_4#1#0.0002": [
+        "is",
+        "minimal.,The,proof,is,rather,complicated.",
+        "There,is,a,natural,question,if,there,are,some,additional",
+        "4ft-quanti\\036ers,that,ha,v,e,the,s,ame,s,ecured,completion.,T,w,o",
+        "additional,4ft,quanti\\036ers,are,de\\036ned,in",
+        "The",
+        "quanti\\036er",
+        "is",
+        "is",
+        "if,f"
+      ],
+      "/T1_4#1#-0.0004": [
+        "of",
+        "and",
+        "and",
+        "by",
+        "and",
+        "and",
+        "and",
+        "and",
+        "and",
+        "as",
+        "the,Fisher\\222,s,quanti\\036er,if,and,only,if",
+        "quan-",
+        "ti\\036er,ha,v,e,the,F-property,.,It,is,an,alternati,v,e,proof,that",
+        "these,quanti\\036ers,ha,v,e,the,abo,v,e,de\\036ned,secured,completion",
+        "and",
+        "and",
+        "and",
+        "and",
+        "and",
+        "and",
+        "and",
+        "it,is",
+        "and",
+        "and",
+        "be",
+        "the,s,trong,symmetrical,equi,v,alence,quanti\\036er,with,the",
+        ",,and",
+        "and"
+      ],
+      "/T1_6#1#-0.0001": [
+        "simple,de,viation",
+        "the,lo,garithmic,inter,action",
+        "of",
+        "F-pr,operty",
+        "str,ong,symmetrical"
+      ],
+      "/T1_0#1#0.4382": [
+        "\\006>"
+      ],
+      "/T1_2#1#0": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "\\(",
+        "\\(",
+        "\\",
+        "0",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\("
+      ],
+      "/T1_0#1#0.4511": [
+        "B>"
+      ],
+      "/T1_0#1#-0.0001": [
+        "ad,>,e",
+        "bc",
+        "ad,>,bc",
+        "a,,b,,c,,d",
+        "a,,b",
+        "a,,b,,c,,d",
+        "a,,b",
+        "a,,b,,c,,d",
+        "a,,c,,b,,d",
+        "d,,b,,c,,a",
+        "a,,b,,c,",
+        "a,,b,,c,",
+        "a,,b,,c,,d",
+        "a,,b",
+        "a,,b,,c,,d",
+        "a,,b"
+      ],
+      "/T1_1#1#0": [
+        "\\004",
+        "b",
+        "a",
+        "a",
+        "\\001",
+        "\\001",
+        "F",
+        "F",
+        "F",
+        "F",
+        "F",
+        "F",
+        "F",
+        "F",
+        "F",
+        "F",
+        "F",
+        "F",
+        "\\002",
+        "N",
+        "N",
+        "N",
+        "N",
+        "\\002",
+        "1",
+        "N"
+      ],
+      "/T1_0#1#1.114": [
+        "a"
+      ],
+      "/T1_5#1#0.806": [
+        "\\n"
+      ],
+      "/T1_0#1#1.056": [
+        "B",
+        "c",
+        "b",
+        "a"
+      ],
+      "/T1_4#1#-0.0001": [
+        ".,The,association,rule",
+        "distrib,ution,function.",
+        "The,association,rule",
+        ".,The,class,of,4ft-quanti\\036ers,with,F-",
+        "property,is,de\\036ned,in",
+        "\\(see",
+        "also",
+        "[15]\\",
+        "such",
+        "that",
+        "the",
+        "4ft",
+        "quanti\\036er",
+        "has,the,F-property,.",
+        "There,is,also,a,direct,proof,in",
+        "that",
+        "the",
+        "Fisher\\222",
+        "s",
+        "quan-",
+        "ti\\036er,,,the,quanti\\036er,of,simple,de,viation,and,the",
+        "are,association,rules",
+        "and",
+        "is,the,4ft-quanti\\036er,with,the,F-property,.,Remember",
+        "that,there,are,interesting,results,concerning,correctness,of",
+        "analogous,rules,with,v,arious,4ft-quanti\\036ers;,see,Section,5.",
+        "There,is,a,criterion,of,correctness,of,the,rule",
+        "are,deri,v,ed,from,the,data,matrix,with,the",
+        "Boolean,columns",
+        "then,the,propositional,formula",
+        "related,to",
+        "is,a,propositional,v,ariable.,If",
+        "related,to",
+        "if,it,has,the",
+        "for,each,4ft-table",
+        "for,each,4ft-table",
+        "is,correct,if,and",
+        "only,if,at,least,one,of,the,f,ollo,wing,conditions,a\\,\\226,g\\,is,s,at-",
+        "is\\036ed.,\\(The,symbol",
+        "The,follo,wing,formulas,are,tautologies",
+        "are,tautologies."
+      ],
+      "/T1_5#1#0.978": [
+        "\\r"
+      ],
+      "/T1_6#1#-0.0004": [
+        "and",
+        "has"
+      ],
+      "/T1_6#1#-0.0002": [
+        "is,estimated,to,be,gr,eater,than",
+        "pr,operty"
+      ],
+      "/T1_4#1#0.482": [
+        ".",
+        "The"
+      ],
+      "/T1_4#1#-0.0003": [
+        "quanti\\036er",
+        "can,be,deri,v,ed,from,the",
+        "statistical",
+        "ha,v,e,the,s,ame,s,ecured,com-",
+        "pletion",
+        "has,the",
+        "then",
+        "then",
+        ".,I,t,means,that",
+        "etc.,The,e,xample",
+        "of,such,the,rule,is",
+        "is,one,of,Boolean",
+        "attrib,utes",
+        "is,de\\036ned,as",
+        "is,de\\036ned,as",
+        "and,analogously,for,Boolean,connecti,v,es",
+        "etc.",
+        "The,presented,criterion,concerns,a,s,peci\\036c,subclass,of",
+        "quanti\\036ers,with,the,F-property,.,W,e,need,notions,of,strong",
+        "symmetrical,quanti\\036ers,and,the",
+        "prop-",
+        "erty,and,if,it,satis\\036es,the,follo,wing,conditions:"
+      ],
+      "/T1_4#1#9.9626": [
+        "is,de\\036ned,for",
+        "test,\\(on,the,le,v,el,of",
+        ".",
+        "W,e,are,going,to,present,this,criterion,in,a,bit,infor,-",
+        "mal,w,ay,,,the,formal,one,is,out,of,the,s,cope,of,this,paper,.",
+        "The,criterion,is,based,on,propositional,formulas,associated",
+        "with,Boolean,attrib,utes",
+        ",",
+        ",",
+        ",",
+        "are,b,uilt,from"
+      ],
+      "/T1_0#1#0.3424": [
+        "<\\004<"
+      ],
+      "/T1_0#1#": [
+        ".",
+        "a",
+        "a",
+        "a",
+        "a",
+        "\\007",
+        "P",
+        "P",
+        "P",
+        "\\b",
+        "\\b",
+        "\\005",
+        "P",
+        "P",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003"
+      ],
+      "/T1_2#1#0.777": [
+        "5"
+      ],
+      "/T1_0#1#0.3283": [
+        "B>"
+      ],
+      "/T1_1#1#1.153": [
+        "ad>bc"
+      ],
+      "/T1_1#1#0.447": [
+        "a"
+      ],
+      "/T1_1#1#1.498": [
+        "c",
+        "b",
+        "c"
+      ],
+      "/T1_3#1#0.0001": [
+        "\\",
+        "",
+        "\\",
+        "",
+        "\\",
+        ""
+      ],
+      "/T1_1#1#1.38": [
+        "d"
+      ],
+      "/T1_0#1#1.254": [
+        "\\001"
+      ],
+      "/T1_0#1#0.896": [
+        "a"
+      ],
+      "/T1_5#1#0.807": [
+        "\\n"
+      ],
+      "/T1_0#1#1.055": [
+        "B"
+      ],
+      "/T1_4#1#0.809": [
+        ".",
+        "Here"
+      ],
+      "/T1_0#1#2.193": [
+        "\\001"
+      ],
+      "/T1_2#1#-0.0004": [
+        "\\(1",
+        "\\(0",
+        "0\\,=,0"
+      ],
+      "/T1_0#1#0.997": [
+        "\\004"
+      ],
+      "/T1_2#1#0.643": [
+        "\\",
+        "\\"
+      ],
+      "/T1_5#1#0.994": [
+        "\\r"
+      ],
+      "/T1_0#1#4.054": [
+        "\\001"
+      ],
+      "/T1_0#1#8.065": [
+        "\\004"
+      ],
+      "/T1_4#1#0.0001": [
+        "is,positi,v,e,.,It,is,p,ro,v,e,d",
+        "in",
+        "that",
+        "both",
+        "if,it,satis\\036es:",
+        "1.,If"
+      ],
+      "/T1_0#1#0.1658": [
+        ",b",
+        ",c",
+        ",d",
+        ",b",
+        ",c",
+        ",d",
+        ",c",
+        ",d",
+        ",c",
+        ",d",
+        ",b",
+        ",c",
+        ",d",
+        ",b",
+        ",c",
+        ",d",
+        ",P",
+        ",P",
+        ",B",
+        ",...",
+        ",P",
+        ",P",
+        ",b,,c,,d",
+        ",b,,c,,d",
+        ",c",
+        ",d",
+        ",c",
+        ",d",
+        ",P"
+      ],
+      "/T1_2#1#1.055": [
+        "\\(",
+        "0",
+        "\\(",
+        "\\(",
+        "0",
+        "\\(",
+        "\\(",
+        "\\("
+      ],
+      "/T1_2#1#0.2794": [
+        "\\",
+        "\\"
+      ],
+      "/T1_5#1#0.706": [
+        "\\n"
+      ],
+      "/T1_5#1#0.655": [
+        "\\212"
+      ],
+      "/T1_2#1#1": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "/T1_5#1#0.778": [
+        "\\n",
+        "\\n"
+      ],
+      "/T1_2#1#0.2223": [
+        "+1",
+        "+1"
+      ],
+      "/T1_2#1#0.2785": [
+        "\\",
+        "\\",
+        "\\"
+      ],
+      "/T1_4#1#0": [
+        ".",
+        "2.,If",
+        ".",
+        "It,is,also,pro,v,ed,in",
+        "that",
+        "each",
+        "equi",
+        "v",
+        "alence",
+        "quanti-",
+        "\\036er",
+        ".",
+        "The,criterion,of,correctness,is,pro,v,ed,in",
+        "and",
+        "it",
+        "can,be,a,bit,informally,formulated,as,follo,ws.,Let"
+      ],
+      "/T1_5#1#0.71": [
+        "\\n"
+      ],
+      "/T1_5#1#0.651": [
+        "\\212"
+      ],
+      "/T1_4#1#": [
+        ".",
+        ",",
+        ",",
+        ",",
+        ",",
+        ".",
+        "."
+      ],
+      "/T1_7#1#0.0001": [
+        "7,Results,on,F-pr,operty"
+      ],
+      "/T1_8#1#0": [
+        "7.1,Deduction,Rules,and,F-prop,ert,y"
+      ],
+      "/T1_5#1#0.931": [
+        "\\001"
+      ],
+      "/T1_0#1#9.9626": [
+        "\\003",
+        "",
+        "\\002",
+        "\\003",
+        "\\003",
+        "\\003",
+        "\\003",
+        "P"
+      ],
+      "/T1_9#1#6.9738": [
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\005",
+        "F",
+        "\\001",
+        "\\001",
+        "\\005",
+        "F",
+        "\\005",
+        "F"
+      ],
+      "/T1_5#1#1.118": [
+        "\\001"
+      ],
+      "/T1_9#1#": [
+        "\\005",
+        "F"
+      ],
+      "/T1_5#1#1.114": [
+        "\\001"
+      ],
+      "/T1_0#1#3.939": [
+        "\\002"
+      ],
+      "/T1_3#1#0": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ],
+      "/T1_0#1#0.1664": [
+        ",...,P",
+        ",...,P",
+        ",...,P",
+        ",...,P"
+      ],
+      "/T1_2#1#": [
+        "\\(",
+        "0"
+      ],
+      "/T1_0#1#1.138": [
+        "\\004"
+      ],
+      "/T1_2#1#1.007": [
+        "\\"
+      ],
+      "/T1_0#1#0.889": [
+        "P",
+        "P",
+        "P",
+        "p"
+      ],
+      "/T1_4#1#0.5721": [
+        ".I,f"
+      ],
+      "/T1_0#1#4.177": [
+        "P"
+      ],
+      "/T1_2#1#0.778": [
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\("
+      ],
+      "/T1_2#1#0.5253": [
+        "\\"
+      ],
+      "/T1_0#1#0.1663": [
+        ",...,P"
+      ],
+      "/T1_5#1#3.382": [
+        "P"
+      ],
+      "/T1_5#1#1.037": [
+        "\\007"
+      ],
+      "/T1_0#1#0.763": [
+        "\\005",
+        "\\005"
+      ],
+      "/T1_2#1#0.659": [
+        "\\"
+      ],
+      "/T1_5#1#0.648": [
+        "\\007"
+      ],
+      "/T1_2#1#0.939": [
+        "\\"
+      ],
+      "/T1_5#1#0.0967": [
+        "\\007P"
+      ],
+      "/T1_2#1#1.048": [
+        "\\"
+      ],
+      "/T1_2#1#0.2778": [
+        "\\",
+        "\\"
+      ],
+      "/T1_5#1#0.5": [
+        "P"
+      ],
+      "/T1_5#1#0.2223": [
+        "\\006\\254",
+        "\\006\\254",
+        "\\007P",
+        "\\007P",
+        "\\007\\254,P",
+        "\\007\\254,P",
+        "\\007P",
+        "\\007P",
+        "\\007\\254,P",
+        "\\007\\254,P",
+        "\\007P",
+        "\\007P",
+        "\\007\\254,P",
+        "\\007P",
+        "\\007P",
+        "\\007\\254,P",
+        "\\007\\254,P",
+        "\\007\\254,P"
+      ],
+      "/T1_2#1#1.056": [
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\("
+      ],
+      "/T1_2#1#0.781": [
+        "\\"
+      ],
+      "/T1_2#1#0.2814": [
+        "\\"
+      ],
+      "/T1_4#1#0.642": [
+        ".",
+        "The,4ft-quanti\\036er"
+      ],
+      "/T1_4#1#0.0003": [
+        "It,is"
+      ],
+      "/T1_2#1#0.2799": [
+        "\\",
+        "\\"
+      ],
+      "/T1_5#1#": [
+        "\\003"
+      ],
+      "/T1_4#1#0.888": [
+        "."
+      ],
+      "/T1_5#1#-20.997": [
+        "\\200"
+      ],
+      "/T1_4#1#1": [
+        "There,are,4ft-tables"
+      ],
+      "/T1_5#1#8.58": [
+        "\\002"
+      ],
+      "/T1_9#1#0": [
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001"
+      ],
+      "/T1_2#1#0.711": [
+        "+",
+        "+"
+      ],
+      "/T1_0#1#0.96": [
+        "b",
+        "c",
+        "d",
+        "b",
+        "c",
+        "d"
+      ],
+      "/T1_2#1#0.612": [
+        "+"
+      ],
+      "/T1_2#1#0.615": [
+        "+"
+      ],
+      "/T1_2#1#0.798": [
+        "="
+      ],
+      "/T1_5#1#1.012": [
+        "\\001"
+      ],
+      "/T1_0#1#0.608": [
+        "\\002"
+      ],
+      "/T1_0#1#-23.463": [
+        "\\003"
+      ],
+      "/T1_0#1#5.904": [
+        "P"
+      ],
+      "/T1_7#1#-0.0004": [
+        "a\\",
+        "b\\",
+        "c\\"
+      ],
+      "/T1_5#1#0.2774": [
+        "\\022P",
+        "\\022P",
+        "\\022\\254,P",
+        "\\022\\254,P",
+        "\\022P",
+        "\\022\\254,P",
+        "\\022P",
+        "\\022\\254,P"
+      ],
+      "/T1_5#1#-14.016": [
+        "P"
+      ],
+      "/T1_5#1#-15.35": [
+        "\\254P",
+        "\\254P",
+        "\\254P",
+        "\\254P"
+      ],
+      "/T1_2#1#1.444": [
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\("
+      ],
+      "/T1_5#1#0.2783": [
+        "\\022\\254,P"
+      ],
+      "/T1_5#1#0.5276": [
+        "\\022P"
+      ],
+      "/T1_5#1#-14.017": [
+        "P"
+      ]
+    },
+    "Content#3": {
+      "##": [
+        "291"
+      ]
+    },
+    "Content#4": {
+      "##": [
+        "291"
+      ]
+    }
+  },
+  "Page#6": {
+    "Content#0": {},
+    "Content#1": {},
+    "Content#2": {
+      "/T1_0#1#-0.0004": [
+        "d\\",
+        "e\\",
+        "g\\"
+      ],
+      "/T1_1#1#-0.0002": [
+        "The,follo,wing,formulas,are,tautologies",
+        "of,natural,numbers,s,atisfying",
+        "where",
+        "can,be,used,in,the,s,ame,w,ay",
+        "as,the,function",
+        "called,table,of,maximal,b,for",
+        "implicational,quanti\\036er",
+        ",,s,ee,Section,5.,The,function",
+        "if,and,only,if",
+        "is,equi,v,alence,and,symmetrical",
+        "b,ut,it,has,not,the,F-property,and,thus,it,is,equi,v,alence,and",
+        "symmetrical,b,ut,it,has,not,the,s,ame,s,ecured,completion,as",
+        "the,Fisher\\222,s,quanti\\036er,.",
+        "Thus,the,abo,v,e,mentioned,conjecture,is,denied.",
+        "The,Fisher\\222,s,quanti\\036er,,,the,quanti\\036er,of,simple,de,via-",
+        "tion,and,the",
+        "quanti\\036er,belong,to,the,class,of,equi,v-",
+        "alence,quanti\\036ers;,see",
+        "is,the,Fisher\\222,s,quanti\\036er,,,the,quanti\\036er,of,simple",
+        "de,viation,or,the",
+        "quanti\\036er,then,the,rule",
+        "to,ha,v,e,the,s,ame,v,alue",
+        "\\(either",
+        "Do,the,Fisher\\222,s,quanti\\036er,,,the,quanti\\036er,of,simple,de-",
+        "viation,and,the",
+        "quanti\\036er,belong,to,the,class,of",
+        "-equi,v,alence,quanti\\036ers?",
+        "It,is,easy,to,pro,v,e,that,each"
+      ],
+      "/T1_2#1#0": [
+        "P",
+        "P",
+        "P",
+        "P",
+        "P",
+        "P",
+        "\\001",
+        "\\002",
+        "\\003",
+        "\\001",
+        "|",
+        "\\b",
+        "|",
+        "\\001",
+        "A",
+        "\\001",
+        "A",
+        "\\006",
+        "\\007",
+        "\\006",
+        "\\007",
+        "\\006",
+        "\\007",
+        "\\001",
+        "B",
+        "\\001",
+        "B",
+        "\\001",
+        "B",
+        "\\200",
+        "\\001",
+        "\\200",
+        "\\f",
+        "p,B",
+        "\\200",
+        "\\200",
+        "\\001",
+        "\\001",
+        "\\212",
+        "\\001",
+        "\\212",
+        "\\001",
+        "\\001",
+        "\\212",
+        "\\001",
+        "\\001"
+      ],
+      "/T1_3#1#0.778": [
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\("
+      ],
+      "/T1_4#1#": [
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "a",
+        "a"
+      ],
+      "/T1_5#1#6.9738": [
+        "1",
+        "1",
+        "2",
+        "2",
+        "2",
+        "2",
+        "1",
+        "1",
+        "2",
+        "2",
+        "1",
+        "1",
+        "1",
+        "1",
+        "2",
+        "2",
+        "1",
+        "1",
+        "2",
+        "2",
+        "2",
+        "2",
+        "1",
+        "1",
+        "2",
+        "2",
+        "1",
+        "1",
+        "1",
+        "1",
+        "2",
+        "2",
+        "1",
+        "1",
+        "2",
+        "2",
+        "1",
+        "1",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "1",
+        "1",
+        "2",
+        "2",
+        "1",
+        "1",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "+",
+        "2",
+        "2",
+        "2"
+      ],
+      "/T1_3#1#9.9626": [
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "+",
+        "+",
+        "+",
+        "+",
+        "+",
+        "+",
+        "=",
+        "=",
+        "=",
+        "="
+      ],
+      "/T1_2#1#0.2223": [
+        "\\007P",
+        "\\007\\254,P",
+        "\\007\\254,P",
+        "\\007\\254,P",
+        "\\007P",
+        "\\007P",
+        "\\007\\254,P",
+        "\\007P",
+        "\\007P",
+        "\\007\\254,P",
+        "\\007\\254,P",
+        "\\007P",
+        "\\007P",
+        "\\007\\254,P",
+        "\\007\\254,P",
+        "\\007P",
+        "\\007P",
+        "\\007P",
+        "\\007\\254,P",
+        "\\007\\254,P",
+        "\\007P",
+        "\\007\\254,P",
+        "\\007\\254,P",
+        "\\007P"
+      ],
+      "/T1_3#1#0": [
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001"
+      ],
+      "/T1_2#1#0.2774": [
+        "\\022\\254,P",
+        "\\022P",
+        "\\022\\254,P",
+        "\\022P",
+        "\\022\\254,P",
+        "\\022\\254,P",
+        "\\022P",
+        "\\022P",
+        "\\022P",
+        "\\022\\254,P",
+        "\\022P",
+        "\\022\\254,P",
+        "\\022\\254,P",
+        "\\022P",
+        "\\022P",
+        "\\022\\254,P"
+      ],
+      "/T1_1#1#": [
+        ",",
+        ",",
+        ",",
+        ".",
+        ",",
+        ",",
+        ",",
+        ".",
+        ",",
+        ",",
+        "and,at,least,one,of,formulas",
+        ",",
+        ",",
+        ",",
+        "and,at,least,one,of,formulas",
+        ",",
+        "-",
+        "equi,v,alence,quanti\\036ers?"
+      ],
+      "/T1_2#1#-15.35": [
+        "P",
+        "\\254P",
+        "\\254P",
+        "P",
+        "\\254P",
+        "\\254P",
+        "\\254P"
+      ],
+      "/T1_3#1#1.444": [
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\(",
+        "\\("
+      ],
+      "/T1_1#1#-0.0001": [
+        "The,follo,wing,formulas,are,tautologies",
+        "Both,the,follo,wing,tw,o,formulas,are,tautologies",
+        "are,tautologies.",
+        "Both,the,follo,wing,tw,o,formulas,are,tautologies",
+        "are,tautologies.",
+        "W,e,already,kno,w,that,the,Fisher\\222,s,quanti\\036er,,,the,quan-",
+        "ti\\036er,of,simple,de,viation,and,the",
+        "property,.",
+        "It,is,pro,v,ed,in",
+        "that",
+        "for",
+        "the",
+        "symmetrical",
+        "4ft-quanti\\036er",
+        "that,assigns,to",
+        "each,triple",
+        "is,called",
+        "",
+        "such",
+        "that",
+        "it",
+        "is",
+        ",,thus,the,y,also,e,xpress",
+        "a,t,endenc,y,of",
+        "to,ha,v,e,the,same,v,alues.,An",
+        "e,xample,is,the,quanti\\036er",
+        "What,is,the,relation,of,the,class,of,quanti\\036ers,with,the",
+        "F-property,to,the,class,of",
+        "for",
+        "says,that,if"
+      ],
+      "/T1_0#1#0.0003": [
+        "f\\"
+      ],
+      "/T1_2#1#-14.016": [
+        "\\254P"
+      ],
+      "/T1_2#1#-17.81": [
+        "\\254P",
+        "\\254P"
+      ],
+      "/T1_4#1#0": [
+        "\\001",
+        "F",
+        "a",
+        "T",
+        "b",
+        "c",
+        "a",
+        "T",
+        "T",
+        "T",
+        "b",
+        "b",
+        "\\001",
+        "\\001",
+        "\\002",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\001",
+        "b",
+        "c",
+        "b",
+        "a",
+        "a"
+      ],
+      "/T1_1#1#-0.0003": [
+        "quanti\\036er,are,equi,v,a-",
+        "lence,quanti\\036ers.,It,is,pro,v,ed,in",
+        "that",
+        "these",
+        "quanti\\036ers",
+        "are,also,strong,symmetrical,and,that,the,y,ha,v,e",
+        "the,number",
+        "such,that,for,each",
+        "There,w,as,a,conjecture,that,ha,ving,the,s,ame,s,ecured",
+        "completion,as,the,Fisher\\222,s,quanti\\036er,is,for,equi,v,alence",
+        "quanti\\036ers,the,same,as,being,symmetrical.,Ho,we,v,er,it,can",
+        "be,easy,v,eri\\036ed,that,the,4ft-quanti\\036er",
+        "de\\036ned,such,that",
+        "are,de\\036ned,by",
+        "de\\036ned,by,the,condition",
+        "a",
+        ";,s,ee,Section,3.",
+        "Thus,it,is,natural,to,ask,the,follo,wing,questions:",
+        "-equi,v,alence,quanti\\036er,has",
+        "the,F-property,.,Let,us,suppose,that",
+        "-equi,v,alence",
+        "quanti\\036er,.,W,e,ha,v,e,to,pro,v,e,\\(see,Section,6\\",
+        "1.,If",
+        "then",
+        "then",
+        "-equi,v,alence",
+        "quanti\\036ers.,The",
+        "then"
+      ],
+      "/T1_6#1#0": [
+        "7.2,T,ables,of,Critical,F,requencies,and,F-",
+        "prop,ert,y"
+      ],
+      "/T1_1#1#1.032": [
+        "with,the,F-property,there,is,a,function"
+      ],
+      "/T1_4#1#15.495": [
+        "T"
+      ],
+      "/T1_7#1#6.9738": [
+        "\\005",
+        "\\005",
+        "\\005",
+        "\\005",
+        "\\006",
+        "\\005",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001"
+      ],
+      "/T1_4#1#-0.0001": [
+        "a,,d,,n",
+        "a,,d,,n",
+        "a,,b,,c,,d",
+        "a,,d,,n",
+        "a,,d,,n",
+        "a,,d,,n",
+        "a,,b,,c,,d",
+        "a,,b,,c,,d",
+        "a,,b,,c,,d",
+        "a,,b",
+        "a,,b,,c,,d",
+        "a,,b",
+        "a,,b,,c,,d",
+        "a,,b",
+        "a,,b,,c,,d",
+        "a,,b"
+      ],
+      "/T1_3#1#0.637": [
+        "+"
+      ],
+      "/T1_4#1#0.886": [
+        "d"
+      ],
+      "/T1_2#1#0.798": [
+        "\\t"
+      ],
+      "/T1_4#1#1.056": [
+        "n",
+        "a",
+        "c",
+        "b",
+        "a"
+      ],
+      "/T1_2#1#0.742": [
+        "\\n"
+      ],
+      "/T1_3#1#1.09": [
+        "0",
+        "0"
+      ],
+      "/T1_1#1#-0.0004": [
+        "and",
+        "and",
+        "or",
+        "The",
+        "and",
+        "and",
+        "and",
+        "and",
+        "and"
+      ],
+      "/T1_2#1#0.745": [
+        "\\n"
+      ],
+      "/T1_3#1#0.751": [
+        "+"
+      ],
+      "/T1_4#1#1": [
+        "b",
+        "c",
+        "d",
+        "c",
+        "c"
+      ],
+      "/T1_3#1#0.651": [
+        "+"
+      ],
+      "/T1_3#1#0.655": [
+        "+"
+      ],
+      "/T1_3#1#0.799": [
+        "="
+      ],
+      "/T1_4#1#1.055": [
+        "n",
+        "c",
+        "b",
+        "p",
+        "B",
+        "b",
+        "a",
+        "b"
+      ],
+      "/T1_1#1#0.0002": [
+        "it,is",
+        "if,f",
+        "is",
+        "equi,v,alence,,has,the,F-property,\\(i.e.,it,has,the,s,ame,s,ecured",
+        "completion,as,the,Fisher\\222,s,quanti\\036er\\,and,it,is,not,symmet-",
+        "rical.",
+        "Let,us,de\\036ne,the,4ft-quanti\\036er",
+        "if,f"
+      ],
+      "/T1_3#1#1.056": [
+        "\\("
+      ],
+      "/T1_3#1#0.2794": [
+        "\\",
+        "\\",
+        "\\",
+        "\\"
+      ],
+      "/T1_4#1#0.277": [
+        "b",
+        "b"
+      ],
+      "/T1_2#1#0.652": [
+        "\\212"
+      ],
+      "/T1_2#1#0.2778": [
+        "|\\n"
+      ],
+      "/T1_1#1#0.642": [
+        ".",
+        "The,f,unction"
+      ],
+      "/T1_4#1#0.1392": [
+        "Tb"
+      ],
+      "/T1_7#1#0": [
+        "\\002",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001"
+      ],
+      "/T1_8#1#4.9813": [
+        "\\002"
+      ],
+      "/T1_3#1#0.917": [
+        "\\"
+      ],
+      "/T1_9#1#3.556": [
+        "table,of,minimal"
+      ],
+      "/T1_2#1#0.651": [
+        "\\212",
+        "\\212"
+      ],
+      "/T1_2#1#": [
+        "|"
+      ],
+      "/T1_1#1#0.71": [
+        "."
+      ],
+      "/T1_6#1#0.0001": [
+        "7.3,Symmetry,and,F-prop,ert,y"
+      ],
+      "/T1_3#1#0.707": [
+        "="
+      ],
+      "/T1_3#1#0.2774": [
+        "=0",
+        "=1",
+        "=0",
+        "=0",
+        "=1"
+      ],
+      "/T1_4#1#0.718": [
+        "b",
+        "b",
+        "b"
+      ],
+      "/T1_4#1#0.922": [
+        "c",
+        "c",
+        "c"
+      ],
+      "/T1_3#1#0.2783": [
+        "=2",
+        "=0"
+      ],
+      "/T1_3#1#0.3499": [
+        "\\"
+      ],
+      "/T1_2#1#0.777": [
+        "\\t"
+      ],
+      "/T1_3#1#1.127": [
+        "2",
+        "1"
+      ],
+      "/T1_2#1#0.751": [
+        "\\007",
+        "\\007"
+      ],
+      "/T1_4#1#0.917": [
+        "c",
+        "b",
+        "c"
+      ],
+      "/T1_2#1#0.78": [
+        "\\t"
+      ],
+      "/T1_2#1#0.75": [
+        "\\006"
+      ],
+      "/T1_2#1#0.778": [
+        "\\t",
+        "\\n",
+        "\\n"
+      ],
+      "/T1_3#1#1.126": [
+        "1",
+        "2"
+      ],
+      "/T1_2#1#0.781": [
+        "\\t"
+      ],
+      "/T1_1#1#0.4248": [
+        ".I,t",
+        "can,be,easy,v,eri\\036ed,that"
+      ],
+      "/T1_0#1#0.0001": [
+        "8,F-pr,operty,and",
+        "\\001",
+        "-equi,v,alence,Rules"
+      ],
+      "/T1_1#1#0": [
+        "There,are,the,follo,wing,f,acts:",
+        ".",
+        "2.,If",
+        ".",
+        "W,e,pro,v,e,the,condition,1\\,the,proof,of,the,condition,2\\",
+        "is,analogous.,Let,us,suppose",
+        ".",
+        "Ho,we,v,er,,,it,follo,ws,from,the,truth,preserv,ation,condition",
+        ".",
+        "In,our,case,we,ha,v,e"
+      ],
+      "/T1_2#1#-0.2": [
+        "\\200"
+      ],
+      "/T1_1#1#0.0003": [
+        "If",
+        "\\"
+      ],
+      "/T1_2#1#0.986": [
+        "\\001"
+      ],
+      "/T1_4#1#1.109": [
+        "\\003"
+      ],
+      "/T1_1#1#-0.0158": [
+        "ex,-",
+        "presses,a,tendenc,y,of"
+      ],
+      "/T1_9#1#2.86": [
+        "true"
+      ],
+      "/T1_9#1#0.0001": [
+        "false"
+      ],
+      "/T1_9#1#-0.0002": [
+        "-equivalence,quanti\\036er,s"
+      ],
+      "/T1_4#1#0.1393": [
+        "TPC",
+        "TPC",
+        "TPC"
+      ],
+      "/T1_5#1#0": [
+        "\\002",
+        ",",
+        "\\002",
+        ",",
+        "\\002",
+        ","
+      ],
+      "/T1_7#1#": [
+        "\\004",
+        "\\004",
+        "\\004"
+      ],
+      "/T1_4#1#9.9626": [
+        "a"
+      ],
+      "/T1_4#1#0.86": [
+        "d",
+        "d",
+        "c",
+        "c"
+      ],
+      "/T1_2#1#9.9626": [
+        "\\n",
+        "\\t",
+        "\\n",
+        "\\n",
+        "\\t",
+        "\\n",
+        "\\t"
+      ],
+      "/T1_3#1#0.611": [
+        "+"
+      ],
+      "/T1_2#1#0.816": [
+        "\\007"
+      ],
+      "/T1_4#1#0.961": [
+        "b"
+      ],
+      "/T1_3#1#0.511": [
+        "+"
+      ],
+      "/T1_5#1#": [
+        "+",
+        "d",
+        "",
+        "n"
+      ],
+      "/T1_2#1#0.725": [
+        "\\007"
+      ],
+      "/T1_4#1#0.889": [
+        "a"
+      ],
+      "/T1_2#1#0.807": [
+        "\\n"
+      ],
+      "/T1_3#1#10.304": [
+        "\\001"
+      ],
+      "/T1_1#1#0.0001": [
+        "is,the"
+      ],
+      "/T1_2#1#2.417": [
+        "\\001",
+        "\\001"
+      ],
+      "/T1_3#1#1.055": [
+        "\\(",
+        "0",
+        "\\(",
+        "\\(",
+        "0",
+        "\\(",
+        "\\(",
+        "\\("
+      ],
+      "/T1_2#1#0.706": [
+        "\\n"
+      ],
+      "/T1_2#1#0.655": [
+        "\\212"
+      ],
+      "/T1_3#1#1": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "/T1_3#1#0.2223": [
+        "+1",
+        "+1"
+      ],
+      "/T1_4#1#0.1658": [
+        ",c",
+        ",d",
+        ",c",
+        ",d",
+        ",c",
+        ",d",
+        ",b",
+        ",c",
+        ",d",
+        ",c",
+        ",d"
+      ],
+      "/T1_3#1#0.2785": [
+        "\\",
+        "\\"
+      ],
+      "/T1_2#1#0.71": [
+        "\\n"
+      ],
+      "/T1_3#1#1.242": [
+        "\\("
+      ],
+      "/T1_3#1#0.4655": [
+        "\\"
+      ],
+      "/T1_2#1#0.892": [
+        "\\n"
+      ],
+      "/T1_4#1#-22.936": [
+        "c"
+      ],
+      "/T1_2#1#0.723": [
+        "\\212"
+      ],
+      "/T1_3#1#1.068": [
+        "1",
+        "1"
+      ],
+      "/T1_2#1#0.948": [
+        "\\n"
+      ],
+      "/T1_3#1#1.225": [
+        "0"
+      ],
+      "/T1_1#1#0.3422": [
+        ",,w,eh,a,v,et,os,h,o,w"
+      ],
+      "/T1_3#1#9.589": [
+        "\\("
+      ],
+      "/T1_3#1#0.29": [
+        "+1"
+      ],
+      "/T1_3#1#0.4483": [
+        "\\"
+      ],
+      "/T1_1#1#9.9626": [
+        ":"
+      ],
+      "/T1_4#1#0.563": [
+        "a"
+      ],
+      "/T1_4#1#0.809": [
+        "d",
+        "d",
+        "c",
+        "c"
+      ],
+      "/T1_3#1#0.56": [
+        "+"
+      ],
+      "/T1_2#1#0.752": [
+        "\\007"
+      ],
+      "/T1_4#1#0.897": [
+        "b"
+      ],
+      "/T1_3#1#0.461": [
+        "+"
+      ],
+      "/T1_3#1#0.2799": [
+        "\\"
+      ],
+      "/T1_4#1#0.919": [
+        "d",
+        "d",
+        "c",
+        "c"
+      ],
+      "/T1_3#1#0.669": [
+        "+"
+      ],
+      "/T1_2#1#0.889": [
+        "\\007"
+      ],
+      "/T1_4#1#1.035": [
+        "b"
+      ],
+      "/T1_3#1#0.57": [
+        "+"
+      ],
+      "/T1_3#1#0.2781": [
+        "\\"
+      ],
+      "/T1_4#1#1.097": [
+        "b",
+        "c",
+        "d"
+      ],
+      "/T1_3#1#0.2385": [
+        "+1"
+      ],
+      "/T1_2#1#0.671": [
+        "\\212"
+      ],
+      "/T1_3#1#1.016": [
+        "1"
+      ]
+    },
+    "Content#3": {
+      "##": [
+        "292"
+      ]
+    },
+    "Content#4": {
+      "##": [
+        "292"
+      ]
+    }
+  },
+  "Page#7": {
+    "Content#0": {},
+    "Content#1": {},
+    "Content#2": {
+      "/T1_0#1#-0.0003": [
+        "and,thus",
+        "has,the",
+        "has,the",
+        "quanti\\036er,ha,v,e,the",
+        "-equi,v,alence."
+      ],
+      "/T1_1#1#0": [
+        "a",
+        "\\001",
+        "b",
+        "\\001",
+        "\\001"
+      ],
+      "/T1_2#1#6.9738": [
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001"
+      ],
+      "/T1_3#1#9.9626": [
+        "+",
+        "=",
+        "+",
+        "=",
+        "+"
+      ],
+      "/T1_1#1#0.922": [
+        "d",
+        "d",
+        "c",
+        "c"
+      ],
+      "/T1_1#1#1.055": [
+        "a"
+      ],
+      "/T1_3#1#0.673": [
+        "+"
+      ],
+      "/T1_4#1#0.894": [
+        "\\007"
+      ],
+      "/T1_1#1#1.041": [
+        "b"
+      ],
+      "/T1_1#1#1.056": [
+        "b"
+      ],
+      "/T1_3#1#0.574": [
+        "+"
+      ],
+      "/T1_0#1#-0.0002": [
+        "and,according,to",
+        ".,This,\\036nishes,the",
+        "proof.",
+        "The,question,remains,if,there,are,some,4ft-quanti\\036ers",
+        "with,the,F-property,that,are,not",
+        "quanti\\036er,are,e,xamples,of,important",
+        "quanti\\036ers,with,the,F-property,that,do,not,belong,to,the",
+        "class,of",
+        "-equi,v,alence,quanti\\036ers.,The,proof,is,out,of,the",
+        "scope,of,this,paper,.,It,is,based,on,the,notion,of,the",
+        "such,that",
+        "Association,rules,can,be,de\\036ned,as,general,relations",
+        "of,tw,o,Boolean,attrib,utes,deri,v,ed,in,v,arious,w,ays,from",
+        "columns,of,analyzed,data,matrix.,Se,v,eral,classes,of,associ-",
+        "ation,rules,related,to,types,of,these,r,elations,is,introduced.",
+        "Ov,ervie,w,of,the,theoretically,interesting,and,practically,im-",
+        "portant,results,related,to,these,classes,is,gi,v,en.",
+        "A,ne,w,class,of,association,rules,with,F-property,is,de-",
+        "scribed,in,a,detailed,w,ay,.,This,class,contains,important,as-",
+        "sociation,rules,corresponding,to,the,Fisher\\222,s,test,and,to,the",
+        "-equi,v,alence,rules,is,s,tudied.",
+        "There,are,tens,of,additional,measures,for,association,pat-",
+        "terns,described,in,literature;,see,e.g.",
+        "These",
+        "measures",
+        "can,be,understood,as,the,additional,4ft-quanti\\036ers.,W,e,sup-",
+        "pose,to,s,tudy,relations,of,these,additional,4ft-quanti\\036ers,to",
+        "kno,wn,classes,of,association,rules."
+      ],
+      "/T1_1#1#0.1393": [
+        "TPC"
+      ],
+      "/T1_5#1#0": [
+        "\\002"
+      ],
+      "/T1_6#1#0.816": [
+        ","
+      ],
+      "/T1_2#1#": [
+        "\\004"
+      ],
+      "/T1_0#1#0.0002": [
+        "it,is"
+      ],
+      "/T1_4#1#0": [
+        "\\001",
+        "\\212",
+        "\\001",
+        "\\002",
+        "\\003",
+        "\\002",
+        "\\003",
+        "\\001"
+      ],
+      "/T1_3#1#1.119": [
+        "\\("
+      ],
+      "/T1_1#1#-0.0001": [
+        "a,,b",
+        "a,,b,,c,,d",
+        "a,,b",
+        "a,,b,,c,,d",
+        "a,,b"
+      ],
+      "/T1_3#1#0.2476": [
+        "+1"
+      ],
+      "/T1_1#1#0.1658": [
+        ",c",
+        ",d",
+        ",c",
+        ",d",
+        ",c",
+        ",d"
+      ],
+      "/T1_3#1#1.025": [
+        "1"
+      ],
+      "/T1_3#1#0.3417": [
+        "\\"
+      ],
+      "/T1_3#1#0": [
+        "\\001",
+        "\\001",
+        "\\(",
+        "\\(",
+        "\\001",
+        "\\001",
+        "\\001"
+      ],
+      "/T1_0#1#-0.0001": [
+        "-equi,v,alence.,It,is,pro,v,ed",
+        "in",
+        "that",
+        "the",
+        "Fisher\\222",
+        "s",
+        "quanti\\036er",
+        ",",
+        "the",
+        "quanti\\036er",
+        "of",
+        "simple",
+        "de,viation,and,the",
+        "-property,then,it,is,not",
+        "-equi,v,alence.,It,is,also",
+        "pro,v,ed,in",
+        "that",
+        "Fisher\\222",
+        "s",
+        "quanti\\036er",
+        ",",
+        "the",
+        "quanti\\036er",
+        "of",
+        "sim-",
+        "ple,de,viation,and,the",
+        "",
+        "Aggra",
+        "v",
+        "al",
+        "R",
+        "et",
+        "al.",
+        "\\(1996\\",
+        "F",
+        "ast",
+        "Disco",
+        "v",
+        "ery",
+        "of",
+        "Associa-",
+        "tion,Rules.,I,n:,F,ayyad,,U.,M.,et,al.\\(Eds.\\,Adv,ances,in",
+        "Kno,wledge,Disco,v,ery,and,Data,Mining.,AAAI,Press",
+        "",
+        "H",
+        "\\264",
+        "ajek,P,,,Ha,vr",
+        "\\264",
+        "anek,T,\\(,1978\\,Mechanising,Hypothesis",
+        "F,ormation,-,Mathematical,F,oundations,for,a,General",
+        "Theory,.,Springer,,,Berlin,Heidelber,g,Ne,w,Y,ork",
+        "",
+        "H",
+        "\\264",
+        "ajek,P,\\(guest,ed.\\,\\(1978\\,International,Journal,of",
+        "Man-Machine,Studies,,s,pecial,issue,on,GUHA,,10",
+        "",
+        "H",
+        "\\264",
+        "ajek,P,\\(guest,ed.\\,\\(1981\\,International,Journal,of",
+        "Man-Machine,Studies,,s,econd,special,issue,on,GUHA,",
+        "15",
+        "",
+        "H",
+        "\\264",
+        "ajek,P,,,Ha,vr",
+        "\\264",
+        "anek,T,,,Ch,ytil,M,\\(,1983\\,GUHA,Method.",
+        "Academia,,Prague,\\(in,Czech\\",
+        "",
+        "H",
+        "\\264",
+        "ajek,P,,,Sochoro,v",
+        "\\264",
+        "aA,,Z,v",
+        "\\264",
+        "aro,v",
+        "\\264",
+        "a,J,\\(1995\\,GUHA,for",
+        "personal,computers.,Computational,Statistics,&,Data",
+        "Analysis,,19",
+        "",
+        "P",
+        "ang-Ning",
+        "T",
+        ",",
+        "K",
+        "umar",
+        "V",
+        ",",
+        "Sri",
+        "v",
+        "asta",
+        "v",
+        "a",
+        "J",
+        "\\(2004\\",
+        "Selecting",
+        "the,Right,Objecti,v,e,Measure,for,Association,Analysis.",
+        "Information,Systems,,29",
+        "",
+        "Ralbo",
+        "vsk",
+        "\\264",
+        "y,M,,K,ucha",
+        "\\030",
+        "r,T,\\(2007\\,Using,Disjunctions,in",
+        "Association,Mining.,In:,Perner,P,\\(Ed.\\,Adv,ances,in",
+        "Data,Mining,-,Theoretical,Aspects,and,Applications.",
+        "Springer,,,Berlin,Heidelber,g,Ne,w,Y,ork",
+        "",
+        "Rauch",
+        "J",
+        "\\(1975\\",
+        "Ein",
+        "Beitrag",
+        "zu",
+        "der",
+        "GUHA",
+        "Methode",
+        "in",
+        "der,dreiwertigen,Logik.,K,ybernetika,,11",
+        "",
+        "Rauch",
+        "J",
+        "\\(",
+        "1986\\",
+        "Logical",
+        "F",
+        "oundations",
+        "of",
+        "Hypothesis",
+        "F,ormation,from,Databases.,Mathematical,Institute,of",
+        "the,Czechoslo,v,ak,Academy,of,Sciences,,Prague,,Dis-",
+        "sertation,\\(in,Czech\\",
+        "",
+        "Rauch",
+        "J",
+        "\\(",
+        "1998\\",
+        "Classes",
+        "of",
+        "F",
+        "our",
+        "-F",
+        "old",
+        "T",
+        "able",
+        "Quanti-",
+        "\\036ers.,In:,Zytk,o,w,J,,Quaf,afou,M,\\(Eds.\\,Principles",
+        "of,Data,Mining,and,Kno,wledge,Disco,v,ery,.,Springer,,",
+        "Berlin,Heidelber,g,Ne,w,Y,ork",
+        "",
+        "Rauch",
+        "J",
+        "\\(",
+        "1998\\",
+        "Contrib",
+        "ution",
+        "to",
+        "Logical",
+        "F",
+        "oundations",
+        "of,KDD.,Uni,v,ersity,of,Economics,Prague,,Assoc.,Prof.",
+        "Thesis,\\(in,Czech\\",
+        "",
+        "Rauch",
+        "J",
+        "\\(2004\\",
+        "De\\036nability",
+        "of",
+        "Association",
+        "Rules",
+        "and",
+        "T,ables,of,Critical,Frequencies.,In:,Lin,T,Y,et,al.,\\(Eds.\\",
+        "F,oundations,of,Data,Mining.,Brighton,,IEEE,Computer",
+        "Society",
+        "",
+        "Rauch",
+        "J",
+        "\\(",
+        "2005\\",
+        "Logic",
+        "of",
+        "Association",
+        "Rules.",
+        "Applied",
+        "Intelligence,,22",
+        "",
+        "Rauch",
+        "J",
+        "\\(2005\\",
+        "Classes",
+        "of",
+        "Association",
+        "Rules,",
+        "an",
+        "Ov,ervie,w,.,In:,Lin,T,Y,,,Xie,Y,\\(Eds.\\,F,oundation,of,se-",
+        "mantic,Oriented,Data,and,W,eb,Mining.,Houston,,IEEE",
+        "Computer,Society",
+        "",
+        "Rauch",
+        "J,",
+        "\\030",
+        "Sim",
+        "\\035",
+        "unek,M,\\(,2005\\,An,Alternati,v,e,Approach",
+        "to,Mining,Association,Rules.,In:,Lin,T,Y,et,al.,\\(Eds.\\",
+        "Data,Mining:,F,oundations,,Methods,,and,Applications.",
+        "Springer,,,Berlin,Heidelber,g,Ne,w,Y,ork",
+        "",
+        "Rauch",
+        "J,",
+        "\\030",
+        "Sim",
+        "\\035",
+        "unek,M,\\(,2005\\,GUHA,Method,and",
+        "Granular,Computing.,In:,Hu,,X,et,al.,\\(Eds.\\,Proceed-",
+        "ings,of,IEEE,conference,Granular,Computing.,Beijing,",
+        "IEEE,Computer,Society",
+        "",
+        "Rauch",
+        "J,",
+        "\\030",
+        "Sim",
+        "\\035",
+        "unek,M:,Semantic,W,eb,Presentation,of",
+        "Analytical,Reports,from,Data,Mining,\\226,Preliminary",
+        "Considerations.,I,n,Proceedings,of,W,eb,Intelligence,07"
+      ],
+      "/T1_5#1#6.9738": [
+        "2",
+        "2",
+        "2"
+      ],
+      "/T1_1#1#20.775": [
+        "AD"
+      ],
+      "/T1_3#1#-0.0004": [
+        "01",
+        "01",
+        "01",
+        "01"
+      ],
+      "/T1_0#1#0": [
+        "-",
+        "property,.,W,e,s,ay,that,the,4ft,quanti\\036er",
+        ".",
+        "There,is,a,theorem,saying,that,if,the,quanti\\036er",
+        "-property,.",
+        "Thus,these,quanti\\036ers,are,not"
+      ],
+      "/T1_1#1#-0.0002": [
+        "AD",
+        "AD",
+        "AD"
+      ],
+      "/T1_7#1#0": [
+        "-",
+        "pr,operty"
+      ],
+      "/T1_0#1#0.0001": [
+        "if,there,a,re"
+      ],
+      "/T1_0#1#-0.0004": [
+        "and"
+      ],
+      "/T1_2#1#0": [
+        "\\001",
+        "\\001",
+        "\\001",
+        "\\001"
+      ],
+      "/T1_3#1#0.655": [
+        "+"
+      ],
+      "/T1_1#1#1.004": [
+        "c",
+        "c"
+      ],
+      "/T1_3#1#0.72": [
+        "="
+      ],
+      "/T1_1#1#1.065": [
+        "b"
+      ],
+      "/T1_4#1#0.5421": [
+        "\\007\\001",
+        "\\007\\001"
+      ],
+      "/T1_3#1#0.2889": [
+        "\\"
+      ],
+      "/T1_3#1#0.288": [
+        "\\"
+      ],
+      "/T1_8#1#0.0001": [
+        "9,Conclusions,and,Further,W,ork",
+        "Refer,ences"
+      ],
+      "/T1_0#1#9.9626": [
+        "test.,Relation,of,the,class,of,rules,with,the,F-property,to",
+        "the,class,of"
+      ]
+    },
+    "Content#3": {
+      "##": [
+        "293"
+      ]
+    },
+    "Content#4": {
+      "##": [
+        "293"
+      ]
+    }
+  }
+}

@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-06 16:58:51
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-14 09:44:38
+# @Last Modified time: 2017-03-14 10:14:09
 
 
 
@@ -179,8 +179,11 @@ def extract_page_contents(page_nbr, page):
 
   # looping through the `pdfminer.pdftypes.PDFObjRef`s in the Contents list of the page
   # and adding the resolved PDFStream objects to the contents list
-  for objref in page[CONTENTS]:
-    contents.append(objref.resolve())
+  if type(page[CONTENTS]) != list:
+    contents.append(page[CONTENTS].resolve())
+  else:
+    for objref in page[CONTENTS]:
+      contents.append(objref.resolve())
 
   # contruct the page_dict
   # The value is converted to string since the JSON conversion of bytes is hard.
