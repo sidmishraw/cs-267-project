@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-06 16:58:51
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-14 10:14:09
+# @Last Modified time: 2017-03-16 17:36:44
 
 
 
@@ -359,17 +359,46 @@ def __build_pdf_json_pattern__():
 
 
 
+# def __extract_content__(matching_pattern):
+#   '''
+#   Extracts the text from the PostScript code.
+
+#   :return: extracted_text `str`
+#   '''
+
+#   text_pattern = r'\((.*?)\)'
+#   text_pieces = findall(compile(text_pattern), matching_pattern)
+
+#   return ''.join(text_pieces)
+
+
+
+
 def __extract_content__(matching_pattern):
   '''
-  Extracts the text from the PostScript code.
+  New and improved. Text extraction mechanism.
 
-  :return: extracted_text `str`
+  :return: extracted_text `list(str)`
   '''
 
-  text_pattern = r'\((.*?)\)'
-  text_pieces = findall(compile(text_pattern), matching_pattern)
+  text_digit_regex_pattern = r'(-{0,1}\d*)\((.*?)\)'
+  matching_patterns = findall(compile(text_digit_regex_pattern), matching_pattern)
 
-  return ','.join(text_pieces)
+  extracted_texts = []
+  extracted_string = ''
+
+  for pattern in matching_patterns:
+    if pattern[0] == '':
+      extracted_string = pattern[1]
+    elif float(pattern[0]) >= 0:
+      extracted_string = '{}{}'.format(extracted_string, pattern[1])
+    elif float(pattern[0]) < 0:
+      extracted_texts.append(extracted_string)
+      extracted_string = pattern[1]
+
+  extracted_texts.append(extracted_string)
+
+  return extracted_texts
 
 
 
@@ -432,6 +461,14 @@ def build_pdf_json():
       pdf_dict[page][content_key] = __get_content__(content)
 
   return pdf_dict
+
+
+
+
+## IDEA - 03-16, upon further observation of the PDF contents, the numbers < 0 after `()` in the
+# postscript code happen to coresspond to whitespaces and numbers > 0 are just minor spacing which
+# are not word boundaries.
+# I'm going to try and leverage this to get meaningful words.
 
 
 
