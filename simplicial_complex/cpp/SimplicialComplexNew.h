@@ -2,6 +2,7 @@
 #define __SimplicialComplexNew_H__
 
 #include <vector>
+#include <map>
 
 using namespace std;
 
@@ -38,6 +39,13 @@ private:
     void connectSimplex(Simplex& simplex);
     void printSimplex(Simplex& simplex);
     bool isLookupValid();
+
+    vector<vector<bool> > m_data;         // [col][row#] -- input data matrix
+    vector<vector<int> > m_lookup;        // [col][row#] -- inverted list of 1's
+    vector<pair<short, int> > m_qcols;    // [simplex, count] -- sorted list of qualified counts
+    map<short, int> m_results;            // [simplex, #items]
+    FILE* m_fpResult;
+    int m_thresholdLimit;
 
     int m_has_initialized;
     int m_rules;
