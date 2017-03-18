@@ -5,7 +5,6 @@
  */
 
 #include <algorithm>
-#include <map>
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -13,14 +12,6 @@
 #include <stdio.h>
 #include "SimplicialComplexNew.h"
 
-vector<vector<bool> > data;         // [col][row#] -- input data matrix
-vector<vector<int> > lookup;        // [col][row#] -- inverted list of 1's
-vector<pair<short, int> > qcols;    // [simplex, count] -- sorted list of qualified counts
-map<short, int> results;            // [simplex, #items]
-FILE* fpResult;
-int numRules, thresholdLimit;
-double runtimeReading, runtimeAlgorithm, runtimeWriting;
-long clockStart;
 bool brief = false;
 bool debug = false;
 
@@ -48,6 +39,8 @@ SimplicialCmplx::SimplicialCmplx()
     , m_cols(0)
     , m_rows(0)
     , m_has_initialized(false)
+    , m_fpResult(NULL)
+    , m_thresholdLimit(0)
 {
     cout << "Invalid constructor!! \
     Usage: SimplicialCmplx(int rules, float threshold, int cols, int rows" << endl;
@@ -80,22 +73,20 @@ void SimplicialCmplx::initialize(int rules, float threshold, int cols, int rows)
     m_threshold = threshold;
     m_cols = cols;
     m_rows = rows;
-
-    numRules = rules;
     
-    data.assign(cols, vector<bool>(rows, false));
-    lookup.assign(cols, vector<int>());
-    thresholdLimit = (int)(threshold * rows);
-    thresholdLimit = (thresholdLimit == 0 ? 1 : thresholdLimit);
+    m_data.assign(cols, vector<bool>(rows, false));
+    m_lookup.assign(cols, vector<int>());
+    m_thresholdLimit = (int)(threshold * rows);
+    m_thresholdLimit = (m_thresholdLimit == 0 ? 1 : m_thresholdLimit);
 
-    fpResult = fopen("results.txt", "wt");
+    m_fpResult = fopen("results.txt", "wt");
 }
 
 void SimplicialCmplx::setBitMapRow(int cols, int rows, const char *row_data)
 {
     if (cols < 0 || cols > m_cols || rows < 0 || rows > m_rows) return;
     for (int i = 0; i < cols; i++)
-        data[i][rows] = row_data[i] == '1';
+        m_data[i][rows] = row_data[i] == '1';
 
     m_has_initialized = true;
 }
@@ -105,7 +96,7 @@ bool SimplicialCmplx::isLookupValid()
    // check lookup table if it's valid
     int lookup_checksum = 0;
     for (int i = 0; i < m_cols; i++)
-        lookup_checksum += lookup[i].size();
+        lookup_checksum += m_lookup[i].size();
 
     return lookup_checksum != 0;
 }
@@ -124,30 +115,30 @@ void SimplicialCmplx::process()
         // construct lookup table
         for (int col = 0; col < m_cols; col++)
         {
-            lookup[col].reserve(m_rows);
+            m_lookup[col].reserve(m_rows);
             for (int row = 0; row < m_rows; row++)
             {
-                if (data[col][row] == true) lookup[col].push_back(row);
+                if (m_data[col][row] == true) m_lookup[col].push_back(row);
             }
         }
-        for (int col = 0; col < m_cols; col++) lookup[col].shrink_to_fit();
+        for (int col = 0; col < m_cols; col++) m_lookup[col].shrink_to_fit();
     }
 
     // reduce and sort topology space for faster processing
     reduceSpace();
 
-    cout << endl << "running simplicial complex... rules:" << m_rules << ", threshold:" << m_threshold << ", qcols:" << qcols.size() << endl;
+    cout << endl << "running simplicial complex... rules:" << m_rules << ", threshold:" << m_threshold << ", qcols:" << m_qcols.size() << endl;
     map<short, int>::iterator shape;
-    for (int index = (int)qcols.size() - 1; index >= 0; index--) {
-        short col = qcols[index].first;
+    for (int index = (int)m_qcols.size() - 1; index >= 0; index--) {
+        short col = m_qcols[index].first;
         string gname = to_string(col);
         Simplex simplex;
-        buildSimplex(simplex, gname, 1, lookup[col], qcols, index + 1);
+        buildSimplex(simplex, gname, 1, m_lookup[col], m_qcols, index + 1);
         connectSimplex(simplex);
         // track time for all shapes for every 10 vertices processed
-        if (index == 0 || index == (qcols.size() - 1) || (index % 10) == 0) {
+        if (index == 0 || index == (m_qcols.size() - 1) || (index % 10) == 0) {
             cout << " col " << index << ", shape";
-            for (shape = results.begin(); shape != results.end(); shape++) {
+            for (shape = m_results.begin(); shape != m_results.end(); shape++) {
                 cout << " " << shape->first << ":" << shape->second;
             }
             cout << endl;
@@ -157,7 +148,6 @@ void SimplicialCmplx::process()
 
 bool SimplicialCmplx::readFile(string strFile, int numCols, int numRows)
 {
-    clockStart = clock();
     FILE* fp;
     fp = fopen(strFile.c_str(), "rt");
     if (!fp)
@@ -168,25 +158,23 @@ bool SimplicialCmplx::readFile(string strFile, int numCols, int numRows)
 
     int length, col;
     for (col = 0; col < numCols; col++) {
-        lookup[col].reserve(numRows);
+        m_lookup[col].reserve(numRows);
     }
 
     for (int row = 0; row < numRows; row++) {
         fscanf(fp, "%d", &length);
         for (int i = 0; i < length; i++) {
             fscanf(fp, "%d", &col);
-            data[col][row] = true;
-            lookup[col].push_back(row);
+            m_data[col][row] = true;
+            m_lookup[col].push_back(row);
         }
     }
 
     for (col = 0; col < numCols; col++) {
-        lookup[col].shrink_to_fit();
+        m_lookup[col].shrink_to_fit();
     }
 
     fclose(fp);
-
-    runtimeReading = (clock() - clockStart) / 1000.0;
 
     return true;
 }
@@ -199,15 +187,15 @@ bool SimplicialCmplx::readFile(string strFile, int numCols, int numRows)
  */
 void SimplicialCmplx::reduceSpace()
 {
-    qcols.reserve(lookup.size());
-    for (int col = 0; col < (int)lookup.size(); col++) {
-        int count = (int)lookup[col].size();
-        if (count >= thresholdLimit) {
-            qcols.push_back(pair<short, int>(col, count));
+    m_qcols.reserve(m_lookup.size());
+    for (int col = 0; col < (int)m_lookup.size(); col++) {
+        int count = (int)m_lookup[col].size();
+        if (count >= m_thresholdLimit) {
+            m_qcols.push_back(pair<short, int>(col, count));
         }
     }
-    qcols.shrink_to_fit();
-    sort(qcols.begin(), qcols.end(), compareCounts);
+    m_qcols.shrink_to_fit();
+    sort(m_qcols.begin(), m_qcols.end(), compareCounts);
 }
 
 /*
@@ -237,11 +225,11 @@ void SimplicialCmplx::buildSimplex(Simplex& simplex, string& gname, int nrules, 
             pair<short, vector<int> > link;
             link.second.reserve(ones.size());
             for (int row = 0; row < ones.size(); row++) {
-                if (data[col][ones[row]]) {
+                if (m_data[col][ones[row]]) {
                     link.second.push_back(ones[row]);
                 }
             }
-            if (link.second.size() >= thresholdLimit) {
+            if (link.second.size() >= m_thresholdLimit) {
                 link.first = col;
                 link.second.shrink_to_fit();
                 simplex.links.push_back(link);
@@ -265,9 +253,9 @@ void SimplicialCmplx::buildSimplex(Simplex& simplex, string& gname, int nrules, 
  */
 void SimplicialCmplx::connectSimplex(Simplex& simplex)
 {
-    results[simplex.nrules]++;
+    m_results[simplex.nrules]++;
     printSimplex(simplex);
-    if (simplex.nrules < numRules) {
+    if (simplex.nrules < m_rules) {
         for (int i = 0; i < simplex.links.size(); i++) {
             pair<short, vector<int> >& link = simplex.links[i];
             string gname = simplex.gname + " " + to_string(link.first);
@@ -294,17 +282,17 @@ void SimplicialCmplx::printSimplex(Simplex& simplex)
         for (int i = 0; i < simplex.ones.size(); i++) {
             inverted += to_string(simplex.ones[i]) + (i == simplex.ones.size() - 1 ? "" : " ");
         }
-        fprintf(fpResult, "[%s] {%s}\n", simplex.gname.c_str(), inverted.c_str());
+        fprintf(m_fpResult, "[%s] {%s}\n", simplex.gname.c_str(), inverted.c_str());
         for (int i = 0; i < simplex.links.size(); i++) {
             pair<short, vector<int> >& link = simplex.links[i];
             string connected = "";
             for (int j = 0; j < link.second.size(); j++) {
                 connected += to_string(link.second[j]) + (j == link.second.size() - 1 ? "" : " ");
             }
-            fprintf(fpResult, " => [%d] {%s}\n", link.first, connected.c_str());
+            fprintf(m_fpResult, " => [%d] {%s}\n", link.first, connected.c_str());
         }
     }
     else {
-        fprintf(fpResult, "[%s] %ld\n", simplex.gname.c_str(), simplex.ones.size());
+        fprintf(m_fpResult, "[%s] %ld\n", simplex.gname.c_str(), simplex.ones.size());
     }
 }
