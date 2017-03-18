@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-06 16:58:51
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-16 17:36:44
+# @Last Modified time: 2017-03-18 00:25:12
 
 
 
@@ -24,6 +24,7 @@ from pprint import pprint
 from re import compile
 from re import findall
 from re import IGNORECASE
+from re import sub
 from collections import defaultdict
 
 
@@ -286,54 +287,37 @@ def __find_all_matching__(regex_pattern, search_text):
 
 
 
-# Extract the words/phrases from the contents of the __pdf_contents_dict__ and
-# make a new JSON string/file
-def extract_words(json_file_name):
-  '''
-  Extracts the words(textual)/phrases from the decoded(decomoressed) contents of the PDF pages
-  and writes them to a new JSON file and returns the JSON string as well.
-
-  :param json_file_name: The name of the JSON file that contains the new JSON. :class: `str`
-
-  :return: json_string `str`
-  '''
-
-  global __pdf_contents_dict__
-
-  new_json = {}
-
-  # since in POSTScript, all the strings are enclosed within `()`
-  textual_regex_pattern = r'\([^\(\)]*\)'
-  pattern = compile(textual_regex_pattern)
-
-  for page in __pdf_contents_dict__.keys():
-    new_json[page] = {}
-    for content in __pdf_contents_dict__[page].keys():
-      print('Content {}'.format(__pdf_contents_dict__[page][content]))
-      new_json[page][content] = __find_all_matching__(textual_regex_pattern, \
-        __pdf_contents_dict__[page][content])
-
-  json_string = dumps(new_json)
-
-  with open(json_file_name, 'w') as op_file:
-    op_file.write(json_string)
-
-  return json_string
-
-
-
-
-# EXPERIMENTAL
 # Trying to parse the PDF and make the metadata for the entire PDF
 # {
-#   "title": "",
-#   "authors": [""],
-#   "abstract": "",
-#   "contents": [{
-#     "page#1": "",
-#     "page#n": ""
-#   }]
+#   "Page#1": {
+#     "Content#0": {},
+#     "Content#1": {},
+#     "Content#2": {
+#       "/T1_0#1#13.948": [
+#         [
+#           "Learning",
+#           "Embedding",
+#           "Representations",
+#           "for",
+#           "Knowledge",
+#           "Inference",
+#           ...]
+#           ...]
+#           ...
+#     },
+#     ...
 # }
+# and
+# {
+#   "Page#1": [
+#     "Observational",
+#     "Calculi,",
+#     "Classes",
+#     "of",
+#     ...]
+#     ...
+# }
+# formats.
 def __build_pdf_json_pattern__():
   '''
   Builds and returns the regex pattern to extract the information from the contents of the PDF
@@ -443,11 +427,16 @@ def __get_content__(content):
 
 
 
-# EXPERIMENTAL
+# EXPERIMENTAL - Testing1 complete - can use now
 # Builds the JSON structure for the PDF
 def build_pdf_json():
   '''
-  WIP, do not try to use this method yet.
+  `The reading order of the words is not preserved but the grouping order is preserved.`
+  Extracts the text and groups similar text together depending on their font, size, weight behavior
+  in the pdf document. For this reason their reading order is not preserved but they get logically
+  grouped based on their roles in the document.
+
+  :return: pdf_dict `dict`
   '''
 
   global __pdf_contents_dict__
@@ -465,8 +454,172 @@ def build_pdf_json():
 
 
 
+# findall(compile(r'\b[\W]*([\w\W]+)[\W]*\b'), '--F-Property;;')
+# ['default', 'mmmm', '']
+def __leading_trailing_nonword_remover__(word_string):
+  '''
+  Removes the leading and trailing non-word i.e `\W` from the strings cleansing them.
+
+  :param word_string: The word to be cleansed. :class: `str`
+
+  :return: word `str`
+  '''
+
+  word = findall(compile(r'\b[\W]*([\w\W]+)[\W]*\b'), word_string)
+
+  if len(word) == 0:
+    return ''
+  else:
+    return word[0]
+
+
+
+
+def __cleanse_words__(word_group, cleansed_word_container):
+  '''
+  Cleanse the words by removing hypenations, commas, periods etc from the end of the words and
+  clean them all.
+
+  :param word_group: The words in the word_group :class: `list(str)`
+  :param cleansed_word_container: The container to hold the cleansed words :class: `list(str)`
+
+  :return: None
+  '''
+
+  for word in word_group:
+    if len(cleansed_word_container) != 0 and cleansed_word_container[-1].endswith('-'):
+      cleansed_word_container[-1] = '{}{}'.format(cleansed_word_container[-1][:-1], word)
+    else:
+      cleansed_word_container.append(word)
+
+  return
+
+
+
+
+# cleansed pdf json aka a python dict
+def __dump_words__(content_group, cleansed_page_contents):
+  '''
+  Extracts and dumps the words inside the content groups of the PDF-JSON's pages into the
+  `cleansed_page_contents`
+
+  :param content_group: The content group, i.e, the value portion of the "Content#1": {...} 
+  :class: `dict`
+  :param cleansed_page_contents: The cleansed page contents (transformed words 
+  are written into this list) :class: `list(str)`
+
+  :return: None
+  '''
+
+  for word_group in content_group:
+    __cleanse_words__(word_group, cleansed_page_contents)
+
+  return
+
+
+
+
+def __cleanse_page_contents__(page_contents):
+  '''
+  Cleanses the contents of the page and returns a list of stemmed words from the contents of the page.
+
+  :param page_contents: The contents of the page :class: `dict`
+
+  :return: cleansed_page_contents `list(str)`
+  '''
+
+  cleansed_page_contents = []
+
+  for content_groups in page_contents.values():
+    for content_group in content_groups.values():
+      __dump_words__(content_group, cleansed_page_contents)
+
+  cleansed_page_contents = list(map(__leading_trailing_nonword_remover__, cleansed_page_contents))
+
+  return cleansed_page_contents
+
+
+
+
+def cleansed_pdf_json(pdf_dict):
+  '''
+  `The reading order of the words is not preserved but the grouping order is preserved.`
+  The second pass that cleans the PDF JSON structure to make a listing of the words in just pages.
+  This phase stems the words using the Porter stemmer algorithm, it also removes the words that are
+  not in proper encoding (like \\\028 etc.).
+
+  :param pdf_dict: The pdf_json (python) `dict` object obtained from the build_pdf_json(). 
+  :class: `dict`
+
+  :return: cleansed_pdf_dict `dict`
+  '''
+
+  cleansed_pdf_dict = {}
+
+  for page_key, page_contents in pdf_dict.items():
+    cleansed_pdf_dict[page_key] = __cleanse_page_contents__(page_contents)
+
+  return cleansed_pdf_dict
+
+
+
+
+# Extract the words/phrases from the contents of the __pdf_contents_dict__ and
+# make a new pdf_json without grouping the words together and preserving their position in the
+# pdf.
+def extract_words():
+  '''
+  Extracts the words(textual)/phrases from the decoded(decomoressed) contents of the PDF pages
+  and returns a python dict holding the mapping from page#number to the words in the page.
+
+  :return: pdf_page_words_dict `defaultdict`
+  '''
+
+  global __pdf_contents_dict__
+
+  pdf_page_words_dict = defaultdict(list)
+
+  regex_pattern = __build_pdf_json_pattern__()
+
+  for page, page_contents in __pdf_contents_dict__.items():
+    for content in page_contents.values():
+      matching_patterns = findall(regex_pattern, content)
+      for matching_pattern in matching_patterns:
+        if matching_pattern[5] == '':
+          pdf_page_words_dict[page].extend(__extract_content__(matching_pattern[4]))
+        else:
+          pdf_page_words_dict[page].extend(__extract_content__(matching_pattern[5]))
+
+  return pdf_page_words_dict
+
+
+
+
+# to be called after extracting words
+def cleanse_extracted_words(pdf_page_words_dict):
+  '''
+  The next phase after obtaining pdf_page_words_dict from `extract_words()`. This will cleanse the
+  words removing hypenation and other symbols at the start or end of the words.
+
+  :param pdf_page_words_dict: The dict holding the mapping between page# and it's words.
+  :class: `defaultdict`
+
+  :return: cleansed_pdf_page_words_dict `dict`
+  '''
+
+  cleansed_pdf_page_words_dict = defaultdict(list)
+
+  for page, page_contents in pdf_page_words_dict.items():
+    cleansed_pdf_page_words_dict[page].extend(\
+      list(map(__leading_trailing_nonword_remover__, page_contents)))
+
+  return cleansed_pdf_page_words_dict
+
+
+
+
 ## IDEA - 03-16, upon further observation of the PDF contents, the numbers < 0 after `()` in the
-# postscript code happen to coresspond to whitespaces and numbers > 0 are just minor spacing which
+# postscript code happen to correspond to whitespaces and numbers > 0 are just minor spacing which
 # are not word boundaries.
 # I'm going to try and leverage this to get meaningful words.
 
