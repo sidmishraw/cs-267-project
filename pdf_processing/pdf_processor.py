@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-06 16:58:51
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-17 21:44:05
+# @Last Modified time: 2017-03-18 00:23:42
 
 
 
@@ -619,7 +619,7 @@ def cleanse_extracted_words(pdf_page_words_dict):
 
 
 ## IDEA - 03-16, upon further observation of the PDF contents, the numbers < 0 after `()` in the
-# postscript code happen to coresspond to whitespaces and numbers > 0 are just minor spacing which
+# postscript code happen to corresspond to whitespaces and numbers > 0 are just minor spacing which
 # are not word boundaries.
 # I'm going to try and leverage this to get meaningful words.
 
