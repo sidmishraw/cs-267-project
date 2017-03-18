@@ -1,10 +1,3 @@
-"""
-Python wrapper for basic cpp test file in shared object "test.so"
-
-Created on 3/12/2017.
-
-@author: sordonia120446, skycckk
-"""
 from ctypes import *
 
 lib = CDLL('test.so')
@@ -15,16 +8,27 @@ class Test(object):
         self.obj = lib.CreateInstance()
 
     def DoSomething(self):
-        """Deprecated test fnc"""
         lib.DoSomething()
 
     def DoSomethingHello(self):
-        """
-        Test fnc to return int.
-        """
         return c_int(lib.DoSomethingHello(self.obj))
 
+    def InputTestInteger(self):
+        lib.InputInteger(c_int(404))
 
-my_test = Test()
-my_int = my_test.DoSomethingHello()
-print(my_int.value)
+    def InputTestFloat(self):
+        lib.InputFloat(c_float(7.8))
+
+    def InputTestString(self):
+        lib.InputString(c_char_p(b"GoGoPowerRanger!"))
+
+t = Test()
+i = t.DoSomethingHello()
+print(i.value)
+print("stop")
+
+t.InputTestInteger()
+t.InputTestFloat()
+t.InputTestString();
+
+
