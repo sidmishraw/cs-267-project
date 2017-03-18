@@ -7,7 +7,6 @@
 #include <algorithm>
 #include <iostream>
 #include <sstream>
-#include <string>
 #include <time.h>
 #include <stdio.h>
 #include "SimplicialComplexNew.h"
@@ -42,24 +41,17 @@ SimplicialCmplx::SimplicialCmplx()
     , m_fpResult(NULL)
     , m_thresholdLimit(0)
 {
-    cout << "Invalid constructor!! \
-    Usage: SimplicialCmplx(int rules, float threshold, int cols, int rows" << endl;
+
 }
 
 SimplicialCmplx::SimplicialCmplx(int rules, float threshold, int cols, int rows)
 {
-    m_has_initialized = false;
     initialize(rules, threshold, cols, rows);
 }
 
 SimplicialCmplx::SimplicialCmplx(int rules, float threshold, int cols, int rows, const char *file_path)
 {
-    m_has_initialized = false;
-    initialize(rules, threshold, cols, rows);
-
-    string input_file = file_path;
-    if (!readFile(input_file, cols, rows)) return;
-    m_has_initialized = true;
+    initialize(rules, threshold, cols, rows, file_path);
 }
 
 SimplicialCmplx::~SimplicialCmplx()
@@ -80,6 +72,19 @@ void SimplicialCmplx::initialize(int rules, float threshold, int cols, int rows)
     m_thresholdLimit = (m_thresholdLimit == 0 ? 1 : m_thresholdLimit);
 
     m_fpResult = fopen("results.txt", "wt");
+    m_has_initialized = true;
+}
+
+void SimplicialCmplx::initialize(int rules, float threshold, int cols, int rows, const char *file_path)
+{
+    initialize(rules, threshold, cols, rows);
+
+    if (!file_path) return;
+
+    m_has_initialized = false;
+    string input_file = file_path;
+    if (!readFile(input_file, cols, rows)) return;
+    m_has_initialized = true;
 }
 
 void SimplicialCmplx::setBitMapRow(int cols, int rows, const char *row_data)

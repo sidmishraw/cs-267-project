@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <map>
+#include <string>
 
 using namespace std;
 
@@ -28,6 +29,7 @@ public:
     SimplicialCmplx(int rules, float threshold, int cols, int rows, const char *file_path);
     ~SimplicialCmplx();
 
+    void initialize(int rules, float threshold, int cols, int rows, const char *file_path);
     void setBitMapRow(int cols, int rows, const char *data);
     void process();
 
