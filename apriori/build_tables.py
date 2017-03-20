@@ -25,14 +25,14 @@ def read_text_files(filepath):
     Returns a filename-[words] key-value pair dict.
     """
     corpus = dict()
-    tokens = set() # TODO: change to ordereddict
+    tokens = OrderedDict(docs=os.listdir(filepath))
     for file in os.listdir(filepath):
         if file.endswith('.txt'):
             for line in open(os.path.join(filepath, file), 'r'):
                 line = re.sub('[.,!@#$?]', '', line)
                 words = line.split()
                 words = [word.lower() for word in words]
-                [tokens.add(word) for word in words]
+                [tokens.setdefault(word, file) for word in words]
                 if (file in corpus.keys()):
                     corpus[file].append(words)
                 else:
@@ -74,16 +74,9 @@ def determine_doc_frequency(docs, tokens, corpus):
     for ind, doc in enumerate(docs):
         # This row should correspond to the doc
         row = doc_frequency.iloc[ind]
-        row['precious'] = 1
         words = corpus[doc]
-        # [print(word) for word in words]
         for word in words:
             row[word] = 1
-        # [print(row[word]) for word in words]
-        # [(row[word] = 1) for word in words]
-    # for key in doc_frequency.keys():
-    #     # [doc_frequency[key] = 1 for ]
-    #     print(doc_frequency[key])
     return doc_frequency
 
 """
@@ -91,6 +84,7 @@ Run tests here.
 """
 filepath = '../inputs/first_test'
 (corpus, tokens) = read_text_files(filepath)
+token_list = list(tokens.keys())
 docs = sorted(corpus.keys())
 
 # --------------------------------------------------------------------------------------------------
@@ -109,10 +103,10 @@ print(tf_output)
 # Part 2 section:  df
 
 # print("\nThese are the doc frequencies for all terms:\n")
-df_output = determine_doc_frequency(docs, tokens, corpus)
+df_output = determine_doc_frequency(docs, token_list, corpus)
 
 # Print to csv file
-df_output.to_csv('./output_doc_freq.csv', header=tokens, sep=',')
+df_output.to_csv('./output_doc_freq.csv', header=token_list, sep=',')
 
 # Print to txt file
 np.savetxt('./output_doc_freq.txt', df_output.values, fmt='%d')
