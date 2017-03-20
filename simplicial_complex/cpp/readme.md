@@ -3,23 +3,28 @@
 
 ## API Description - SCExport (.so)
 - createInstance: Create an instance of SimplicialComplex  
-  output: instance of SimplicialComplex -> objType  
+  output:  
+-- instance of SimplicialComplex -> objType  
 - removeInstance: Release resources of instance  
-  input: instance of SimplicialComplex -> objType  
+  input:  
+-- instance of SimplicialComplex -> objType  
 - initialize: Initialize the instance by taking some necessary parameters  
-  input: instance of SimplicialComplex -> objType  
-         number of rules -> int  
-         threshold -> float  
-         number of columns -> int  
-         number of rows -> int  
-         input file path (set NULL is there is no input file) -> string  
+  input:  
+-- instance of SimplicialComplex -> objType  
+-- number of rules -> int  
+-- threshold -> float  
+-- number of columns -> int  
+-- number of rows -> int  
+-- input file path (set NULL is there is no input file) -> string  
 - setBitMapRow: Set the bit-vector directly row-by-row  
-  input: instance of SimplicialComplex -> objType  
-         number of columns -> int  
-         which row of this bit-vector -> int  
-         bit-vector data (string vector) -> string  
+  input:  
+-- instance of SimplicialComplex -> objType  
+-- number of columns -> int  
+-- which row of this bit-vector -> int  
+-- bit-vector data (string vector) -> string  
 - process: Do the process of Simplicial Complex  
-  input: instance of SimplicialComplex -> objType  
+  input:  
+-- instance of SimplicialComplex -> objType  
 
 ## Example usage
 - Please refers to main.cpp as more detail of usage.
