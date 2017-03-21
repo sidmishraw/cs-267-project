@@ -9,20 +9,22 @@ Created on 2/25/2017
 @author: sordonia
 """
 
-import os, re
+import os, re, json
 from collections import defaultdict, OrderedDict
 import numpy as np
 import pandas as pd
 
-def read_text_files(filepath):
+def read_input_files(filepath):
     """
-    Input is the filepath to all text files.
-    Steps:
+    Input is the filepath to all files.
+    Steps for text files:
         Goes through each file.
         Extracts text.
         Removes regex's.
         Lower-cases all leters.
-    Returns a filename-[words] key-value pair dict.
+    Steps for json files:
+        Goes through each page's array of page_content.
+    Returns a filename-[words] key-value pair dict and an OrderedDict of token-doc.
     """
     corpus = dict()
     tokens = OrderedDict(docs=os.listdir(filepath))
@@ -37,6 +39,18 @@ def read_text_files(filepath):
                     corpus[file].append(words)
                 else:
                     corpus[file] = words
+        elif file.endswith('.json'):
+            with open(os.path.join(filepath, file), 'r', encoding='utf-8') as json_file:
+                pages = json.load(json_file)
+                for page_number, page_content in pages.items():
+                    words = [word for word in page_content]
+                    if (page_number == "Page#1"):
+                        [print(word) for word in words]
+                    [tokens.setdefault(word, file) for word in words]
+                    if (file in corpus.keys()):
+                        [corpus[file].append(word) for word in words]
+                    else:
+                        corpus[file] = words
     return corpus, tokens
 
 def determine_word_positions(words):
@@ -82,8 +96,9 @@ def determine_doc_frequency(docs, tokens, corpus):
 """
 Run tests here.
 """
-filepath = '../inputs/first_test'
-(corpus, tokens) = read_text_files(filepath)
+# filepath = '../inputs/first_test'
+filepath = '../inputs/second_test'
+(corpus, tokens) = read_input_files(filepath)
 token_list = list(tokens.keys())
 docs = sorted(corpus.keys())
 
