@@ -1,6 +1,9 @@
 from ctypes import *
+import os
 
-lib = CDLL('./cpp/SCExport.so')
+# Temp hack to make import to main file work
+filepath = './simplicial_complex/cpp/SCExport.so'
+lib = CDLL(filepath)
 
 class SimplicialComplex(object):
 
