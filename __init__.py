@@ -42,6 +42,10 @@ if __name__ == '__main__':
     sc = SimplicialComplex(4, 0.05, len(tf_output), len(docs))
 
 
+    # sc.process()
+    sc.remove_instance()
+
+
 
 
 

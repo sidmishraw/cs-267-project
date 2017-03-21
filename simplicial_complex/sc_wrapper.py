@@ -22,9 +22,11 @@ class SimplicialComplex(object):
         self.rows = rows
         self.filepath = filepath
 
-    def set_bit_map_row(self, row_data, bit_vector):
-        for ind, row in enumerate(row_data):
-            lib.setBitMapRow(self.obj, self.cols, ind, row)
+    def remove_instance(self):
+        lib.removeInstance(self.obj)
+
+    def set_bit_map_row(self, row_number, bit_vector):
+        lib.setBitMapRow(self.obj, self.cols, row_number, bit_vector)
 
     def process(self):
         lib.process(self.obj)
