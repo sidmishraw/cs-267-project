@@ -41,6 +41,10 @@ if __name__ == '__main__':
     # Part 3 section:  to sc
     sc = SimplicialComplex(4, 0.05, len(tf_output), len(docs))
 
+    for index, series in df_output.iterrows():
+        bit_vector_as_string = str(series.values)
+        # sc.set_bit_map_row(int(index), bit_vector_as_string)
+    # TODO fix running out of mem issue
 
     # sc.process()
     sc.remove_instance()
