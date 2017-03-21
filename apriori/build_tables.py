@@ -105,7 +105,6 @@ docs = sorted(corpus.keys())
 # --------------------------------------------------------------------------------------------------
 # Part 1 section:  tf
 
-
 term_frequency_with_positions = dict()
 for doc in docs:
     term_frequency_with_positions[doc] = determine_word_positions(corpus[doc])
@@ -113,6 +112,8 @@ for doc in docs:
 print("\nThese are the terms with their positions in each doc:\n")
 tf_output = term_frequency_with_positions
 print(tf_output)
+tf_file_output = open('output_term_freq.json', 'w')
+tf_file_output.write(json.dumps(tf_output, sort_keys=True, indent=2))
 
 # --------------------------------------------------------------------------------------------------
 # Part 2 section:  df
