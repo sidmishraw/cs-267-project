@@ -1,3 +1,10 @@
+"""
+Python wrapper for sc cpp code.
+
+Created on 3/21/2017.
+
+@author: sordonia120446 | Sam O
+"""
 from ctypes import *
 import os
 

@@ -6,7 +6,7 @@ Builds the following tables:
 
 Created on 2/25/2017
 
-@author: sordonia
+@author: sordonia120446 | Sam O
 """
 
 import os, re, json
