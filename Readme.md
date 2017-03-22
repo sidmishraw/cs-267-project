@@ -1,5 +1,5 @@
 # CS 267 Project - WIP
 ## TODOs
-![](./thumnail.png=200x)
+![](./thumnail.png)
 * PDF parser
 * Apriori modified version
