@@ -46,12 +46,9 @@ if __name__ == '__main__':
         whitespace_regex = r'\s+'
         string_vector = np.array_str(series.values)
         string_vector = re.sub(whitespace_regex, '', string_vector)
-        bit_vector_as_string = string_vector[1:(len(token_list))]
-        print(type(int(index)))
-        print(len(token_list) - 1)
-        print(len(bit_vector_as_string))
+        bit_vector_as_string = string_vector[1:(len(token_list))].encode('utf-8')
+        print(type(bit_vector_as_string))
         sc.set_bit_map_row(int(index), bit_vector_as_string)
-    # TODO fix running out of mem issue
 
     # sc.process()
     sc.remove_instance()
