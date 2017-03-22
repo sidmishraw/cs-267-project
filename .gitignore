@@ -2,3 +2,5 @@ charmander
 *.sublime-project
 *.sublime-workspace
 *.pyc
+*.DS_STORE
+.DS_Store

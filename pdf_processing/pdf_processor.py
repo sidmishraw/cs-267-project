@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-06 16:58:51
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-18 00:25:12
+# @Last Modified time: 2017-03-22 00:02:53
 
 
 
@@ -26,7 +26,7 @@ from re import findall
 from re import IGNORECASE
 from re import sub
 from collections import defaultdict
-
+from pdb import set_trace
 
 
 
@@ -157,6 +157,7 @@ def extract_pages(pdf_doc):
 
 
 
+# Experimental ---####
 # Extract contents of the pages
 def extract_page_contents(page_nbr, page):
   '''
@@ -365,7 +366,7 @@ def __extract_content__(matching_pattern):
   :return: extracted_text `list(str)`
   '''
 
-  text_digit_regex_pattern = r'(-{0,1}\d*)\((.*?)\)'
+  text_digit_regex_pattern = r'(-{0,1}\d*\.{0,1}\d*)\((.*?)\)'
   matching_patterns = findall(compile(text_digit_regex_pattern), matching_pattern)
 
   extracted_texts = []
@@ -374,9 +375,9 @@ def __extract_content__(matching_pattern):
   for pattern in matching_patterns:
     if pattern[0] == '':
       extracted_string = pattern[1]
-    elif float(pattern[0]) >= 0:
+    elif float(pattern[0]) >= -100:
       extracted_string = '{}{}'.format(extracted_string, pattern[1])
-    elif float(pattern[0]) < 0:
+    elif float(pattern[0]) < -100:
       extracted_texts.append(extracted_string)
       extracted_string = pattern[1]
 
@@ -521,7 +522,7 @@ def __dump_words__(content_group, cleansed_page_contents):
 
 def __cleanse_page_contents__(page_contents):
   '''
-  Cleanses the contents of the page and returns a list of stemmed words from the contents of the page.
+  Cleanses the contents of the page and returns a list of words from the contents of the page.
 
   :param page_contents: The contents of the page :class: `dict`
 
@@ -545,8 +546,6 @@ def cleansed_pdf_json(pdf_dict):
   '''
   `The reading order of the words is not preserved but the grouping order is preserved.`
   The second pass that cleans the PDF JSON structure to make a listing of the words in just pages.
-  This phase stems the words using the Porter stemmer algorithm, it also removes the words that are
-  not in proper encoding (like \\\028 etc.).
 
   :param pdf_dict: The pdf_json (python) `dict` object obtained from the build_pdf_json(). 
   :class: `dict`
@@ -569,7 +568,8 @@ def cleansed_pdf_json(pdf_dict):
 # pdf.
 def extract_words():
   '''
-  Extracts the words(textual)/phrases from the decoded(decomoressed) contents of the PDF pages
+  `Preserves the word's position from the PDF to the JSON.`
+  Extracts the words(textual)/phrases from the decoded(decompressed) contents of the PDF pages
   and returns a python dict holding the mapping from page#number to the words in the page.
 
   :return: pdf_page_words_dict `defaultdict`
