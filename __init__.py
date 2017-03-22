@@ -1,5 +1,6 @@
 from apriori.build_tables import *
 from simplicial_complex.sc_wrapper import SimplicialComplex
+import re
 
 """
 Building tables
@@ -39,11 +40,17 @@ if __name__ == '__main__':
 
     # --------------------------------------------------------------------------------------------------
     # Part 3 section:  to sc
-    sc = SimplicialComplex(4, 0.05, len(tf_output), len(docs))
+    sc = SimplicialComplex(4, 0.05, len(token_list) - 1, len(docs))
 
     for index, series in df_output.iterrows():
-        bit_vector_as_string = str(series.values)
-        # sc.set_bit_map_row(int(index), bit_vector_as_string)
+        whitespace_regex = r'\s+'
+        string_vector = np.array_str(series.values)
+        string_vector = re.sub(whitespace_regex, '', string_vector)
+        bit_vector_as_string = string_vector[1:(len(token_list))]
+        print(type(int(index)))
+        print(len(token_list) - 1)
+        print(len(bit_vector_as_string))
+        sc.set_bit_map_row(int(index), bit_vector_as_string)
     # TODO fix running out of mem issue
 
     # sc.process()
