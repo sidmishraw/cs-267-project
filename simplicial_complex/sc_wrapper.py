@@ -22,6 +22,10 @@ class SimplicialComplex(object):
         self.rows = rows
         self.filepath = filepath
 
+    def initialize(self):
+        lib.initialize(self.obj, self.num_of_rules, c_float(self.threshold),
+            self.cols, self.rows, filepath=None)
+
     def remove_instance(self):
         lib.removeInstance(self.obj)
 

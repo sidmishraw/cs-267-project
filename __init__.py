@@ -41,6 +41,7 @@ if __name__ == '__main__':
     # --------------------------------------------------------------------------------------------------
     # Part 3 section:  to sc
     sc = SimplicialComplex(4, 0.05, len(token_list) - 1, len(docs))
+    sc.initialize()
 
     for index, series in df_output.iterrows():
         whitespace_regex = r'\s+'
