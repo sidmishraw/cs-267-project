@@ -8,4 +8,5 @@ Simplicial Complex Text Analysis
 
 ## TODOs
 * PDF parser
+* Word Stemmer
 * Apriori modified version
