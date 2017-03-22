@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-06 16:58:51
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-22 00:02:53
+# @Last Modified time: 2017-03-22 16:20:16
 
 
 
@@ -30,10 +30,12 @@ from pdb import set_trace
 
 
 
+
 # PDFMiner library imports
 from pdfminer.pdfdocument import PDFDocument
 from pdfminer.pdfparser import PDFParser
 from pdfminer.pdftypes import PDFStream
+from pdfminer.psparser import PSLiteral
 
 
 
@@ -52,6 +54,8 @@ METADATA = 'Metadata'
 TYPE = 'Type'
 CONTENTS = 'Contents'
 KIDS = 'Kids'
+TYPE = 'Type'
+PAGE = 'Page'
 
 
 
@@ -126,6 +130,34 @@ def get_stream_data(stream_obj_list):
 
 
 
+# This function handles the scenarios when the PDF has embedded pages.
+# The pattern to look for embedded pages is to match the count of pages in the
+# PDF document's catalog and the number of `Kids` in the `Pages` dict. If they don't
+# match then we can infer that the PDF might have embedded pages. This function will solve the
+# above scenario.
+def __extract_pages__(resolved_obj, pages):
+  '''
+  This function extracts and returns the list of pages from the resolved `Page` dict obtained
+  from the PDF document's catalog.
+
+  :param resolved_obj: The resolved object reference obtained by resolving the `Pages` value 
+  of the catalog. :class: `dict`
+  :param pages: The list holding the pages :class: `list(dict)`
+
+  :return: `None`
+  '''
+
+  if type(resolved_obj[TYPE]) == PSLiteral and resolved_obj[TYPE].name == PAGE:
+    pages.append(resolved_obj)
+    return 
+  elif type(resolved_obj[TYPE]) == PSLiteral and resolved_obj[TYPE].name == PAGES:
+    for objref in resolved_obj[KIDS]:
+      __extract_pages__(objref.resolve(), pages)
+    return
+
+
+
+
 # This function will extract the pages from the PDF document using the PDF's catalog
 def extract_pages(pdf_doc):
   '''
@@ -150,7 +182,8 @@ def extract_pages(pdf_doc):
   # adding to the list to be returned from this function.
   # catalog[PAGES] gives the object references to the Pages listing
   for objref in catalog[PAGES].resolve()[KIDS]:
-    pages.append(objref.resolve())
+    resolved_obj = objref.resolve()
+    __extract_pages__(resolved_obj, pages)
 
   return pages
 
@@ -610,8 +643,10 @@ def cleanse_extracted_words(pdf_page_words_dict):
   cleansed_pdf_page_words_dict = defaultdict(list)
 
   for page, page_contents in pdf_page_words_dict.items():
+    cleansed_words_container = []
+    __cleanse_words__(page_contents, cleansed_words_container)
     cleansed_pdf_page_words_dict[page].extend(\
-      list(map(__leading_trailing_nonword_remover__, page_contents)))
+      list(map(__leading_trailing_nonword_remover__, cleansed_words_container)))
 
   return cleansed_pdf_page_words_dict
 

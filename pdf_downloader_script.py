@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-21 09:55:58
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-21 23:51:00
+# @Last Modified time: 2017-03-22 16:31:50
 
 
 
@@ -73,8 +73,8 @@ def generate_jsons():
       fp_open.write(dumps(def_dict))
 
     # # PDF grouping of words maintained
-    def_dict = get_pdf_contents(ip_file_path)
-    # def_dict = cleansed_pdf_json(build_pdf_json())
+    # def_dict = get_pdf_contents(ip_file_path)
+    def_dict = cleansed_pdf_json(build_pdf_json())
 
     op_file_path = '{base_path}{separator}{folder_name}{separator}{file_name}'.format(\
       base_path = getcwd(), separator = sep, folder_name = 'pdf_grouped_jsons', \
