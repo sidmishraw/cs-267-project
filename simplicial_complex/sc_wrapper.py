@@ -26,7 +26,7 @@ class SimplicialComplex(object):
         lib.removeInstance(self.obj)
 
     def set_bit_map_row(self, row_number, bit_vector):
-        lib.setBitMapRow(self.obj, self.cols, row_number, bit_vector)
+        lib.setBitMapRow(self.obj, self.cols, row_number, c_char_p(bit_vector))
 
     def process(self):
         lib.process(self.obj)
