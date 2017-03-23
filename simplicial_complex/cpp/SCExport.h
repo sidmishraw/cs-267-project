@@ -10,6 +10,7 @@ extern "C"
     void initialize(SimplicialCmplx *p_instance, int rules, float threshold, int cols, int rows, const char *file_path);
     void setBitMapRow(SimplicialCmplx *p_instance, int cols, int row, const char *data);
     void process(SimplicialCmplx *p_instance);
+    void directProcess(int rules, float threshold, int cols, int rows, const char *data);
 }
 
 #endif
