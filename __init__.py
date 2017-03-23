@@ -40,19 +40,25 @@ if __name__ == '__main__':
 
     # --------------------------------------------------------------------------------------------------
     # Part 3 section:  to sc
-    sc = SimplicialComplex(4, 0.05, len(token_list) - 1, len(docs))
-    sc.initialize()
+    # sc = SimplicialComplex(4, 0.05, len(token_list) - 1, len(docs))
+    # sc.initialize()
 
+    string_vector_all = ''
     for index, series in df_output.iterrows():
         whitespace_regex = r'\s+'
         string_vector = np.array_str(series.values)
         string_vector = re.sub(whitespace_regex, '', string_vector)
+        string_vector_all += string_vector_all + string_vector[1:len(token_list)]
         bit_vector_as_string = string_vector[1:(len(token_list))].encode('utf-8')
         print(type(bit_vector_as_string))
-        sc.set_bit_map_row(int(index), bit_vector_as_string)
+        # sc.set_bit_map_row(int(index), bit_vector_as_string)
+
+    bit_vector_as_string = string_vector_all.encode('utf-8')
+    sc2 = SimplicialComplex()
+    sc2.directProcess(4, 0.05, len(token_list) - 1, len(docs), bit_vector_as_string)
 
     # sc.process()
-    sc.remove_instance()
+    # sc.remove_instance()
 
 
 
