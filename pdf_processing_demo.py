@@ -3,7 +3,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-03-06 17:14:07
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-03-17 21:55:47
+# @Last Modified time: 2017-04-03 19:56:00
 
 
 
@@ -30,16 +30,16 @@ from pdb import set_trace
 
 
 # cs_267_project specific imports
-from pdf_processing.pdf_processor import extract_pages
-from pdf_processing.pdf_processor import extract_page_contents
-from pdf_processing.pdf_processor import get_pdf_contents
-from pdf_processing.pdf_processor import create_json_file
-from pdf_processing.pdf_processor import extract_words
-from pdf_processing.pdf_processor import build_pdf_json
+from pdf_processing import extract_pages
+from pdf_processing import extract_page_contents
+from pdf_processing import get_pdf_contents
+from pdf_processing import create_json_file
+from pdf_processing import extract_words
+from pdf_processing import build_pdf_json
+from pdf_processing import cleanse_extracted_words
+from pdf_processing import cleansed_pdf_json
 from pdf_processing.pdf_processor import TEST_PDF
 from pdf_processing.pdf_processor import TEST_PDF_2
-from pdf_processing.pdf_processor import cleanse_extracted_words
-from pdf_processing.pdf_processor import cleansed_pdf_json
 
 
 
