@@ -1,3 +1,13 @@
+# build_tables.py
+# -*- coding: utf-8 -*-
+# @Author: Samuel Ordonia | sordonia120446 | Sam O
+# @Date:   2017-04-05 20:25:02
+# @Last Modified by:   Sidharth Mishra
+# @Last Modified time: 2017-04-05 22:59:58
+
+
+
+
 """
 Builds the following tables:
     1) (Dict) Alphabetically ordered words for each document and their positions.
@@ -9,10 +19,17 @@ Created on 2/25/2017
 @author: sordonia120446 | Sam O
 """
 
+
+
+
 import os, re, json
-from collections import defaultdict, OrderedDict
+from collections import defaultdict
+from collections import OrderedDict
 import numpy as np
 import pandas as pd
+
+
+
 
 def read_input_files(filepath):
     """
@@ -44,6 +61,11 @@ def read_input_files(filepath):
                 pages = json.load(json_file)
                 for page_number, page_content in pages.items():
                     words = [word for word in page_content]
+                    
+                    # added by sidmishraw
+                    from pdf_processing import standardize_words
+                    words = standardize_words(words)
+                    
                     if (page_number == "Page#1"):
                         [print(word) for word in words]
                     [tokens.setdefault(word, file) for word in words]
@@ -52,6 +74,9 @@ def read_input_files(filepath):
                     else:
                         corpus[file] = words
     return corpus, tokens
+
+
+
 
 def determine_word_positions(words):
     """
@@ -67,6 +92,9 @@ def determine_word_positions(words):
     for (key, value) in keyword_positions:
         term_positions[key].append(value)
     return sorted(term_positions.items())
+
+
+
 
 def determine_doc_frequency(docs, tokens, corpus):
     """
@@ -92,27 +120,3 @@ def determine_doc_frequency(docs, tokens, corpus):
         for word in words:
             row[word] = 1
     return doc_frequency
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

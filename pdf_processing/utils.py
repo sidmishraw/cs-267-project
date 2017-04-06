@@ -3,13 +3,13 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-04-03 19:45:31
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-04-03 20:03:43
+# @Last Modified time: 2017-04-05 20:33:26
 
 
 
 
 '''
-Some Utilities
+Some Utilities and Stemming algorithms
 '''
 
 
@@ -33,9 +33,9 @@ def standardize_words(words):
 
   for word in words:
     if ' ' in word:
-      word_splits = word.strip(' ').split(' ')
+      word_splits = list(filter(lambda x: len(x) > 0, word.strip(' ').split(' ')))
       standardized_words.extend(word_splits)
-    elif word != '':
+    elif word != '' or len(word) != 0:
       standardized_words.append(word)
 
   return standardized_words

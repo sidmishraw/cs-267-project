@@ -1,0 +1,5 @@
+{
+  "shared_obj_filepath": "./simplicial_complex/cpp/SCExport.so",
+  "input_jsons_filepath": "./pdf_jsons",
+  "output_filepath": "./outputs/"
+}
