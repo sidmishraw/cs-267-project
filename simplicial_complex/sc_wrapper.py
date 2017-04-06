@@ -3,7 +3,7 @@
 # @Author: Samuel Ordonia | sordonia120446 | Sam O
 # @Date:   2017-04-01 19:00:01
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-04-05 22:08:10
+# @Last Modified time: 2017-04-06 13:57:47
 
 
 
@@ -20,9 +20,16 @@ Created on 3/21/2017.
 
 
 # Python standard library imports
-from ctypes import CDLL
 from ctypes import c_float
 from ctypes import c_char_p
+from sys import platform
+
+
+
+
+# constants
+__WIN__ = 'win32'
+__OSX__ = 'darwin' 
 
 
 
@@ -42,7 +49,13 @@ class SimplicialComplex(object):
         :return: `None`
         '''
 
-        self.__lib = CDLL(shared_obj_path)
+        if platform == __WIN__:
+            from ctypes import WinDLL
+            self.__lib = WinDLL(shared_obj_path)
+        elif platform == __OSX__:
+            from ctypes import CDLL
+            self.__lib = CDLL(shared_obj_path)
+
         self.simplical_complex_instance = self.__lib.createInstance()
         self.num_of_rules = max_simplex
         self.threshold = threshold
