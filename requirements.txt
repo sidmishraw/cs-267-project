@@ -12,3 +12,5 @@ python-gnupg==0.4.0
 pytz==2017.2
 PyYAML==3.12
 six==1.10.0
+stemming==1.0.1
+nltk==3.2.2
