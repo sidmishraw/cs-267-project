@@ -47,6 +47,7 @@ private:
     vector<pair<short, int> > m_qcols;    // [simplex, count] -- sorted list of qualified counts
     map<short, int> m_results;            // [simplex, #items]
     FILE* m_fpResult;
+    FILE* m_fpResult_csv;
     int m_thresholdLimit;
 
     int m_has_initialized;

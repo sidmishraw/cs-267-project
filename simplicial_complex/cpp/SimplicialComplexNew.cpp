@@ -14,6 +14,25 @@
 bool brief = false;
 bool debug = false;
 
+template<typename Out>
+void split(const string &s, char delim, Out result)
+{
+    stringstream ss;
+    ss.str(s);
+    string item;
+    while (getline(ss, item, delim))
+    {
+        *(result++) = item;
+    }
+}
+
+vector<string> split(const string &s, char delim)
+{
+    vector<string> elems;
+    split(s, delim, std::back_inserter(elems));
+    return elems;
+}
+
 /*
  * Sort by QualifiedCount/ColumnIndex
  */
@@ -39,6 +58,7 @@ SimplicialCmplx::SimplicialCmplx()
     , m_rows(0)
     , m_has_initialized(false)
     , m_fpResult(NULL)
+    , m_fpResult_csv(NULL)
     , m_thresholdLimit(0)
 {
 
@@ -72,6 +92,7 @@ void SimplicialCmplx::initialize(int rules, float threshold, int cols, int rows)
     m_thresholdLimit = (m_thresholdLimit == 0 ? 1 : m_thresholdLimit);
 
     m_fpResult = fopen("results.txt", "wt");
+    m_fpResult_csv = fopen("result.csv", "wt");
     m_has_initialized = true;
 }
 
@@ -299,5 +320,11 @@ void SimplicialCmplx::printSimplex(Simplex& simplex)
     }
     else {
         fprintf(m_fpResult, "[%s] %ld\n", simplex.gname.c_str(), simplex.ones.size());
+
+        // Each row format in CSV: #rules, index1, index2, index3, ..., frequency
+        vector<string> x = split(simplex.gname.c_str(), ' ');
+        fprintf(m_fpResult_csv, "%d,", simplex.nrules);
+        for (int i = 0; i < x.size(); i++) fprintf(m_fpResult_csv, "%d,", stoi(x[i]));
+        fprintf(m_fpResult_csv, "%ld\n", simplex.ones.size());        
     }
 }
