@@ -4,3 +4,7 @@ charmander
 *.pyc
 *.DS_STORE
 .DS_Store
+
+env\.sh
+
+jennifer/
