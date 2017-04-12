@@ -3,7 +3,7 @@
 # @Author: Samuel Ordonia
 # @Date:   2017-04-04 18:32:49
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-04-05 23:14:43
+# @Last Modified time: 2017-04-11 15:23:15
 
 
 
@@ -20,6 +20,7 @@ from re import sub
 from json import dumps
 from json import loads
 from os.path import sep
+from os.path import exists
 
 
 
@@ -27,6 +28,12 @@ from os.path import sep
 # Numpy
 import numpy as np
 import pandas as pd
+
+
+
+
+# nltk
+from nltk import download
 
 
 
@@ -53,6 +60,25 @@ props = None
 __INPUT_FILEPATH__ = 'input_jsons_filepath'
 __SHARED_OBJ_FILEPATH__ = 'shared_obj_filepath'
 __OUTPUT_FILEPATH__ = 'output_filepath'
+
+
+
+
+# nltk stop words resource setup
+def nltk_stopwords_setup():
+    '''
+    Sets up the `corpora/stopwords` resource which is used for stemming by NLTK.
+
+    :return: `None`
+    '''
+
+    if exists('mystopwords/corpora/stopwords') == False:
+        download(download_dir = 'mystopwords')
+
+    return
+
+
+
 
 
 
@@ -151,6 +177,7 @@ def process_simplical_cmplx():
 
 
 if __name__ == '__main__':
+    nltk_stopwords_setup()
     read_data_init()
     get_term_frequency()
     compute_df()

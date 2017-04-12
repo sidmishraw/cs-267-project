@@ -3,7 +3,7 @@
 # @Author: Samuel Ordonia | sordonia120446 | Sam O
 # @Date:   2017-04-01 19:00:01
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-04-06 13:57:47
+# @Last Modified time: 2017-04-06 16:41:24
 
 
 
@@ -50,8 +50,8 @@ class SimplicialComplex(object):
         '''
 
         if platform == __WIN__:
-            from ctypes import WinDLL
-            self.__lib = WinDLL(shared_obj_path)
+            from ctypes import windll
+            self.__lib = windll.LoadLibrary(shared_obj_path)
         elif platform == __OSX__:
             from ctypes import CDLL
             self.__lib = CDLL(shared_obj_path)

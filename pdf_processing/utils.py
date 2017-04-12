@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # @Author: Sidharth Mishra and Michael Symonds
 # @Date:   2017-04-03 19:45:31
-# @Last Modified by:   Michael Symonds
-# @Last Modified time: 2017-04-09 20:51:26
+# @Last Modified by:   Sidharth Mishra
+# @Last Modified time: 2017-04-11 15:44:41
 
 
 
@@ -17,7 +17,29 @@ Some Utilities and Stemming algorithms
 
 # Pypi
 from stemming.porter2 import stem
-from nltk.corpus import stopwords
+# from nltk.corpus import stopwords
+
+
+
+
+# fetching stopwords from NLTK's corpora API
+def fetch_stopwords(language):
+  '''
+  Fetches the stopwords from the files downloaded from NLTK's corpora APIs.
+
+  :param language: The name of the language you are searching the stopwords for. :class: `str`
+  :return: `None`
+  '''
+
+  stopwords = None
+
+  # mystopwords/corpora/stopwords/english
+  with open('mystopwords/corpora/stopwords/{}'.format(language), 'r') as stopwords_f:
+    stopwords = stopwords_f.read().strip().split('\n')
+
+  return stopwords
+
+
 
 
 def standardize_words(words):
@@ -31,14 +53,17 @@ def standardize_words(words):
   :return: standardized_words :class: `list(str)`
   '''
   
-  stops = set(stopwords.words("english"))
+  # fetches the stopwords from the words list downloaded by NLTK
+  stops = set(fetch_stopwords('english'))
+
   symbols = {'.', ',', ';', '/', ':', '\\', '-', '(', ')', '&', '@', '!', '#', '$', '%', '^', '*', '\''
              , u"\u0022", u"\u0027", u"\u02ba", u"\u02dd", u"\u02ee", u"\u02f6", u"\u05f2", u"\u05f4"
              , u"\u1cd3", u"\u201c", u"\u201d", u"\u201f", u"\u2033", u"\u2036", u"\u3003", u"\uff02"
-             , u"\u2019"}
+             , u"\u2019", '=', '`', '~', '[', ']', '{', '}'}
   
   standardized_words = []
   result = []
+
   for word in words:
     if ' ' in word:
       word_splits = list(filter(lambda x: len(x) > 0, word.strip(' ').split(' ')))
