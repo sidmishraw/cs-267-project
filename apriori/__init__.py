@@ -19,6 +19,7 @@ Houses the core logic used to build the reverse-indices for the words extracted 
 from apriori.build_tables import read_input_files
 from apriori.build_tables import determine_word_positions
 from apriori.build_tables import determine_doc_frequency
+from apriori.build_tables import sc_to_word
 
 
 

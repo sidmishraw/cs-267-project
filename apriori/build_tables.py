@@ -120,3 +120,24 @@ def determine_doc_frequency(docs, tokens, corpus):
         for word in words:
             row[word] = 1
     return doc_frequency
+
+
+
+
+def sc_to_word(filepath, filename):
+    """
+    Reads in csv file output from Simplicial Complex.
+
+    Each row in the csv should contain the following:
+        1) # of rules (ie, the simplex order)
+        2) frequency of simplex
+        3) the simplex members (ie, the tokens making up the simplex)
+    """
+    with open(os.path.join(os.listdir(filepath), filename)) as csvfile:
+        sc_reader = csv.reader(csvfile)
+        for line in sc_reader:
+            print(line)
+
+
+
+

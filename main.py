@@ -176,6 +176,17 @@ def process_simplical_cmplx():
 
 
 
+# post-simplex analysis
+def simplex_analysis():
+    """
+    1) Read in simplex output from csv
+    2) Associate simplex members to tokens
+    """
+    pass
+
+
+
+
 if __name__ == '__main__':
     nltk_stopwords_setup()
     read_data_init()
